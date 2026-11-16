@@ -1,0 +1,112 @@
+.motion-sections {
+  padding: clamp(58px, 7vw, 100px) 0 clamp(78px, 9vw, 128px);
+  background: #f5f3e9;
+  font-family: "Manrope", sans-serif;
+}
+.motion-sections__inner { width: min(calc(100% - clamp(36px, 8vw, 144px)), 1320px); margin-inline: auto; }
+.motion-sections__heading { display: grid; grid-template-columns: minmax(0, 1fr) minmax(220px, .6fr); align-items: end; gap: 18px 40px; margin-bottom: clamp(28px, 4vw, 52px); }
+.motion-sections__eyebrow { grid-column: 1 / -1; margin: 0; color: #0e6b45; font-size: 11px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+.motion-sections__heading h2 { margin: 0; color: #143e30; font-size: clamp(36px, 5.4vw, 68px); font-weight: 600; letter-spacing: -.06em; line-height: 1.02; }
+.motion-sections__intro { margin: 0; color: #68766e; font-size: 14px; line-height: 1.75; }
+.motion-sections__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: stretch; gap: clamp(16px, 2.4vw, 32px); }
+
+.motion-section-card {
+  --card-surface: #e8efe5;
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  min-width: 0;
+  min-height: clamp(360px, 31vw, 420px);
+  grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr);
+  grid-template-rows: minmax(0, 1fr);
+  grid-template-areas: "media copy";
+  overflow: hidden;
+  border: 1px solid rgba(11,86,59,.11);
+  border-radius: 16px;
+  background: var(--card-surface);
+  box-shadow: 0 12px 34px rgba(20,62,48,.07);
+  color: #143e30;
+  text-decoration: none;
+  animation: motion-hub-card-reveal .68s cubic-bezier(.2,.75,.25,1) both;
+  animation-delay: calc(var(--card-index, 0) * 130ms);
+  transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease;
+}
+.motion-section-card--achievements {
+  --card-surface: #f6f0dc;
+  grid-template-columns: minmax(0, 1.18fr) minmax(0, .82fr);
+  grid-template-areas: "copy media";
+}
+
+/* Circle rings sit over the whole card, behind the text. */
+.motion-section-card::before,
+.motion-section-card::after {
+  position: absolute;
+  z-index: 1;
+  border: 1px solid rgba(14,107,69,.13);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+}
+.motion-section-card::before {
+  top: -175px;
+  right: -95px;
+  width: clamp(330px, 34vw, 520px);
+  aspect-ratio: 1;
+  box-shadow: 0 0 0 24px rgba(14,107,69,.035), 0 0 0 50px rgba(14,107,69,.025);
+}
+.motion-section-card::after {
+  bottom: -235px;
+  left: 20%;
+  width: clamp(260px, 26vw, 410px);
+  aspect-ratio: 1;
+  border-style: dashed;
+  opacity: .5;
+}
+.motion-section-card--achievements::before { top: -180px; right: auto; left: -125px; border-color: rgba(157,127,49,.17); box-shadow: 0 0 0 24px rgba(157,127,49,.04), 0 0 0 50px rgba(157,127,49,.026); }
+.motion-section-card--achievements::after { right: -105px; bottom: -245px; left: auto; border-color: rgba(157,127,49,.16); }
+
+.motion-section-card__media { grid-area: media; position: relative; z-index: 0; display: block; min-width: 0; min-height: 100%; overflow: hidden; background: #d5dfd3; }
+.motion-section-card__media::after { position: absolute; inset: 0; background: linear-gradient(90deg, transparent 72%, var(--card-surface)); content: ""; pointer-events: none; }
+.motion-section-card--achievements .motion-section-card__media::after { background: linear-gradient(270deg, transparent 72%, var(--card-surface)); }
+.motion-section-card__media img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform .65s cubic-bezier(.2,.75,.25,1); }
+.motion-section-card__copy { grid-area: copy; position: relative; z-index: 2; display: flex; min-width: 0; flex-direction: column; align-items: flex-start; justify-content: center; padding: clamp(22px, 2.5vw, 38px); }
+.motion-section-card__title { display: block; max-width: 100%; color: #143e30; font-size: clamp(28px, 2.7vw, 40px); font-weight: 650; letter-spacing: -.055em; line-height: 1.06; overflow-wrap: anywhere; }
+.motion-section-card__description { display: block; max-width: 100%; margin-top: 14px; color: #596d61; font-size: clamp(13px, .95vw, 14px); line-height: 1.75; overflow-wrap: anywhere; }
+.motion-section-card__link { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 10px; max-width: 100%; margin-top: 22px; padding-bottom: 6px; border-bottom: 1px solid #d5ab36; color: #0b6944; font-size: 12px; font-weight: 800; transition: gap .2s ease, color .2s ease; }
+.motion-section-card__link > span { transition: transform .2s ease; }
+.motion-section-card:hover { transform: translateY(-5px); border-color: rgba(14,107,69,.3); box-shadow: 0 22px 48px rgba(20,62,48,.12); }
+.motion-section-card:hover .motion-section-card__media img { transform: scale(1.045); }
+.motion-section-card:hover .motion-section-card__link { gap: 15px; color: #084b34; }
+.motion-section-card:hover .motion-section-card__link > span { transform: translate(2px,-2px); }
+.motion-section-card:focus-visible { outline: 3px solid #e7bd43; outline-offset: 4px; }
+@keyframes motion-hub-card-reveal { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+
+@media (max-width: 1100px) {
+  .motion-sections__grid { grid-template-columns: minmax(0, 1fr); }
+  .motion-section-card { min-height: clamp(330px, 38vw, 410px); grid-template-columns: minmax(0, .88fr) minmax(0, 1.12fr); }
+  .motion-section-card--achievements { grid-template-columns: minmax(0, 1.12fr) minmax(0, .88fr); }
+  .motion-section-card__copy { padding: clamp(26px, 4vw, 48px); }
+}
+@media (max-width: 700px) {
+  .motion-sections__inner { width: min(calc(100% - 36px), 560px); }
+  .motion-sections__heading { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .motion-sections__heading h2 { font-size: clamp(34px, 9vw, 52px); }
+  .motion-sections__intro { max-width: 540px; }
+  .motion-section-card,
+  .motion-section-card--achievements { min-height: 0; grid-template-columns: minmax(0, 1fr); grid-template-rows: auto auto; grid-template-areas: "media" "copy"; }
+  .motion-section-card__media { min-height: 0; aspect-ratio: 1.5; }
+  .motion-section-card__media::after,
+  .motion-section-card--achievements .motion-section-card__media::after { background: linear-gradient(180deg, transparent 65%, var(--card-surface)); }
+  .motion-section-card__copy { padding: 22px 23px 26px; }
+  .motion-section-card__title { font-size: clamp(28px, 7vw, 36px); }
+  .motion-section-card__description { font-size: 14px; }
+  .motion-section-card__link { margin-top: 18px; }
+  .motion-section-card::before { top: -118px; right: -78px; width: 300px; }
+  .motion-section-card::after { bottom: -165px; left: 10%; width: 250px; }
+  .motion-section-card--achievements::before { top: -125px; right: auto; left: -90px; }
+  .motion-section-card--achievements::after { right: -75px; bottom: -170px; left: auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .motion-section-card { animation: none; transition: none; }
+  .motion-section-card__media img, .motion-section-card__link, .motion-section-card__link > span { transition: none; }
+}

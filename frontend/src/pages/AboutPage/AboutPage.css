@@ -1,0 +1,15 @@
+.about-page {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  color: #171b18;
+  font-family: "Manrope", sans-serif;
+}
+
+.about-page,
+.about-page *,
+.about-page *::before,
+.about-page *::after {
+  box-sizing: border-box;
+}

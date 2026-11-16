@@ -1,0 +1,222 @@
+.learning-pillars {
+  --pillars-cream: #f7f7f2;
+  --pillars-green: #0b563b;
+  --pillars-main: #0b8255;
+  --pillars-bright: #26b474;
+  --pillars-orange: #f9a01b;
+  width: 100%;
+  overflow: hidden;
+  padding: clamp(42px, 4.2vw, 66px) 0 clamp(58px, 5vw, 76px);
+  background-color: var(--pillars-cream);
+  color: var(--pillars-green);
+  font-family: "Manrope", sans-serif;
+}
+
+.learning-pillars,
+.learning-pillars * { box-sizing: border-box; }
+
+.learning-pillars__inner {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(18px, 2vw, 26px);
+  width: min(calc(100% - var(--layout-gutter, 24px) * 2), var(--container, 1360px));
+  max-width: var(--container, 1360px);
+  margin-inline: auto;
+}
+
+.learning-pillars__header {
+  display: grid;
+  justify-items: center;
+  gap: clamp(18px, 2.5vw, 36px);
+  padding-bottom: clamp(14px, 2vw, 28px);
+  text-align: center;
+}
+.learning-pillars__logo {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  margin-inline: auto;
+}
+.learning-pillars__header h2 {
+  margin: 0;
+  color: var(--pillars-main);
+  font-size: clamp(40px, 5vw, 68px);
+  font-weight: 600;
+  letter-spacing: -.04em;
+  line-height: 1.04;
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+}
+.learning-pillars__heading-accent { color: var(--pillars-green); }
+
+/* Three wide, horizontal mascot cards, matching the supplied reference. */
+.learning-pillars__grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: clamp(18px, 2.4vw, 30px); }
+.learning-pillar {
+  --pillar-surface: #39b98e;
+  --card-accent: #f6c75f;
+  --card-tint: #cdebdc;
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(250px, 36%) minmax(0, 1fr);
+  min-width: 0;
+  min-height: 238px;
+  overflow: hidden;
+  border: 1px solid rgb(255 255 255 / 26%);
+  border-radius: 21px;
+  background: var(--pillar-surface);
+  color: var(--pillars-green);
+  text-decoration: none;
+  box-shadow: 0 12px 28px rgb(24 67 49 / 9%);
+  transition: transform 260ms ease, box-shadow 260ms ease;
+  isolation: isolate;
+}
+.learning-pillar::before,
+.learning-pillar::after {
+  position: absolute;
+  z-index: 0;
+  border: 1px solid color-mix(in srgb, var(--card-accent) 48%, transparent);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+}
+.learning-pillar::before {
+  top: -170px;
+  right: -82px;
+  width: clamp(280px, 36vw, 500px);
+  aspect-ratio: 1;
+  box-shadow: 0 0 0 22px color-mix(in srgb, var(--card-accent) 10%, transparent), 0 0 0 48px color-mix(in srgb, var(--card-accent) 5%, transparent);
+}
+.learning-pillar::after {
+  bottom: -250px;
+  left: 20%;
+  width: clamp(250px, 31vw, 430px);
+  aspect-ratio: 1;
+  border-style: dashed;
+  opacity: .62;
+}
+.learning-pillar--1::before { top: -190px; right: -42px; }
+.learning-pillar--1::after { left: 13%; bottom: -290px; }
+.learning-pillar--2::before { top: -150px; right: auto; left: -90px; }
+.learning-pillar--2::after { right: 12%; bottom: -265px; left: auto; }
+.learning-pillar--3::before { top: -205px; right: 20%; }
+.learning-pillar--3::after { right: -65px; bottom: -245px; left: auto; }
+.learning-pillar__art,
+.learning-pillar__copy { position: relative; z-index: 1; }
+.learning-pillar--1 { --pillar-surface: #39b98e; --card-accent: #f6c75f; --card-tint: #cdebdc; }
+.learning-pillar--2 {
+  --pillar-surface: #ffb536;
+  --card-accent: #fff1d3;
+  --card-tint: #ffd993;
+  grid-template-columns: minmax(0, 1fr) minmax(250px, 36%);
+}
+.learning-pillar--3 { --pillar-surface: #39b98e; --card-accent: #f6c75f; --card-tint: #cdebdc; }
+.learning-pillar--2 .learning-pillar__art { grid-column: 2; grid-row: 1; }
+.learning-pillar--2 .learning-pillar__copy { grid-column: 1; grid-row: 1; }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .learning-pillar:hover { z-index: 2; box-shadow: 0 20px 38px rgb(24 67 49 / 16%); transform: translateY(-4px); }
+}
+.learning-pillar:focus-visible { outline: 3px solid var(--pillars-orange); outline-offset: 4px; }
+
+.learning-pillar__art {
+  position: relative;
+  display: grid;
+  min-width: 0;
+  min-height: 238px;
+  place-items: end center;
+  overflow: hidden;
+  background: transparent;
+  isolation: isolate;
+}
+.learning-pillar__mascot {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: min(82%, 235px);
+  height: 216px;
+  object-fit: contain;
+  object-position: center bottom;
+  filter: drop-shadow(0 9px 8px rgb(22 68 47 / 12%));
+  animation: learning-pillar-mascot-float 3.8s ease-in-out infinite;
+  will-change: transform;
+}
+
+.learning-pillar--2 .learning-pillar__mascot { animation-delay: .55s; }
+.learning-pillar--3 .learning-pillar__mascot { animation-delay: 1.1s; }
+
+@keyframes learning-pillar-mascot-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+
+.learning-pillar__copy {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 24px clamp(30px, 5vw, 76px);
+}
+.learning-pillar__copy h3 {
+  margin: 0;
+  color: #103b2b;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(25px, 2.05vw, 34px);
+  font-weight: 800;
+  letter-spacing: -.025em;
+  line-height: 1.04;
+}
+.learning-pillar__subtitle { margin: 5px 0 0; color: #103b2b; font-size: clamp(13px, 1vw, 15px); font-weight: 800; line-height: 1.3; }
+.learning-pillar__description { margin: 10px 0 0; max-width: 660px; color: #173f30; font-size: clamp(14px, .98vw, 16px); font-weight: 600; line-height: 1.48; }
+.learning-pillar__link { position: relative; display: inline-block; margin-top: 11px; padding-bottom: 4px; color: #173f30; font-size: 12px; font-weight: 800; line-height: 1.2; }
+.learning-pillar__link::after { position: absolute; right: 0; bottom: 0; left: 0; height: 1px; background: currentColor; content: ""; transform: scaleX(.42); transform-origin: left center; transition: transform 230ms ease; }
+.learning-pillar:hover .learning-pillar__link::after, .learning-pillar:focus-visible .learning-pillar__link::after { transform: scaleX(1); }
+
+@media (max-width: 900px) {
+  .learning-pillar { grid-template-columns: minmax(210px, 35%) minmax(0, 1fr); min-height: 224px; }
+  .learning-pillar--2 { grid-template-columns: minmax(0, 1fr) minmax(210px, 35%); }
+  .learning-pillar__copy { padding: 20px 30px; }
+  .learning-pillar__art { min-height: 224px; }
+  .learning-pillar__mascot { width: 100%; max-width: 205px; height: 100%; max-height: 218px; }
+}
+
+@media (max-width: 620px) {
+  .learning-pillars { padding: 40px 0 56px; }
+  .learning-pillars__inner { gap: 18px; }
+  .learning-pillars__header h2 { font-size: clamp(32px, 8vw, 46px); }
+  .learning-pillars__logo { max-width: 330px; }
+  .learning-pillars__grid { gap: 15px; }
+  .learning-pillar { grid-template-columns: minmax(92px, 32%) minmax(0, 1fr); min-height: 218px; border-radius: 17px; }
+  .learning-pillar--2 { grid-template-columns: minmax(0, 1fr) minmax(92px, 32%); }
+  .learning-pillar__art { min-height: 218px; }
+  .learning-pillar__mascot { width: 100%; max-width: 132px; height: 100%; max-height: 208px; object-fit: contain; }
+  .learning-pillar__copy { padding: 15px 12px 15px 16px; }
+  .learning-pillar--2 .learning-pillar__copy { padding: 15px 16px 15px 12px; }
+  .learning-pillar__copy h3 { font-size: clamp(18px, 5vw, 24px); line-height: 1.08; }
+  .learning-pillar__subtitle { font-size: 13px; }
+  .learning-pillar__description { margin-top: 8px; font-size: 14px; line-height: 1.45; }
+  .learning-pillar__link { margin-top: 8px; font-size: 12px; }
+  .learning-pillar::before { top: -145px; right: -100px; width: 270px; }
+  .learning-pillar::after { bottom: -175px; left: 12%; width: 250px; }
+  .learning-pillar--2::before { right: auto; left: -86px; }
+  .learning-pillar--2::after { right: -85px; left: auto; }
+  .learning-pillar--3::before { right: 8%; }
+  .learning-pillar--3::after { right: auto; left: -95px; }
+}
+
+@media (max-width: 360px) {
+  .learning-pillar,
+  .learning-pillar--2 { grid-template-columns: minmax(0, 1fr); }
+  .learning-pillar__art,
+  .learning-pillar--2 .learning-pillar__art { grid-area: 1 / 1; min-height: 140px; }
+  .learning-pillar__mascot { height: 140px; }
+  .learning-pillar__copy,
+  .learning-pillar--2 .learning-pillar__copy { grid-area: 2 / 1; padding: 18px; }
+}
+
+/* The floating back-to-top mascot remains available in this section. */
+
+@media (prefers-reduced-motion: reduce) {
+  .learning-pillar, .learning-pillar__link::after { transition: none; }
+  .learning-pillar__mascot { animation: none; will-change: auto; }
+}

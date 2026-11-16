@@ -1,0 +1,16 @@
+.about-statement {
+  padding: clamp(56px, 7vw, 100px) var(--page-padding);
+  background: #f5f3e9;
+  color: #0b563b;
+}
+
+.about-statement p {
+  max-width: 42ch;
+  margin-inline: auto;
+  font-size: clamp(1.45rem, 3vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.28;
+  letter-spacing: -.03em;
+  text-align: center;
+  text-wrap: pretty;
+}

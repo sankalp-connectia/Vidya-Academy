@@ -1,0 +1,1746 @@
+/* =========================================================
+   VIDYA ACADEMY
+   CAMPUS BUILDINGS
+
+   - SAME EXISTING COLLAGE
+   - SAME MARQUEE
+   - SAME RESPONSIVE STRUCTURE
+   - SAME COLOR FOR COMPLETE DESCRIPTION
+========================================================= */
+
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+.campus-buildings {
+  --page-padding:
+    clamp(
+      68px,
+      5vw,
+      100px
+    );
+
+  --cream:
+    #f5f3e9;
+
+  --cream-soft:
+    #f3f0e6;
+
+  --green:
+    #0b8255;
+
+  --deep-green:
+    #0b563b;
+
+  --deep-green-2:
+    #073f32;
+
+  --bright-green:
+    #26b474;
+
+  --orange:
+    #f9a01b;
+
+  --white:
+    #ffffff;
+
+
+  position:
+    relative;
+
+
+  width:
+    100%;
+
+
+  overflow:
+    hidden;
+
+
+  background:
+    var(--cream);
+
+
+  color:
+    var(--deep-green);
+
+
+  padding-bottom:
+    clamp(
+      90px,
+      7vw,
+      125px
+    );
+
+
+  font-family:
+    "Manrope",
+    sans-serif;
+}
+
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+.campus-buildings,
+.campus-buildings *,
+.campus-buildings *::before,
+.campus-buildings *::after {
+  box-sizing:
+    border-box;
+
+
+  font-family:
+    "Manrope",
+    sans-serif !important;
+}
+
+
+/* =========================================================
+   NO DECORATIVE ROOT GLOW
+========================================================= */
+
+.campus-buildings::before,
+.campus-buildings::after {
+  content:
+    none;
+}
+
+
+/* =========================================================
+   MARQUEE SECTION
+========================================================= */
+
+.campus-buildings-marquee-section {
+  position:
+    relative;
+
+
+  z-index:
+    2;
+
+
+  display:
+    flex;
+
+
+  align-items:
+    center;
+
+
+  width:
+    100%;
+
+
+  min-height:
+    clamp(
+      155px,
+      11vw,
+      195px
+    );
+
+
+  overflow:
+    hidden;
+
+
+  background:
+    transparent;
+}
+
+
+/* =========================================================
+   MARQUEE SHELL
+========================================================= */
+
+.campus-buildings-marquee-shell {
+  position:
+    relative;
+
+
+  width:
+    100%;
+
+
+  overflow:
+    hidden;
+
+
+  will-change:
+    transform;
+}
+
+
+/* =========================================================
+   MARQUEE TRACK
+========================================================= */
+
+.campus-buildings-marquee-track {
+  display:
+    flex;
+
+
+  align-items:
+    center;
+
+
+  width:
+    max-content;
+
+
+  will-change:
+    transform;
+
+
+  animation:
+    campus-buildings-marquee 34s linear infinite;
+  -webkit-animation:
+    campus-buildings-marquee 34s linear infinite;
+}
+
+
+@-webkit-keyframes campus-buildings-marquee {
+  from { -webkit-transform: translate3d(0, 0, 0); }
+  to { -webkit-transform: translate3d(-50%, 0, 0); }
+}
+
+@keyframes campus-buildings-marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+
+/* =========================================================
+   MARQUEE GROUP
+========================================================= */
+
+.campus-buildings-marquee-group {
+  display:
+    flex;
+
+
+  align-items:
+    center;
+
+
+  flex-shrink:
+    0;
+}
+
+
+/* =========================================================
+   MARQUEE ITEM
+========================================================= */
+
+.campus-buildings-marquee-item {
+  display:
+    flex;
+
+
+  align-items:
+    center;
+
+
+  flex-shrink:
+    0;
+
+
+  gap:
+    clamp(
+      18px,
+      1.5vw,
+      26px
+    );
+
+
+  margin-right:
+    clamp(
+      34px,
+      3vw,
+      52px
+    );
+}
+
+
+/* =========================================================
+   "THE BUILDINGS"
+========================================================= */
+
+.campus-buildings-marquee-item > span {
+  white-space:
+    nowrap;
+
+
+  color:
+    var(--green);
+
+
+  font-size:
+    clamp(
+      45px,
+      4.3vw,
+      70px
+    );
+
+
+  font-style:
+    normal;
+
+
+  font-weight:
+    550;
+
+
+  line-height:
+    1;
+
+
+  letter-spacing:
+    -0.058em;
+}
+
+
+/* =========================================================
+   MARQUEE THUMB
+========================================================= */
+
+.campus-buildings-thumb {
+  position:
+    relative;
+
+
+  flex:
+    0 0 auto;
+
+
+  width:
+    clamp(
+      108px,
+      7.5vw,
+      142px
+    );
+
+
+  height:
+    clamp(
+      70px,
+      4.8vw,
+      90px
+    );
+
+
+  overflow:
+    hidden;
+
+
+  background:
+    var(--green);
+}
+
+
+/* =========================================================
+   THUMB SHADE
+========================================================= */
+
+.campus-buildings-thumb::after {
+  position:
+    absolute;
+
+
+  z-index:
+    2;
+
+
+  inset:
+    0;
+
+
+  background:
+    linear-gradient(
+      180deg,
+
+      transparent
+      72%,
+
+      rgba(
+        11,
+        86,
+        59,
+        0.07
+      )
+      100%
+    );
+
+
+  content:
+    "";
+
+
+  pointer-events:
+    none;
+}
+
+
+/* =========================================================
+   THUMB IMAGE
+========================================================= */
+
+.campus-buildings-thumb img {
+  position:
+    absolute;
+
+
+  inset:
+    0;
+
+
+  display:
+    block;
+
+
+  width:
+    100%;
+
+
+  height:
+    100%;
+
+
+  object-fit:
+    cover;
+
+
+  object-position:
+    center;
+
+
+  transform:
+    scale(
+      1.01
+    );
+
+
+  pointer-events:
+    none;
+
+
+  user-select:
+    none;
+
+
+  -webkit-user-drag:
+    none;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.campus-buildings-caption {
+  position:
+    relative;
+
+
+  z-index:
+    2;
+
+
+  width:
+    min(
+      640px,
+      calc(
+        100% -
+        (
+          var(--page-padding) *
+          2
+        )
+      )
+    );
+
+
+  margin:
+    clamp(
+      8px,
+      0.8vw,
+      14px
+    )
+    auto
+    clamp(
+      42px,
+      3.5vw,
+      58px
+    );
+
+
+  text-align:
+    center;
+
+
+  will-change:
+    opacity,
+    transform;
+}
+
+
+/* =========================================================
+   DESCRIPTION TEXT
+
+   COMPLETE SENTENCE USES ONE COLOR
+========================================================= */
+
+.campus-buildings-caption p {
+  margin:
+    0;
+
+
+  color:
+    var(--deep-green);
+
+
+  font-size:
+    clamp(
+      16px,
+      1.1vw,
+      19px
+    );
+
+
+  font-style:
+    normal;
+
+
+  font-weight:
+    400;
+
+
+  line-height:
+    1.5;
+
+
+  letter-spacing:
+    -0.012em;
+
+
+  text-wrap:
+    balance;
+}
+
+
+/* =========================================================
+   DESCRIPTION ACCENT
+
+   SAME COLOR AS REST OF SENTENCE
+========================================================= */
+
+.campus-buildings-caption-accent {
+  color:
+    inherit;
+
+
+  font-size:
+    inherit;
+
+
+  font-style:
+    normal;
+
+
+  font-weight:
+    inherit;
+
+
+  line-height:
+    inherit;
+
+
+  letter-spacing:
+    inherit;
+}
+
+
+/* =========================================================
+   BUILDING COLLAGE
+========================================================= */
+
+.campus-buildings-grid {
+  position:
+    relative;
+
+
+  z-index:
+    2;
+
+
+  display:
+    grid;
+
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(
+        0,
+        1fr
+      )
+    );
+
+
+  grid-template-rows:
+    repeat(
+      11,
+      clamp(
+        34px,
+        3.15vw,
+        52px
+      )
+    );
+
+
+  column-gap:
+    clamp(
+      12px,
+      1vw,
+      18px
+    );
+
+
+  row-gap:
+    clamp(
+      12px,
+      1vw,
+      18px
+    );
+
+
+  width:
+    min(
+      calc(
+        100% -
+        (
+          var(--page-padding) *
+          2
+        )
+      ),
+      1420px
+    );
+
+
+  margin:
+    0 auto;
+
+
+  align-items:
+    stretch;
+}
+
+
+/* =========================================================
+   PHOTO
+========================================================= */
+
+.campus-building-photo {
+  position:
+    relative;
+
+
+  width:
+    100%;
+
+
+  height:
+    100%;
+
+
+  min-width:
+    0;
+
+
+  min-height:
+    0;
+
+
+  margin:
+    0;
+
+
+  padding:
+    0;
+
+
+  overflow:
+    hidden;
+
+
+  background:
+    var(--green);
+
+
+  border:
+    0;
+
+
+  border-radius:
+    0;
+
+
+  will-change:
+    opacity,
+    transform;
+}
+
+
+/* =========================================================
+   PHOTO IMAGE
+========================================================= */
+
+.campus-building-photo img {
+  position:
+    absolute;
+
+
+  inset:
+    -3% 0;
+
+
+  display:
+    block;
+
+
+  width:
+    100%;
+
+
+  height:
+    106%;
+
+
+  max-width:
+    none;
+
+
+  object-fit:
+    cover;
+
+
+  object-position:
+    center;
+
+
+  transform:
+    scale(
+      1.05
+    );
+
+
+  transform-origin:
+    center;
+
+
+  pointer-events:
+    none;
+
+
+  user-select:
+    none;
+
+
+  -webkit-user-drag:
+    none;
+
+
+  backface-visibility:
+    hidden;
+
+
+  -webkit-backface-visibility:
+    hidden;
+
+
+  will-change:
+    transform;
+}
+
+
+/* =========================================================
+   IMAGE SHADE
+========================================================= */
+
+.campus-building-photo::after {
+  position:
+    absolute;
+
+
+  z-index:
+    2;
+
+
+  inset:
+    0;
+
+
+  background:
+    linear-gradient(
+      180deg,
+
+      transparent
+      72%,
+
+      rgba(
+        7,
+        63,
+        50,
+        0.08
+      )
+      100%
+    );
+
+
+  content:
+    "";
+
+
+  pointer-events:
+    none;
+}
+
+
+/* =========================================================
+   DESKTOP COLLAGE
+========================================================= */
+
+.building-photo--01 {
+  grid-column:
+    1 / 2;
+
+
+  grid-row:
+    1 / span 5;
+}
+
+
+.building-photo--02 {
+  grid-column:
+    2 / 3;
+
+
+  grid-row:
+    1 / span 3;
+}
+
+
+.building-photo--03 {
+  grid-column:
+    3 / 4;
+
+
+  grid-row:
+    1 / span 5;
+}
+
+
+.building-photo--04 {
+  grid-column:
+    2 / 3;
+
+
+  grid-row:
+    4 / span 3;
+}
+
+
+.building-photo--05 {
+  grid-column:
+    1 / 2;
+
+
+  grid-row:
+    6 / span 5;
+}
+
+
+.building-photo--06 {
+  grid-column:
+    2 / 3;
+
+
+  grid-row:
+    7 / span 5;
+}
+
+
+.building-photo--07 {
+  grid-column:
+    3 / 4;
+
+
+  grid-row:
+    6 / span 5;
+}
+
+
+/* =========================================================
+   IMAGE CROPS
+========================================================= */
+
+.building-photo--01 img {
+  object-position:
+    center 50%;
+}
+
+
+.building-photo--02 img {
+  object-position:
+    center 48%;
+}
+
+
+.building-photo--03 img {
+  object-position:
+    center center;
+}
+
+
+.building-photo--04 img {
+  object-position:
+    center center;
+}
+
+
+.building-photo--05 img {
+  object-position:
+    center 50%;
+}
+
+
+.building-photo--06 img {
+  object-position:
+    center 48%;
+}
+
+
+.building-photo--07 img {
+  object-position:
+    center center;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (
+  min-width: 1500px
+) {
+
+  .campus-buildings {
+    --page-padding:
+      72px;
+
+
+    padding-bottom:
+      125px;
+  }
+
+
+  .campus-buildings-marquee-section {
+    min-height:
+      195px;
+  }
+
+
+  .campus-buildings-marquee-item > span {
+    font-size:
+      70px;
+  }
+
+
+  .campus-buildings-thumb {
+    width:
+      142px;
+
+
+    height:
+      90px;
+  }
+
+
+  .campus-buildings-caption {
+    margin-top:
+      8px;
+
+
+    margin-bottom:
+      56px;
+  }
+
+
+  .campus-buildings-grid {
+    grid-template-rows:
+      repeat(
+        11,
+        51px
+      );
+
+
+    column-gap:
+      18px;
+
+
+    row-gap:
+      18px;
+  }
+
+}
+
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media
+(
+  max-width: 1200px
+)
+and
+(
+  min-width: 769px
+) {
+
+  .campus-buildings {
+    --page-padding:
+      42px;
+
+
+    padding-bottom:
+      92px;
+  }
+
+
+  /* =====================================================
+     MARQUEE
+  ===================================================== */
+
+  .campus-buildings-marquee-section {
+    min-height:
+      150px;
+  }
+
+
+  .campus-buildings-marquee-item {
+    gap:
+      15px;
+
+
+    margin-right:
+      30px;
+  }
+
+
+  .campus-buildings-marquee-item > span {
+    font-size:
+      clamp(
+        37px,
+        4vw,
+        52px
+      );
+
+
+    line-height:
+      1;
+
+
+    letter-spacing:
+      -0.055em;
+  }
+
+
+  .campus-buildings-thumb {
+    width:
+      96px;
+
+
+    height:
+      62px;
+  }
+
+
+  /* =====================================================
+     DESCRIPTION
+  ===================================================== */
+
+  .campus-buildings-caption {
+    max-width:
+      560px;
+
+
+    margin-top:
+      6px;
+
+
+    margin-bottom:
+      44px;
+  }
+
+
+  .campus-buildings-caption p {
+    font-size:
+      clamp(
+        15px,
+        1.5vw,
+        18px
+      );
+  }
+
+
+  /* =====================================================
+     GRID
+  ===================================================== */
+
+  .campus-buildings-grid {
+    grid-template-rows:
+      repeat(
+        11,
+        clamp(
+          32px,
+          3.9vw,
+          46px
+        )
+      );
+
+
+    column-gap:
+      12px;
+
+
+    row-gap:
+      12px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media
+(
+  max-width: 900px
+)
+and
+(
+  min-width: 769px
+) {
+
+  .campus-buildings {
+    --page-padding:
+      30px;
+  }
+
+
+  .campus-buildings-caption {
+    max-width:
+      520px;
+  }
+
+
+  .campus-buildings-grid {
+    column-gap:
+      11px;
+
+
+    row-gap:
+      11px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (
+  max-width: 768px
+) {
+
+  .campus-buildings {
+    --page-padding:
+      20px;
+
+
+    padding-bottom:
+      68px;
+  }
+
+
+  /* =====================================================
+     MOBILE MARQUEE
+  ===================================================== */
+
+  .campus-buildings-marquee-section {
+    min-height:
+      116px;
+  }
+
+
+  .campus-buildings-marquee-item {
+    gap:
+      11px;
+
+
+    margin-right:
+      20px;
+  }
+
+
+  .campus-buildings-marquee-item > span {
+    font-size:
+      clamp(
+        37px,
+        9.5vw,
+        49px
+      );
+
+
+    font-weight:
+      550;
+
+
+    line-height:
+      0.98;
+
+
+    letter-spacing:
+      -0.058em;
+  }
+
+
+  .campus-buildings-thumb {
+    width:
+      clamp(
+        72px,
+        19vw,
+        88px
+      );
+
+
+    height:
+      clamp(
+        46px,
+        12vw,
+        57px
+      );
+  }
+
+
+  /* =====================================================
+     MOBILE DESCRIPTION
+  ===================================================== */
+
+  .campus-buildings-caption {
+    width:
+      calc(
+        100% -
+        40px
+      );
+
+
+    max-width:
+      460px;
+
+
+    margin:
+      8px
+      auto
+      32px;
+
+
+    text-align:
+      left;
+  }
+
+
+  .campus-buildings-caption p {
+    color:
+      var(--deep-green);
+
+
+    font-size:
+      15px;
+
+
+    line-height:
+      1.48;
+
+
+    letter-spacing:
+      -0.012em;
+
+
+    text-wrap:
+      pretty;
+  }
+
+
+  .campus-buildings-caption-accent {
+    color:
+      inherit;
+  }
+
+
+  /* =====================================================
+     MOBILE COLLAGE
+  ===================================================== */
+
+  .campus-buildings-grid {
+    width:
+      calc(
+        100% -
+        24px
+      );
+
+
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(
+          0,
+          1fr
+        )
+      );
+
+
+    grid-template-rows:
+      repeat(
+        14,
+        clamp(
+          40px,
+          12.5vw,
+          62px
+        )
+      );
+
+
+    column-gap:
+      9px;
+
+
+    row-gap:
+      9px;
+
+
+    margin:
+      0 auto;
+  }
+
+
+  .building-photo--01 {
+    grid-column:
+      1 / 2 !important;
+
+
+    grid-row:
+      1 / span 4 !important;
+  }
+
+
+  .building-photo--02 {
+    grid-column:
+      2 / 3 !important;
+
+
+    grid-row:
+      1 / span 3 !important;
+  }
+
+
+  .building-photo--03 {
+    grid-column:
+      2 / 3 !important;
+
+
+    grid-row:
+      4 / span 4 !important;
+  }
+
+
+  .building-photo--04 {
+    grid-column:
+      1 / 2 !important;
+
+
+    grid-row:
+      5 / span 3 !important;
+  }
+
+
+  .building-photo--05 {
+    grid-column:
+      1 / 2 !important;
+
+
+    grid-row:
+      8 / span 4 !important;
+  }
+
+
+  .building-photo--06 {
+    grid-column:
+      2 / 3 !important;
+
+
+    grid-row:
+      8 / span 4 !important;
+  }
+
+
+  .building-photo--07 {
+    grid-column:
+      1 / -1 !important;
+
+
+    grid-row:
+      12 / span 3 !important;
+  }
+
+
+  .campus-building-photo {
+    width:
+      100%;
+
+
+    height:
+      100%;
+
+
+    min-height:
+      0;
+
+
+    touch-action:
+      pan-y;
+  }
+
+
+  .campus-building-photo img {
+    inset:
+      -2% 0;
+
+
+    width:
+      100%;
+
+
+    height:
+      104%;
+
+
+    transform:
+      scale(
+        1.025
+      );
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (
+  max-width: 480px
+) {
+
+  .campus-buildings {
+    --page-padding:
+      17px;
+
+
+    padding-bottom:
+      60px;
+  }
+
+
+  /* =====================================================
+     MARQUEE
+  ===================================================== */
+
+  .campus-buildings-marquee-section {
+    min-height:
+      102px;
+  }
+
+
+  .campus-buildings-marquee-item {
+    gap:
+      9px;
+
+
+    margin-right:
+      17px;
+  }
+
+
+  .campus-buildings-marquee-item > span {
+    font-size:
+      clamp(
+        33px,
+        9vw,
+        42px
+      );
+  }
+
+
+  .campus-buildings-thumb {
+    width:
+      64px;
+
+
+    height:
+      42px;
+  }
+
+
+  /* =====================================================
+     DESCRIPTION
+  ===================================================== */
+
+  .campus-buildings-caption {
+    width:
+      calc(
+        100% -
+        34px
+      );
+
+
+    margin:
+      6px
+      auto
+      28px;
+  }
+
+
+  .campus-buildings-caption p {
+    color:
+      var(--deep-green);
+
+
+    font-size:
+      14px;
+  }
+
+
+  .campus-buildings-caption-accent {
+    color:
+      inherit;
+  }
+
+
+  /* =====================================================
+     GRID
+  ===================================================== */
+
+  .campus-buildings-grid {
+    width:
+      calc(
+        100% -
+        18px
+      );
+
+
+    grid-template-rows:
+      repeat(
+        14,
+        clamp(
+          37px,
+          12vw,
+          52px
+        )
+      );
+
+
+    column-gap:
+      7px;
+
+
+    row-gap:
+      7px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (
+  max-width: 360px
+) {
+
+  .campus-buildings-marquee-section {
+    min-height:
+      94px;
+  }
+
+
+  .campus-buildings-marquee-item > span {
+    font-size:
+      31px;
+  }
+
+
+  .campus-buildings-thumb {
+    width:
+      58px;
+
+
+    height:
+      39px;
+  }
+
+
+  .campus-buildings-caption {
+    width:
+      calc(
+        100% -
+        30px
+      );
+
+
+    margin-bottom:
+      24px;
+  }
+
+
+  .campus-buildings-caption p {
+    color:
+      var(--deep-green);
+
+
+    font-size:
+      13.5px;
+  }
+
+
+  .campus-buildings-caption-accent {
+    color:
+      inherit;
+  }
+
+
+  .campus-buildings-grid {
+    width:
+      calc(
+        100% -
+        14px
+      );
+
+
+    grid-template-rows:
+      repeat(
+        14,
+        42px
+      );
+
+
+    column-gap:
+      6px;
+
+
+    row-gap:
+      6px;
+  }
+
+}
+
+
+/* =========================================================
+   SHORT MOBILE
+========================================================= */
+
+@media
+(
+  max-width: 768px
+)
+and
+(
+  max-height: 700px
+) {
+
+  .campus-buildings-marquee-section {
+    min-height:
+      98px;
+  }
+
+
+  .campus-buildings-caption {
+    margin-top:
+      5px;
+
+
+    margin-bottom:
+      26px;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (
+  prefers-reduced-motion:
+    reduce
+) {
+
+  .campus-buildings-marquee-track,
+  .campus-buildings-marquee-shell {
+    transform: none !important;
+  }
+
+  .campus-buildings-marquee-track {
+    -webkit-animation: none !important;
+    animation: none !important;
+  }
+
+
+  .campus-buildings-caption {
+    opacity:
+      1 !important;
+
+
+    transform:
+      none !important;
+  }
+
+
+  .campus-building-photo,
+  .campus-building-photo img {
+    opacity:
+      1 !important;
+
+
+    transform:
+      none !important;
+  }
+
+}
+/* On wide desktop screens, let the campus photo collage use the available width. */
+@media (min-width: 1201px) {
+  .campus-buildings-grid {
+    width: calc(100% - clamp(16px, 2vw, 36px));
+    max-width: none;
+  }
+}

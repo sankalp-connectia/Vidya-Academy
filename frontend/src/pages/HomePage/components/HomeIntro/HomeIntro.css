@@ -1,0 +1,932 @@
+/* =========================================================
+   VIDYA ACADEMY INTRO
+
+   2 SECOND HOLD
+   SLOW SMOOTH ZOOM
+   SMOOTH TRANSPARENT LOGO REVEAL
+   FULL TRANSPARENT END
+========================================================= */
+
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+.vidya-intro {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 2147483647;
+
+  width: 100vw;
+
+  height: 100vh;
+  height: 100dvh;
+
+  margin: 0;
+
+  padding: 0;
+
+  overflow: hidden;
+
+  background: transparent;
+
+  pointer-events: all;
+
+  opacity: 1;
+
+  transform:
+    translate3d(
+      0,
+      0,
+      0
+    );
+
+  backface-visibility:
+    hidden;
+
+  -webkit-backface-visibility:
+    hidden;
+
+  contain:
+    layout
+    paint
+    style;
+}
+
+
+/* =========================================================
+   PAGE LOCK
+========================================================= */
+
+body.vidya-page-intro-active {
+  overflow:
+    hidden !important;
+}
+
+
+/* =========================================================
+   HERO FALLBACK
+========================================================= */
+
+body.vidya-page-intro-active
+.vidya-hero,
+
+body.vidya-page-intro-active
+.vidya-hero-video-box {
+  background:
+    #000000 !important;
+}
+
+
+/* =========================================================
+   HIDE NAVIGATION DURING INTRO
+========================================================= */
+
+body.vidya-page-intro-active
+.navbar,
+
+body.vidya-page-intro-active
+.Navbar,
+
+body.vidya-page-intro-active
+.vidya-navbar,
+
+body.vidya-page-intro-active
+.main-navbar,
+
+body.vidya-page-intro-active
+.site-navbar,
+
+body.vidya-page-intro-active
+.nav-wrapper,
+
+body.vidya-page-intro-active
+.bottom-blur,
+
+body.vidya-page-intro-active
+.BottomBlur {
+  opacity:
+    0 !important;
+
+  visibility:
+    hidden !important;
+
+  pointer-events:
+    none !important;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+
+   HERO VIDEO CONTINUES PLAYING BELOW INTRO
+========================================================= */
+
+body.vidya-page-intro-active
+.vidya-hero-bottom {
+  opacity:
+    0 !important;
+
+  visibility:
+    hidden !important;
+
+  pointer-events:
+    none !important;
+}
+
+
+body.vidya-page-intro-active
+.vidya-hero-overlay {
+  opacity:
+    0 !important;
+}
+
+
+body.vidya-page-intro-active
+.vidya-hero-video-box::after {
+  opacity:
+    0 !important;
+}
+
+
+/* =========================================================
+   SVG
+========================================================= */
+
+.vidya-intro-svg {
+  position: absolute;
+
+  inset: 0;
+
+  display: block;
+
+  width: 100%;
+
+  height: 100%;
+
+  margin: 0;
+
+  padding: 0;
+
+  overflow: hidden;
+
+  background:
+    transparent;
+
+  pointer-events:
+    none;
+
+  transform:
+    translate3d(
+      0,
+      0,
+      0
+    );
+
+  backface-visibility:
+    hidden;
+
+  -webkit-backface-visibility:
+    hidden;
+}
+
+
+/* =========================================================
+   LOGO OPENING
+========================================================= */
+
+.vidya-logo-opening {
+  transform-box:
+    view-box;
+
+  transform:
+    translate3d(
+      0,
+      0,
+      0
+    )
+    scale3d(
+      1,
+      1,
+      1
+    );
+
+  will-change:
+    transform;
+
+  backface-visibility:
+    hidden;
+
+  -webkit-backface-visibility:
+    hidden;
+
+  transform-style:
+    preserve-3d;
+
+  -webkit-transform-style:
+    preserve-3d;
+}
+
+
+/* =========================================================
+   DESKTOP
+
+   HOLD:
+   2 SECONDS
+
+   ZOOM:
+   4.2 SECONDS
+
+   TOTAL:
+   ABOUT 6.2 SECONDS
+========================================================= */
+
+.vidya-intro--started
+.vidya-logo-opening {
+  animation-name:
+    vidyaLogoZoomDesktop;
+
+  animation-duration:
+    4.2s;
+
+  animation-delay:
+    2s;
+
+  animation-timing-function:
+    cubic-bezier(
+      0.22,
+      0.58,
+      0.12,
+      1
+    );
+
+  animation-fill-mode:
+    forwards;
+
+  animation-iteration-count:
+    1;
+}
+
+
+/* =========================================================
+   DESKTOP CONTINUOUS ZOOM
+
+   Only start + end.
+   No stuck feeling.
+========================================================= */
+
+@keyframes vidyaLogoZoomDesktop {
+
+  0% {
+    transform:
+      translate3d(
+        0,
+        0,
+        0
+      )
+      scale3d(
+        1,
+        1,
+        1
+      );
+  }
+
+
+  100% {
+    transform:
+      translate3d(
+        0,
+        0,
+        0
+      )
+      scale3d(
+        34,
+        34,
+        1
+      );
+  }
+
+}
+
+
+/* =========================================================
+   GREEN COVER
+========================================================= */
+
+.vidya-green-cover {
+  opacity:
+    1;
+
+  fill-opacity:
+    1;
+
+  visibility:
+    visible;
+
+  pointer-events:
+    none;
+
+  transform:
+    translate3d(
+      0,
+      0,
+      0
+    );
+
+  will-change:
+    opacity,
+    fill-opacity;
+}
+
+
+/* =========================================================
+   DESKTOP GREEN COVER TRANSITION
+
+   LOGO ZOOM:
+   2.00s -> 6.20s
+
+   GREEN COVER FADE:
+   2.55s -> 4.75s
+
+   FINAL ~1.45 SEC:
+   FULL TRANSPARENT ZOOM
+========================================================= */
+
+.vidya-intro--started
+.vidya-green-cover {
+  animation-name:
+    vidyaWhiteFadeDesktop;
+
+  animation-duration:
+    2.2s;
+
+  animation-delay:
+    2.55s;
+
+  animation-timing-function:
+    cubic-bezier(
+      0.42,
+      0,
+      0.18,
+      1
+    );
+
+  animation-fill-mode:
+    forwards;
+
+  animation-iteration-count:
+    1;
+}
+
+
+/* =========================================================
+   DESKTOP SMOOTH COVER DISSOLVE
+========================================================= */
+
+@keyframes vidyaWhiteFadeDesktop {
+
+  0% {
+    opacity:
+      1;
+
+    fill-opacity:
+      1;
+  }
+
+
+  8% {
+    opacity:
+      0.98;
+
+    fill-opacity:
+      0.98;
+  }
+
+
+  16% {
+    opacity:
+      0.94;
+
+    fill-opacity:
+      0.94;
+  }
+
+
+  24% {
+    opacity:
+      0.87;
+
+    fill-opacity:
+      0.87;
+  }
+
+
+  32% {
+    opacity:
+      0.77;
+
+    fill-opacity:
+      0.77;
+  }
+
+
+  40% {
+    opacity:
+      0.65;
+
+    fill-opacity:
+      0.65;
+  }
+
+
+  48% {
+    opacity:
+      0.52;
+
+    fill-opacity:
+      0.52;
+  }
+
+
+  56% {
+    opacity:
+      0.39;
+
+    fill-opacity:
+      0.39;
+  }
+
+
+  64% {
+    opacity:
+      0.27;
+
+    fill-opacity:
+      0.27;
+  }
+
+
+  71% {
+    opacity:
+      0.17;
+
+    fill-opacity:
+      0.17;
+  }
+
+
+  77% {
+    opacity:
+      0.095;
+
+    fill-opacity:
+      0.095;
+  }
+
+
+  82% {
+    opacity:
+      0.047;
+
+    fill-opacity:
+      0.047;
+  }
+
+
+  86% {
+    opacity:
+      0.02;
+
+    fill-opacity:
+      0.02;
+  }
+
+
+  90% {
+    opacity:
+      0.007;
+
+    fill-opacity:
+      0.007;
+  }
+
+
+  93% {
+    opacity:
+      0.002;
+
+    fill-opacity:
+      0.002;
+  }
+
+
+  96% {
+    opacity:
+      0.0004;
+
+    fill-opacity:
+      0.0004;
+  }
+
+
+  98% {
+    opacity:
+      0;
+
+    fill-opacity:
+      0;
+  }
+
+
+  100% {
+    opacity:
+      0;
+
+    fill-opacity:
+      0;
+
+    visibility:
+      hidden;
+  }
+
+}
+
+
+/* =========================================================
+   HERO RETURN
+========================================================= */
+
+.vidya-hero-bottom {
+  transition:
+    opacity
+    0.55s
+    cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    );
+}
+
+
+.vidya-hero-overlay,
+
+.vidya-hero-video-box::after {
+  transition:
+    opacity
+    0.55s
+    ease;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (
+  max-width: 768px
+) {
+
+  .vidya-intro {
+    height:
+      100dvh;
+  }
+
+
+  /* =====================================================
+     MOBILE
+
+     HOLD:
+     2 SECONDS
+
+     ZOOM:
+     3.7 SECONDS
+  ===================================================== */
+
+  .vidya-intro--started
+  .vidya-logo-opening {
+    animation-name:
+      vidyaLogoZoomMobile;
+
+    animation-duration:
+      3.7s;
+
+    animation-delay:
+      2s;
+
+    animation-timing-function:
+      cubic-bezier(
+        0.22,
+        0.58,
+        0.12,
+        1
+      );
+
+    animation-fill-mode:
+      forwards;
+
+    animation-iteration-count:
+      1;
+  }
+
+
+  /* =====================================================
+     MOBILE SMOOTH CONTINUOUS ZOOM
+  ===================================================== */
+
+  @keyframes vidyaLogoZoomMobile {
+
+    0% {
+      transform:
+        translate3d(
+          0,
+          0,
+          0
+        )
+        scale3d(
+          1,
+          1,
+          1
+        );
+    }
+
+
+    100% {
+      transform:
+        translate3d(
+          0,
+          0,
+          0
+        )
+        scale3d(
+          30,
+          30,
+          1
+        );
+    }
+
+  }
+
+
+  /* =====================================================
+     MOBILE GREEN COVER TRANSITION
+
+     Smooth + slower.
+
+     Final zoom becomes fully transparent.
+  ===================================================== */
+
+  .vidya-intro--started
+  .vidya-green-cover {
+    animation-name:
+      vidyaWhiteFadeMobile;
+
+    animation-duration:
+      1.95s;
+
+    animation-delay:
+      2.45s;
+
+    animation-timing-function:
+      cubic-bezier(
+        0.42,
+        0,
+        0.18,
+        1
+      );
+
+    animation-fill-mode:
+      forwards;
+
+    animation-iteration-count:
+      1;
+  }
+
+
+  /* =====================================================
+     MOBILE COVER DISSOLVE
+  ===================================================== */
+
+  @keyframes vidyaWhiteFadeMobile {
+
+    0% {
+      opacity:
+        1;
+
+      fill-opacity:
+        1;
+    }
+
+
+    10% {
+      opacity:
+        0.97;
+
+      fill-opacity:
+        0.97;
+    }
+
+
+    20% {
+      opacity:
+        0.9;
+
+      fill-opacity:
+        0.9;
+    }
+
+
+    30% {
+      opacity:
+        0.79;
+
+      fill-opacity:
+        0.79;
+    }
+
+
+    40% {
+      opacity:
+        0.65;
+
+      fill-opacity:
+        0.65;
+    }
+
+
+    50% {
+      opacity:
+        0.5;
+
+      fill-opacity:
+        0.5;
+    }
+
+
+    60% {
+      opacity:
+        0.35;
+
+      fill-opacity:
+        0.35;
+    }
+
+
+    70% {
+      opacity:
+        0.21;
+
+      fill-opacity:
+        0.21;
+    }
+
+
+    78% {
+      opacity:
+        0.115;
+
+      fill-opacity:
+        0.115;
+    }
+
+
+    84% {
+      opacity:
+        0.055;
+
+      fill-opacity:
+        0.055;
+    }
+
+
+    89% {
+      opacity:
+        0.021;
+
+      fill-opacity:
+        0.021;
+    }
+
+
+    93% {
+      opacity:
+        0.006;
+
+      fill-opacity:
+        0.006;
+    }
+
+
+    96% {
+      opacity:
+        0.001;
+
+      fill-opacity:
+        0.001;
+    }
+
+
+    98% {
+      opacity:
+        0;
+
+      fill-opacity:
+        0;
+    }
+
+
+    100% {
+      opacity:
+        0;
+
+      fill-opacity:
+        0;
+
+      visibility:
+        hidden;
+    }
+
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (
+  max-width: 480px
+) {
+
+  .vidya-intro-svg {
+    transform:
+      translate3d(
+        0,
+        0,
+        0
+      );
+  }
+
+}
+
+
+/* =========================================================
+   PERFORMANCE
+
+   Keep animation GPU friendly.
+========================================================= */
+
+.vidya-intro,
+
+.vidya-intro-svg,
+
+.vidya-logo-opening,
+
+.vidya-green-cover {
+  filter:
+    none !important;
+
+  backdrop-filter:
+    none !important;
+
+  -webkit-backdrop-filter:
+    none !important;
+
+  box-shadow:
+    none !important;
+
+  text-shadow:
+    none !important;
+}
+
+
+/* Keep the branded intro visible for reduced-motion devices too.
+   The reveal remains smooth and completes through its fallback timer. */
+
+/* Semicircle details match the enquiry form's green graphic treatment. */
+.vidya-intro-semicircles {
+  pointer-events: none;
+}
+.vidya-intro-semicircles__large {
+  fill: rgba(255, 255, 255, 0.03);
+  stroke: rgba(255, 255, 255, 0.12);
+  stroke-width: 2;
+}
+.vidya-intro-semicircles__ring {
+  fill: rgba(255, 255, 255, 0.02);
+  stroke: none;
+}
+.vidya-intro-semicircles__ring--outer {
+  fill: rgba(255, 255, 255, 0.015);
+}
+.vidya-intro--started .vidya-intro-semicircles {
+  animation: vidyaWhiteFadeDesktop 2.2s 2.55s cubic-bezier(0.42, 0, 0.18, 1) forwards;
+}
+@media (max-width: 768px) {
+  .vidya-intro--started .vidya-intro-semicircles {
+    animation: vidyaWhiteFadeMobile 1.95s 2.45s cubic-bezier(0.42, 0, 0.18, 1) forwards;
+  }
+}

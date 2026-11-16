@@ -1,0 +1,2169 @@
+/* =========================================================
+   VIDYA ACADEMY
+   MOTION HERO
+
+   STABLE VERSION
+
+   - NO SCROLL PARALLAX
+   - NO SCROLLTRIGGER
+   - NO MEDIA TRANSLATION DURING SCROLL
+   - NO FIRST-SCROLL WHITE GAP
+   - NO REPEATING WHITE GAP
+   - STABLE AT BROWSER ZOOM
+   - STATIC FULL-BLEED BACKGROUND
+========================================================= */
+
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+.motion-hero {
+  --cream:
+    #f5f3e9;
+
+  --green:
+    #0b8255;
+
+  --deep-green:
+    #0b563b;
+
+  --bright-green:
+    #26b474;
+
+  --orange:
+    #f9a01b;
+
+  --white:
+    #ffffff;
+
+
+  position:
+    relative;
+
+
+  display:
+    block;
+
+
+  width:
+    100%;
+
+
+  max-width:
+    100%;
+
+
+  height:
+    100vh;
+
+  height:
+    100svh;
+
+
+  min-height:
+    560px;
+
+
+  margin:
+    0;
+
+
+  padding:
+    0;
+
+
+  overflow:
+    hidden;
+
+
+  background:
+    var(--deep-green);
+
+
+  border:
+    0;
+
+
+  outline:
+    0;
+
+
+  color:
+    #ffffff;
+
+
+  font-family:
+    "Manrope",
+    sans-serif;
+
+
+  isolation:
+    isolate;
+
+
+  /*
+    Keeps hero painting inside itself.
+    Prevents compositing seams.
+  */
+
+  contain:
+    paint;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+.motion-hero,
+.motion-hero *,
+.motion-hero *::before,
+.motion-hero *::after {
+  box-sizing:
+    border-box;
+
+
+  font-family:
+    "Manrope",
+    sans-serif;
+}
+
+
+/* =========================================================
+   REMOVE ROOT DECORATION
+========================================================= */
+
+.motion-hero::before,
+.motion-hero::after {
+  display:
+    none;
+
+
+  content:
+    none;
+}
+
+
+/* =========================================================
+   MEDIA
+
+   IMPORTANT:
+
+   THIS ELEMENT NEVER MOVES.
+
+   It extends a few pixels beyond the hero to ensure
+   browser compositing can never reveal a white seam.
+========================================================= */
+
+.motion-hero-media {
+  position:
+    absolute;
+
+
+  z-index:
+    1;
+
+
+  top:
+    -2px;
+
+
+  right:
+    -2px;
+
+
+  bottom:
+    -2px;
+
+
+  left:
+    -2px;
+
+
+  overflow:
+    hidden;
+
+
+  background:
+    var(--deep-green);
+
+
+  transform:
+    translateZ(
+      0
+    );
+
+
+  backface-visibility:
+    hidden;
+
+
+  -webkit-backface-visibility:
+    hidden;
+
+
+  pointer-events:
+    none;
+}
+
+
+/* =========================================================
+   IMAGE
+
+   ONLY INITIAL LOAD ZOOM TOUCHES TRANSFORM.
+
+   AFTER INTRO COMPLETES IT REMAINS STATIC.
+========================================================= */
+
+.motion-hero-image {
+  position:
+    absolute;
+
+
+  top:
+    -1px;
+
+
+  right:
+    -1px;
+
+
+  bottom:
+    -1px;
+
+
+  left:
+    -1px;
+
+
+  display:
+    block;
+
+
+  width:
+    calc(
+      100% + 2px
+    );
+
+
+  height:
+    calc(
+      100% + 2px
+    );
+
+
+  max-width:
+    none;
+
+
+  object-fit:
+    cover;
+
+
+  object-position:
+    center center;
+
+
+  transform:
+    scale(
+      1.055
+    );
+
+
+  transform-origin:
+    50% 50%;
+
+
+  pointer-events:
+    none;
+
+
+  user-select:
+    none;
+
+
+  -webkit-user-drag:
+    none;
+
+
+  backface-visibility:
+    hidden;
+
+
+  -webkit-backface-visibility:
+    hidden;
+
+
+  will-change:
+    transform;
+}
+
+
+/* =========================================================
+   OVERLAY
+========================================================= */
+
+.motion-hero-overlay {
+  position:
+    absolute;
+
+
+  z-index:
+    2;
+
+
+  inset:
+    0;
+
+
+  width:
+    100%;
+
+
+  height:
+    100%;
+
+
+  background:
+    linear-gradient(
+      180deg,
+
+      rgba(
+        4,
+        27,
+        20,
+        0.42
+      )
+      0%,
+
+      rgba(
+        4,
+        27,
+        20,
+        0.1
+      )
+      30%,
+
+      rgba(
+        4,
+        27,
+        20,
+        0.15
+      )
+      53%,
+
+      rgba(
+        4,
+        27,
+        20,
+        0.72
+      )
+      100%
+    );
+
+
+  pointer-events:
+    none;
+}
+
+
+/* =========================================================
+   LEFT DEPTH
+========================================================= */
+
+.motion-hero-overlay::after {
+  position:
+    absolute;
+
+
+  inset:
+    0;
+
+
+  background:
+    linear-gradient(
+      90deg,
+
+      rgba(
+        3,
+        25,
+        18,
+        0.34
+      )
+      0%,
+
+      rgba(
+        3,
+        25,
+        18,
+        0.14
+      )
+      38%,
+
+      rgba(
+        3,
+        25,
+        18,
+        0
+      )
+      72%
+    );
+
+
+  content:
+    "";
+
+
+  pointer-events:
+    none;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.motion-hero-content {
+  position:
+    absolute;
+
+
+  z-index:
+    5;
+
+
+  left:
+    clamp(
+      48px,
+      5.3vw,
+      96px
+    );
+
+
+  bottom:
+    clamp(
+      52px,
+      7vh,
+      90px
+    );
+
+
+  display:
+    flex;
+
+
+  flex-direction:
+    column;
+
+
+  align-items:
+    flex-start;
+
+
+  width:
+    min(
+      700px,
+      calc(
+        100% -
+        340px
+      )
+    );
+
+
+  max-width:
+    700px;
+
+
+  min-width:
+    0;
+
+
+  margin:
+    0;
+
+
+  padding:
+    0;
+
+
+  color:
+    #ffffff;
+}
+
+
+/* =========================================================
+   CATEGORY
+========================================================= */
+
+.motion-hero-category {
+  display:
+    inline-flex;
+
+
+  align-items:
+    center;
+
+
+  margin:
+    0
+    0
+    16px;
+
+
+  color:
+    var(--bright-green);
+
+
+  font-size:
+    11px;
+
+
+  font-style:
+    normal;
+
+
+  font-weight:
+    700;
+
+
+  line-height:
+    1;
+
+
+  letter-spacing:
+    0.15em;
+
+
+  text-transform:
+    uppercase;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.motion-hero-title {
+  width:
+    min(
+      700px,
+      100%
+    );
+
+
+  margin:
+    0;
+
+
+  color:
+    #ffffff;
+
+
+  font-size:
+    clamp(
+      50px,
+      5.2vw,
+      82px
+    );
+
+
+  font-style:
+    normal;
+
+
+  font-weight:
+    550;
+
+
+  line-height:
+    0.94;
+
+
+  letter-spacing:
+    -0.062em;
+
+
+  text-wrap:
+    balance;
+}
+
+
+/* =========================================================
+   META
+========================================================= */
+
+.motion-hero-meta {
+  display:
+    flex;
+
+
+  align-items:
+    center;
+
+
+  flex-wrap:
+    wrap;
+
+
+  gap:
+    10px;
+
+
+  width:
+    100%;
+
+
+  margin-top:
+    18px;
+
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.8
+    );
+}
+
+
+.motion-hero-meta-item {
+  display:
+    inline-flex;
+
+
+  align-items:
+    center;
+
+
+  gap:
+    10px;
+
+
+  font-size:
+    clamp(
+      12px,
+      0.82vw,
+      14px
+    );
+
+
+  font-style:
+    normal;
+
+
+  font-weight:
+    450;
+
+
+  line-height:
+    1.4;
+}
+
+
+.motion-hero-meta-dot {
+  width:
+    4px;
+
+
+  height:
+    4px;
+
+
+  flex:
+    0
+    0
+    4px;
+
+
+  border-radius:
+    50%;
+
+
+  background:
+    var(--orange);
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.motion-hero-description {
+  width:
+    min(
+      590px,
+      100%
+    );
+
+
+  margin:
+    20px
+    0
+    0;
+
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.76
+    );
+
+
+  font-size:
+    clamp(
+      14px,
+      0.95vw,
+      17px
+    );
+
+
+  font-style:
+    normal;
+
+
+  font-weight:
+    400;
+
+
+  line-height:
+    1.56;
+
+
+  letter-spacing:
+    -0.014em;
+
+
+  text-wrap:
+    pretty;
+}
+
+
+/* =========================================================
+   DATE
+========================================================= */
+
+.motion-hero-date {
+  position:
+    absolute;
+
+
+  z-index:
+    5;
+
+
+  right:
+    clamp(
+      48px,
+      5vw,
+      90px
+    );
+
+
+  bottom:
+    clamp(
+      56px,
+      7vh,
+      92px
+    );
+
+
+  display:
+    flex;
+
+
+  flex-direction:
+    column;
+
+
+  align-items:
+    center;
+
+
+  justify-content:
+    center;
+
+
+  width:
+    clamp(
+      100px,
+      7vw,
+      122px
+    );
+
+
+  height:
+    clamp(
+      108px,
+      7.5vw,
+      132px
+    );
+
+
+  padding:
+    10px;
+
+
+  background:
+    var(--cream);
+
+
+  color:
+    var(--deep-green);
+
+
+  border:
+    0;
+
+
+  border-top:
+    3px
+    solid
+    var(--orange);
+
+
+  text-align:
+    center;
+}
+
+
+/* =========================================================
+   DATE MONTH
+========================================================= */
+
+.motion-hero-date-month {
+  color:
+    var(--green);
+
+
+  font-size:
+    12px;
+
+
+  font-weight:
+    600;
+
+
+  line-height:
+    1;
+}
+
+
+/* =========================================================
+   DATE DAY
+========================================================= */
+
+.motion-hero-date-day {
+  display:
+    block;
+
+
+  margin:
+    7px
+    0
+    5px;
+
+
+  color:
+    var(--deep-green);
+
+
+  font-size:
+    clamp(
+      34px,
+      2.5vw,
+      44px
+    );
+
+
+  font-style:
+    normal;
+
+
+  font-weight:
+    550;
+
+
+  line-height:
+    0.9;
+
+
+  letter-spacing:
+    -0.055em;
+}
+
+
+/* =========================================================
+   DATE YEAR
+========================================================= */
+
+.motion-hero-date-year {
+  color:
+    rgba(
+      11,
+      86,
+      59,
+      0.72
+    );
+
+
+  font-size:
+    11px;
+
+
+  font-weight:
+    500;
+
+
+  line-height:
+    1;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.motion-hero-button {
+  position:
+    relative;
+
+
+  display:
+    inline-flex;
+
+
+  align-items:
+    center;
+
+
+  justify-content:
+    space-between;
+
+
+  gap:
+    32px;
+
+
+  min-width:
+    180px;
+
+
+  height:
+    49px;
+
+
+  margin-top:
+    26px;
+
+
+  padding:
+    0
+    15px
+    0
+    19px;
+
+
+  overflow:
+    hidden;
+
+
+  border:
+    1px
+    solid
+    rgba(
+      255,
+      255,
+      255,
+      0.58
+    );
+
+
+  border-radius:
+    0;
+
+
+  background:
+    transparent;
+
+
+  color:
+    #ffffff;
+
+
+  text-decoration:
+    none;
+
+
+  cursor:
+    pointer;
+
+
+  transition:
+    color
+    0.35s
+    ease,
+    border-color
+    0.35s
+    ease;
+}
+
+
+/* =========================================================
+   BUTTON FILL
+========================================================= */
+
+.motion-hero-button::before {
+  position:
+    absolute;
+
+
+  z-index:
+    0;
+
+
+  inset:
+    0;
+
+
+  background:
+    #ffffff;
+
+
+  content:
+    "";
+
+
+  transform:
+    translateY(
+      102%
+    );
+
+
+  transition:
+    transform
+    0.4s
+    cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    );
+}
+
+
+.motion-hero-button > * {
+  position:
+    relative;
+
+
+  z-index:
+    2;
+}
+
+
+.motion-hero-button span {
+  font-size:
+    10px;
+
+
+  font-weight:
+    700;
+
+
+  line-height:
+    1;
+
+
+  letter-spacing:
+    0.11em;
+
+
+  text-transform:
+    uppercase;
+}
+
+
+.motion-hero-button svg {
+  width:
+    17px;
+
+
+  height:
+    17px;
+
+
+  flex:
+    0
+    0
+    17px;
+
+
+  transition:
+    transform
+    0.3s
+    ease;
+}
+
+
+/* =========================================================
+   BUTTON HOVER
+========================================================= */
+
+@media (
+  hover: hover
+) {
+
+  .motion-hero-button:hover {
+    color:
+      var(--deep-green);
+
+
+    border-color:
+      #ffffff;
+  }
+
+
+  .motion-hero-button:hover::before {
+    transform:
+      translateY(
+        0
+      );
+  }
+
+
+  .motion-hero-button:hover
+  svg {
+    transform:
+      translateX(
+        3px
+      );
+  }
+
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (
+  min-width: 1600px
+) {
+
+  .motion-hero-content {
+    left:
+      92px;
+
+
+    bottom:
+      84px;
+
+
+    width:
+      min(
+        720px,
+        calc(
+          100% -
+          370px
+        )
+      );
+  }
+
+
+  .motion-hero-date {
+    right:
+      88px;
+
+
+    bottom:
+      84px;
+  }
+
+}
+
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media
+(
+  max-width: 1200px
+)
+and
+(
+  min-width: 769px
+) {
+
+  .motion-hero {
+    min-height:
+      520px;
+  }
+
+
+  .motion-hero-content {
+    left:
+      40px;
+
+
+    bottom:
+      44px;
+
+
+    width:
+      min(
+        600px,
+        calc(
+          100% -
+          260px
+        )
+      );
+  }
+
+
+  .motion-hero-title {
+    font-size:
+      clamp(
+        42px,
+        5vw,
+        64px
+      );
+  }
+
+
+  .motion-hero-description {
+    width:
+      min(
+        540px,
+        100%
+      );
+
+
+    font-size:
+      clamp(
+        13px,
+        1.1vw,
+        16px
+      );
+  }
+
+
+  .motion-hero-date {
+    right:
+      38px;
+
+
+    bottom:
+      44px;
+
+
+    width:
+      94px;
+
+
+    height:
+      105px;
+  }
+
+
+  .motion-hero-date-day {
+    font-size:
+      34px;
+  }
+
+}
+
+
+/* =========================================================
+   SHORT LAPTOP
+========================================================= */
+
+@media
+(
+  min-width: 769px
+)
+and
+(
+  max-height: 720px
+) {
+
+  .motion-hero {
+    min-height:
+      0;
+  }
+
+
+  .motion-hero-content {
+    bottom:
+      24px;
+  }
+
+
+  .motion-hero-category {
+    margin-bottom:
+      10px;
+
+
+    font-size:
+      9px;
+  }
+
+
+  .motion-hero-title {
+    font-size:
+      clamp(
+        38px,
+        4.3vw,
+        56px
+      );
+  }
+
+
+  .motion-hero-meta {
+    margin-top:
+      11px;
+  }
+
+
+  .motion-hero-description {
+    width:
+      min(
+        520px,
+        100%
+      );
+
+
+    margin-top:
+      12px;
+
+
+    font-size:
+      clamp(
+        12.5px,
+        1vw,
+        14px
+      );
+
+
+    line-height:
+      1.45;
+  }
+
+
+  .motion-hero-button {
+    height:
+      43px;
+
+
+    margin-top:
+      14px;
+  }
+
+
+  .motion-hero-date {
+    bottom:
+      24px;
+
+
+    width:
+      88px;
+
+
+    height:
+      98px;
+  }
+
+
+  .motion-hero-date-month {
+    font-size:
+      10px;
+  }
+
+
+  .motion-hero-date-day {
+    margin:
+      5px
+      0
+      3px;
+
+
+    font-size:
+      31px;
+  }
+
+
+  .motion-hero-date-year {
+    font-size:
+      9px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SHORT DESKTOP / HIGH ZOOM
+========================================================= */
+
+@media
+(
+  min-width: 769px
+)
+and
+(
+  max-height: 590px
+) {
+
+  .motion-hero-content {
+    bottom:
+      16px;
+  }
+
+
+  .motion-hero-title {
+    font-size:
+      clamp(
+        34px,
+        4vw,
+        48px
+      );
+  }
+
+
+  .motion-hero-description {
+    max-width:
+      480px;
+
+
+    margin-top:
+      9px;
+
+
+    font-size:
+      12px;
+
+
+    line-height:
+      1.38;
+  }
+
+
+  .motion-hero-button {
+    height:
+      39px;
+
+
+    min-width:
+      158px;
+
+
+    margin-top:
+      10px;
+  }
+
+
+  .motion-hero-date {
+    bottom:
+      16px;
+
+
+    width:
+      76px;
+
+
+    height:
+      86px;
+  }
+
+
+  .motion-hero-date-day {
+    font-size:
+      27px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (
+  max-width: 768px
+) {
+
+  .motion-hero {
+    height:
+      100svh;
+
+
+    min-height:
+      0;
+  }
+
+
+  /*
+    Keep exact static full-cover media.
+    No transforms are applied to this wrapper.
+  */
+
+  .motion-hero-media {
+    top:
+      -2px;
+
+
+    right:
+      -2px;
+
+
+    bottom:
+      -2px;
+
+
+    left:
+      -2px;
+
+
+    transform:
+      translateZ(
+        0
+      ) !important;
+  }
+
+
+  .motion-hero-image {
+    object-position:
+      center center;
+  }
+
+
+  /* =====================================================
+     OVERLAY
+  ===================================================== */
+
+  .motion-hero-overlay {
+    background:
+      linear-gradient(
+        180deg,
+
+        rgba(
+          4,
+          27,
+          20,
+          0.43
+        )
+        0%,
+
+        rgba(
+          4,
+          27,
+          20,
+          0.08
+        )
+        27%,
+
+        rgba(
+          4,
+          27,
+          20,
+          0.22
+        )
+        53%,
+
+        rgba(
+          4,
+          27,
+          20,
+          0.88
+        )
+        100%
+      );
+  }
+
+
+  .motion-hero-overlay::after {
+    display:
+      none;
+  }
+
+
+  /* =====================================================
+     CONTENT
+  ===================================================== */
+
+  .motion-hero-content {
+    right:
+      20px;
+
+
+    bottom:
+      calc(
+        28px +
+        env(
+          safe-area-inset-bottom,
+          0px
+        )
+      );
+
+
+    left:
+      20px;
+
+
+    width:
+      auto;
+
+
+    max-width:
+      none;
+  }
+
+
+  .motion-hero-category {
+    margin-bottom:
+      11px;
+
+
+    font-size:
+      9px;
+  }
+
+
+  .motion-hero-title {
+    width:
+      min(
+        500px,
+        100%
+      );
+
+
+    font-size:
+      clamp(
+        39px,
+        10.5vw,
+        54px
+      );
+
+
+    line-height:
+      0.95;
+
+
+    letter-spacing:
+      -0.058em;
+  }
+
+
+  .motion-hero-meta {
+    margin-top:
+      13px;
+  }
+
+
+  .motion-hero-meta-item {
+    font-size:
+      11px;
+  }
+
+
+  .motion-hero-description {
+    width:
+      min(
+        470px,
+        100%
+      );
+
+
+    margin-top:
+      15px;
+
+
+    font-size:
+      13px;
+
+
+    line-height:
+      1.48;
+  }
+
+
+  .motion-hero-button {
+    min-width:
+      160px;
+
+
+    height:
+      44px;
+
+
+    margin-top:
+      18px;
+  }
+
+
+  /* =====================================================
+     DATE
+  ===================================================== */
+
+  .motion-hero-date {
+    top:
+      calc(
+        86px +
+        env(
+          safe-area-inset-top,
+          0px
+        )
+      );
+
+
+    right:
+      16px;
+
+
+    bottom:
+      auto;
+
+
+    width:
+      72px;
+
+
+    height:
+      82px;
+
+
+    padding:
+      7px;
+
+
+    border-top-width:
+      2px;
+  }
+
+
+  .motion-hero-date-month {
+    font-size:
+      9px;
+  }
+
+
+  .motion-hero-date-day {
+    margin:
+      5px
+      0
+      3px;
+
+
+    font-size:
+      27px;
+  }
+
+
+  .motion-hero-date-year {
+    font-size:
+      9px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (
+  max-width: 480px
+) {
+
+  .motion-hero-content {
+    right:
+      17px;
+
+
+    bottom:
+      calc(
+        22px +
+        env(
+          safe-area-inset-bottom,
+          0px
+        )
+      );
+
+
+    left:
+      17px;
+  }
+
+
+  .motion-hero-title {
+    font-size:
+      clamp(
+        36px,
+        10vw,
+        46px
+      );
+  }
+
+
+  .motion-hero-description {
+    margin-top:
+      13px;
+
+
+    font-size:
+      12.5px;
+  }
+
+
+  .motion-hero-button {
+    height:
+      42px;
+
+
+    margin-top:
+      16px;
+  }
+
+
+  .motion-hero-date {
+    top:
+      calc(
+        78px +
+        env(
+          safe-area-inset-top,
+          0px
+        )
+      );
+
+
+    right:
+      12px;
+
+
+    width:
+      68px;
+
+
+    height:
+      77px;
+  }
+
+}
+
+
+/* =========================================================
+   SHORT MOBILE
+========================================================= */
+
+@media
+(
+  max-width: 768px
+)
+and
+(
+  max-height: 720px
+) {
+
+  .motion-hero-content {
+    bottom:
+      calc(
+        16px +
+        env(
+          safe-area-inset-bottom,
+          0px
+        )
+      );
+  }
+
+
+  .motion-hero-category {
+    margin-bottom:
+      8px;
+  }
+
+
+  .motion-hero-title {
+    font-size:
+      clamp(
+        32px,
+        8.6vw,
+        42px
+      );
+  }
+
+
+  .motion-hero-meta {
+    margin-top:
+      9px;
+  }
+
+
+  .motion-hero-description {
+    margin-top:
+      10px;
+
+
+    font-size:
+      11.5px;
+
+
+    line-height:
+      1.4;
+  }
+
+
+  .motion-hero-button {
+    height:
+      38px;
+
+
+    margin-top:
+      11px;
+  }
+
+
+  .motion-hero-date {
+    top:
+      calc(
+        72px +
+        env(
+          safe-area-inset-top,
+          0px
+        )
+      );
+
+
+    width:
+      63px;
+
+
+    height:
+      70px;
+  }
+
+
+  .motion-hero-date-day {
+    font-size:
+      23px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (
+  max-width: 360px
+) {
+
+  .motion-hero-content {
+    right:
+      14px;
+
+
+    left:
+      14px;
+  }
+
+
+  .motion-hero-title {
+    font-size:
+      33px;
+  }
+
+
+  .motion-hero-description {
+    font-size:
+      11px;
+  }
+
+
+  .motion-hero-date {
+    right:
+      10px;
+
+
+    width:
+      60px;
+
+
+    height:
+      68px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE LANDSCAPE
+========================================================= */
+
+@media
+(
+  max-width: 900px
+)
+and
+(
+  max-height: 520px
+)
+and
+(
+  orientation: landscape
+) {
+
+  .motion-hero-content {
+    right:
+      auto;
+
+
+    bottom:
+      18px;
+
+
+    left:
+      24px;
+
+
+    width:
+      min(
+        610px,
+        66%
+      );
+  }
+
+
+  .motion-hero-category {
+    margin-bottom:
+      7px;
+
+
+    font-size:
+      8px;
+  }
+
+
+  .motion-hero-title {
+    font-size:
+      clamp(
+        30px,
+        5vw,
+        43px
+      );
+  }
+
+
+  .motion-hero-meta {
+    margin-top:
+      7px;
+  }
+
+
+  .motion-hero-description {
+    margin-top:
+      7px;
+
+
+    font-size:
+      11px;
+
+
+    line-height:
+      1.35;
+  }
+
+
+  .motion-hero-button {
+    height:
+      36px;
+
+
+    margin-top:
+      8px;
+  }
+
+
+  .motion-hero-date {
+    top:
+      auto;
+
+
+    right:
+      22px;
+
+
+    bottom:
+      18px;
+
+
+    width:
+      68px;
+
+
+    height:
+      76px;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (
+  prefers-reduced-motion:
+    reduce
+) {
+
+  .motion-hero-image {
+    transform:
+      none !important;
+
+
+    will-change:
+      auto;
+  }
+
+
+  .motion-hero-content > *,
+  .motion-hero-date {
+    opacity:
+      1 !important;
+
+
+    transform:
+      none !important;
+  }
+
+}
+
+/* Motion hero starts beneath the in-flow navbar and uses a slightly shorter viewport frame. */
+.motion-hero {
+  height: calc(100svh - var(--site-nav-height, 88px));
+  min-height: min(530px, calc(100svh - var(--site-nav-height, 88px)));
+}
+@media (max-width: 768px) {
+  .motion-hero {
+    height: calc(100svh - var(--site-nav-height, 70px));
+    min-height: min(500px, calc(100svh - var(--site-nav-height, 70px)));
+  }
+}
+
+/* Keep the title and its supporting copy inside the shared desktop content box. */
+@media (min-width: 769px) {
+  .motion-hero-content {
+    left: max(24px, calc((100% - 1360px) / 2));
+    right: max(180px, calc((100% - 1360px) / 2 + 180px));
+    width: auto;
+    max-width: 700px;
+  }
+
+  .motion-hero-date {
+    right: max(24px, calc((100% - 1360px) / 2));
+  }
+}

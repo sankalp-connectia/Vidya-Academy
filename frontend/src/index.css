@@ -1,0 +1,429 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;550;600;700;800&display=swap");
+
+
+/* =========================================================
+   ROOT VARIABLES
+========================================================= */
+
+:root {
+  font-family: "Manrope", sans-serif;
+
+  --green: #0e6b45;
+  --green-dark: #07472f;
+  --green-deep: #033925;
+
+  --yellow: #f5c842;
+
+  --white: #ffffff;
+
+  --text: #153d2f;
+
+  --container: 1360px;
+  /* Shared editorial box for Events, Achievements, Blogs, and SEO pages. */
+  --editorial-content-width: min(calc(100% - clamp(36px, 8vw, 144px)), 1320px);
+  --layout-gutter: clamp(18px, 4vw, 72px);
+
+  --page-padding:
+    clamp(24px, 4vw, 72px);
+
+  --ease-main:
+    cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+/* =========================================================
+   GLOBAL RESET
+========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+html,
+body,
+#root {
+  width: 100%;
+
+  min-height: 100%;
+
+  margin: 0;
+
+  padding: 0;
+}
+
+
+/* =========================================================
+   HTML
+========================================================= */
+
+html {
+  scroll-behavior: auto;
+  scroll-padding-top: var(--site-nav-height, 88px);
+
+  /*
+    Hide scrollbar in Firefox
+  */
+
+  scrollbar-width: none;
+
+  -ms-overflow-style: none;
+}
+
+
+/* Chrome / Edge / Safari */
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+body {
+  min-width: 320px;
+
+  min-height: 100vh;
+
+  margin: 0;
+
+  /* `hidden` creates a scrolling ancestor and prevents sticky FAQ content. */
+  overflow-x: clip;
+  overflow-y: visible;
+
+  background: #f3f1e9;
+
+  color: var(--text);
+
+  /*
+    ONE FONT FOR THE WHOLE WEBSITE
+  */
+
+  font-family:
+    "Manrope",
+    sans-serif;
+
+  font-weight: 400;
+
+  -webkit-font-smoothing:
+    antialiased;
+
+  -moz-osx-font-smoothing:
+    grayscale;
+}
+
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+#root {
+  width: 100%;
+
+  min-height: 100vh;
+}
+
+
+/* =========================================================
+   ALL TEXT ELEMENTS
+
+   SAME FONT EVERYWHERE
+========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+button,
+input,
+textarea,
+select,
+label {
+  font-family:
+    "Manrope",
+    sans-serif;
+}
+
+
+/* =========================================================
+   HEADINGS / PARAGRAPHS
+========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+
+/* =========================================================
+   LINKS
+========================================================= */
+
+a {
+  color: inherit;
+
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   FORMS / BUTTONS
+========================================================= */
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+
+button {
+  border: 0;
+
+  padding: 0;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   MEDIA
+========================================================= */
+
+img,
+video {
+  display: block;
+
+  max-width: 100%;
+}
+
+
+/* =========================================================
+   LISTS
+========================================================= */
+
+ul,
+ol {
+  margin: 0;
+
+  padding: 0;
+
+  list-style: none;
+}
+
+
+/* =========================================================
+   LENIS
+========================================================= */
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+
+.lenis.lenis-smooth {
+  scroll-behavior:
+    auto !important;
+}
+
+
+.lenis.lenis-smooth
+[data-lenis-prevent] {
+  overscroll-behavior:
+    contain;
+}
+
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   GLOBAL CONTAINER
+========================================================= */
+
+.container {
+  width:
+    min(
+      calc(
+        100% -
+        (
+          var(--page-padding)
+          * 2
+        )
+      ),
+      var(--container)
+    );
+
+  margin-inline:
+    auto;
+}
+
+/* Structural content wrappers share one fluid box across all page sections. */
+#root :is(
+  .about-hero__inner,
+  .about-content__inner,
+  .about-chairman-voice__inner,
+  .about-faculty-inner,
+  .about-leadership-inner,
+  .about-way-inner,
+  .about-year__inner,
+  .admissions-wrap,
+  .vidya-blogs__inner,
+  .journal-story__shell,
+  .campus-intro-inner,
+  .campus-numbers-inner,
+  .contact-enquiry__inner,
+  .contact-page-wrap,
+  .vidya-about-intro-inner,
+  .academic-programs-container,
+  .learning-pillars__inner,
+  .motion-archive__inner,
+  .motion-sections__inner,
+  .motion-story__hero-inner,
+  .career-guidance__inner,
+  .continuum-section__inner,
+  .learning-journey__inner,
+  .school-guide__shell,
+  .school-guides-index__shell
+) {
+  width: min(
+    calc(100% - var(--layout-gutter) * 2),
+    var(--container)
+  );
+  max-width: var(--container);
+  margin-inline: auto;
+}
+
+
+/* =========================================================
+   TEXT SELECTION
+========================================================= */
+
+::selection {
+  background:
+    var(--yellow);
+
+  color:
+    var(--green-deep);
+}
+
+
+/* =========================================================
+   TABLET / MOBILE
+========================================================= */
+
+@media (
+  max-width: 768px
+) {
+
+  :root {
+    --page-padding:
+      20px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (
+  max-width: 480px
+) {
+
+  :root {
+    --page-padding:
+      18px;
+  }
+
+}
+
+
+/* Header participates in document flow; these values reserve its height in viewport heroes. */
+:root { --site-nav-height: 88px; }
+@media (max-width: 1320px) { :root { --site-nav-height: 82px; } }
+@media (max-width: 1080px) { :root { --site-nav-height: 74px; } }
+@media (max-width: 768px) { :root { --site-nav-height: 70px; } }
+@media (max-width: 480px) { :root { --site-nav-height: 66px; } }
+
+/* Shared heading scale. These explicit classes take precedence over the
+   older component breakpoint rules, including titles split into spans. */
+:root {
+  --site-page-title-size: clamp(2rem, 5.8vw, 5.75rem);
+  --site-section-title-size: clamp(1.875rem, 4.45vw, 4rem);
+  --site-content-title-size: clamp(1.375rem, 2.25vw, 2rem);
+}
+
+.site-page-title {
+  font-size: var(--site-page-title-size) !important;
+  line-height: 1.04 !important;
+  letter-spacing: -.04em !important;
+  overflow-wrap: anywhere;
+}
+
+/* Give page-level titles a small left inset within their shared container. */
+#root .site-page-title {
+  margin-inline-start: clamp(-12px, -0.6vw, -5px);
+}
+
+.site-section-title {
+  font-size: var(--site-section-title-size) !important;
+  line-height: 1.1 !important;
+  letter-spacing: -.035em !important;
+  overflow-wrap: anywhere;
+}
+
+.site-page-title :is(span, em),
+.site-section-title :is(span, em) {
+  font-size: inherit !important;
+  line-height: inherit !important;
+  letter-spacing: inherit !important;
+}
+
+.site-content-title {
+  font-size: var(--site-content-title-size);
+  line-height: 1.2;
+  letter-spacing: -.025em;
+}
+/* The React routes mount only after WordPress delivers the current site content. */
+.wordpress-content-gate {
+  display: grid;
+  min-height: 100svh;
+  place-content: center;
+  justify-items: center;
+  gap: 16px;
+  padding: 24px;
+  background: #f5f3e9;
+  color: #0b563b;
+  font-family: "Manrope", sans-serif;
+  text-align: center;
+}
+
+.wordpress-content-gate p { max-width: 540px; margin: 0; font-size: 15px; line-height: 1.7; }
+.wordpress-content-gate button { min-height: 44px; padding: 0 22px; border: 0; border-radius: 999px; background: #0b563b; color: #fff; font: inherit; font-weight: 700; cursor: pointer; }
+.wordpress-content-gate button:focus-visible { outline: 3px solid #f5d566; outline-offset: 3px; }

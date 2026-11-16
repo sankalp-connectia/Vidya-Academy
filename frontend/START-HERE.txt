@@ -1,0 +1,7 @@
+VIDYA ACADEMY — OFFLINE-READY REACT + WORDPRESS
+
+The back-to-top Vidya video stays at one fixed position while scrolling, slightly lower than the previous package while remaining clear of footer icons. The three Body, Mind, and Heart & Soul mascots float gently inside their cards.
+
+Bundled content and photos render without WordPress. WordPress content and uploads replace defaults when configured. The included CMS plugin ZIP is version 1.9.7.
+
+Set VITE_WORDPRESS_URL in Vercel to use WordPress. Do not commit .env.local.

@@ -1,0 +1,49 @@
+VIDYA ACADEMY — IMAGE SIZE GUIDE
+
+GENERAL RULE
+Only hero banners use two image files. Add a desktop/tablet image and a separate mobile image in the hero fields. The mobile image is used at 768 px and below.
+All other photos use one image file for desktop, tablet, and mobile. The website crops the same image responsively. Keep faces and important details near the centre.
+
+HERO BANNERS — TWO IMAGES
+Desktop/tablet: 1920 × 1080 px
+Mobile: 900 × 1600 px
+Use for the homepage hero image, About hero, Programs hero, Campus hero, Motion-In hero, Events hero, Achievements hero, and SEO landing page hero.
+
+EVENT AND ACHIEVEMENT DETAIL HERO — TWO IMAGES
+Desktop/tablet: 1600 × 1200 px
+Mobile: 900 × 1200 px
+Use the separate desktop and mobile hero image fields for each event or achievement.
+
+BLOG ARTICLE HERO — TWO IMAGES
+Desktop/tablet: 1600 × 1200 px
+Mobile: 900 × 1200 px
+Use the featured desktop image and optional mobile hero image. If the mobile field is blank, the desktop image is used.
+
+HOMEPAGE PHOTOS — ONE IMAGE EACH
+About gallery: 960 × 1080 px
+Programs cards: 720 × 1200 px
+Life at School cards: 1000 × 940 px
+Vidya Way cards: 840 × 910 px
+Quick Facts photos: 1000 × 750 px
+Trividha Shikshana mascots: 600 × 720 px; use transparent PNG or WebP.
+
+OTHER PHOTOS — ONE IMAGE EACH
+Campus grounds and buildings: 1600 × 1000 px
+About leadership portraits: 1000 × 1200 px
+Story, event, achievement, blog, and SEO gallery photos: 1600 × 1000 px
+Motion-In cards: 1200 × 1500 px
+Blog article gallery: 1600 × 1000 px per photo
+
+LOGOS AND MASCOTS — ONE IMAGE EACH
+Navbar logo: 800 × 240 px, transparent PNG or WebP.
+Trividha Shikshana logo: 1200 × 1028 px, transparent PNG or WebP.
+FAQ mascot: 600 × 720 px, transparent PNG or WebP.
+Admissions mascot: 900 × 1100 px, transparent PNG or WebP.
+
+HOMEPAGE HERO VIDEO
+Desktop video: 1600 × 900 px or 1920 × 1080 px.
+Optional mobile video: 720 × 1280 px, only when its framing differs from desktop.
+Use muted H.264 MP4. Host very large videos on a streaming service or object storage.
+
+UPLOAD NOTES
+Upload through the WordPress Media Library. Choose desktop and mobile files only for hero images. For all other photo fields, upload one file. Add useful alt text and keep the subject inside the central safe area.

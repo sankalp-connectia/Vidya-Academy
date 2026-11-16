@@ -1,0 +1,90 @@
+/* =========================================================
+   HIDE WEBSITE SCROLLBAR
+   Scrolling still works
+========================================================= */
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  /* Keep the page itself as the scroll container so sticky sections work. */
+  overflow-x: visible;
+  overflow-y: visible;
+
+  /* Firefox */
+  scrollbar-width: none;
+
+  /* IE / older Edge */
+  -ms-overflow-style: none;
+}
+
+
+/* Chrome / Safari / Edge */
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+
+  overflow-x: visible;
+}
+
+
+/* =========================================================
+   APP
+========================================================= */
+
+.app {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  background: #ffffff;
+
+  overflow-x: visible;
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.site-main {
+  position: relative;
+
+  width: 100%;
+
+  overflow-x: clip;
+}
+
+/* Keep route content from imposing a wider intrinsic size on the viewport. */
+.main-layout-content {
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: visible;
+}
+
+.main-layout-content > * {
+  min-width: 0;
+  max-width: 100%;
+}
+
+/* Keep page backgrounds full bleed; content sections provide their own text containers. */
+html, body, #root, .app, .site-main, .main-layout, .main-layout-content {
+  width: 100%;
+  max-width: 100%;
+}

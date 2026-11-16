@@ -1,0 +1,1618 @@
+/* =========================================================
+   VIDYA ACADEMY
+   ABOUT
+
+   SIMPLE STABLE STRUCTURE:
+
+   WHITE CONTENT
+   ↓
+   GREEN SECTION
+   ↓
+   3 IMAGES + CURVED LINES
+   ↓
+   NEXT SECTION
+
+   NO PARALLAX
+   NO STICKY
+   NO GSAP
+   NO SCROLL TRACK
+   NO EMPTY GREEN VIEWPORT
+========================================================= */
+
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+.vidya-about {
+  --about-white:
+    #ffffff;
+
+  --about-green:
+    #0b8255;
+
+  --about-deep-green:
+    #0b563b;
+
+  --about-light-green:
+    #26b474;
+
+  --about-orange:
+    #f9a01b;
+
+  --about-side:
+    clamp(
+      42px,
+      5vw,
+      90px
+    );
+
+
+  position:
+    relative;
+
+
+  width:
+    100%;
+
+
+  max-width:
+    100%;
+
+
+  margin:
+    0;
+
+
+  padding:
+    0;
+
+
+  overflow:
+    hidden;
+
+
+  background:
+    var(--about-white);
+
+
+  font-family:
+    "Manrope",
+    sans-serif;
+}
+
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+.vidya-about,
+.vidya-about *,
+.vidya-about *::before,
+.vidya-about *::after {
+  box-sizing:
+    border-box;
+
+
+  font-family:
+    "Manrope",
+    sans-serif;
+}
+
+
+/* =========================================================
+   WHITE CONTENT SECTION
+========================================================= */
+
+.vidya-about-intro {
+  position:
+    relative;
+
+
+  z-index:
+    2;
+
+
+  width:
+    100%;
+
+
+  margin:
+    0;
+
+
+  padding:
+    0;
+
+
+  background:
+    #ffffff;
+
+
+  color:
+    var(--about-deep-green);
+}
+
+
+/* =========================================================
+   INNER
+========================================================= */
+
+.vidya-about-intro-inner {
+  width:
+    100%;
+
+
+  margin:
+    0;
+
+
+  padding:
+    clamp(
+      76px,
+      8vw,
+      120px
+    )
+    var(--about-side)
+    clamp(
+      70px,
+      7vw,
+      105px
+    );
+}
+
+/* The shared app container already supplies the horizontal gutters. Keep this
+   section on that same edge instead of adding a second inset. */
+#root .vidya-about-intro-inner {
+  padding-inline: 0;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.vidya-about-intro-title {
+  width:
+    100%;
+
+
+  margin:
+    0;
+
+
+  color:
+    var(--about-green);
+
+
+  font-size:
+    clamp(
+      52px,
+      5vw,
+      82px
+    );
+
+
+  font-style:
+    normal;
+
+
+  font-weight:
+    550;
+
+
+  line-height:
+    0.95;
+
+
+  letter-spacing:
+    -0.058em;
+}
+
+
+.vidya-about-title-dark {
+  color:
+    var(--about-green);
+}
+
+
+.vidya-about-title-light {
+  color:
+    var(--about-light-green);
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.vidya-about-intro-divider {
+  width:
+    100%;
+
+
+  height:
+    1px;
+
+
+  margin:
+    clamp(
+      21px,
+      2vw,
+      28px
+    )
+    0
+    clamp(
+      28px,
+      2.8vw,
+      40px
+    );
+
+
+  background:
+    linear-gradient(
+      90deg,
+
+      var(--about-orange)
+      0%,
+
+      var(--about-orange)
+      8%,
+
+      rgba(
+        11,
+        130,
+        85,
+        0.14
+      )
+      8%,
+
+      rgba(
+        11,
+        130,
+        85,
+        0.14
+      )
+      100%
+    );
+}
+
+
+/* =========================================================
+   CONTENT GRID
+========================================================= */
+
+.vidya-about-copy-grid {
+  display:
+    grid;
+
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(
+        0,
+        1fr
+      )
+    );
+
+
+  column-gap:
+    clamp(
+      50px,
+      6vw,
+      110px
+    );
+
+
+  row-gap:
+    clamp(
+      26px,
+      2.6vw,
+      38px
+    );
+
+
+  width:
+    100%;
+}
+
+
+/* =========================================================
+   BODY COPY
+========================================================= */
+
+.vidya-about-copy-grid p {
+  width:
+    100%;
+
+
+  max-width:
+    760px;
+
+
+  margin:
+    0;
+
+
+  color:
+    rgba(
+      7,
+      63,
+      50,
+      0.76
+    );
+
+
+  font-size:
+    clamp(
+      17px,
+      1.22vw,
+      21px
+    );
+
+
+  font-style:
+    normal;
+
+
+  font-weight:
+    400;
+
+
+  line-height:
+    1.55;
+
+
+  letter-spacing:
+    -0.016em;
+}
+
+
+/* =========================================================
+   CLOSING STATEMENT
+========================================================= */
+
+.vidya-about-intro-closing {
+  width:
+    min(
+      1050px,
+      88%
+    );
+
+
+  margin:
+    clamp(
+      30px,
+      3.2vw,
+      48px
+    )
+    0
+    0;
+
+
+  color:
+    var(--about-green);
+
+
+  font-size:
+    clamp(
+      20px,
+      1.65vw,
+      27px
+    );
+
+
+  font-style:
+    normal;
+
+
+  font-weight:
+    500;
+
+
+  line-height:
+    1.35;
+
+
+  letter-spacing:
+    -0.03em;
+}
+
+
+/* =========================================================
+   VALUES
+========================================================= */
+
+.vidya-about-intro-values {
+  display:
+    flex;
+
+
+  align-items:
+    center;
+
+
+  gap:
+    14px;
+
+
+  width:
+    100%;
+
+
+  margin-top:
+    clamp(
+      30px,
+      3vw,
+      44px
+    );
+
+
+  color:
+    var(--about-green);
+}
+
+
+.vidya-about-intro-values span {
+  font-size:
+    11px;
+
+
+  font-weight:
+    750;
+
+
+  line-height:
+    1;
+
+
+  letter-spacing:
+    0.17em;
+}
+
+
+.vidya-about-intro-values i {
+  display:
+    block;
+
+
+  width:
+    5px;
+
+
+  height:
+    5px;
+
+
+  flex:
+    0
+    0
+    auto;
+
+
+  border-radius:
+    50%;
+
+
+  background:
+    var(--about-orange);
+}
+
+
+/* =========================================================
+   GREEN IMAGE SECTION
+
+   NORMAL CONTENT-DRIVEN HEIGHT.
+
+   IMPORTANT:
+   NO min-height: 100vh
+
+   THIS REMOVES THE LARGE EMPTY GREEN AREA.
+========================================================= */
+
+.vidya-about-story {
+  position:
+    relative;
+
+
+  z-index:
+    1;
+
+
+  width:
+    100%;
+
+
+  margin:
+    0;
+
+
+  padding:
+    clamp(
+      70px,
+      7vw,
+      105px
+    )
+    clamp(
+      48px,
+      5vw,
+      88px
+    );
+
+
+  overflow:
+    hidden;
+
+
+  background:
+    var(--about-green);
+}
+
+
+/* =========================================================
+   CURVED LINE BACKGROUND
+========================================================= */
+
+.vidya-about-green-lines {
+  position:
+    absolute;
+
+
+  z-index:
+    0;
+
+
+  inset:
+    0;
+
+
+  width:
+    100%;
+
+
+  height:
+    100%;
+
+
+  overflow:
+    hidden;
+
+
+  pointer-events:
+    none;
+}
+
+
+/* =========================================================
+   SVG
+========================================================= */
+
+.vidya-about-curves {
+  position:
+    absolute;
+
+
+  top:
+    -22%;
+
+
+  left:
+    -4%;
+
+
+  display:
+    block;
+
+
+  width:
+    108%;
+
+
+  height:
+    145%;
+
+
+  overflow:
+    visible;
+
+
+  pointer-events:
+    none;
+}
+
+
+/* =========================================================
+   LIGHT CURVES
+========================================================= */
+
+.vidya-about-curves-main path {
+  fill:
+    none;
+
+
+  stroke:
+    rgba(
+      255,
+      255,
+      255,
+      0.13
+    );
+
+
+  stroke-width:
+    1.1;
+
+
+  vector-effect:
+    non-scaling-stroke;
+}
+
+
+/* =========================================================
+   DARK GREEN CURVES
+========================================================= */
+
+.vidya-about-curves-secondary path {
+  fill:
+    none;
+
+
+  stroke:
+    rgba(
+      5,
+      92,
+      63,
+      0.42
+    );
+
+
+  stroke-width:
+    0.9;
+
+
+  vector-effect:
+    non-scaling-stroke;
+}
+
+
+/* =========================================================
+   IMAGE GRID
+========================================================= */
+
+.vidya-about-gallery {
+  position:
+    relative;
+
+
+  z-index:
+    3;
+
+
+  display:
+    grid;
+
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(
+        0,
+        1fr
+      )
+    );
+
+
+  align-items:
+    stretch;
+
+
+  gap:
+    clamp(
+      28px,
+      2.4vw,
+      42px
+    );
+
+
+  width:
+    100%;
+
+
+  max-width:
+    1640px;
+
+
+  margin:
+    0
+    auto;
+
+
+  padding:
+    0;
+}
+
+
+/* =========================================================
+   CARD
+
+   MODERATE HEIGHT.
+   NO EMPTY GREEN SCREEN.
+========================================================= */
+
+.vidya-about-gallery-card {
+  position:
+    relative;
+
+
+  width:
+    100%;
+
+
+  height:
+    clamp(
+      330px,
+      32vw,
+      470px
+    );
+
+
+  min-width:
+    0;
+
+
+  margin:
+    0;
+
+
+  padding:
+    0;
+
+
+  overflow:
+    hidden;
+
+
+  background:
+    #076f4b;
+
+
+  border:
+    0;
+
+
+  border-radius:
+    0;
+
+
+  isolation:
+    isolate;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.vidya-about-gallery-card img {
+  position:
+    absolute;
+
+
+  z-index:
+    0;
+
+
+  inset:
+    0;
+
+
+  display:
+    block;
+
+
+  width:
+    100%;
+
+
+  height:
+    100%;
+
+
+  max-width:
+    none;
+
+
+  object-fit:
+    cover;
+
+
+  object-position:
+    center;
+
+
+  transform:
+    none;
+
+
+  pointer-events:
+    none;
+
+
+  user-select:
+    none;
+
+
+  -webkit-user-drag:
+    none;
+}
+
+
+/* =========================================================
+   IMAGE CROPS
+========================================================= */
+
+.vidya-about-gallery-card--1
+img {
+  object-position:
+    center 48%;
+}
+
+
+.vidya-about-gallery-card--2
+img {
+  object-position:
+    center 47%;
+}
+
+
+.vidya-about-gallery-card--3
+img {
+  object-position:
+    center 50%;
+}
+
+
+/* =========================================================
+   OVERLAY
+========================================================= */
+
+.vidya-about-gallery-overlay {
+  position:
+    absolute;
+
+
+  z-index:
+    1;
+
+
+  inset:
+    0;
+
+
+  background:
+    linear-gradient(
+      180deg,
+
+      rgba(
+        1,
+        35,
+        23,
+        0
+      )
+      38%,
+
+      rgba(
+        1,
+        35,
+        23,
+        0.05
+      )
+      66%,
+
+      rgba(
+        1,
+        35,
+        23,
+        0.28
+      )
+      100%
+    );
+
+
+  pointer-events:
+    none;
+}
+
+
+/* =========================================================
+   BADGE
+========================================================= */
+
+.vidya-about-gallery-badge {
+  position:
+    absolute;
+
+
+  z-index:
+    4;
+
+
+  top:
+    14px;
+
+
+  right:
+    14px;
+
+
+  display:
+    inline-flex;
+
+
+  align-items:
+    center;
+
+
+  justify-content:
+    center;
+
+
+  min-height:
+    30px;
+
+
+  padding:
+    0
+    12px;
+
+
+  color:
+    var(--about-deep-green);
+
+
+  background:
+    var(--about-orange);
+
+
+  box-shadow:
+    0
+    7px
+    20px
+    rgba(
+      0,
+      0,
+      0,
+      0.12
+    );
+}
+
+
+.vidya-about-gallery-badge span {
+  font-size:
+    9px;
+
+
+  font-weight:
+    800;
+
+
+  line-height:
+    1;
+
+
+  letter-spacing:
+    0.15em;
+}
+
+
+/* =========================================================
+   OPTIONAL HOVER
+
+   NOT PARALLAX.
+   JUST SMALL NORMAL HOVER.
+========================================================= */
+
+@media (
+  hover: hover
+) {
+
+  .vidya-about-gallery-card img {
+    transition:
+      transform
+      0.65s
+      cubic-bezier(
+        0.22,
+        1,
+        0.36,
+        1
+      );
+  }
+
+
+  .vidya-about-gallery-card:hover
+  img {
+    transform:
+      scale(
+        1.025
+      );
+  }
+
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (
+  min-width: 1500px
+) {
+
+  .vidya-about-intro-inner {
+    padding-top:
+      110px;
+
+
+    padding-bottom:
+      96px;
+  }
+
+
+  .vidya-about-copy-grid p {
+    font-size:
+      20px;
+  }
+
+
+  .vidya-about-story {
+    padding-top:
+      92px;
+
+
+    padding-bottom:
+      92px;
+  }
+
+
+  .vidya-about-gallery {
+    gap:
+      44px;
+  }
+
+
+  .vidya-about-gallery-card {
+    height:
+      470px;
+  }
+
+}
+
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media
+(
+  max-width: 1200px
+)
+and
+(
+  min-width: 769px
+) {
+
+  .vidya-about {
+    --about-side:
+      36px;
+  }
+
+
+  .vidya-about-intro-inner {
+    padding:
+      74px
+      36px
+      68px;
+  }
+
+
+  .vidya-about-intro-title {
+    font-size:
+      clamp(
+        44px,
+        5vw,
+        64px
+      );
+  }
+
+
+  .vidya-about-intro-divider {
+    margin:
+      16px
+      0
+      20px;
+  }
+
+
+  .vidya-about-copy-grid {
+    column-gap:
+      38px;
+
+
+    row-gap:
+      18px;
+  }
+
+
+  .vidya-about-copy-grid p {
+    font-size:
+      clamp(
+        15px,
+        1.5vw,
+        18px
+      );
+
+
+    line-height:
+      1.48;
+  }
+
+
+  .vidya-about-intro-closing {
+    margin-top:
+      22px;
+
+
+    font-size:
+      clamp(
+        18px,
+        1.7vw,
+        23px
+      );
+  }
+
+
+  .vidya-about-intro-values {
+    margin-top:
+      24px;
+  }
+
+
+  /* GREEN */
+
+  .vidya-about-story {
+    padding:
+      58px
+      34px;
+  }
+
+
+  .vidya-about-gallery {
+    gap:
+      24px;
+  }
+
+
+  .vidya-about-gallery-card {
+    height:
+      clamp(
+        300px,
+        34vw,
+        390px
+      );
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media
+(
+  max-width: 900px
+)
+and
+(
+  min-width: 769px
+) {
+
+  .vidya-about-story {
+    padding:
+      48px
+      26px;
+  }
+
+
+  .vidya-about-gallery {
+    gap:
+      18px;
+  }
+
+
+  .vidya-about-gallery-card {
+    height:
+      310px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (
+  max-width: 768px
+) {
+
+  .vidya-about {
+    --about-side:
+      18px;
+  }
+
+
+  /* =====================================================
+     WHITE CONTENT
+  ===================================================== */
+
+  .vidya-about-intro-inner {
+    padding:
+      56px
+      18px
+      46px;
+  }
+
+
+  .vidya-about-intro-title {
+    font-size:
+      clamp(
+        38px,
+        10vw,
+        50px
+      );
+
+
+    line-height:
+      0.98;
+  }
+
+
+  .vidya-about-title-dark,
+  .vidya-about-title-light {
+    display:
+      block;
+  }
+
+
+  .vidya-about-intro-divider {
+    margin:
+      17px
+      0
+      20px;
+  }
+
+
+  .vidya-about-copy-grid {
+    display:
+      flex;
+
+
+    flex-direction:
+      column;
+
+
+    gap:
+      15px;
+  }
+
+
+  .vidya-about-copy-grid p {
+    max-width:
+      none;
+
+
+    font-size:
+      clamp(
+        15px,
+        4vw,
+        17px
+      );
+
+
+    line-height:
+      1.5;
+  }
+
+
+  .vidya-about-intro-closing {
+    width:
+      100%;
+
+
+    margin-top:
+      24px;
+
+
+    font-size:
+      clamp(
+        18px,
+        5vw,
+        22px
+      );
+  }
+
+
+  .vidya-about-intro-values {
+    margin-top:
+      26px;
+  }
+
+
+  .vidya-about-intro-values span {
+    font-size:
+      9px;
+  }
+
+
+  /* =====================================================
+     GREEN SECTION
+  ===================================================== */
+
+  .vidya-about-story {
+    padding:
+      30px
+      18px;
+  }
+
+
+  /* =====================================================
+     CURVES
+  ===================================================== */
+
+  .vidya-about-curves {
+    top:
+      -5%;
+
+
+    left:
+      -28%;
+
+
+    width:
+      156%;
+
+
+    height:
+      110%;
+  }
+
+
+  /* =====================================================
+     MOBILE IMAGES
+  ===================================================== */
+
+  .vidya-about-gallery {
+    display:
+      flex;
+
+
+    flex-direction:
+      column;
+
+
+    gap:
+      18px;
+
+
+    width:
+      100%;
+  }
+
+
+  .vidya-about-gallery-card {
+    width:
+      100%;
+
+
+    height:
+      clamp(
+        260px,
+        58vw,
+        360px
+      );
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (
+  max-width: 480px
+) {
+
+  .vidya-about-intro-inner {
+    padding:
+      48px
+      16px
+      40px;
+  }
+
+
+  .vidya-about-intro-title {
+    font-size:
+      clamp(
+        35px,
+        9.6vw,
+        44px
+      );
+  }
+
+
+  .vidya-about-copy-grid {
+    gap:
+      13px;
+  }
+
+
+  .vidya-about-copy-grid p {
+    font-size:
+      14px;
+
+
+    line-height:
+      1.47;
+  }
+
+
+  .vidya-about-intro-closing {
+    font-size:
+      18px;
+  }
+
+
+  .vidya-about-story {
+    padding:
+      24px
+      14px;
+  }
+
+
+  .vidya-about-gallery {
+    gap:
+      14px;
+  }
+
+
+  .vidya-about-gallery-card {
+    height:
+      clamp(
+        235px,
+        65vw,
+        310px
+      );
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (
+  max-width: 360px
+) {
+
+  .vidya-about-intro-title {
+    font-size:
+      34px;
+  }
+
+
+  .vidya-about-copy-grid p {
+    font-size:
+      13.5px;
+  }
+
+
+  .vidya-about-intro-closing {
+    font-size:
+      17px;
+  }
+
+
+  .vidya-about-gallery-card {
+    height:
+      235px;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (
+  prefers-reduced-motion:
+    reduce
+) {
+
+  .vidya-about-gallery-card img {
+    transition:
+      none;
+  }
+
+
+  .vidya-about-gallery-card:hover
+  img {
+    transform:
+      none;
+  }
+
+}
+/* Parent decision points stay compact and easy to scan. */
+.vidya-about-why {
+  display: grid;
+  grid-template-columns: minmax(210px, .72fr) minmax(0, 1.28fr);
+  gap: clamp(28px, 5vw, 76px);
+  align-items: start;
+  margin-top: clamp(44px, 6vw, 82px);
+  padding-top: clamp(28px, 4vw, 48px);
+  border-top: 1px solid rgba(11, 130, 85, .18);
+}
+.vidya-about-why__heading > p {
+  margin: 0 0 14px;
+  color: #0b8255;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .14em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+.vidya-about-why__heading h3 {
+  max-width: 340px;
+  margin: 0;
+  color: #163a2d;
+  font-size: clamp(27px, 3vw, 40px);
+  font-weight: 600;
+  letter-spacing: -.05em;
+  line-height: 1.12;
+}
+.vidya-about-why ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 28px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.vidya-about-why li {
+  display: grid;
+  grid-template-columns: 9px minmax(0, 1fr);
+  align-items: start;
+  gap: 12px;
+  min-height: 58px;
+  padding: 13px 0;
+  border-bottom: 1px solid rgba(11, 130, 85, .12);
+  color: #53655b;
+  font-size: 13px;
+  line-height: 1.6;
+}
+.vidya-about-why li > span {
+  width: 7px;
+  height: 7px;
+  margin-top: 7px;
+  border-radius: 50%;
+  background: #d9ad2c;
+}
+@media (max-width: 760px) {
+  .vidya-about-why { grid-template-columns: 1fr; gap: 22px; }
+  .vidya-about-why ul { grid-template-columns: 1fr; }
+  .vidya-about-why li { min-height: 0; }
+}

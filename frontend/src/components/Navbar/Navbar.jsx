@@ -1,0 +1,902 @@
+import {
+  useEffect,
+  useRef,
+  useState,
+} from "react";
+
+import {
+  Link,
+  useLocation,
+} from "react-router-dom";
+
+import {
+  AnimatePresence,
+  motion,
+} from "motion/react";
+
+import {
+  Menu,
+  X,
+  ArrowUpRight,
+} from "lucide-react";
+
+import "./Navbar.css";
+import { navbarData } from "../../cms/siteContent.js";
+
+
+const MotionLink =
+  motion.create(Link);
+
+
+/* =========================================================
+   NAVBAR DATA
+========================================================= */
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+const Navbar = () => {
+  const location =
+    useLocation();
+
+
+  const [
+    insideHero,
+    setInsideHero,
+  ] = useState(true);
+
+
+  const [
+    heroScrolled,
+    setHeroScrolled,
+  ] = useState(false);
+
+
+  const [
+    visible,
+    setVisible,
+  ] = useState(true);
+
+
+  const [
+    menuOpen,
+    setMenuOpen,
+  ] = useState(false);
+
+
+  const lastScrollY =
+    useRef(0);
+
+
+  const ticking =
+    useRef(false);
+
+
+  /* =========================================================
+     FIND CURRENT HERO
+  ========================================================= */
+
+  const getCurrentHero =
+    () => {
+      const customHero =
+        document.querySelector(
+          "[data-navbar-hero]"
+        );
+
+
+      if (customHero) {
+        return customHero;
+      }
+
+
+      const homeHero =
+        document.getElementById(
+          "home"
+        );
+
+
+      if (homeHero) {
+        return homeHero;
+      }
+
+
+      const campusHero =
+        document.querySelector(
+          ".campus-hero"
+        );
+
+
+      if (campusHero) {
+        return campusHero;
+      }
+
+
+      const pageHero =
+        document.querySelector(
+          ".page-hero"
+        );
+
+
+      if (pageHero) {
+        return pageHero;
+      }
+
+
+      return null;
+    };
+
+
+  /* =========================================================
+     CLOSE MENU
+  ========================================================= */
+
+  const closeMenu =
+    () => {
+      setMenuOpen(false);
+    };
+
+
+  /* =========================================================
+     ACTIVE ROUTE
+  ========================================================= */
+
+  const isActiveRoute =
+    (to) => {
+      if (
+        to.includes("#")
+      ) {
+        return (
+          location.pathname +
+          location.hash
+        ) === to;
+      }
+
+
+      if (
+        to === "/"
+      ) {
+        return (
+          location.pathname === "/"
+        );
+      }
+
+
+      return (
+        location.pathname === to ||
+        location.pathname.startsWith(
+          `${to}/`
+        )
+      );
+    };
+
+
+  /* =========================================================
+     ROUTE CHANGE
+  ========================================================= */
+
+  useEffect(() => {
+    setMenuOpen(false);
+
+    setVisible(true);
+
+    setHeroScrolled(false);
+
+
+  }, [
+    location.pathname,
+    location.hash,
+  ]);
+
+
+  /* =========================================================
+     NAVBAR SCROLL
+  ========================================================= */
+
+  useEffect(() => {
+    let frameId =
+      null;
+
+
+    const updateNavbar =
+      () => {
+        const currentY =
+          window.scrollY;
+
+
+        const hero =
+          getCurrentHero();
+
+
+        let isInsideHero =
+          false;
+
+
+        if (hero) {
+          const heroRect =
+            hero.getBoundingClientRect();
+
+
+          isInsideHero =
+            heroRect.bottom >
+            80;
+        }
+
+
+        setInsideHero(
+          isInsideHero
+        );
+
+
+        /* =================================================
+           INSIDE HERO
+        ================================================= */
+
+        if (
+          isInsideHero
+        ) {
+          const heroRect =
+            hero.getBoundingClientRect();
+
+
+          const heroScrolledAmount =
+            Math.max(
+              0,
+              -heroRect.top
+            );
+
+
+          setHeroScrolled(
+            heroScrolledAmount >
+            38
+          );
+
+
+          setVisible(true);
+
+
+          lastScrollY.current =
+            currentY;
+
+
+          ticking.current =
+            false;
+
+
+          return;
+        }
+
+
+        /* =================================================
+           OUTSIDE HERO
+        ================================================= */
+
+        setHeroScrolled(false);
+
+
+        const delta =
+          currentY -
+          lastScrollY.current;
+
+
+        if (
+          Math.abs(delta) <
+          6
+        ) {
+          ticking.current =
+            false;
+
+          return;
+        }
+
+
+        if (
+          delta >
+            0 &&
+          currentY >
+            90
+        ) {
+          setVisible(false);
+        }
+
+
+        if (
+          delta <
+          0
+        ) {
+          setVisible(true);
+        }
+
+
+        if (
+          currentY <=
+          5
+        ) {
+          setVisible(true);
+        }
+
+
+        lastScrollY.current =
+          currentY;
+
+
+        ticking.current =
+          false;
+      };
+
+
+    const handleScroll =
+      () => {
+        if (
+          ticking.current
+        ) {
+          return;
+        }
+
+
+        ticking.current =
+          true;
+
+
+        frameId =
+          requestAnimationFrame(
+            updateNavbar
+          );
+      };
+
+
+    const handleResize =
+      () => {
+        if (frameId) {
+          cancelAnimationFrame(
+            frameId
+          );
+        }
+
+
+        frameId =
+          requestAnimationFrame(
+            updateNavbar
+          );
+      };
+
+
+    const initialFrame =
+      requestAnimationFrame(
+        () => {
+          lastScrollY.current =
+            window.scrollY;
+
+
+          updateNavbar();
+        }
+      );
+
+
+    window.addEventListener(
+      "scroll",
+      handleScroll,
+      {
+        passive: true,
+      }
+    );
+
+
+    window.addEventListener(
+      "resize",
+      handleResize
+    );
+
+
+    return () => {
+      cancelAnimationFrame(
+        initialFrame
+      );
+
+
+      if (frameId) {
+        cancelAnimationFrame(
+          frameId
+        );
+      }
+
+
+      window.removeEventListener(
+        "scroll",
+        handleScroll
+      );
+
+
+      window.removeEventListener(
+        "resize",
+        handleResize
+      );
+    };
+  }, [
+    location.pathname,
+  ]);
+
+
+  /* =========================================================
+     BODY LOCK
+  ========================================================= */
+
+  useEffect(() => {
+    document.body.style.overflow =
+      menuOpen
+        ? "hidden"
+        : "";
+
+
+    return () => {
+      document.body.style.overflow =
+        "";
+    };
+  }, [
+    menuOpen,
+  ]);
+
+
+  /* =========================================================
+     ESCAPE
+  ========================================================= */
+
+  useEffect(() => {
+    const handleKeyDown =
+      (event) => {
+        if (
+          event.key ===
+          "Escape"
+        ) {
+          setMenuOpen(false);
+        }
+      };
+
+
+    window.addEventListener(
+      "keydown",
+      handleKeyDown
+    );
+
+
+    return () => {
+      window.removeEventListener(
+        "keydown",
+        handleKeyDown
+      );
+    };
+  }, []);
+
+
+  /* =========================================================
+     CLOSE MOBILE MENU ON DESKTOP
+  ========================================================= */
+
+  useEffect(() => {
+    const handleResize =
+      () => {
+        if (
+          window.innerWidth >
+          1080
+        ) {
+          setMenuOpen(false);
+        }
+      };
+
+
+    window.addEventListener(
+      "resize",
+      handleResize
+    );
+
+
+    return () => {
+      window.removeEventListener(
+        "resize",
+        handleResize
+      );
+    };
+  }, []);
+
+
+  /* =========================================================
+     JSX
+  ========================================================= */
+
+  return (
+    <>
+      <header
+        className={`
+          vidya-nav
+
+          ${
+            insideHero
+              ? "is-hero"
+              : "is-page"
+          }
+
+          ${
+            heroScrolled
+              ? "is-hero-scrolled"
+              : ""
+          }
+
+          ${
+            visible
+              ? "is-visible"
+              : "is-hidden"
+          }
+
+          ${
+            menuOpen
+              ? "is-menu-open"
+              : ""
+          }
+        `}
+      >
+
+        <div className="vidya-nav-inner">
+
+          {/* =================================================
+              LOGO
+          ================================================= */}
+
+          <Link
+            to={
+              navbarData.logo.to
+            }
+            className="vidya-nav-brand"
+            onClick={
+              closeMenu
+            }
+            aria-label="Vidya Academy home"
+          >
+
+            <img
+              src={
+                navbarData.logo.src || "/brand/vidya-academy-navbar.png"
+              }
+              alt={
+                navbarData.logo.alt
+              }
+              className="vidya-nav-logo"
+            />
+
+          </Link>
+
+
+          {/* =================================================
+              DESKTOP LINKS
+          ================================================= */}
+
+          <nav
+            className="vidya-nav-links"
+            aria-label="Main navigation"
+          >
+
+            {navbarData.links.map(
+              (link) => {
+                const isExternal = Boolean(link.external) || /^https?:\/\//i.test(link.to || "");
+                const active = !isExternal && isActiveRoute(link.to);
+                const NavigationLink = isExternal ? "a" : Link;
+                const navigationProps = isExternal ? { href: link.to, rel: "noopener noreferrer" } : { to: link.to };
+
+
+                return (
+                  <NavigationLink
+                    key={
+                      link.label
+                    }
+                    {...navigationProps}
+                    className={`
+                      vidya-nav-link
+
+                      ${
+                        active
+                          ? "is-active"
+                          : ""
+                      }
+                    `}
+                    style={{
+                      color: "#111111",
+                      WebkitTextFillColor: "#111111",
+                    }}
+                  >
+
+                    <span
+                      style={{
+                        color: "#111111",
+                        WebkitTextFillColor: "#111111",
+                      }}
+                    >
+                      {
+                        link.label
+                      }
+                    </span>
+
+                  </NavigationLink>
+                );
+              }
+            )}
+
+          </nav>
+
+
+          {/* =================================================
+              ACTIONS
+          ================================================= */}
+
+          <div className="vidya-nav-actions">
+
+            <Link
+              to={
+                navbarData.cta.to
+              }
+              className="vidya-nav-cta"
+              onClick={
+                closeMenu
+              }
+            >
+
+              <span>
+                {
+                  navbarData.cta.label
+                }
+              </span>
+
+            </Link>
+
+
+            {/* =================================================
+                MOBILE TOGGLE
+            ================================================= */}
+
+            <button
+              type="button"
+              className="vidya-nav-mobile-toggle"
+              onClick={
+                () =>
+                  setMenuOpen(
+                    (value) =>
+                      !value
+                  )
+              }
+              aria-expanded={
+                menuOpen
+              }
+              aria-controls="vidya-mobile-navigation"
+              aria-label={
+                menuOpen
+                  ? "Close navigation"
+                  : "Open navigation"
+              }
+            >
+
+              <AnimatePresence
+                mode="wait"
+                initial={false}
+              >
+
+                {menuOpen ? (
+
+                  <motion.span
+                    key="close"
+                    initial={{
+                      opacity: 0,
+                      rotate: -20,
+                    }}
+                    animate={{
+                      opacity: 1,
+                      rotate: 0,
+                    }}
+                    exit={{
+                      opacity: 0,
+                      rotate: 20,
+                    }}
+                    transition={{
+                      duration: 0.18,
+                    }}
+                  >
+
+                    <X
+                      size={20}
+                      strokeWidth={1.8}
+                    />
+
+                  </motion.span>
+
+                ) : (
+
+                  <motion.span
+                    key="menu"
+                    initial={{
+                      opacity: 0,
+                    }}
+                    animate={{
+                      opacity: 1,
+                    }}
+                    exit={{
+                      opacity: 0,
+                    }}
+                    transition={{
+                      duration: 0.18,
+                    }}
+                  >
+
+                    <Menu
+                      size={21}
+                      strokeWidth={1.8}
+                    />
+
+                  </motion.span>
+
+                )}
+
+              </AnimatePresence>
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </header>
+
+
+      {/* =====================================================
+          MOBILE MENU
+      ===================================================== */}
+
+      <AnimatePresence>
+
+        {menuOpen && (
+
+          <motion.div
+            id="vidya-mobile-navigation"
+            className="vidya-mobile-menu"
+            initial={{
+              opacity: 0,
+            }}
+            animate={{
+              opacity: 1,
+            }}
+            exit={{
+              opacity: 0,
+            }}
+            transition={{
+              duration: 0.24,
+              ease: "easeOut",
+            }}
+          >
+
+            <div className="vidya-mobile-menu-inner">
+
+              <nav
+                className="vidya-mobile-menu-links"
+                aria-label="Mobile navigation"
+              >
+
+                {navbarData.links.map(
+                  (
+                    link,
+                    index
+                  ) => {
+                    const isExternal = Boolean(link.external) || /^https?:\/\//i.test(link.to || "");
+                    const active = !isExternal && isActiveRoute(link.to);
+                    const NavigationLink = isExternal ? motion.a : MotionLink;
+                    const navigationProps = isExternal ? { href: link.to, rel: "noopener noreferrer" } : { to: link.to };
+
+
+                    return (
+                      <NavigationLink
+                        key={
+                          link.label
+                        }
+                        {...navigationProps}
+                        onClick={
+                          closeMenu
+                        }
+                        className={
+                          active
+                            ? "is-active"
+                            : ""
+                        }
+                        initial={{
+                          opacity: 0,
+                          y: 10,
+                        }}
+                        animate={{
+                          opacity: 1,
+                          y: 0,
+                        }}
+                        transition={{
+                          duration: 0.3,
+
+                          delay:
+                            index *
+                            0.025,
+
+                          ease: [
+                            0.22,
+                            1,
+                            0.36,
+                            1,
+                          ],
+                        }}
+                      >
+
+                        <span>
+                          {
+                            link.label
+                          }
+                        </span>
+
+
+                        <ArrowUpRight
+                          size={16}
+                          strokeWidth={1.6}
+                        />
+
+                      </NavigationLink>
+                    );
+                  }
+                )}
+
+              </nav>
+
+
+              <motion.div
+                className="vidya-mobile-menu-footer"
+                initial={{
+                  opacity: 0,
+                  y: 8,
+                }}
+                animate={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                transition={{
+                  duration: 0.3,
+                  delay: 0.12,
+                }}
+              >
+
+                <p>
+                  Discover more about
+                  Vidya Academy.
+                </p>
+
+
+                <Link
+                  to={
+                    navbarData.cta.to
+                  }
+                  onClick={
+                    closeMenu
+                  }
+                  className="vidya-mobile-menu-cta"
+                >
+
+                  <span>
+                    {
+                      navbarData.cta.label
+                    }
+                  </span>
+
+                </Link>
+
+              </motion.div>
+
+            </div>
+
+          </motion.div>
+
+        )}
+
+      </AnimatePresence>
+    </>
+  );
+};
+
+
+export default Navbar;

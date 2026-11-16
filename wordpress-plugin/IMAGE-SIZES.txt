@@ -1,0 +1,37 @@
+VIDYA ACADEMY — WORDPRESS IMAGE SIZE GUIDE
+
+IMAGE UPLOAD RULE
+Only fields labeled “Desktop hero image” need a second, optional phone image.
+Every other photo uses one upload for desktop, tablet, and phone. The website crops it responsively.
+
+HERO BANNERS — TWO IMAGES
+Desktop and tablet: 1920 × 1080 px
+Phone: 900 × 1600 px
+Use the separate Desktop hero image and Mobile hero image fields. The phone image is used at 768 px wide and below. If it is blank, the desktop image is reused.
+
+EVENT AND ACHIEVEMENT STORY HEROES — TWO IMAGES
+Desktop and tablet: 1600 × 1200 px
+Phone: 900 × 1200 px
+Use these sizes for the hero image inside an individual event or achievement detail page.
+
+BLOG ARTICLE HERO — TWO IMAGES
+Desktop and tablet: 1600 × 1200 px
+Phone: 900 × 1200 px
+The phone image is optional. If it is blank, the desktop featured image is reused.
+
+OTHER PHOTO FIELDS — ONE IMAGE EACH
+Homepage gallery: 960 × 1080 px
+Program card: 720 × 1200 px
+Life at School card: 1000 × 940 px
+Vidya Way card: 840 × 910 px
+Quick Facts photo: 1000 × 750 px
+Campus, story, event, achievement, blog, or SEO gallery photo: 1600 × 1000 px
+Leadership portrait: 1000 × 1200 px
+
+LOGOS AND MASCOTS — ONE IMAGE EACH
+Navbar logo: 800 × 240 px, transparent PNG or WebP.
+Trividha Shikshana logo: 1200 × 1028 px, transparent PNG or WebP.
+FAQ and learning-card mascot: 600 × 720 px, transparent PNG or WebP.
+Admissions mascot: 900 × 1100 px, transparent PNG or WebP.
+
+Keep faces and important details inside the central area of one-image photos. Use the phone hero field only when its framing needs to differ from desktop.

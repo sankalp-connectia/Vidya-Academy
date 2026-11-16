@@ -1,0 +1,90 @@
+.mandatory-disclosure {
+  --disclosure-green: #07543c;
+  --disclosure-deep: #062f25;
+  --disclosure-mint: #9ae6bd;
+  --disclosure-cream: #f5f3e9;
+  color: #273b33;
+  font-family: "Manrope", sans-serif;
+}
+
+.mandatory-disclosure__hero {
+  position: relative;
+  display: flex;
+  min-height: clamp(390px, 52vh, 620px);
+  align-items: center;
+  overflow: hidden;
+  padding: clamp(112px, 12vw, 160px) max(24px, calc((100vw - 1360px) / 2));
+  color: #fff;
+  background: radial-gradient(ellipse at 82% 28%, rgb(38 180 116 / 32%), transparent 42%), linear-gradient(118deg, #062f24, #0b6848 65%, #083c2c);
+  isolation: isolate;
+}
+
+.mandatory-disclosure__hero::after {
+  position: absolute;
+  z-index: -1;
+  right: -8vw;
+  bottom: -32vw;
+  width: min(72vw, 900px);
+  aspect-ratio: 1;
+  border: 1px solid rgb(255 255 255 / 18%);
+  border-radius: 50%;
+  box-shadow: 0 0 0 70px rgb(255 255 255 / 3%), 0 0 0 140px rgb(255 255 255 / 2%);
+  content: "";
+}
+
+.mandatory-disclosure__hero-inner { position: relative; z-index: 1; width: min(100%, 880px); }
+.mandatory-disclosure__eyebrow,
+.mandatory-disclosure__index { color: #b9efcf; font-size: 11px; font-weight: 800; letter-spacing: .15em; }
+.mandatory-disclosure__hero h1 { max-width: 900px; margin: 22px 0 18px; color: #fff; font-size: clamp(44px, 7.5vw, 88px); line-height: .98; letter-spacing: -.065em; }
+.mandatory-disclosure__hero-inner > p:not(.mandatory-disclosure__eyebrow) { max-width: 640px; color: rgb(255 255 255 / 82%); font-size: clamp(15px, 1.5vw, 19px); line-height: 1.7; }
+.mandatory-disclosure__jump { display: inline-flex; align-items: center; gap: 10px; margin-top: 26px; padding: 13px 17px; color: var(--disclosure-deep); background: var(--disclosure-mint); font-size: 13px; font-weight: 750; text-decoration: none; transition: background .2s ease, transform .2s ease; }
+.mandatory-disclosure__jump:hover { transform: translateY(-2px); background: #c0f4d4; }
+.mandatory-disclosure__hero-mark { position: absolute; right: max(24px, calc((100vw - 1440px) / 2)); bottom: 5%; color: rgb(255 255 255 / 6%); font-size: clamp(180px, 32vw, 470px); font-weight: 800; letter-spacing: -.12em; line-height: .8; pointer-events: none; }
+
+.mandatory-disclosure__body { padding: clamp(54px, 7vw, 92px) 24px clamp(72px, 9vw, 120px); background: var(--disclosure-cream); }
+.mandatory-disclosure__inner { width: min(100%, 1240px); margin-inline: auto; }
+.mandatory-disclosure__intro { margin-bottom: 38px; }
+.mandatory-disclosure__intro .mandatory-disclosure__index { color: #a8791a; }
+.mandatory-disclosure__intro h2 { margin: 12px 0 8px; color: var(--disclosure-green); font-size: clamp(30px, 4.5vw, 52px); line-height: 1.05; letter-spacing: -.055em; }
+.mandatory-disclosure__intro > p { margin: 0; color: #63746a; font-size: 15px; line-height: 1.7; }
+.mandatory-disclosure__sections { display: grid; gap: 28px; }
+.mandatory-disclosure__section { min-width: 0; padding: clamp(20px, 3vw, 34px); border: 1px solid #d8dfd5; background: rgb(255 255 255 / 66%); box-shadow: 0 12px 32px rgb(16 54 38 / 4%); }
+.mandatory-disclosure__section-head { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+.mandatory-disclosure__section-head h2 { margin: 0; color: var(--disclosure-green); font-size: clamp(18px, 2vw, 24px); line-height: 1.25; letter-spacing: -.025em; }
+.mandatory-disclosure__table-wrap { max-width: 100%; overflow-x: auto; overscroll-behavior-inline: contain; }
+.mandatory-disclosure__table { width: 100%; border-collapse: collapse; background: #fff; font-size: 14px; line-height: 1.55; }
+.mandatory-disclosure__table th,
+.mandatory-disclosure__table td { padding: 13px 14px; border: 1px solid #d8dfd5; text-align: left; vertical-align: top; }
+.mandatory-disclosure__table th { color: #193a2d; background: #edf4ed; font-size: 11px; font-weight: 800; letter-spacing: .045em; }
+.mandatory-disclosure__table td:first-child { width: 82px; color: #68776e; white-space: nowrap; }
+.mandatory-disclosure__table td:nth-child(2) { width: 43%; font-weight: 600; }
+.mandatory-disclosure__table td:nth-child(3) { color: #52665a; overflow-wrap: anywhere; }
+.mandatory-disclosure__pdf { display: inline-flex; align-items: center; gap: 8px; color: var(--disclosure-green); font-weight: 750; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.mandatory-disclosure__pdf:hover { color: #b17a10; }
+.mandatory-disclosure__pending { color: #7a7060; font-size: 12px; font-style: italic; }
+.mandatory-disclosure__note { margin: 9px 0 0; color: #718077; font-size: 12px; }
+.mandatory-disclosure__contact { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-top: clamp(42px, 6vw, 74px); padding: clamp(26px, 4vw, 44px); color: #fff; background: var(--disclosure-deep); }
+.mandatory-disclosure__contact .mandatory-disclosure__index { color: #e6a42c; }
+.mandatory-disclosure__contact h2 { margin: 11px 0 0; color: #fff; font-size: clamp(27px, 4vw, 42px); letter-spacing: -.05em; line-height: 1.05; }
+.mandatory-disclosure__contact-links { display: flex; flex-wrap: wrap; gap: 12px 24px; }
+.mandatory-disclosure__contact-links a { color: var(--disclosure-mint); font-size: 14px; font-weight: 700; text-decoration-color: rgb(154 230 189 / 50%); text-underline-offset: 4px; overflow-wrap: anywhere; }
+
+@media (max-width: 680px) {
+  .mandatory-disclosure__hero { min-height: 440px; padding: 108px 22px 64px; }
+  .mandatory-disclosure__hero h1 { font-size: clamp(42px, 12vw, 62px); }
+  .mandatory-disclosure__hero-mark { right: -12px; bottom: 8%; font-size: 58vw; }
+  .mandatory-disclosure__body { padding: 52px 16px 72px; }
+  .mandatory-disclosure__intro { margin-bottom: 28px; }
+  .mandatory-disclosure__sections { gap: 16px; }
+  .mandatory-disclosure__section { padding: 19px 15px; }
+  .mandatory-disclosure__section-head { align-items: flex-start; }
+  .mandatory-disclosure__table { min-width: 680px; font-size: 13px; }
+  .mandatory-disclosure__table th,
+  .mandatory-disclosure__table td { padding: 11px 10px; }
+  .mandatory-disclosure__table-wrap:focus-visible { outline: 2px solid var(--disclosure-green); outline-offset: 3px; }
+  .mandatory-disclosure__contact { display: grid; gap: 22px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mandatory-disclosure__jump { transition: none; }
+}

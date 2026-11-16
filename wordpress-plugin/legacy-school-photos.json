@@ -1,0 +1,818 @@
+{
+  "home": {
+    "https://media.istockphoto.com/id/1343473005/photo/teacher-teaching-concepts-of-windmill-in-the-classroom-to-students.webp": [
+      {
+        "path": "galleryImages.0.image",
+        "image": "/images/school/classroom-teacher.webp",
+        "alt": [
+          "alt",
+          "A teacher speaking to a group in a classroom"
+        ]
+      }
+    ],
+    "https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3": [
+      {
+        "path": "galleryImages.1.image",
+        "image": "/images/school/playground-friends.webp",
+        "alt": [
+          "alt",
+          "Two children playing together on playground equipment"
+        ]
+      }
+    ],
+    "https://images.unsplash.com/photo-1600792170156-7fdc12ed6733": [
+      {
+        "path": "galleryImages.2.image",
+        "image": "/images/school/outdoor-group-play.webp",
+        "alt": [
+          "alt",
+          "Children taking part in an outdoor group activity"
+        ]
+      }
+    ],
+    "https://plus.unsplash.com/premium_photo-1661963297627-92799f5658fd": [
+      {
+        "path": "lifeCards.0.image",
+        "image": "/images/school/building-blocks.webp"
+      }
+    ],
+    "https://images.unsplash.com/photo-1771257807779-a72e74deaa11": [
+      {
+        "path": "lifeCards.1.image",
+        "image": "/images/school/climbing-wall.webp"
+      }
+    ],
+    "https://images.unsplash.com/photo-1770096679844-57ca92c2b64b": [
+      {
+        "path": "lifeCards.2.image",
+        "image": "/images/school/teacher-at-board.webp"
+      }
+    ],
+    "https://images.unsplash.com/photo-1761039807514-292d7d33059f": [
+      {
+        "path": "lifeCards.3.image",
+        "image": "/images/school/friends-on-the-lawn.webp"
+      }
+    ],
+    "https://plus.unsplash.com/premium_photo-1682124399858-022a1cf3aa71": [
+      {
+        "path": "lifeCards.4.image",
+        "image": "/images/school/lunchtime.webp"
+      }
+    ],
+    "https://plus.unsplash.com/premium_photo-1770505495978-51e36b2f8040": [
+      {
+        "path": "lifeCards.5.image",
+        "image": "/images/school/outdoor-mindfulness.webp"
+      }
+    ],
+    "https://images.unsplash.com/photo-1758685733726-4c9a728afeb5": [
+      {
+        "path": "wayItems.0.image",
+        "image": "/images/school/early-writing.webp"
+      }
+    ],
+    "https://images.unsplash.com/photo-1692269726060-9c604e06f63b": [
+      {
+        "path": "wayItems.1.image",
+        "image": "/images/school/classroom-writing.webp"
+      }
+    ],
+    "https://images.pexels.com/photos/8535215/pexels-photo-8535215.jpeg": [
+      {
+        "path": "wayItems.2.image",
+        "image": "/images/school/school-friends.webp"
+      }
+    ],
+    "https://images.pexels.com/photos/8613094/pexels-photo-8613094.jpeg": [
+      {
+        "path": "wayItems.3.image",
+        "image": "/images/school/carrom-game.webp"
+      }
+    ],
+    "https://images.unsplash.com/photo-1509062522246-3755977927d7": [
+      {
+        "path": "fallbackImage",
+        "image": "/images/school/classroom-writing.webp"
+      },
+      {
+        "path": "facts.0.image",
+        "image": "/images/school/school-entrance.webp"
+      },
+      {
+        "path": "homeMedia.aboutFallback",
+        "image": "/images/school/classroom-writing.webp"
+      }
+    ],
+    "https://images.unsplash.com/photo-1544717305-2782549b5136": [
+      {
+        "path": "facts.1.image",
+        "image": "/images/school/preschool-circle.webp"
+      }
+    ],
+    "https://images.unsplash.com/photo-1588072432836-e10032774350": [
+      {
+        "path": "facts.2.image",
+        "image": "/images/school/playground-ride-on.webp"
+      }
+    ],
+    "https://images.unsplash.com/photo-1546519638-68e109498ffc": [
+      {
+        "path": "facts.3.image",
+        "image": "/images/school/classroom-writing.webp"
+      }
+    ],
+    "https://images.unsplash.com/photo-1562774053-701939374585": [
+      {
+        "path": "facts.4.image",
+        "image": "/images/school/circle-time.webp"
+      }
+    ],
+    "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9": [
+      {
+        "path": "facts.5.image",
+        "image": "/images/school/school-bus.webp"
+      }
+    ],
+    "https://images.unsplash.com/photo-1532094349884-543bc11b234d": [
+      {
+        "path": "facts.6.image",
+        "image": "/images/school/campus-courtyard.webp"
+      }
+    ],
+    "https://images.unsplash.com/photo-1529390079861-591de354faf5": [
+      {
+        "path": "facts.7.image",
+        "image": "/images/school/faculty-team-meeting.webp"
+      }
+    ],
+    "https://velammalnexus.edu.in/assets/images/mogappair-west-kids-home/kids-west-about.jpg": [
+      {
+        "path": "programs.0.image",
+        "image": "/images/school/preschool-ride-on.webp"
+      }
+    ],
+    "https://azimpremjiuniversity.edu.in/imager/photos/Communication/Outdoor-Pics/1490951/6-2.f1729879149_4b32b63c5c28c858e051e9d1a2a717a1.JPG": [
+      {
+        "path": "programs.1.image",
+        "image": "/images/school/early-writing.webp"
+      }
+    ],
+    "https://www.nmajs.edu.in/sites/nmajs/files/2025-01/myp-sec1.webp": [
+      {
+        "path": "programs.2.image",
+        "image": "/images/school/student-in-class.webp"
+      }
+    ],
+    "https://svssac.in/uploads/colleges/banner_1780574578_63917903.jpg": [
+      {
+        "path": "programs.3.image",
+        "image": "/images/school/student-group-meeting.webp"
+      }
+    ]
+  },
+  "about": {
+    "https://images.unsplash.com/photo-1692269725827-699e04a11cdf": [
+      {
+        "path": "aboutImages.0.src",
+        "image": "/images/school/learning-through-play.webp",
+        "alt": [
+          "alt",
+          "Children playing and learning together on the lawn"
+        ]
+      }
+    ],
+    "https://images.unsplash.com/photo-1623863568368-69e4cbe6cc0b": [
+      {
+        "path": "aboutImages.1.src",
+        "image": "/images/school/building-blocks.webp",
+        "alt": [
+          "alt",
+          "Young children working together with colourful building blocks"
+        ]
+      }
+    ],
+    "https://images.unsplash.com/photo-1524069290683-0457abfe42c3": [
+      {
+        "path": "aboutImages.2.src",
+        "image": "/images/school/classroom-teacher.webp",
+        "alt": [
+          "alt",
+          "A teacher speaking to a group in a classroom"
+        ]
+      }
+    ],
+    "https://images.unsplash.com/flagged/photo-1574097656146-0b43b7660cb6": [
+      {
+        "path": "aboutImages.3.src",
+        "image": "/images/school/school-community.webp",
+        "alt": [
+          "alt",
+          "A large group of Vidya Academy students seated together"
+        ]
+      }
+    ],
+    "https://images.unsplash.com/photo-1494790108377-be9c29b29330": [
+      {
+        "path": "aboutCopy.faculty.images.quote.src",
+        "image": "/images/school/staff-at-desk.webp",
+        "alt": [
+          "alt",
+          "A staff member seated at a desk"
+        ]
+      }
+    ],
+    "https://images.unsplash.com/photo-1529070538774-1843cb3265df": [
+      {
+        "path": "aboutCopy.faculty.images.collaboration.src",
+        "image": "/images/school/staff-roundtable.webp",
+        "alt": [
+          "alt",
+          "School staff meeting around a long table"
+        ]
+      }
+    ],
+    "https://images.unsplash.com/photo-1544717305-2782549b5136": [
+      {
+        "path": "aboutCopy.faculty.images.guidance.src",
+        "image": "/images/school/student-guidance.webp",
+        "alt": [
+          "alt",
+          "Students meeting with a staff member"
+        ]
+      }
+    ]
+  },
+  "campus": {
+    "https://images.unsplash.com/photo-1771909712619-54b241d2f8ff": [
+      {
+        "path": "marqueeImages.0",
+        "image": "/images/school/campus-courtyard.webp"
+      }
+    ],
+    "https://images.unsplash.com/photo-1566938089211-5821c49b3548": [
+      {
+        "path": "marqueeImages.1",
+        "image": "/images/school/climbing-wall.webp"
+      }
+    ],
+    "https://images.unsplash.com/photo-1710845423770-dafc183dbc4b": [
+      {
+        "path": "marqueeImages.2",
+        "image": "/images/school/racket-play.webp"
+      }
+    ],
+    "https://images.unsplash.com/photo-1771909712463-b1c7b542f845": [
+      {
+        "path": "marqueeImages.3",
+        "image": "/images/school/playground-friends.webp"
+      },
+      {
+        "path": "groundsImages.2.src",
+        "image": "/images/school/outdoor-group-play.webp",
+        "alt": [
+          "alt",
+          "Children taking part in an outdoor group activity"
+        ]
+      }
+    ],
+    "https://images.unsplash.com/photo-1711369093144-2ada6e035a84": [
+      {
+        "path": "groundsImages.0.src",
+        "image": "/images/school/climbing-wall.webp",
+        "alt": [
+          "alt",
+          "Children climbing a colourful play wall"
+        ]
+      }
+    ],
+    "https://images.unsplash.com/photo-1674573228894-3d8c97e9a394": [
+      {
+        "path": "groundsImages.1.src",
+        "image": "/images/school/preschool-ride-on.webp",
+        "alt": [
+          "alt",
+          "A young child on a pink ride-on toy"
+        ]
+      }
+    ],
+    "https://plus.unsplash.com/premium_photo-1723575635498-f56e800c595e": [
+      {
+        "path": "groundsImages.3.src",
+        "image": "/images/school/playground-ride-on.webp",
+        "alt": [
+          "alt",
+          "A child on a red playground ride-on"
+        ]
+      }
+    ],
+    "https://images.unsplash.com/photo-1657977727664-43b1260cff11": [
+      {
+        "path": "groundsImages.4.src",
+        "image": "/images/school/cricket-court.webp",
+        "alt": [
+          "alt",
+          "Students practising cricket on the covered court"
+        ]
+      }
+    ],
+    "https://images.unsplash.com/photo-1771909713629-c261826a9f9f": [
+      {
+        "path": "groundsImages.5.src",
+        "image": "/images/school/activity-walkway.webp",
+        "alt": [
+          "alt",
+          "Children moving through a covered school walkway"
+        ]
+      }
+    ],
+    "https://plus.unsplash.com/premium_photo-1684713510655-e6e31536168d": [
+      {
+        "path": "groundsImages.6.src",
+        "image": "/images/school/students-at-school-gate.webp",
+        "alt": [
+          "alt",
+          "Students walking outside the school gate with backpacks"
+        ]
+      }
+    ],
+    "https://images.unsplash.com/photo-1586760517845-88f3ea745618": [
+      {
+        "path": "heroImages.0.src",
+        "image": "/images/school/academy-entrance-sign.webp",
+        "alt": [
+          "alt",
+          "Vidya Academy signage above the entrance"
+        ]
+      }
+    ],
+    "https://images.unsplash.com/photo-1505305976870-c0be1cd39939": [
+      {
+        "path": "heroImages.1.src",
+        "image": "/images/school/academy-wall-sign.webp",
+        "alt": [
+          "alt",
+          "Vidya Academy lettering on an interior wall"
+        ]
+      }
+    ],
+    "https://images.unsplash.com/photo-1576610616656-d3aa5d1f4534": [
+      {
+        "path": "heroImages.2.src",
+        "image": "/images/school/racket-play.webp",
+        "alt": [
+          "alt",
+          "A student playing a racket sport in the covered area"
+        ]
+      }
+    ],
+    "https://plus.unsplash.com/premium_photo-1748026235764-a01dd638d70d": [
+      {
+        "path": "heroImages.3.src",
+        "image": "/images/school/students-in-corridor.webp",
+        "alt": [
+          "alt",
+          "A group of students walking through a school corridor"
+        ]
+      }
+    ],
+    "https://images.unsplash.com/photo-1728206348193-9b5ae74a7d32": [
+      {
+        "path": "heroImages.4.src",
+        "image": "/images/school/covered-activity-court.webp",
+        "alt": [
+          "alt",
+          "Children playing in the covered school court"
+        ]
+      }
+    ],
+    "https://images.unsplash.com/photo-1530549387789-4c1017266635": [
+      {
+        "path": "heroImages.5.src",
+        "image": "/images/school/outdoor-mindfulness.webp",
+        "alt": [
+          "alt",
+          "Children sitting quietly on the outdoor lawn"
+        ]
+      }
+    ],
+    "https://images.unsplash.com/photo-1546519638-68e109498ffc": [
+      {
+        "path": "heroImages.6.src",
+        "image": "/images/school/cricket-swing.webp",
+        "alt": [
+          "alt",
+          "A student practising a cricket swing"
+        ]
+      }
+    ],
+    "https://images.unsplash.com/photo-1509062522246-3755977927d7": [
+      {
+        "path": "heroImages.7.src",
+        "image": "/images/school/classroom-writing.webp",
+        "alt": [
+          "alt",
+          "Children writing together at a classroom table"
+        ]
+      }
+    ],
+    "https://images.unsplash.com/photo-1529390079861-591de354faf5": [
+      {
+        "path": "heroImages.8.src",
+        "image": "/images/school/school-friends.webp",
+        "alt": [
+          "alt",
+          "Four students talking together on campus"
+        ]
+      }
+    ],
+    "https://images.unsplash.com/photo-1562774053-701939374585": [
+      {
+        "path": "FALLBACK_IMAGE",
+        "image": "/images/school/covered-activity-court.webp"
+      },
+      {
+        "path": "FALLBACK_BUILDING_IMAGE",
+        "image": "/images/school/academy-entrance-sign.webp"
+      },
+      {
+        "path": "buildingMarqueeImages.0",
+        "image": "/images/school/academy-entrance-sign.webp"
+      }
+    ],
+    "https://images.unsplash.com/photo-1722853827087-f6fc4d977d25": [
+      {
+        "path": "buildingMarqueeImages.1",
+        "image": "/images/school/campus-arched-door.webp"
+      }
+    ],
+    "https://images.unsplash.com/photo-1702763529935-f4f7b4df3380": [
+      {
+        "path": "buildingMarqueeImages.2",
+        "image": "/images/school/academy-wall-sign.webp"
+      }
+    ],
+    "https://images.unsplash.com/photo-1523050854058-8df90110c9f1": [
+      {
+        "path": "buildingMarqueeImages.3",
+        "image": "/images/school/campus-courtyard.webp"
+      }
+    ],
+    "https://images.unsplash.com/photo-1592280771190-3e2e4d571952": [
+      {
+        "path": "buildingImages.0.src",
+        "image": "/images/school/academy-entrance-sign.webp",
+        "alt": [
+          "alt",
+          "Vidya Academy signage above the entrance"
+        ]
+      }
+    ],
+    "https://images.unsplash.com/photo-1519452575417-564c1401ecc0": [
+      {
+        "path": "buildingImages.1.src",
+        "image": "/images/school/campus-arched-door.webp",
+        "alt": [
+          "alt",
+          "An arched yellow door beside a planter"
+        ]
+      }
+    ],
+    "https://images.unsplash.com/photo-1559135197-8a45ea74d367": [
+      {
+        "path": "buildingImages.2.src",
+        "image": "/images/school/academy-wall-sign.webp",
+        "alt": [
+          "alt",
+          "Vidya Academy lettering on an interior wall"
+        ]
+      }
+    ],
+    "https://images.unsplash.com/photo-1675747158934-5f82097d2c21": [
+      {
+        "path": "buildingImages.3.src",
+        "image": "/images/school/classroom-teacher.webp",
+        "alt": [
+          "alt",
+          "A teacher speaking to a group in a classroom"
+        ]
+      }
+    ],
+    "https://images.unsplash.com/photo-1498243691581-b145c3f54a5a": [
+      {
+        "path": "buildingImages.4.src",
+        "image": "/images/school/student-group-meeting.webp",
+        "alt": [
+          "alt",
+          "Students seated together in a meeting room"
+        ]
+      }
+    ],
+    "https://images.unsplash.com/photo-1541339907198-e08756dedf3f": [
+      {
+        "path": "buildingImages.5.src",
+        "image": "/images/school/student-guidance.webp",
+        "alt": [
+          "alt",
+          "Students meeting with a staff member"
+        ]
+      }
+    ],
+    "https://images.unsplash.com/photo-1564981797816-1043664bf78d": [
+      {
+        "path": "buildingImages.6.src",
+        "image": "/images/school/students-in-corridor.webp",
+        "alt": [
+          "alt",
+          "A group of students walking through a school corridor"
+        ]
+      }
+    ],
+    "https://images.unsplash.com/photo-1780844824566-2fb198a6b93c": [
+      {
+        "path": "campusFeatureImage",
+        "image": "/images/school/covered-activity-court.webp"
+      }
+    ]
+  },
+  "learningPathways": {
+    "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9": [
+      {
+        "path": "programmes.0.image",
+        "image": "/images/school/learning-through-play.webp",
+        "alt": [
+          "imageAlt",
+          "Children playing and learning together on the lawn"
+        ]
+      }
+    ],
+    "https://images.unsplash.com/photo-1509062522246-3755977927d7": [
+      {
+        "path": "programmes.1.image",
+        "image": "/images/school/building-blocks.webp",
+        "alt": [
+          "imageAlt",
+          "Young children working together with colourful building blocks"
+        ]
+      }
+    ],
+    "https://images.unsplash.com/photo-1523240795612-9a054b0db644": [
+      {
+        "path": "programmes.2.image",
+        "image": "/images/school/board-game-together.webp",
+        "alt": [
+          "imageAlt",
+          "Students playing a tabletop game together"
+        ]
+      }
+    ],
+    "https://images.unsplash.com/photo-1562774053-701939374585": [
+      {
+        "path": "learningPathwaysCopy.careerGuidance.image",
+        "image": "/images/school/student-guidance.webp",
+        "alt": [
+          "imageAlt",
+          "Students meeting with a staff member"
+        ]
+      }
+    ],
+    "https://images.unsplash.com/photo-1719159381916-062fa9f435a6": [
+      {
+        "path": "learningPathwaysCopy.hero.image.src",
+        "image": "/images/school/classroom-writing.webp",
+        "alt": [
+          "alt",
+          "Children writing together at a classroom table"
+        ]
+      }
+    ]
+  },
+  "motion": {
+    "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9": [
+      {
+        "path": "FALLBACK_IMAGE",
+        "image": "/images/school/school-community.webp"
+      },
+      {
+        "path": "motionSections.cards.0.image",
+        "image": "/images/school/outdoor-group-play.webp",
+        "alt": [
+          "imageAlt",
+          "Children taking part in an outdoor group activity"
+        ]
+      },
+      {
+        "path": "motionSections.cards.1.image",
+        "image": "/images/school/karate-sparring.webp",
+        "alt": [
+          "imageAlt",
+          "Students practising karate sparring in uniform"
+        ]
+      }
+    ],
+    "https://images.unsplash.com/photo-1523240795612-9a054b0db644": [
+      {
+        "path": "FALLBACK_IMAGE",
+        "image": "/images/school/school-community.webp"
+      }
+    ],
+    "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b": [
+      {
+        "path": "motionSections.cards.0.image",
+        "image": "/images/school/outdoor-group-play.webp",
+        "alt": [
+          "imageAlt",
+          "Children taking part in an outdoor group activity"
+        ]
+      }
+    ]
+  },
+  "motionEvents": {
+    "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9": [
+      {
+        "path": "events.0.image",
+        "image": "/images/school/students-applauding.webp",
+        "alt": [
+          "imageAlt",
+          "Students seated together and applauding"
+        ],
+        "imageCaption": "Students gathered and applauding at Vidya Academy.",
+        "gallery": [
+          {
+            "image": "/images/school/circle-time.webp",
+            "imageAlt": "Children sitting together in a circle",
+            "caption": "Children sitting together in a circle."
+          },
+          {
+            "image": "/images/school/preschool-circle.webp",
+            "imageAlt": "Children seated together during a group activity",
+            "caption": "Children seated together during a group activity."
+          }
+        ]
+      }
+    ],
+    "https://images.unsplash.com/photo-1472396961693-142e6e269027": [
+      {
+        "path": "events.1.image",
+        "image": "/images/school/outdoor-mindfulness.webp",
+        "alt": [
+          "imageAlt",
+          "Children sitting quietly on the outdoor lawn"
+        ],
+        "imageCaption": "Children on the lawn at Vidya Academy.",
+        "gallery": [
+          {
+            "image": "/images/school/friends-on-the-lawn.webp",
+            "imageAlt": "Two children sitting together on the lawn",
+            "caption": "Two children sitting together on the lawn."
+          },
+          {
+            "image": "/images/school/campus-courtyard.webp",
+            "imageAlt": "A student in the courtyard by the arched walkway",
+            "caption": "A student in the courtyard by the arched walkway."
+          }
+        ]
+      }
+    ],
+    "https://images.unsplash.com/photo-1511632765486-a01980e01a18": [
+      {
+        "path": "events.2.image",
+        "image": "/images/school/school-community.webp",
+        "alt": [
+          "imageAlt",
+          "A large group of Vidya Academy students seated together"
+        ],
+        "imageCaption": "The Vidya Academy school community.",
+        "gallery": [
+          {
+            "image": "/images/school/students-applauding.webp",
+            "imageAlt": "Students seated together and applauding",
+            "caption": "Students seated together and applauding."
+          },
+          {
+            "image": "/images/school/school-friends.webp",
+            "imageAlt": "Four students talking together on campus",
+            "caption": "Four students talking together on campus."
+          }
+        ]
+      }
+    ],
+    "https://images.unsplash.com/photo-1556911220-e15b29be8c8f": [
+      {
+        "path": "events.3.image",
+        "image": "/images/school/lunchtime.webp",
+        "alt": [
+          "imageAlt",
+          "A student eating lunch at school"
+        ],
+        "imageCaption": "A lunchtime moment at Vidya Academy.",
+        "gallery": [
+          {
+            "image": "/images/school/water-break.webp",
+            "imageAlt": "A child drinking from a cup",
+            "caption": "A child drinking from a cup."
+          },
+          {
+            "image": "/images/school/early-writing.webp",
+            "imageAlt": "A child writing at a yellow classroom table",
+            "caption": "A child writing at a yellow classroom table."
+          }
+        ]
+      }
+    ],
+    "https://images.unsplash.com/photo-1504609813442-a8924e83f76e": [
+      {
+        "path": "events.4.image",
+        "image": "/images/school/covered-play-activity.webp",
+        "alt": [
+          "imageAlt",
+          "Children moving together through the covered activity area"
+        ],
+        "imageCaption": "Movement and play in the covered activity area.",
+        "gallery": [
+          {
+            "image": "/images/school/outdoor-group-play.webp",
+            "imageAlt": "Children taking part in an outdoor group activity",
+            "caption": "Children taking part in an outdoor group activity."
+          },
+          {
+            "image": "/images/school/covered-activity-court.webp",
+            "imageAlt": "Children playing in the covered school court",
+            "caption": "Children playing in the covered school court."
+          }
+        ]
+      }
+    ],
+    "https://images.unsplash.com/photo-1523240795612-9a054b0db644": [
+      {
+        "path": "events.5.image",
+        "image": "/images/school/school-bus.webp",
+        "alt": [
+          "imageAlt",
+          "Students beside a Vidya Academy school bus"
+        ],
+        "imageCaption": "Students beside the Vidya Academy school bus.",
+        "gallery": [
+          {
+            "image": "/images/school/school-entrance.webp",
+            "imageAlt": "Students walking through the green school gate",
+            "caption": "Students walking through the green school gate."
+          },
+          {
+            "image": "/images/school/students-in-corridor.webp",
+            "imageAlt": "A group of students walking through a school corridor",
+            "caption": "A group of students walking through a school corridor."
+          }
+        ]
+      }
+    ]
+  },
+  "motionAchievements": {
+    "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9": [
+      {
+        "path": "achievements.0.image",
+        "image": "/images/school/school-community.webp",
+        "alt": [
+          "imageAlt",
+          "A large group of Vidya Academy students seated together"
+        ],
+        "imageCaption": "A group photo of the Vidya Academy school community.",
+        "gallery": [
+          {
+            "image": "/images/school/academy-wall-sign.webp",
+            "imageAlt": "Vidya Academy lettering on an interior wall",
+            "caption": "Vidya Academy lettering on an interior wall."
+          },
+          {
+            "image": "/images/school/academy-entrance-sign.webp",
+            "imageAlt": "Vidya Academy signage above the entrance",
+            "caption": "Vidya Academy signage above the entrance."
+          }
+        ]
+      }
+    ],
+    "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b": [
+      {
+        "path": "achievements.1.image",
+        "image": "/images/school/karate-sparring.webp",
+        "alt": [
+          "imageAlt",
+          "Students practising karate sparring in uniform"
+        ],
+        "imageCaption": "Karate practice at Vidya Academy.",
+        "gallery": [
+          {
+            "image": "/images/school/karate-class.webp",
+            "imageAlt": "Children practising karate in a line",
+            "caption": "Children practising karate in a line."
+          },
+          {
+            "image": "/images/school/students-applauding.webp",
+            "imageAlt": "Students seated together and applauding",
+            "caption": "Students seated together and applauding."
+          }
+        ]
+      }
+    ]
+  }
+}

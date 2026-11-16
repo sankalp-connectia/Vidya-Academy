@@ -1,0 +1,34 @@
+.article-gallery {
+  margin-block-start: clamp(40px, 6vw, 84px);
+}
+
+.article-gallery__photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: clamp(16px, 2.5vw, 32px);
+  margin-top: 16px;
+}
+
+.article-gallery figure { min-width: 0; margin: 0; }
+.article-gallery figure h3 { margin: 0 0 10px; color: #173c30; font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.15rem, 2vw, 1.45rem); font-weight: 400; line-height: 1.2; }
+
+.article-gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 12px;
+  background: #e4ece2;
+}
+
+.article-gallery figcaption {
+  margin: 10px 0 0;
+  color: #425e51;
+  font-size: .875rem;
+  line-height: 1.5;
+}
+
+.article-gallery img[src^="/images/mascot-"] {
+  object-fit: contain;
+}

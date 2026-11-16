@@ -1,0 +1,3238 @@
+@import url(
+  "https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&display=swap"
+);
+
+
+/* =========================================================
+   VIDYA ACADEMY FOOTER
+========================================================= */
+
+:root {
+  --vidya-mascot-width:
+    clamp(
+      135px,
+      9.4vw,
+      175px
+    );
+
+  --vidya-mascot-height:
+    clamp(
+      175px,
+      12.2vw,
+      228px
+    );
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.vidya-footer {
+  --footer-white:
+    #d4d5d5;
+
+  --footer-muted:
+    #b4b6b7;
+
+  --footer-muted-light:
+    #c5c7c7;
+
+  --footer-accent:
+    #8fd8b2;
+
+  --footer-black:
+    #070908;
+
+  --footer-line:
+    rgba(
+      180,
+      188,
+      183,
+      0.16
+    );
+
+  --wordmark-stroke:
+    rgba(
+      92,
+      106,
+      98,
+      0.94
+    );
+
+
+  position:
+    relative;
+
+  z-index:
+    80;
+
+
+  display:
+    block;
+
+
+  width:
+    100%;
+
+
+  /*
+    2px overlap prevents browser
+    sub-pixel white seams.
+  */
+
+  margin:
+    -2px
+    0
+    0;
+
+
+  padding:
+    clamp(
+      70px,
+      8vh,
+      100px
+    )
+    0
+    26px;
+
+
+  overflow:
+    hidden;
+
+
+  isolation:
+    isolate;
+
+
+  background:
+    radial-gradient(
+      ellipse at 50% 116%,
+
+      rgba(
+        131,
+        148,
+        137,
+        0.07
+      )
+      0%,
+
+      rgba(
+        86,
+        102,
+        92,
+        0.03
+      )
+      30%,
+
+      transparent
+      61%
+    ),
+    linear-gradient(
+      180deg,
+
+      #060807
+      0%,
+
+      #070908
+      28%,
+
+      #080a09
+      49%,
+
+      #090c0a
+      65%,
+
+      #0b100c
+      77%,
+
+      #101710
+      88%,
+
+      #182019
+      100%
+    );
+
+
+  color:
+    var(
+      --footer-white
+    );
+
+
+  font-family:
+    "Manrope",
+    sans-serif;
+
+
+  /*
+    CRITICAL:
+    Never animate / translate
+    the footer root itself.
+  */
+
+  transform:
+    none !important;
+}
+
+
+/* =========================================================
+   TOP SEAM COVER
+
+   This sits 4px above footer and
+   guarantees no white line appears.
+========================================================= */
+
+.vidya-footer::before {
+  content:
+    "";
+
+
+  position:
+    absolute;
+
+  z-index:
+    0;
+
+
+  top:
+    -4px;
+
+  left:
+    0;
+
+
+  width:
+    100%;
+
+  height:
+    6px;
+
+
+  background:
+    #060807;
+
+
+  pointer-events:
+    none;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+.vidya-footer,
+.vidya-footer *,
+.vidya-footer *::before,
+.vidya-footer *::after,
+.vidya-site-mascot,
+.vidya-site-mascot *,
+.vidya-site-mascot *::before,
+.vidya-site-mascot *::after {
+  box-sizing:
+    border-box;
+}
+
+
+.vidya-footer h1,
+.vidya-footer h2,
+.vidya-footer h3,
+.vidya-footer p,
+.vidya-footer ul {
+  margin:
+    0;
+
+  padding:
+    0;
+}
+
+
+.vidya-footer a {
+  color:
+    inherit;
+
+  text-decoration:
+    none;
+}
+
+
+.vidya-footer button,
+.vidya-site-mascot {
+  font:
+    inherit;
+}
+
+
+/* =========================================================
+   CONTAINER
+
+   THIS moves during footer reveal.
+   Footer background itself does not.
+========================================================= */
+
+.vidya-footer-container {
+  position:
+    relative;
+
+  z-index:
+    2;
+
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+
+  width:
+    min(
+      1750px,
+      calc(
+        100% - 110px
+      )
+    );
+
+
+  margin:
+    0 auto;
+
+
+  will-change:
+    transform,
+    opacity;
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.vidya-footer-main {
+  position:
+    relative;
+
+
+  display:
+    grid;
+
+
+  grid-template-columns:
+    minmax(
+      390px,
+      0.9fr
+    )
+    minmax(
+      650px,
+      1.55fr
+    );
+
+
+  align-items:
+    start;
+
+
+  gap:
+    clamp(
+      70px,
+      8vw,
+      150px
+    );
+
+
+  width:
+    100%;
+
+
+  min-height:
+    310px;
+}
+
+
+/* =========================================================
+   INFO
+========================================================= */
+
+.vidya-footer-info {
+  position:
+    relative;
+
+  z-index:
+    5;
+
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  align-items:
+    flex-start;
+
+
+  width:
+    100%;
+
+
+  max-width:
+    590px;
+
+
+  padding-top:
+    4px;
+
+
+  will-change:
+    transform,
+    opacity;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.vidya-footer-description {
+  width:
+    100%;
+
+
+  max-width:
+    560px;
+
+
+  color:
+    var(
+      --footer-muted-light
+    );
+
+
+  font-size:
+    clamp(
+      15px,
+      1.08vw,
+      19px
+    );
+
+
+  font-weight:
+    400;
+
+
+  line-height:
+    1.65;
+
+
+  letter-spacing:
+    -0.02em;
+}
+
+
+/* =========================================================
+   DETAILS
+========================================================= */
+
+.vidya-footer-details {
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+
+  gap:
+    15px;
+
+
+  margin-top:
+    32px;
+}
+
+
+.vidya-footer-detail {
+  display:
+    flex;
+
+  align-items:
+    center;
+
+
+  gap:
+    13px;
+
+
+  color:
+    var(
+      --footer-muted-light
+    );
+
+
+  font-size:
+    14px;
+
+
+  font-weight:
+    400;
+
+
+  line-height:
+    1.4;
+
+
+  letter-spacing:
+    -0.015em;
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.detail-icon {
+  display:
+    inline-flex;
+
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+
+  width:
+    22px;
+
+  height:
+    22px;
+
+
+  flex:
+    0
+    0
+    22px;
+
+
+  color:
+    var(
+      --footer-accent
+    );
+}
+
+
+.detail-icon svg {
+  display:
+    block;
+
+
+  width:
+    19px;
+
+  height:
+    19px;
+}
+
+
+/* =========================================================
+   WHATSAPP
+========================================================= */
+
+.vidya-footer-actions {
+  margin-top:
+    31px;
+}
+
+
+.vidya-footer-whatsapp {
+  position:
+    relative;
+
+
+  display:
+    inline-flex;
+
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+
+  gap:
+    11px;
+
+
+  min-width:
+    215px;
+
+
+  height:
+    54px;
+
+
+  padding:
+    0
+    22px;
+
+
+  overflow:
+    hidden;
+
+
+  border:
+    1px solid
+    rgba(
+      200,
+      210,
+      203,
+      0.18
+    );
+
+
+  border-radius:
+    0;
+
+
+  background:
+    var(
+      --footer-black
+    );
+
+
+  color:
+    #d4d5d5;
+
+
+  font-size:
+    13px;
+
+
+  font-weight:
+    600;
+
+
+  transition:
+    transform
+      0.4s
+      cubic-bezier(
+        0.22,
+        1,
+        0.36,
+        1
+      ),
+    border-color
+      0.3s
+      ease,
+    box-shadow
+      0.3s
+      ease,
+    color
+      0.3s
+      ease;
+}
+
+
+.vidya-footer-whatsapp::before {
+  content:
+    "";
+
+
+  position:
+    absolute;
+
+
+  inset:
+    0;
+
+
+  z-index:
+    0;
+
+
+  background:
+    var(
+      --footer-accent
+    );
+
+
+  transform:
+    translateY(
+      102%
+    );
+
+
+  transition:
+    transform
+      0.45s
+      cubic-bezier(
+        0.22,
+        1,
+        0.36,
+        1
+      );
+}
+
+
+.vidya-footer-whatsapp span,
+.vidya-footer-whatsapp svg {
+  position:
+    relative;
+
+  z-index:
+    2;
+}
+
+
+.vidya-footer-whatsapp svg {
+  width:
+    21px;
+
+  height:
+    21px;
+
+
+  color:
+    #43d67b;
+
+
+  transition:
+    color
+      0.3s
+      ease;
+}
+
+
+.vidya-footer-whatsapp:hover {
+  color:
+    var(
+      --footer-black
+    );
+
+
+  border-color:
+    var(
+      --footer-accent
+    );
+
+
+  transform:
+    translateY(
+      -3px
+    );
+
+
+  box-shadow:
+    0
+    12px
+    28px
+    rgba(
+      0,
+      0,
+      0,
+      0.24
+    );
+}
+
+
+.vidya-footer-whatsapp:hover::before {
+  transform:
+    translateY(
+      0
+    );
+}
+
+
+.vidya-footer-whatsapp:hover svg {
+  color:
+    var(
+      --footer-black
+    );
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.vidya-footer-navigation {
+  display:
+    grid;
+
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(
+        0,
+        1fr
+      )
+    );
+
+
+  gap:
+    clamp(
+      42px,
+      6vw,
+      110px
+    );
+
+
+  width:
+    100%;
+
+
+  padding-top:
+    10px;
+}
+
+
+.vidya-footer-column {
+  min-width:
+    0;
+
+
+  width:
+    100%;
+
+
+  will-change:
+    transform,
+    opacity;
+}
+
+
+.vidya-footer-column h3 {
+  color:
+    #d4d5d5;
+
+
+  font-size:
+    clamp(
+      19px,
+      1.4vw,
+      23px
+    );
+
+
+  font-weight:
+    600;
+
+
+  line-height:
+    1.15;
+
+
+  letter-spacing:
+    -0.04em;
+}
+
+
+.vidya-footer-column ul {
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+
+  gap:
+    14px;
+
+
+  margin-top:
+    23px;
+
+
+  list-style:
+    none;
+}
+
+
+.vidya-footer-column li {
+  width:
+    fit-content;
+
+
+  max-width:
+    100%;
+}
+
+
+.vidya-footer-column a {
+  display:
+    inline-block;
+
+
+  color:
+    var(
+      --footer-muted
+    );
+
+
+  font-size:
+    14px;
+
+
+  font-weight:
+    400;
+
+
+  line-height:
+    1.45;
+
+
+  letter-spacing:
+    -0.015em;
+
+
+  transition:
+    color
+      0.25s
+      ease,
+    transform
+      0.25s
+      ease;
+}
+
+
+.vidya-footer-column a:hover {
+  color:
+    #e4e5e5;
+
+
+  transform:
+    translateX(
+      3px
+    );
+}
+
+
+/* =========================================================
+   MASCOT
+========================================================= */
+
+.vidya-site-mascot {
+  position:
+    fixed;
+
+
+  z-index:
+    9999;
+
+
+  right:
+    clamp(
+      12px,
+      1.1vw,
+      20px
+    );
+
+
+  bottom:
+    clamp(
+      14px,
+      1.5vw,
+      24px
+    );
+
+
+  width:
+    var(
+      --vidya-mascot-width
+    );
+
+
+  height:
+    var(
+      --vidya-mascot-height
+    );
+
+
+  margin:
+    0;
+
+
+  padding:
+    0;
+
+
+  overflow:
+    visible;
+
+
+  border:
+    0;
+
+
+  outline:
+    none;
+
+
+  border-radius:
+    0;
+
+
+  background:
+    transparent;
+
+
+  cursor:
+    pointer;
+
+
+  opacity:
+    0;
+
+
+  visibility:
+    hidden;
+
+
+  pointer-events:
+    none;
+
+
+  transform:
+    translateY(
+      20px
+    )
+    scale(
+      0.95
+    );
+
+
+  transform-origin:
+    right
+    bottom;
+
+
+  transition:
+    opacity
+      0.35s
+      ease,
+    visibility
+      0.35s
+      ease,
+    transform
+      0.48s
+      cubic-bezier(
+        0.22,
+        1,
+        0.36,
+        1
+      );
+}
+
+
+/* =========================================================
+   MASCOT VISIBLE
+========================================================= */
+
+.vidya-site-mascot--visible {
+  opacity:
+    1;
+
+
+  visibility:
+    visible;
+
+
+  pointer-events:
+    auto;
+
+
+  transform:
+    translateY(
+      0
+    )
+    scale(
+      1
+    );
+}
+
+
+/* =========================================================
+   MASCOT VIDEO
+========================================================= */
+
+.vidya-site-mascot-video {
+  position:
+    absolute;
+
+
+  inset:
+    0;
+
+
+  z-index:
+    1;
+
+
+  display:
+    block;
+
+
+  width:
+    100%;
+
+  height:
+    100%;
+
+
+  object-fit:
+    contain;
+
+
+  object-position:
+    right
+    bottom;
+
+
+  border:
+    0;
+
+
+  outline:
+    none;
+
+
+  background:
+    transparent;
+
+
+  pointer-events:
+    none;
+
+
+  user-select:
+    none;
+
+
+  transform-origin:
+    right
+    bottom;
+
+
+  filter:
+    drop-shadow(
+      0
+      15px
+      22px
+      rgba(
+        0,
+        0,
+        0,
+        0.22
+      )
+    );
+
+
+  transition:
+    transform
+      0.45s
+      cubic-bezier(
+        0.22,
+        1,
+        0.36,
+        1
+      ),
+    filter
+      0.35s
+      ease;
+}
+
+
+.vidya-site-mascot:hover
+.vidya-site-mascot-video {
+  transform:
+    translateY(
+      -5px
+    )
+    scale(
+      1.035
+    );
+
+
+  filter:
+    drop-shadow(
+      0
+      21px
+      26px
+      rgba(
+        0,
+        0,
+        0,
+        0.3
+      )
+    );
+}
+
+
+/* =========================================================
+   BRAND AREA
+========================================================= */
+
+.vidya-footer-brand {
+  position:
+    relative;
+
+
+  z-index:
+    5;
+
+
+  width:
+    100%;
+
+
+  margin-top:
+    clamp(
+      45px,
+      5vh,
+      72px
+    );
+
+
+  padding-left:
+    12px;
+
+  padding-right:
+    12px;
+
+
+  overflow:
+    hidden;
+}
+
+
+/* =========================================================
+   WORDMARK WINDOW
+========================================================= */
+
+.vidya-footer-wordmark-window {
+  --wordmark-size:
+    clamp(
+      148px,
+      12vw,
+      250px
+    );
+
+
+  position:
+    relative;
+
+
+  width:
+    100%;
+
+
+  height:
+    calc(
+      var(
+        --wordmark-size
+      )
+      * 0.78
+    );
+
+
+  min-height:
+    0;
+
+
+  margin:
+    0;
+
+
+  padding:
+    0;
+
+
+  overflow:
+    hidden;
+
+
+  border-bottom:
+    1px solid
+    var(
+      --footer-line
+    );
+}
+
+
+/* =========================================================
+   LARGE VIDYA ACADEMY
+========================================================= */
+
+.vidya-footer-large-name {
+  display:
+    block;
+
+
+  position:
+    relative;
+
+
+  left:
+    0;
+
+
+  width:
+    100%;
+
+
+  max-width:
+    100%;
+
+
+  margin:
+    0;
+
+
+  padding:
+    0;
+
+
+  font-family:
+    "Poppins",
+    sans-serif !important;
+
+
+  font-size:
+    var(
+      --wordmark-size
+    );
+
+
+  font-weight:
+    700 !important;
+
+
+  line-height:
+    1;
+
+
+  letter-spacing:
+    -0.055em;
+
+
+  text-transform:
+    uppercase;
+
+
+  text-align:
+    center;
+
+
+  white-space:
+    nowrap;
+
+
+  color:
+    transparent !important;
+
+
+  -webkit-text-fill-color:
+    transparent !important;
+
+
+  -webkit-text-stroke:
+    1.45px
+    var(
+      --wordmark-stroke
+    );
+
+
+  text-stroke:
+    1.45px
+    var(
+      --wordmark-stroke
+    );
+
+
+  text-shadow:
+    none !important;
+
+
+  scale:
+    0.84
+    1.15;
+
+
+  transform-origin:
+    center
+    top;
+
+
+  will-change:
+    transform,
+    opacity;
+}
+
+
+/* =========================================================
+   FOOTER BOTTOM
+========================================================= */
+
+.vidya-footer-bottom {
+  display:
+    flex;
+
+
+  align-items:
+    center;
+
+
+  justify-content:
+    space-between;
+
+
+  gap:
+    25px;
+
+
+  width:
+    100%;
+
+
+  margin-top:
+    18px;
+
+
+  will-change:
+    transform,
+    opacity;
+}
+
+
+.vidya-footer-copyright {
+  color:
+    #bec0c1;
+
+
+  font-size:
+    11px;
+
+
+  font-weight:
+    400;
+
+
+  line-height:
+    1.5;
+}
+
+
+.vidya-footer-bottom-links {
+  display:
+    flex;
+
+
+  align-items:
+    center;
+
+
+  gap:
+    14px;
+
+
+  color:
+    #bec0c1;
+}
+
+
+.vidya-footer-bottom-links a {
+  color:
+    #bec0c1;
+
+
+  font-size:
+    11px;
+
+
+  transition:
+    color
+      0.25s
+      ease;
+}
+
+
+.vidya-footer-bottom-links button {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.vidya-footer-bottom-links button:hover {
+  color: var(--vidya-gold, #f3c64e);
+}
+
+.vidya-footer-bottom-links button:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+.vidya-footer-bottom-links a:hover {
+  color:
+    #e2e3e4;
+}
+
+
+.vidya-footer-bottom-links span {
+  opacity:
+    0.45;
+
+
+  font-size:
+    10px;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (
+  min-width: 1600px
+) {
+
+  :root {
+    --vidya-mascot-width:
+      178px;
+
+    --vidya-mascot-height:
+      232px;
+  }
+
+
+  .vidya-footer-container {
+    width:
+      min(
+        1780px,
+        calc(
+          100% - 150px
+        )
+      );
+  }
+
+
+  .vidya-footer-main {
+    grid-template-columns:
+      minmax(
+        440px,
+        0.85fr
+      )
+      minmax(
+        760px,
+        1.55fr
+      );
+
+
+    gap:
+      clamp(
+        100px,
+        9vw,
+        180px
+      );
+
+
+    min-height:
+      320px;
+  }
+
+
+  .vidya-site-mascot {
+    right:
+      20px;
+
+    bottom:
+      22px;
+  }
+
+
+  .vidya-footer-brand {
+    margin-top:
+      65px;
+
+
+    padding-left:
+      14px;
+
+    padding-right:
+      14px;
+  }
+
+
+  .vidya-footer-wordmark-window {
+    --wordmark-size:
+      clamp(
+        195px,
+        11.5vw,
+        255px
+      );
+  }
+
+
+  .vidya-footer-large-name {
+    scale:
+      0.84
+      1.15;
+
+
+    -webkit-text-stroke:
+      1.5px
+      rgba(
+        96,
+        110,
+        102,
+        0.96
+      );
+
+
+    text-stroke:
+      1.5px
+      rgba(
+        96,
+        110,
+        102,
+        0.96
+      );
+  }
+
+}
+
+
+/* =========================================================
+   NORMAL DESKTOP
+========================================================= */
+
+@media
+(
+  min-width: 901px
+)
+and
+(
+  max-width: 1599px
+) {
+
+  .vidya-footer-brand {
+    padding-left:
+      16px;
+
+    padding-right:
+      16px;
+  }
+
+
+  .vidya-footer-large-name {
+    left:
+      0;
+
+
+    scale:
+      0.82
+      1.15;
+  }
+
+}
+
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (
+  max-width: 1200px
+) {
+
+  :root {
+    --vidya-mascot-width:
+      155px;
+
+    --vidya-mascot-height:
+      202px;
+  }
+
+
+  .vidya-footer-container {
+    width:
+      calc(
+        100% - 72px
+      );
+  }
+
+
+  .vidya-footer-main {
+    grid-template-columns:
+      minmax(
+        0,
+        0.85fr
+      )
+      minmax(
+        0,
+        1.4fr
+      );
+
+
+    gap:
+      clamp(
+        28px,
+        4vw,
+        55px
+      );
+  }
+
+
+  .vidya-footer-navigation {
+    gap:
+      28px;
+  }
+
+
+  .vidya-site-mascot {
+    right:
+      16px;
+
+
+    bottom:
+      18px;
+  }
+
+
+  .vidya-footer-brand {
+    margin-top:
+      52px;
+
+
+    padding-left:
+      12px;
+
+    padding-right:
+      12px;
+  }
+
+
+  .vidya-footer-wordmark-window {
+    --wordmark-size:
+      clamp(
+        116px,
+        11.4vw,
+        175px
+      );
+  }
+
+
+  .vidya-footer-large-name {
+    scale:
+      0.79
+      1.15;
+
+
+    -webkit-text-stroke:
+      1.45px
+      rgba(
+        94,
+        108,
+        100,
+        0.96
+      );
+
+
+    text-stroke:
+      1.45px
+      rgba(
+        94,
+        108,
+        100,
+        0.96
+      );
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (
+  max-width: 900px
+) {
+
+  :root {
+    --vidya-mascot-width:
+      126px;
+
+    --vidya-mascot-height:
+      165px;
+  }
+
+
+  .vidya-footer {
+    padding:
+      65px
+      0
+      24px;
+  }
+
+
+  .vidya-footer-container {
+    width:
+      calc(
+        100% - 48px
+      );
+
+
+    margin:
+      0 auto;
+  }
+
+
+  .vidya-footer-main {
+    display:
+      flex;
+
+
+    flex-direction:
+      column;
+
+
+    gap:
+      45px;
+
+
+    min-height:
+      0;
+  }
+
+
+  .vidya-footer-navigation {
+    width:
+      100%;
+
+
+    gap:
+      32px;
+
+
+    padding-top:
+      0;
+  }
+
+
+  .vidya-site-mascot {
+    right:
+      14px;
+
+
+    bottom:
+      58px;
+  }
+
+
+  .vidya-footer-brand {
+    width:
+      100%;
+
+
+    margin-top:
+      50px;
+
+
+    padding-left:
+      0;
+
+
+    padding-right:
+      0;
+
+
+    text-align:
+      center;
+  }
+
+
+  .vidya-footer-wordmark-window {
+    --wordmark-size:
+      clamp(
+        46px,
+        9.4vw,
+        76px
+      );
+  }
+
+
+  .vidya-footer-large-name {
+    left:
+      0 !important;
+
+
+    width:
+      100%;
+
+
+    font-size:
+      var(
+        --wordmark-size
+      );
+
+
+    letter-spacing:
+      -0.052em;
+
+
+    text-align:
+      center;
+
+
+    scale:
+      0.84
+      1.15;
+
+
+    -webkit-text-stroke:
+      1.35px
+      rgba(
+        94,
+        108,
+        100,
+        0.96
+      );
+
+
+    text-stroke:
+      1.35px
+      rgba(
+        94,
+        108,
+        100,
+        0.96
+      );
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (
+  max-width: 600px
+) {
+
+  :root {
+    --vidya-mascot-width:
+      105px;
+
+    --vidya-mascot-height:
+      138px;
+  }
+
+
+  .vidya-footer {
+    padding:
+      54px
+      0
+      18px;
+  }
+
+
+  .vidya-footer-container {
+    width:
+      calc(
+        100% - 28px
+      );
+
+
+    margin:
+      0
+      14px;
+  }
+
+
+  .vidya-footer-main {
+    display:
+      flex;
+
+
+    flex-direction:
+      column;
+
+
+    gap:
+      34px;
+
+
+    min-height:
+      0;
+  }
+
+
+  /* =====================================================
+     INFO
+  ===================================================== */
+
+  .vidya-footer-info {
+    max-width:
+      none;
+  }
+
+
+  .vidya-footer-description {
+    max-width:
+      100%;
+
+
+    font-size:
+      14px;
+  }
+
+
+  .vidya-footer-details {
+    gap:
+      12px;
+
+
+    margin-top:
+      24px;
+  }
+
+
+  .vidya-footer-detail {
+    gap:
+      9px;
+
+
+    font-size:
+      11px;
+  }
+
+
+  .detail-icon {
+    width:
+      20px;
+
+
+    height:
+      20px;
+
+
+    flex:
+      0
+      0
+      20px;
+  }
+
+
+  .detail-icon svg {
+    width:
+      17px;
+
+
+    height:
+      17px;
+  }
+
+
+  /* =====================================================
+     BUTTON
+  ===================================================== */
+
+  .vidya-footer-actions {
+    width:
+      100%;
+
+
+    margin-top:
+      25px;
+  }
+
+
+  .vidya-footer-whatsapp {
+    width:
+      100%;
+
+
+    min-width:
+      0;
+
+
+    height:
+      51px;
+  }
+
+
+  /* =====================================================
+     NAVIGATION
+  ===================================================== */
+
+  .vidya-footer-navigation {
+    grid-template-columns:
+      repeat(
+        3,
+        minmax(
+          0,
+          1fr
+        )
+      );
+
+
+    gap:
+      9px;
+
+
+    width:
+      100%;
+
+
+    padding:
+      0;
+  }
+
+
+  .vidya-footer-column h3 {
+    font-size:
+      13px;
+
+
+    white-space:
+      nowrap;
+  }
+
+
+  .vidya-footer-column ul {
+    gap:
+      10px;
+
+
+    margin-top:
+      17px;
+  }
+
+
+  .vidya-footer-column a {
+    font-size:
+      9px;
+
+
+    line-height:
+      1.35;
+
+
+    overflow-wrap:
+      anywhere;
+  }
+
+
+  /* =====================================================
+     MOBILE MASCOT
+  ===================================================== */
+
+  .vidya-site-mascot {
+    right:
+      10px;
+
+
+    bottom:
+      54px;
+
+
+    width:
+      var(
+        --vidya-mascot-width
+      );
+
+
+    height:
+      var(
+        --vidya-mascot-height
+      );
+
+
+    transform-origin:
+      right
+      bottom;
+  }
+
+
+  .vidya-site-mascot-video {
+    object-position:
+      right
+      bottom;
+
+
+    transform-origin:
+      right
+      bottom;
+  }
+
+
+  /* =====================================================
+     MOBILE WORDMARK
+  ===================================================== */
+
+  .vidya-footer-brand {
+    width:
+      100%;
+
+
+    margin-top:
+      45px;
+
+
+    margin-bottom:
+      30px;
+
+
+    padding-left:
+      0;
+
+
+    padding-right:
+      0;
+
+
+    overflow:
+      hidden;
+
+
+    text-align:
+      center;
+  }
+
+
+  .vidya-footer-wordmark-window {
+    --wordmark-size:
+      clamp(
+        40px,
+        12.8vw,
+        62px
+      );
+
+
+    width:
+      100%;
+
+
+    height:
+      calc(
+        var(
+          --wordmark-size
+        )
+        * 0.8
+      );
+
+
+    margin:
+      0;
+
+
+    padding:
+      0;
+
+
+    overflow:
+      hidden;
+
+
+    border-bottom:
+      1px solid
+      var(
+        --footer-line
+      );
+  }
+
+
+  .vidya-footer-large-name {
+    left:
+      0 !important;
+
+
+    width:
+      100%;
+
+
+    max-width:
+      100%;
+
+
+    margin:
+      0;
+
+
+    padding:
+      0;
+
+
+    font-family:
+      "Poppins",
+      sans-serif !important;
+
+
+    font-size:
+      var(
+        --wordmark-size
+      );
+
+
+    font-weight:
+      700 !important;
+
+
+    line-height:
+      1;
+
+
+    letter-spacing:
+      -0.06em;
+
+
+    text-transform:
+      uppercase;
+
+
+    text-align:
+      center;
+
+
+    white-space:
+      nowrap;
+
+
+    color:
+      transparent !important;
+
+
+    -webkit-text-fill-color:
+      transparent !important;
+
+
+    -webkit-text-stroke:
+      1.25px
+      rgba(
+        98,
+        112,
+        104,
+        0.98
+      );
+
+
+    text-stroke:
+      1.25px
+      rgba(
+        98,
+        112,
+        104,
+        0.98
+      );
+
+
+    scale:
+      0.84
+      1.16;
+
+
+    transform-origin:
+      center
+      top;
+  }
+
+
+  /* =====================================================
+     MOBILE BOTTOM
+
+     IMPORTANT:
+     BOTH LINES ARE PERFECTLY CENTERED.
+
+     NO 105PX RIGHT PADDING.
+  ===================================================== */
+
+  .vidya-footer-bottom {
+    display:
+      flex;
+
+
+    flex-direction:
+      column;
+
+
+    align-items:
+      center;
+
+
+    justify-content:
+      center;
+
+
+    gap:
+      8px;
+
+
+    width:
+      100%;
+
+
+    margin-top:
+      10px;
+
+
+    margin-left:
+      auto;
+
+    margin-right:
+      auto;
+
+
+    padding:
+      0 !important;
+
+
+    text-align:
+      center;
+  }
+
+
+  .vidya-footer-copyright {
+    display:
+      block;
+
+
+    width:
+      100%;
+
+
+    margin:
+      0 auto;
+
+
+    padding:
+      0;
+
+
+    color:
+      #bec0c1;
+
+
+    font-size:
+      9px;
+
+
+    line-height:
+      1.5;
+
+
+    text-align:
+      center;
+  }
+
+
+  .vidya-footer-bottom-links {
+    display:
+      flex;
+
+
+    align-items:
+      center;
+
+
+    justify-content:
+      center;
+
+
+    gap:
+      7px;
+
+
+    width:
+      100%;
+
+
+    margin:
+      0 auto;
+
+
+    padding:
+      0;
+
+
+    flex-wrap:
+      nowrap;
+
+
+    color:
+      #bec0c1;
+
+
+    text-align:
+      center;
+  }
+
+
+  .vidya-footer-bottom-links a {
+    font-size:
+      9px;
+
+
+    white-space:
+      nowrap;
+  }
+
+
+  .vidya-footer-bottom-links span {
+    font-size:
+      8px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (
+  max-width: 380px
+) {
+
+  :root {
+    --vidya-mascot-width:
+      96px;
+
+    --vidya-mascot-height:
+      126px;
+  }
+
+
+  .vidya-footer-container {
+    width:
+      calc(
+        100% - 22px
+      );
+
+
+    margin:
+      0
+      11px;
+  }
+
+
+  .vidya-footer-column h3 {
+    font-size:
+      11px;
+  }
+
+
+  .vidya-footer-column a {
+    font-size:
+      8px;
+  }
+
+
+  .vidya-site-mascot {
+    right:
+      8px;
+
+
+    bottom:
+      50px;
+  }
+
+
+  .vidya-footer-brand {
+    margin-top:
+      40px;
+
+
+    margin-bottom:
+      28px;
+  }
+
+
+  .vidya-footer-wordmark-window {
+    --wordmark-size:
+      clamp(
+        38px,
+        12.4vw,
+        48px
+      );
+  }
+
+
+  .vidya-footer-large-name {
+    letter-spacing:
+      -0.062em;
+
+
+    scale:
+      0.82
+      1.16;
+
+
+    -webkit-text-stroke:
+      1.2px
+      rgba(
+        98,
+        112,
+        104,
+        0.98
+      );
+
+
+    text-stroke:
+      1.2px
+      rgba(
+        98,
+        112,
+        104,
+        0.98
+      );
+  }
+
+
+  .vidya-footer-bottom {
+    padding:
+      0 !important;
+  }
+
+
+  .vidya-footer-copyright,
+  .vidya-footer-bottom-links a {
+    font-size:
+      8px;
+  }
+
+
+  .vidya-footer-bottom-links {
+    gap:
+      6px;
+  }
+
+}
+
+
+/* =========================================================
+   EXTRA SMALL MOBILE
+========================================================= */
+
+@media (
+  max-width: 330px
+) {
+
+  :root {
+    --vidya-mascot-width:
+      88px;
+
+    --vidya-mascot-height:
+      116px;
+  }
+
+
+  .vidya-footer-container {
+    width:
+      calc(
+        100% - 18px
+      );
+
+
+    margin:
+      0
+      9px;
+  }
+
+
+  .vidya-footer-column h3 {
+    font-size:
+      9px;
+  }
+
+
+  .vidya-footer-column a {
+    font-size:
+      7px;
+  }
+
+
+  .vidya-site-mascot {
+    right:
+      7px;
+
+
+    bottom:
+      46px;
+  }
+
+
+  .vidya-footer-brand {
+    margin-top:
+      36px;
+
+
+    margin-bottom:
+      26px;
+  }
+
+
+  .vidya-footer-wordmark-window {
+    --wordmark-size:
+      36px;
+  }
+
+
+  .vidya-footer-large-name {
+    letter-spacing:
+      -0.065em;
+
+
+    scale:
+      0.8
+      1.16;
+
+
+    -webkit-text-stroke:
+      1.15px
+      rgba(
+        98,
+        112,
+        104,
+        0.98
+      );
+
+
+    text-stroke:
+      1.15px
+      rgba(
+        98,
+        112,
+        104,
+        0.98
+      );
+  }
+
+
+  .vidya-footer-bottom {
+    padding:
+      0 !important;
+  }
+
+
+  .vidya-footer-copyright,
+  .vidya-footer-bottom-links a {
+    font-size:
+      7.5px;
+  }
+
+
+  .vidya-footer-bottom-links {
+    gap:
+      5px;
+  }
+
+}
+
+
+/* =========================================================
+   SHORT DESKTOP
+========================================================= */
+
+@media
+(
+  min-width: 901px
+)
+and
+(
+  max-height: 760px
+) {
+
+  .vidya-footer {
+    padding-top:
+      55px;
+  }
+
+
+  .vidya-footer-main {
+    min-height:
+      275px;
+  }
+
+
+  .vidya-footer-brand {
+    margin-top:
+      42px;
+  }
+
+
+  .vidya-footer-bottom {
+    margin-top:
+      14px;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (
+  prefers-reduced-motion:
+    reduce
+) {
+
+  .vidya-footer *,
+  .vidya-footer *::before,
+  .vidya-footer *::after,
+  .vidya-site-mascot,
+  .vidya-site-mascot *,
+  .vidya-site-mascot *::before,
+  .vidya-site-mascot *::after {
+    animation:
+      none !important;
+
+
+    transition:
+      none !important;
+  }
+
+
+  .vidya-footer-container,
+  .vidya-footer-info,
+  .vidya-footer-column,
+  .vidya-footer-large-name,
+  .vidya-footer-bottom {
+    opacity:
+      1 !important;
+
+
+    transform:
+      none !important;
+  }
+
+} 
+/* Keep the footer navigation focused on real pages and make its final row simple. */
+.vidya-footer-bottom {
+  justify-content: flex-start;
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, .14);
+}
+
+.vidya-footer-detail a {
+  color: inherit;
+  text-decoration: none;
+  transition: color .2s ease;
+}
+
+.vidya-footer-detail a:hover {
+  color: #f3c64e;
+}
+
+.vidya-footer-detail a:focus-visible,
+.vidya-footer-column a:focus-visible {
+  outline: 2px solid #f3c64e;
+  outline-offset: 4px;
+}
+
+@media (max-width: 900px) {
+  .vidya-footer-bottom {
+    justify-content: center;
+    margin-top: 20px;
+    padding-top: 15px;
+  }
+}
+
+.vidya-footer-socials { display: flex; flex: 0 0 auto; align-items: center; gap: 9px; margin-left: auto; margin-right: clamp(72px, 10vw, 150px); }
+.vidya-footer-socials a { display: grid; width: 38px; height: 38px; place-items: center; border: 1px solid rgba(212,213,213,.24); border-radius: 50%; color: #d4d5d5; transition: color .2s ease, background .2s ease, border-color .2s ease, transform .2s ease; }
+.vidya-footer-socials a:hover { transform: translateY(-2px); border-color: #8fd8b2; background: rgba(143,216,178,.1); color: #a9e8c6; }
+.vidya-footer-socials a:focus-visible { outline: 2px solid #f5d566; outline-offset: 3px; }
+/* Raise the floating mascot above the copyright and social row when the footer is visible. */
+.vidya-site-mascot--visible { bottom: clamp(108px, 14vh, 168px) !important; }
+@media (max-width: 700px) {
+  .vidya-footer-bottom { flex-wrap: wrap; row-gap: 16px; }
+  .vidya-footer-socials { gap: 7px; margin-left: 0; margin-right: clamp(58px, 18vw, 100px); }
+  .vidya-footer-socials a { width: 34px; height: 34px; }
+  .vidya-site-mascot--visible { bottom: 112px !important; }
+}
+.vidya-footer-socials svg { display: block; width: 18px; height: 18px; }
+
+/* Keep four navigation groups tidy on desktop and two columns on narrow screens. */
+@media (min-width: 1201px) {
+  .vidya-footer-navigation { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(18px, 3vw, 48px); }
+}
+@media (min-width: 901px) and (max-width: 1200px) {
+  .vidya-footer-navigation { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 28px; row-gap: 30px; }
+}
+@media (max-width: 900px) {
+  .vidya-footer-navigation { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 20px; row-gap: 28px; }
+}
+.vidya-footer-wordmark-window { height: calc(var(--wordmark-size) * 1.02); }
+.vidya-footer-large-name { white-space: nowrap; scale: .82 1; }
+.vidya-footer-socials { margin-right: clamp(90px, 9vw, 138px); }
+.vidya-site-mascot--footer { bottom: 20px !important; width: 86px !important; height: 112px !important; }
+@media (max-width: 700px) {
+  .vidya-footer-socials { margin-right: 74px; }
+  .vidya-site-mascot--footer { bottom: 16px !important; width: 68px !important; height: 88px !important; }
+  .vidya-footer-wordmark-window { height: calc(var(--wordmark-size) * .9); }
+}
+
+/* Split the related institutions into two compact lists so the footer stays short. */
+.vidya-footer-institution-links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: clamp(10px, 1.15vw, 18px);
+  margin-top: 23px;
+}
+
+.vidya-footer-institution-links ul {
+  gap: 10px;
+  margin-top: 0;
+}
+
+.vidya-footer-institution-links a {
+  font-size: clamp(11px, .8vw, 13px);
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+/* Reveal the mascot with position only; its size never scales during scrolling. */
+.vidya-site-mascot { transform: translateY(20px) !important; }
+.vidya-site-mascot--visible,
+.vidya-site-mascot--footer { transform: translateY(0) !important; }
+
+/* With Explore removed, give the three remaining footer groups room to breathe. */
+@media (min-width: 901px) {
+  .vidya-footer-navigation {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: clamp(28px, 4vw, 64px);
+  }
+}
+
+/* Crop roughly the lower quarter of the oversized wordmark at its divider. */
+.vidya-footer-wordmark-window {
+  height: calc(var(--wordmark-size) * .75) !important;
+  border-bottom: 1px solid var(--footer-line);
+}
+
+/* Keep every footer navigation link at the shared column text size. */
+.vidya-footer-institution-links a {
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+@media (max-width: 900px) {
+  .vidya-footer-institution-links a { font-size: 9px; line-height: 1.35; }
+}
+
+/* Keep copyright and social icons on one baseline at every screen size. */
+.vidya-footer-bottom {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 18px;
+  padding-top: 12px;
+  text-align: left;
+}
+
+.vidya-footer-copyright {
+  flex: 0 1 auto;
+  min-width: 0;
+  white-space: nowrap;
+  font-size: 11px;
+  text-align: left;
+}
+
+.vidya-footer-socials {
+  flex: 0 0 auto;
+  gap: 7px;
+  margin: 0;
+}
+
+/* Keep the back-to-top mascot a little lower across the content sections. */
+.vidya-site-mascot--visible {
+  right: clamp(6px, .7vw, 12px) !important;
+  bottom: clamp(54px, 7vh, 82px) !important;
+}
+
+/* Keep only the wordmark divider; remove the second horizontal footer rule. */
+.vidya-site-mascot-arrow { display: none; }
+.vidya-site-mascot:focus-visible {
+  outline: 2px solid #f9a01b;
+  outline-offset: 3px;
+}
+
+@media (max-width: 768px) {
+  .vidya-site-mascot--visible {
+    width: clamp(58px, 16vw, 82px);
+    height: clamp(76px, 21vw, 108px);
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    color: #fff;
+  }
+  .vidya-site-mascot-arrow {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    bottom: 1px;
+    display: grid;
+    width: 28px;
+    height: 28px;
+    padding: 4px;
+    border: 1px solid rgba(255,255,255,.86);
+    border-radius: 50%;
+    background: #0b563b;
+    color: #fff;
+  }
+  .vidya-site-mascot .vidya-site-mascot-video { display: block; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vidya-site-mascot--visible { width: 44px; height: 44px; }
+  .vidya-site-mascot-arrow { display: block; }
+  .vidya-site-mascot .vidya-site-mascot-video { display: none; }
+}
+
+.vidya-footer-bottom {
+  border-top: 0 !important;
+}
+
+@media (max-width: 700px) {
+  .vidya-footer-bottom {
+    justify-content: space-between;
+    gap: 6px;
+    padding-top: 10px;
+  }
+
+  .vidya-footer-copyright {
+    width: auto !important;
+    margin: 0;
+    font-size: clamp(7px, 2.25vw, 9px);
+  }
+
+  .vidya-footer-socials { gap: 4px; }
+  .vidya-footer-socials a { width: 27px; height: 27px; }
+  .vidya-footer-socials svg { width: 14px; height: 14px; }
+  .vidya-site-mascot--visible { right: 8px !important; bottom: max(12px, env(safe-area-inset-bottom)) !important; }
+}
+
+@media (max-width: 380px) {
+  .vidya-footer-copyright { font-size: 7px; }
+  .vidya-footer-institution-links a { font-size: 8px; }
+  .vidya-footer-socials a { width: 24px; height: 24px; }
+  .vidya-footer-socials svg { width: 12px; height: 12px; }
+}
+
+@media (max-width: 330px) {
+  .vidya-footer-institution-links a { font-size: 7px; }
+}
+
+/* Use one consistent vertical rhythm across every footer link list. */
+.vidya-footer-column ul,
+.vidya-footer-institution-links ul {
+  gap: 14px !important;
+}
+
+/* Keep the mascot at the same responsive dimensions in the footer and other sections. */
+.vidya-site-mascot--footer {
+  width: var(--vidya-mascot-width) !important;
+  height: var(--vidya-mascot-height) !important;
+}
+
+@media (max-width: 700px) {
+  .vidya-footer-wordmark-window {
+    height: calc(var(--wordmark-size) * .75) !important;
+  }
+}
+
+/* Responsive floating Vidya mascot: preserve the video proportions and keep
+   the button inside device safe areas from phones through large desktops. */
+.vidya-site-mascot--visible {
+  z-index: 10010 !important;
+  right: max(12px, env(safe-area-inset-right, 0px)) !important;
+  bottom: max(80px, calc(68px + env(safe-area-inset-bottom, 0px))) !important;
+  width: clamp(88px, 8.7vw, 138px) !important;
+  height: auto !important;
+  aspect-ratio: 484 / 736;
+}
+
+.vidya-site-mascot-video {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+  pointer-events: none;
+}
+
+.vidya-site-mascot-video {
+  z-index: 2;
+}
+
+.vidya-site-mascot-arrow { display: none !important; }
+
+@media (max-width: 1024px) {
+  .vidya-site-mascot--visible {
+    right: max(10px, env(safe-area-inset-right, 0px)) !important;
+    width: clamp(68px, 9vw, 104px) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .vidya-site-mascot--visible {
+    right: max(8px, env(safe-area-inset-right, 0px)) !important;
+    bottom: max(72px, calc(60px + env(safe-area-inset-bottom, 0px))) !important;
+    width: clamp(76px, 19vw, 104px) !important;
+  }
+}
+
+@media (min-width: 1600px) {
+  .vidya-site-mascot--visible {
+    width: clamp(150px, 8.5vw, 188px) !important;
+  }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+  .vidya-site-mascot--visible {
+    right: max(8px, env(safe-area-inset-right, 0px)) !important;
+    bottom: max(52px, calc(40px + env(safe-area-inset-bottom, 0px))) !important;
+    width: clamp(44px, 12vh, 64px) !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vidya-site-mascot .vidya-site-mascot-video {
+    display: block !important;
+  }
+
+  .vidya-site-mascot-arrow { display: none !important; }
+}
+
+/* Match the footer groups and leave balanced breathing room at the right edge. */
+@media (min-width: 901px) {
+  .vidya-footer-navigation {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: clamp(22px, 2.4vw, 36px) !important;
+    padding-right: clamp(18px, 2vw, 30px);
+  }
+}
+
+@media (max-width: 900px) {
+  .vidya-footer-navigation { padding-right: 0; }
+}
+
+/* Give the VIDYA ACADEMY outline a little more visual weight. */
+.vidya-footer-large-name {
+  font-weight: 800 !important;
+  -webkit-text-stroke-width: 1.9px !important;
+  text-stroke-width: 1.9px !important;
+}
+
+/* Tighter, more even footer columns; institutions use both columns on tablets/mobile. */
+.vidya-footer-column ul,
+.vidya-footer-institution-links ul {
+  gap: 10px !important;
+}
+
+.vidya-footer-institution-links {
+  gap: clamp(8px, 0.8vw, 14px);
+}
+
+@media (min-width: 901px) and (max-width: 1200px) {
+  .vidya-footer-navigation {
+    column-gap: 18px;
+    row-gap: 24px;
+  }
+
+  .vidya-footer-column:nth-child(3) {
+    grid-column: 1 / -1;
+  }
+
+  .vidya-footer-institution-links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .vidya-footer-navigation {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 20px;
+    row-gap: 24px;
+  }
+
+  .vidya-footer-column:nth-child(3) {
+    grid-column: 1 / -1;
+  }
+
+  .vidya-footer-column h3 {
+    font-size: 16px;
+    white-space: normal;
+  }
+
+  .vidya-footer-column > ul a {
+    font-size: 12px;
+    line-height: 1.45;
+  }
+
+  .vidya-footer-institution-links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .vidya-footer-institution-links a {
+    font-size: 12px;
+    line-height: 1.45;
+  }
+}
+
+@media (max-width: 600px) {
+  .vidya-footer-navigation {
+    column-gap: 14px;
+    row-gap: 22px;
+  }
+
+  .vidya-footer-column h3 {
+    font-size: 15px;
+  }
+
+  .vidya-footer-column > ul a {
+    font-size: 11px;
+  }
+
+  .vidya-footer-institution-links {
+    gap: 12px;
+    margin-top: 14px;
+  }
+
+  .vidya-footer-institution-links ul {
+    gap: 8px !important;
+  }
+
+  .vidya-footer-institution-links a {
+    font-size: 11px;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 380px) {
+  .vidya-footer-column h3 {
+    font-size: 14px;
+  }
+
+  .vidya-footer-column > ul a,
+  .vidya-footer-institution-links a {
+    font-size: 10px;
+  }
+}

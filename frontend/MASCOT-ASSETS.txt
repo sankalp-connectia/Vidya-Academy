@@ -1,0 +1,64 @@
+VIDYA ACADEMY — BRAND AND MASCOT ASSET MAP
+
+Brand logos, mascot artwork, mascot animation, and the old project's school photos are included in the React code as defaults. Their bundled paths are set in the matching WordPress fields. Edit those fields in WordPress to replace an image or video.
+
+BRAND LOGOS
+File: public/brand/vidya-academy-navbar.png
+Used in: Site navigation header.
+WordPress default/edit path: Navbar → Logo (siteNavigation.navbarData.logo.src).
+Replacement guide: transparent PNG/WebP, 800 × 240 px.
+
+File: public/brand/vidya-logo-transparent.png
+Used in: Existing homepage intro animation as its logo artwork. Intro animation code is unchanged.
+WordPress default/edit path: Homepage → Hero → Intro logo image (homeCopy.hero.introLogoImage).
+Replacement guide: transparent PNG/WebP, 1200 × 900 px.
+
+File: public/brand/trividha-shikshana.webp
+Used in: Trividha Shikshana logo above the three mascots.
+WordPress default/edit path: Homepage → Trividha Shikshana → Logo image (homeCopy.learningPillarsLogo.image).
+Replacement guide: transparent PNG/WebP, 1200 × 1028 px. Keep all lettering and artwork inside the image.
+
+File: public/brand/vidya-academy-logo-cropped.png
+Use: Alternate transparent Vidya Academy logo artwork. Not assigned to a page by default. To use it, paste /brand/vidya-academy-logo-cropped.png into the WordPress Navbar → Logo image URL field.
+
+HOME PAGE — ENQUIRY FORM
+File: public/mascots/vidya-mascot.webp
+Used in: Parent FAQs and Enquiry Form.
+WordPress default/edit path: Homepage → Parent FAQs and Enquiry Form → Enquiry mascot image (homeCopy.faq.mascotImage).
+Replacement guide: transparent PNG/WebP, 600 × 720 px. Show the whole mascot with clear space around it.
+
+HOME PAGE — TRIVIDHA SHIKSHANA CARDS
+File: public/mascots/mascot-body.png
+Used in: Body / Sārririka Shikshana card.
+WordPress default/edit path: first Shikshana card image.
+Replacement guide: desktop 600 × 720 px; phone 360 × 500 px. Transparent PNG/WebP. Show the whole mascot.
+
+File: public/mascots/mascot-mind.png
+Used in: Mind / Mānasa Shikshana card.
+WordPress default/edit path: second Shikshana card image.
+Replacement guide: desktop 600 × 720 px; phone 360 × 500 px. Transparent PNG/WebP. Show the whole mascot.
+
+File: public/mascots/mascot-heart.png
+Used in: Heart & Soul / Ātmika Shikshana card.
+WordPress default/edit path: third Shikshana card image.
+Replacement guide: desktop 600 × 720 px; phone 360 × 500 px. Transparent PNG/WebP. Show the whole mascot.
+
+ADMISSIONS PAGE
+File: public/mascots/vidya-admission-mascot.png
+Used in: Admissions page hero.
+WordPress default/edit path: Admissions → Hero → Image (admissionsPage.hero.image).
+Replacement guide: transparent PNG/WebP, 900 × 1100 px. Show the complete mascot.
+
+FOOTER / BACK-TO-TOP MASCOT
+File: public/mascot-doll1.webm
+Used in: The floating back-to-top control. Video only; there is no still image or poster.
+WordPress default/edit path: Footer → Mascot video (siteNavigation.footerCopy.mascotVideo). A WordPress video URL replaces the bundled video.
+Replacement guide: transparent VP9 WebM, 484 × 736 px or 600 × 900 px, 24–30 fps, short seamless loop, ideally under 2 MB.
+
+Files: public/mascot-doll.webm and public/mascot-doll1.mp4
+Bundled alternate animation versions. The default uses mascot-doll1.webm, featuring Vidya in the green uniform.
+
+Mascot images used in FAQ and learning cards: 600 × 720 px transparent PNG/WebP. Optional phone crop: 360 × 500 px. Admissions mascot: 900 × 1100 px transparent PNG/WebP.
+
+OTHER WEBSITE PHOTOS
+The matching default school photos from the old React project are bundled under public/images/ and assigned to the related WordPress image fields. If a field is blank, the frontend uses that bundled default. Upload/select a WordPress Media Library image or paste a hosted URL to replace it. New entries can be added in WordPress; when their image is blank, the matching section's bundled image is used where available.

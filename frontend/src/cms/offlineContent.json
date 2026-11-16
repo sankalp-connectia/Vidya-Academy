@@ -1,0 +1,1836 @@
+{
+  "siteNavigation": {
+    "footerColumns": [
+      {
+        "title": "School",
+        "links": [
+          {
+            "label": "About us",
+            "to": "/about"
+          },
+          {
+            "label": "Campus",
+            "to": "/campus"
+          },
+          {
+            "label": "Motion-in",
+            "to": "/motion"
+          },
+          {
+            "label": "Programs",
+            "to": "/learning-pathways"
+          },
+          {
+            "label": "Contact",
+            "to": "/contact"
+          }
+        ]
+      },
+      {
+        "title": "Admissions",
+        "links": [
+          {
+            "label": "Admissions",
+            "to": "/admissions"
+          },
+          {
+            "label": "Start an enquiry",
+            "to": "/contact"
+          },
+          {
+            "label": "Blogs",
+            "to": "/blogs"
+          },
+          {
+            "label": "FAQs",
+            "to": "/#faq"
+          }
+        ]
+      },
+      {
+        "title": "Our Institutions",
+        "linkGroups": [
+          [
+            {
+              "label": "Moodlakatte Institutes of Technology",
+              "href": "https://www.mitkundapura.com/",
+              "external": true
+            },
+            {
+              "label": "Moodlakatte College of Nursing",
+              "href": "https://mcnkundapura.com/",
+              "external": true
+            },
+            {
+              "label": "IMJ Institutes of Science and Commerce",
+              "href": "https://imjisc.com/",
+              "external": true
+            },
+            {
+              "label": "Moodlakatte College of Physiotherapy",
+              "href": "https://mcopt.in/",
+              "external": true
+            }
+          ],
+          [
+            {
+              "label": "IMJ College of Allied Health Sciences",
+              "href": "https://imjcoahs.com/",
+              "external": true
+            },
+            {
+              "label": "Moodlakatte Institute of Paramedical Sciences",
+              "href": "https://www.mipskundapura.com/",
+              "external": true
+            },
+            {
+              "label": "IMJ Institute of Research",
+              "href": "https://imjir.org/",
+              "external": true
+            }
+          ]
+        ]
+      }
+    ],
+    "footerCopy": {
+      "description": "A nurturing learning environment where children learn with curiosity, grow with confidence and discover the joy of learning.",
+      "copyrightName": "Vidya Academy",
+      "copyrightNotice": "All rights reserved.",
+      "brandTitle": "VIDYA ACADEMY",
+      "mascotVideo": "/mascot-doll1.webm"
+    },
+    "navbarData": {
+      "logo": {
+        "src": "/brand/vidya-academy-navbar.png",
+        "alt": "Vidya Academy",
+        "to": "/"
+      },
+      "links": [
+        {
+          "label": "PROGRAMS",
+          "to": "/learning-pathways"
+        },
+        {
+          "label": "ADMISSIONS",
+          "to": "/admissions"
+        },
+        {
+          "label": "CAMPUS",
+          "to": "/campus"
+        },
+        {
+          "label": "MILESTONE",
+          "to": "/motion"
+        },
+        {
+          "label": "ABOUT",
+          "to": "/about"
+        },
+        {
+          "label": "MANDATORY DISCLOSURE",
+          "to": "/mandatory-disclosure"
+        }
+      ],
+      "cta": {
+        "label": "ENQUIRE",
+        "to": "/contact"
+      }
+    },
+    "schoolDetails": {
+      "location": "1172/1 Railway Station Road, Moodlakatte, Kundapura – 576217, Karnataka, India",
+      "phone": "+91 91480 19301",
+      "email": "vidyaacademy2024@gmail.com",
+      "whatsapp": ""
+    },
+    "socialLinks": [
+      {
+        "label": "Instagram",
+        "href": "https://www.instagram.com/thevidyaacademy/"
+      },
+      {
+        "label": "Facebook",
+        "href": "https://www.facebook.com/thevidyaacademy/"
+      },
+      {
+        "label": "YouTube",
+        "href": "https://www.youtube.com/channel/UCBGiAGbk6pDo0AlaALEQMXQ"
+      }
+    ]
+  },
+  "home": {
+    "admissionFormCopy": {
+      "eyebrow": "Contact Vidya Academy",
+      "description": "Have questions about admissions, classes, facilities or the learning programme? Our school team is available to help you understand the right learning option for your child.",
+      "title": [
+        "Send an",
+        "Enquiry."
+      ],
+      "closeLabel": "Close admission form",
+      "fields": [
+        {
+          "name": "Parent/Guardian Name",
+          "label": "Parent / Guardian Name",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "Phone Number",
+          "label": "Phone Number",
+          "type": "tel",
+          "required": true
+        },
+        {
+          "name": "Email",
+          "label": "Email",
+          "type": "email",
+          "required": true
+        },
+        {
+          "name": "Address/Location",
+          "label": "Address / Location",
+          "type": "text",
+          "required": false
+        },
+        {
+          "name": "Child’s Age",
+          "label": "Child’s Age",
+          "type": "text",
+          "required": false
+        }
+      ],
+      "classLabel": "Class Interested In",
+      "classPlaceholder": "Select a class",
+      "classOptions": [
+        "Play Group",
+        "Nursery",
+        "LKG",
+        "UKG",
+        "Class 1–5",
+        "Class 6–8"
+      ],
+      "messageLabel": "Message",
+      "submit": "Send an Enquiry"
+    },
+    "facts": [
+      {
+        "id": "01",
+        "value": "24×7",
+        "title": "CCTV Surveillance",
+        "description": "A safety-focused campus with 24×7 CCTV surveillance.",
+        "image": "/images/school/school-entrance.webp",
+        "mobileImage": ""
+      },
+      {
+        "id": "02",
+        "value": "Small",
+        "title": "Batches",
+        "description": "Smaller batches are designed to support personal attention.",
+        "image": "/images/school/preschool-circle.webp",
+        "mobileImage": ""
+      },
+      {
+        "id": "03",
+        "value": "Play",
+        "title": "Indoor and Outdoor",
+        "description": "Indoor and outdoor play opportunities support active learning.",
+        "image": "/images/school/playground-ride-on.webp",
+        "mobileImage": ""
+      },
+      {
+        "id": "04",
+        "value": "Library",
+        "title": "Early Reading",
+        "description": "Library experiences encourage early reading habits.",
+        "image": "/images/school/classroom-writing.webp",
+        "mobileImage": ""
+      },
+      {
+        "id": "05",
+        "value": "Spoken English",
+        "title": "Communication",
+        "description": "Activities give attention to vocabulary and pronunciation.",
+        "image": "/images/school/circle-time.webp",
+        "mobileImage": ""
+      },
+      {
+        "id": "06",
+        "value": "Transport",
+        "title": "To and from School",
+        "description": "Transportation facility to and from the school.",
+        "image": "/images/school/school-bus.webp",
+        "mobileImage": ""
+      },
+      {
+        "id": "07",
+        "value": "Nature",
+        "title": "Nature",
+        "description": "Green surroundings encourage children to connect with nature.",
+        "image": "/images/school/campus-courtyard.webp",
+        "mobileImage": ""
+      },
+      {
+        "id": "08",
+        "value": "Partner",
+        "title": "Key Education Foundation",
+        "description": "Learning support through collaboration with Key Education Foundation.",
+        "image": "/images/school/faculty-team-meeting.webp",
+        "mobileImage": ""
+      }
+    ],
+    "fallbackImage": "/images/school/classroom-writing.webp",
+    "faqItems": [
+      {
+        "question": "What classes are available at Vidya Academy?",
+        "answer": "Vidya Academy lists Play Group and Nursery, LKG and UKG, Classes 1–5, and Classes 6–8. Contact the school to confirm current class availability."
+      },
+      {
+        "question": "Where is Vidya Academy located?",
+        "answer": "Vidya Academy is located at 1172/1 Railway Station Road, Moodlakatte, Kundapura, Karnataka – 576217."
+      },
+      {
+        "question": "What age groups are covered?",
+        "answer": "The website currently lists Play Group from 1.5–2.5 years, Nursery from 2.5–3.5 years, LKG from 3.5–4.5 years, UKG from 4.5–5.5 years and Class 1 at 6 years. Parents should contact the school to confirm current eligibility and age cut-offs."
+      },
+      {
+        "question": "Does Vidya Academy provide transportation?",
+        "answer": "Yes. The school website states that transportation facilities are available to and from the school."
+      },
+      {
+        "question": "Does the school have CCTV surveillance?",
+        "answer": "Yes. Vidya Academy states that the campus has 24×7 CCTV surveillance."
+      },
+      {
+        "question": "What kind of learning approach does Vidya Academy follow?",
+        "answer": "The school uses a child-centred, play-based and experiential approach that combines structured learning with creative, social, physical and language-development activities."
+      },
+      {
+        "question": "Does the school focus on spoken English?",
+        "answer": "Yes. Spoken English, pronunciation and vocabulary are specifically highlighted among the school’s learning facilities."
+      },
+      {
+        "question": "What activities are included in the curriculum?",
+        "answer": "Activities include story and library sessions, rhymes and songs, early mathematics, art and craft, play, garden visits, celebrations, Little Chef, dance and field trips."
+      },
+      {
+        "question": "Does Vidya Academy focus only on academics?",
+        "answer": "No. The school’s approach covers cognitive, physical, language, social-emotional and self-help development alongside academic foundations."
+      },
+      {
+        "question": "Does Vidya Academy have outdoor play facilities?",
+        "answer": "Yes. The school lists an outdoor play area with gardens and sand pits."
+      },
+      {
+        "question": "Does Vidya Academy have a library?",
+        "answer": "Yes. The school has a library intended to encourage reading habits from an early age."
+      },
+      {
+        "question": "What makes the school’s environment child-friendly?",
+        "answer": "The school highlights child-friendly furniture, colourful classrooms, indoor and outdoor activity areas, smaller batches, green surroundings and a safety-focused campus."
+      },
+      {
+        "question": "Does Vidya Academy have an award or recognition?",
+        "answer": "Yes. The school states that it received the Karnataka Shikshana Rathna Award for Best Preschool in January 2025."
+      },
+      {
+        "question": "How can I enquire about admission?",
+        "answer": "Parents can contact Vidya Academy at +91 91480 19301 or use the website enquiry form to ask about admissions, classes and campus visits."
+      }
+    ],
+    "galleryImages": [
+      {
+        "id": "01",
+        "badge": "LEARN",
+        "image": "/images/school/classroom-teacher.webp",
+        "alt": "A teacher speaking to a group in a classroom",
+        "mobileImage": ""
+      },
+      {
+        "id": "02",
+        "badge": "EXPLORE",
+        "image": "/images/school/playground-friends.webp",
+        "alt": "Two children playing together on playground equipment",
+        "mobileImage": ""
+      },
+      {
+        "id": "03",
+        "badge": "GROW",
+        "image": "/images/school/outdoor-group-play.webp",
+        "alt": "Children taking part in an outdoor group activity",
+        "mobileImage": ""
+      }
+    ],
+    "homeCopy": {
+      "hero": {
+        "title": [
+          "A Joyful Start",
+          "to Learning at",
+          "Vidya Academy"
+        ],
+        "description": "Vidya Academy, Moodlakatte, Kundapura, provides a nurturing and engaging learning environment where young children can explore, create, communicate and grow with confidence.",
+        "video": "/media/home-hero-original.mp4",
+        "explore": "Explore Our School",
+        "apply": "Apply for Admission",
+        "mobileVideo": "",
+        "posterImage": "",
+        "mobilePosterImage": "",
+        "introLogoImage": "/brand/vidya-logo-transparent.png"
+      },
+      "philosophy": {
+        "title": [
+          "Welcome to",
+          "Vidya Academy"
+        ],
+        "paragraphs": [
+          "Every child begins their learning journey differently. At Vidya Academy, we create a warm, child-friendly environment where children feel comfortable asking questions, trying new things, making friends and developing the confidence to learn.",
+          "Our approach brings together structured learning, play, creativity, movement, language development and everyday life skills. Children are encouraged to explore their interests while developing the foundations they need for the next stage of education.",
+          "Located in the green surroundings of Moodlakatte, Kundapura, Vidya Academy is designed to make the early years meaningful, active and enjoyable."
+        ],
+        "closing": "A nurturing learning environment where children learn with curiosity, grow with confidence and discover the joy of learning."
+      },
+      "whyParentsChoose": {
+        "eyebrow": "Why parents choose Vidya Academy",
+        "title": "A thoughtful start for every child.",
+        "items": [
+          "Child-centred learning with attention to individual development",
+          "Play-based and experiential learning opportunities",
+          "Focus on cognitive, physical, language, social and emotional development",
+          "Smaller batches designed to support personal attention",
+          "Child-friendly classrooms and learning spaces",
+          "Indoor and outdoor play opportunities",
+          "Library experiences that encourage early reading habits",
+          "Spoken English activities with attention to vocabulary and pronunciation",
+          "24×7 CCTV surveillance and a safety-focused campus",
+          "Transportation facility to and from the school",
+          "Green surroundings that encourage children to connect with nature",
+          "Learning support through collaboration with Key Education Foundation"
+        ]
+      },
+      "programsTitle": [
+        "Classes open",
+        "for admission."
+      ],
+      "lifeTitle": [
+        "Five areas",
+        "of development."
+      ],
+      "wayTitle": [
+        "Our",
+        "Mission."
+      ],
+      "factsTitle": [
+        "Why parents",
+        "choose Vidya Academy."
+      ],
+      "faq": {
+        "title": [
+          "Parent",
+          "FAQs."
+        ],
+        "introduction": "Questions about classes, learning, facilities and admissions.",
+        "enquiryButton": "Send an Enquiry",
+        "mascotImage": "/mascots/vidya-mascot.webp"
+      },
+      "learningPillars": [
+        {
+          "title": "Sārririka Shikshana",
+          "subtitle": "Learning for the Body",
+          "description": "We teach skating, swimming, sports, karate, dance and healthy lifestyle habits to promote physical fitness, discipline and holistic well-being.",
+          "thought": "A strong body gives a strong start.",
+          "color": "green",
+          "image": "/mascots/mascot-body.png",
+          "mobileImage": ""
+        },
+        {
+          "title": "Mānasa Shikshana",
+          "subtitle": "Learning for the Mind",
+          "description": "We teach mindfulness, focus, emotional control and positive thinking to support mental well-being.",
+          "thought": "A curious mind learns anything.",
+          "color": "orange",
+          "image": "/mascots/mascot-mind.png",
+          "mobileImage": ""
+        },
+        {
+          "title": "Ātmika Shikshana",
+          "subtitle": "Learning for the Heart & Soul",
+          "description": "We teach values, self-awareness, compassion and inner discipline to support spiritual and emotional growth.",
+          "thought": "A good heart makes a great child.",
+          "color": "green",
+          "image": "/mascots/mascot-heart.png",
+          "mobileImage": ""
+        }
+      ],
+      "learningPillarsHeading": [
+        "Body, mind and",
+        "heart & soul."
+      ],
+      "learningPillarsLogo": {
+        "image": "/brand/trividha-shikshana.webp",
+        "imageAlt": "Trividha Shikshana, Vidya Academy’s holistic education for the body, mind, heart and soul, inspired by the Taittiriya Upanishad."
+      }
+    },
+    "homeMedia": {
+      "aboutFallback": ""
+    },
+    "lifeCards": [
+      {
+        "id": 1,
+        "label": "DEVELOPMENT",
+        "title": "Cognitive Development",
+        "description": "Building curiosity, vocabulary, planning, problem-solving and exploration skills.",
+        "image": "/images/school/building-blocks.webp",
+        "mobileImage": ""
+      },
+      {
+        "id": 2,
+        "label": "MOVEMENT",
+        "title": "Physical Development",
+        "description": "Strengthening movement, balance, coordination and muscle control through active play.",
+        "image": "/images/school/climbing-wall.webp",
+        "mobileImage": ""
+      },
+      {
+        "id": 3,
+        "label": "COMMUNICATION",
+        "title": "Language Development",
+        "description": "Encouraging listening, speaking, reading and early writing skills through meaningful activities.",
+        "image": "/images/school/teacher-at-board.webp",
+        "mobileImage": ""
+      },
+      {
+        "id": 4,
+        "label": "RELATIONSHIPS",
+        "title": "Social and Emotional Development",
+        "description": "Helping children build friendships, communicate, participate, manage emotions and develop a positive sense of self.",
+        "image": "/images/school/friends-on-the-lawn.webp",
+        "mobileImage": ""
+      },
+      {
+        "id": 5,
+        "label": "INDEPENDENCE",
+        "title": "Self-Help Skills",
+        "description": "Encouraging age-appropriate independence in self-feeding, dressing, grooming, hygiene and simple responsibilities.",
+        "image": "/images/school/lunchtime.webp",
+        "mobileImage": ""
+      },
+      {
+        "id": 6,
+        "label": "WHOLE-CHILD LEARNING",
+        "title": "A Strong Foundation",
+        "description": "Our learning experience is designed to support the whole child, not only academic readiness.",
+        "image": "/images/school/outdoor-mindfulness.webp",
+        "mobileImage": ""
+      }
+    ],
+    "programs": [
+      {
+        "id": 1,
+        "title": "Play Group – Nursery",
+        "age": "1.5–3.5 years",
+        "href": "/learning-pathways#kindergarten",
+        "image": "/images/school/preschool-ride-on.webp",
+        "mobileImage": ""
+      },
+      {
+        "id": 2,
+        "title": "LKG – UKG",
+        "age": "3.5–5.5 years",
+        "href": "/learning-pathways#primary-middle",
+        "image": "/images/school/early-writing.webp",
+        "mobileImage": ""
+      },
+      {
+        "id": 3,
+        "title": "Classes 1–5",
+        "age": "Primary classes",
+        "href": "/learning-pathways#senior-school",
+        "image": "/images/school/teacher-at-board.webp",
+        "mobileImage": ""
+      },
+      {
+        "id": 4,
+        "title": "Classes 6–8",
+        "age": "Middle classes",
+        "href": "/learning-pathways#senior-school",
+        "image": "/images/school/students-in-corridor.webp",
+        "mobileImage": ""
+      }
+    ],
+    "wayItems": [
+      {
+        "id": "01",
+        "title": "Curiosity and Lifelong Learning",
+        "description": "Create a child-centred environment that inspires curiosity and lifelong learning.",
+        "image": "/images/school/early-writing.webp",
+        "reverse": false,
+        "mobileImage": ""
+      },
+      {
+        "id": "02",
+        "title": "Foundational Skills",
+        "description": "Use engaging and age-appropriate learning experiences to develop foundational skills.",
+        "image": "/images/school/classroom-writing.webp",
+        "reverse": true,
+        "mobileImage": ""
+      },
+      {
+        "id": "03",
+        "title": "Values and Responsibility",
+        "description": "Encourage confidence, responsibility, compassion, empathy and integrity.",
+        "image": "/images/school/school-friends.webp",
+        "reverse": false,
+        "mobileImage": ""
+      },
+      {
+        "id": "04",
+        "title": "Creative and Independent Learning",
+        "description": "Support children in becoming creative thinkers, active participants and independent learners.",
+        "image": "/images/school/carrom-game.webp",
+        "reverse": true,
+        "mobileImage": ""
+      }
+    ]
+  },
+  "about": {
+    "aboutCopy": {
+      "chairmanVoice": {
+        "eyebrow": "A message from our Chairman",
+        "title": "A strong beginning, shaped around every child.",
+        "quote": "At Vidya Academy, we believe the early years are a crucial foundation for developing good habits, confidence and character. Every child has unique abilities and potential, and our responsibility is to provide an environment where that potential can be explored and strengthened.",
+        "continuation": "We aim to bring together meaningful learning, creativity, values and opportunities for children to discover what they can do. Through supportive teachers, engaging activities and a child-friendly environment, we strive to make each child’s school experience enriching and purposeful.",
+        "closing": "Our commitment is simple: to give every child a strong, happy and meaningful beginning to their educational journey.",
+        "name": "Mr. Siddhartha J. Shetty",
+        "role": "Chairman, Vidya Academy"
+      },
+      "hero": {
+        "eyebrow": "About Vidya Academy",
+        "lines": [
+          "About Vidya"
+        ],
+        "accent": "Academy",
+        "description": "Vidya Academy is a child-centred school in Moodlakatte, Kundapura, focused on creating a positive foundation for early learning and primary education.",
+        "galleryCaption": "A place to learn, grow and belong"
+      },
+      "content": {
+        "introduction": [
+          "Vidya Academy is a child-centred school in Moodlakatte, Kundapura, focused on creating a positive foundation for early learning and primary education. We believe children learn best when they feel safe, valued and encouraged to explore.",
+          "Our educational approach combines structured learning with play, creativity, movement, language experiences, social interaction and practical activities. This helps children develop not only academic readiness, but also confidence, independence, communication and positive relationships.",
+          "Set in a green and peaceful environment, the school provides children with opportunities to learn both inside and outside the classroom. We work to make the transition from home to school comfortable and build a strong partnership between parents and teachers."
+        ],
+        "visionTitle": "Our Vision",
+        "vision": "To provide transformative early education that helps young learners develop knowledge, values, confidence and curiosity, preparing them to grow into responsible and capable individuals.",
+        "missionTitle": "Our Mission",
+        "mission": [
+          "Create a child-centred environment that inspires curiosity and lifelong learning.",
+          "Use engaging and age-appropriate learning experiences to develop foundational skills.",
+          "Encourage confidence, responsibility, compassion, empathy and integrity.",
+          "Support children in becoming creative thinkers, active participants and independent learners.",
+          "Build a strong partnership between parents, teachers and the school."
+        ],
+        "philosophyTitle": "Our Educational Philosophy",
+        "philosophy": "Our philosophy is rooted in the belief that children have a natural desire to learn. Inspired by child-centred and Montessori-influenced principles, we encourage children to explore their surroundings, learn through experience and progress at an appropriate pace while receiving guidance and encouragement from teachers.",
+        "partnershipTitle": "Home and School Partnership",
+        "partnership": "A child’s development is strongest when home and school work together. Vidya Academy values open communication with parents and aims to create a supportive relationship that helps children make a comfortable transition into school life.",
+        "whyTitle": "Why Choose Vidya Academy?",
+        "whyIntroduction": "Choosing a school for your child is about more than classrooms and textbooks. It is about finding an environment where your child feels safe, understood, encouraged and excited to learn.",
+        "whyItems": [
+          "Holistic Development – We support cognitive, physical, language, social and emotional growth.",
+          "Personal Attention – Smaller batches help teachers understand children and support individual needs.",
+          "Learning Through Experience – Children learn through play, exploration, creativity and practical activities.",
+          "Communication Skills – Reading, listening, speaking and spoken English activities are part of the learning experience.",
+          "Independence – Everyday self-help activities help children become more confident and responsible.",
+          "Active Childhood – Indoor and outdoor activities give children opportunities to move, play and develop coordination.",
+          "Safe Learning Environment – The campus includes 24×7 CCTV surveillance and child-friendly spaces.",
+          "Learning Partnership – Vidya Academy collaborates with Key Education Foundation as a learning partner.",
+          "Nature and Creativity – Green surroundings, gardens, art, music and exploration encourage curiosity."
+        ],
+        "happinessTitle": "Happiness Is Part of Learning",
+        "happiness": "We want children to associate school with curiosity, friendship, discovery and confidence. A happy learning environment gives children the freedom to participate, express themselves, try again and enjoy the process of learning."
+      },
+      "leadership": {
+        "title": [
+          "Leadership and",
+          "Educational Foundation"
+        ],
+        "introduction": "Vidya Academy is managed by Moodlakatte Nagarathna Bhujanga Shetty Trust (MNBS Trust), Moodlakatte. The trust was formed in 1995 under the leadership of the late I. M. Jayaram Shetty, with a focus on education and social and cultural development in rural communities. The trust is associated with institutions in the wider IMJ educational group and an advisory group comprising academicians, industrialists and entrepreneurs. The institution honours the educational and community vision of its founder chairman, Shri I. M. Jayaram Shetty."
+      },
+      "faculty": {
+        "eyebrow": "Home and school partnership",
+        "quoteLabel": "A shared commitment",
+        "title": [
+          "A strong partnership",
+          "between home and",
+          "school."
+        ],
+        "quote": "A child’s development is strongest when home and school work together. Vidya Academy values open communication with parents and aims to create a supportive relationship that helps children make a comfortable transition into school life.",
+        "author": {
+          "name": "Vidya Academy",
+          "school": "Moodlakatte, Kundapura"
+        },
+        "images": {
+          "quote": {
+            "src": "/images/school/staff-at-desk.webp",
+            "alt": "A staff member seated at a desk"
+          },
+          "collaboration": {
+            "src": "/images/school/staff-roundtable.webp",
+            "alt": "School staff meeting around a long table",
+            "label": "Partnership",
+            "caption": "Home and school work together."
+          },
+          "guidance": {
+            "src": "/images/school/student-guidance.webp",
+            "alt": "Students meeting with a staff member",
+            "label": "Exploration",
+            "caption": "Learning through experience."
+          }
+        },
+        "tiles": [
+          {
+            "label": "Our vision",
+            "heading": "Knowledge and values",
+            "description": "Developing confidence and curiosity in young learners."
+          },
+          {
+            "label": "Our approach",
+            "heading": "Child-centred",
+            "description": "Age-appropriate learning, guided at each child’s pace."
+          },
+          {
+            "label": "Our partnership",
+            "heading": "Home and school",
+            "description": "A supportive relationship for a comfortable transition into school life."
+          }
+        ]
+      },
+      "way": {
+        "center": {
+          "eyebrow": "Our mission",
+          "values": [
+            "Curious",
+            "Confident",
+            "Independent"
+          ],
+          "learner": "Learner",
+          "footer": "Knowledge • Values"
+        },
+        "title": [
+          "Our Vision",
+          "and Mission"
+        ],
+        "introduction": "A child-centred approach shaped by curiosity, foundational learning, confidence, compassion and a strong partnership between home and school."
+      },
+      "year": {
+        "eyebrow": "Awards & Achievements",
+        "eventMeta": "",
+        "featuredEventTitles": [
+          "Karnataka Shikshana Rathna Award – Best Preschool"
+        ],
+        "title": "Karnataka Shikshana Rathna Award",
+        "introduction": "Vidya Academy received the Best Preschool award at a ceremony held at Ambedkar Bhavana, Bengaluru, in January 2025."
+      }
+    },
+    "aboutImages": [
+      {
+        "id": "03",
+        "src": "/media/about/IMG_5972-Desktop-1920x1080.jpg",
+        "alt": "Children learning together at Vidya Academy",
+        "focus": true,
+        "mobileImage": "/media/about/IMG_5972-Mobile-900x1600.jpg"
+      },
+      {
+        "id": "02",
+        "src": "/images/school/building-blocks.webp",
+        "alt": "Young children working together with colourful building blocks"
+      }
+    ],
+    "conceptRing": [
+      {
+        "id": "knowledge",
+        "label": "KNOWLEDGE",
+        "start": -44,
+        "end": 44
+      },
+      {
+        "id": "values",
+        "label": "VALUES",
+        "start": 46,
+        "end": 134
+      },
+      {
+        "id": "creativity",
+        "label": "CREATIVITY",
+        "start": 136,
+        "end": 224
+      },
+      {
+        "id": "independence",
+        "label": "INDEPENDENCE",
+        "start": 226,
+        "end": 314
+      }
+    ],
+    "events": [
+      {
+        "displayDate": "January 2025",
+        "title": "Karnataka Shikshana Rathna Award – Best Preschool",
+        "image": "https://daijiworld.ap-south-1.linodeobjects.com/Linode/images3/Karnatakeara11012025_2.jpg",
+        "description": "Vidya Academy, Moodlakatte, received the Karnataka Shikshana Rathna Award for Best Preschool at a ceremony held at Ambedkar Bhavana, Bengaluru, in January 2025."
+      }
+    ],
+    "experienceRing": [
+      {
+        "id": "explore",
+        "title": "EXPLORE",
+        "subtitle": "CURIOSITY • EXPERIENCE",
+        "start": -42,
+        "end": 42
+      },
+      {
+        "id": "communicate",
+        "title": "COMMUNICATE",
+        "subtitle": "LANGUAGE • EXPRESSION",
+        "start": 48,
+        "end": 132
+      },
+      {
+        "id": "participate",
+        "title": "PARTICIPATE",
+        "subtitle": "CONFIDENCE • CARE",
+        "start": 138,
+        "end": 222
+      },
+      {
+        "id": "discover",
+        "title": "DISCOVER",
+        "subtitle": "PLAY • CREATIVITY",
+        "start": 228,
+        "end": 312
+      }
+    ],
+    "leaders": [
+      {
+        "id": "01",
+        "name": "Mr. Siddhartha J. Shetty",
+        "role": "Chairman",
+        "image": "https://www.imjinstitutions.com/wp-content/uploads/2026/04/siddartha_02.jpg-1.png",
+        "imageAlt": "Mr. Siddhartha J. Shetty, Chairman",
+        "quote": "",
+        "bio": ""
+      },
+      {
+        "id": "02",
+        "name": "Smt. Vidya J. Shetty",
+        "role": "Managing Trustee",
+        "image": "https://mnbstrust.com/wp-content/uploads/2024/04/Group-50830.png",
+        "imageAlt": "Smt. Vidya J. Shetty, Managing Trustee",
+        "quote": "",
+        "bio": ""
+      },
+      {
+        "id": "03",
+        "name": "Mr. Ram Rathan J. Shetty",
+        "role": "Trustee",
+        "image": "https://mnbstrust.com/wp-content/uploads/2024/04/Group-50831.png",
+        "imageAlt": "Mr. Ram Rathan J. Shetty, Trustee",
+        "quote": "",
+        "bio": ""
+      }
+    ],
+    "learnerDimensions": [
+      {
+        "id": "cognitive",
+        "label": "COGNITIVE",
+        "start": -34,
+        "end": 34
+      },
+      {
+        "id": "physical",
+        "label": "PHYSICAL",
+        "start": 38,
+        "end": 106
+      },
+      {
+        "id": "language",
+        "label": "LANGUAGE",
+        "start": 110,
+        "end": 178
+      },
+      {
+        "id": "social",
+        "label": "SOCIAL",
+        "start": 182,
+        "end": 250
+      },
+      {
+        "id": "emotional",
+        "label": "EMOTIONAL",
+        "start": 254,
+        "end": 322
+      }
+    ],
+    "outerRing": [
+      {
+        "id": "curiosity",
+        "label": "CURIOSITY",
+        "start": -44,
+        "end": 44
+      },
+      {
+        "id": "confidence",
+        "label": "CONFIDENCE",
+        "start": 46,
+        "end": 134
+      },
+      {
+        "id": "learning",
+        "label": "JOYFUL LEARNING",
+        "start": 136,
+        "end": 224
+      },
+      {
+        "id": "community",
+        "label": "HOME • SCHOOL",
+        "start": 226,
+        "end": 314
+      }
+    ],
+    "statement": "We believe a school should be more than a place children come to study. It should be where they discover what excites them, learn to ask better questions, build confidence through experience and find joy in becoming who they are. Every space, every lesson and every interaction should help make that possible. So we built Vidya around it."
+  },
+  "admissions": {
+    "admissionsPage": {
+      "hero": {
+        "eyebrow": "Admissions at Vidya Academy",
+        "title": "Admissions at Vidya Academy",
+        "description": "Choosing the right beginning for your child matters. Vidya Academy welcomes families looking for a nurturing, engaging and child-centred learning environment in Moodlakatte, Kundapura.",
+        "image": "/mascots/vidya-admission-mascot.png",
+        "imageAlt": "Vidya Academy admission mascot"
+      },
+      "sections": {
+        "heroScroll": "Explore admissions",
+        "processEyebrow": "How to enquire",
+        "processTitle": "How to Enquire",
+        "processDescription": "Contact Vidya Academy, share your child’s age and the class you are interested in, speak with the school team, visit the campus, and complete the admission process as guided by the school.",
+        "stagesEyebrow": "Classes open for admission",
+        "stagesTitle": "Find the class for your child",
+        "stagesLink": "Explore curriculum",
+        "programmeLink": "View curriculum",
+        "documentsEyebrow": "Before you apply",
+        "documentsTitle": "Admission details",
+        "documentsDescription": "Please contact Vidya Academy to confirm the current admission process, documents and eligibility details.",
+        "contactEyebrow": "Contact Vidya Academy",
+        "enquireButton": "Enquire About Admission",
+        "visitButton": "Schedule a Campus Visit"
+      },
+      "introduction": {
+        "eyebrow": "Admissions at Vidya Academy",
+        "title": "A nurturing beginning for your child.",
+        "description": "Choosing the right beginning for your child matters. Vidya Academy welcomes families looking for a nurturing, engaging and child-centred learning environment in Moodlakatte, Kundapura."
+      },
+      "steps": [
+        {
+          "title": "Contact Vidya Academy",
+          "description": "Contact Vidya Academy using the phone number or enquiry form."
+        },
+        {
+          "title": "Share your child’s age and class",
+          "description": "Share your child’s age and the class you are interested in."
+        },
+        {
+          "title": "Speak with the school team",
+          "description": "Speak with the school team about the programme, facilities and admission process."
+        },
+        {
+          "title": "Visit the campus",
+          "description": "Visit the campus to understand the learning environment."
+        },
+        {
+          "title": "Complete the admission process",
+          "description": "Complete the admission process as guided by the school."
+        }
+      ],
+      "stages": [
+        {
+          "name": "Play Group – Nursery",
+          "short": "PG–Nursery",
+          "description": "Play Group and Nursery.",
+          "href": "/learning-pathways#pyp",
+          "tone": "green"
+        },
+        {
+          "name": "LKG – UKG",
+          "short": "LKG–UKG",
+          "description": "Lower Kindergarten and Upper Kindergarten.",
+          "href": "/learning-pathways#myp",
+          "tone": "gold"
+        },
+        {
+          "name": "Classes 1–8",
+          "short": "1–8",
+          "description": "Classes 1 through 8. Contact the school to confirm current class availability.",
+          "href": "/learning-pathways#dp",
+          "tone": "sage"
+        }
+      ],
+      "documents": [],
+      "note": "The PDF asks the school to confirm the current admission process, documents and eligibility details before publishing them.",
+      "contact": {
+        "title": "Enquire About Admission",
+        "description": "Contact the school by phone or email, or send an enquiry through the website.",
+        "address": "1172/1 Railway Station Road, Moodlakatte, Kundapura – 576217, Karnataka, India",
+        "email": "vidyaacademy2024@gmail.com",
+        "phone": "+91 91480 19301"
+      }
+    }
+  },
+  "campus": {
+    "FALLBACK_BUILDING_IMAGE": "/images/school/academy-entrance-sign.webp",
+    "FALLBACK_IMAGE": "/images/school/covered-activity-court.webp",
+    "buildingImages": [
+      {
+        "id": "01",
+        "src": "/media/school-photos/IMG_5719.jpg",
+        "alt": "Vidya Academy campus and student life",
+        "className": "building-photo--01"
+      },
+      {
+        "id": "02",
+        "src": "/media/school-photos/IMG_5950.jpg",
+        "alt": "Vidya Academy campus and student life",
+        "className": "building-photo--02"
+      },
+      {
+        "id": "03",
+        "src": "/media/school-photos/IMG_5956.jpg",
+        "alt": "Vidya Academy campus and student life",
+        "className": "building-photo--03"
+      },
+      {
+        "id": "04",
+        "src": "/media/school-photos/IMG_5965.jpg",
+        "alt": "Vidya Academy campus and student life",
+        "className": "building-photo--04"
+      },
+      {
+        "id": "05",
+        "src": "/media/school-photos/IMG_5966.jpg",
+        "alt": "Vidya Academy campus and student life",
+        "className": "building-photo--05"
+      },
+      {
+        "id": "06",
+        "src": "/media/school-photos/IMG_5972.jpg",
+        "alt": "Vidya Academy campus and student life",
+        "className": "building-photo--06"
+      },
+      {
+        "id": "07",
+        "src": "/media/school-photos/IMG_5697.jpg",
+        "alt": "Vidya Academy campus and student life",
+        "className": "building-photo--07"
+      }
+    ],
+    "buildingMarqueeImages": [
+      "/images/school/academy-entrance-sign.webp",
+      "/images/school/campus-arched-door.webp",
+      "/images/school/academy-wall-sign.webp",
+      "/images/school/campus-courtyard.webp"
+    ],
+    "campusCopy": {
+      "hero": {
+        "eyebrow": "Facilities",
+        "title": [
+          "Facilities Designed",
+          "Around Children"
+        ],
+        "description": "Every space at Vidya Academy is intended to support learning, movement, creativity and comfort. Our campus combines child-friendly learning areas with facilities that encourage children to explore and participate."
+      },
+      "numbers": {
+        "title": "Spaces for learning, movement and creativity."
+      }
+    },
+    "campusFeatureImage": "/media/IMG_5963-Campus-Feature-1600x1000.jpg",
+    "campusStats": [
+      {
+        "id": "01",
+        "value": "24×7",
+        "label": "CCTV surveillance"
+      },
+      {
+        "id": "02",
+        "value": "Indoor",
+        "label": "Activity and play area"
+      },
+      {
+        "id": "03",
+        "value": "Outdoor",
+        "label": "Play area, gardens and sand pits"
+      },
+      {
+        "id": "04",
+        "value": "Library",
+        "label": "Early reading experiences"
+      },
+      {
+        "id": "05",
+        "value": "Smaller",
+        "label": "Batches for personal attention"
+      },
+      {
+        "id": "06",
+        "value": "Audio-visual",
+        "label": "Dedicated learning room"
+      },
+      {
+        "id": "07",
+        "value": "Available",
+        "label": "Transportation to and from school"
+      },
+      {
+        "id": "08",
+        "value": "Green",
+        "label": "Surroundings and nature"
+      }
+    ],
+    "groundsImages": [
+      {
+        "id": "01",
+        "src": "/media/student-photos/IMG_5949.jpg",
+        "alt": "Students learning together at Vidya Academy",
+        "className": "campus-photo--01"
+      },
+      {
+        "id": "02",
+        "src": "/media/student-photos/IMG_5953.jpg",
+        "alt": "Students sharing a school activity",
+        "className": "campus-photo--02"
+      },
+      {
+        "id": "03",
+        "src": "/media/student-photos/IMG_5962.jpg",
+        "alt": "Students taking part in a classroom activity",
+        "className": "campus-photo--03"
+      },
+      {
+        "id": "04",
+        "src": "/media/student-photos/IMG_5970.jpg",
+        "alt": "Vidya Academy students enjoying a school activity",
+        "className": "campus-photo--04"
+      },
+      {
+        "id": "05",
+        "src": "/media/IMG_5677-enhanced-1600x1000.png",
+        "alt": "A student taking part in a cricket activity",
+        "className": "campus-photo--05"
+      },
+      {
+        "id": "06",
+        "src": "/media/school-photos/IMG_5697.jpg",
+        "alt": "Students taking part in a school activity",
+        "className": "campus-photo--06"
+      },
+      {
+        "id": "07",
+        "src": "/media/school-photos/IMG_5714.jpg",
+        "alt": "Students learning and playing on campus",
+        "className": "campus-photo--07"
+      }
+    ],
+    "heroImages": [
+      {
+        "id": "01",
+        "src": "/images/school/academy-entrance-sign.webp",
+        "alt": "Vidya Academy signage above the entrance"
+      },
+      {
+        "id": "02",
+        "src": "/images/school/academy-wall-sign.webp",
+        "alt": "Vidya Academy lettering on an interior wall"
+      },
+      {
+        "id": "03",
+        "src": "/images/school/racket-play.webp",
+        "alt": "A student playing a racket sport in the covered area"
+      },
+      {
+        "id": "04",
+        "src": "/images/school/students-in-corridor.webp",
+        "alt": "A group of students walking through a school corridor"
+      },
+      {
+        "id": "05",
+        "src": "/media/vidya-campus-desktop-1920x1080.jpg",
+        "alt": "Children learning and playing at Vidya Academy",
+        "center": true,
+        "mobileImage": "/media/vidya-campus-mobile-900x1600.jpg"
+      },
+      {
+        "id": "06",
+        "src": "/images/school/outdoor-mindfulness.webp",
+        "alt": "Children sitting quietly on the outdoor lawn"
+      },
+      {
+        "id": "07",
+        "src": "/images/school/cricket-swing.webp",
+        "alt": "A student practising a cricket swing"
+      },
+      {
+        "id": "08",
+        "src": "/images/school/classroom-writing.webp",
+        "alt": "Children writing together at a classroom table"
+      },
+      {
+        "id": "09",
+        "src": "/images/school/school-friends.webp",
+        "alt": "Four students talking together on campus"
+      }
+    ],
+    "introText": "Every space at Vidya Academy is intended to support learning, movement, creativity and comfort. Our campus combines child-friendly learning areas with facilities that encourage children to explore and participate.",
+    "marqueeImages": [
+      "/images/school/campus-courtyard.webp",
+      "/images/school/climbing-wall.webp",
+      "/images/school/racket-play.webp",
+      "/images/school/playground-friends.webp"
+    ],
+    "upcomingCampus": {
+      "title": "Our Upcoming Campus",
+      "description": "Planned spaces will bring together sport, learning, creativity and community for children at every stage.",
+      "image": "/media/upcoming-campus-facilities.jpg",
+      "imageAlt": "Illustrative views of planned school facilities: a library, auditorium, classroom, dining hall, swimming pool and sports court",
+      "groups": [
+        {
+          "id": "sport-wellbeing",
+          "title": "Sport & wellbeing",
+          "facilities": [
+            "Skating rink",
+            "Cricket nets",
+            "Volleyball court",
+            "Tennis court",
+            "Basketball court",
+            "Swimming pool"
+          ]
+        },
+        {
+          "id": "learning-community",
+          "title": "Learning & community",
+          "facilities": [
+            "Auditorium",
+            "High school classrooms",
+            "Foundation and secondary classrooms",
+            "Library",
+            "Dining hall"
+          ]
+        }
+      ]
+    }
+  },
+  "learningPathways": {
+    "learningPathwaysCopy": {
+      "hero": {
+        "title": [
+          "A Holistic,",
+          "Play-Based Learning",
+          "Experience"
+        ],
+        "introduction": "The Vidya Academy curriculum is designed to make learning active, engaging and meaningful. Children participate in structured activities that support early literacy, numeracy, communication, creativity, social skills, physical development and independence.",
+        "image": {
+          "src": "/images/heroes/programs/desktop.webp",
+          "alt": "Children writing together at a classroom table",
+          "mobileImage": "/images/heroes/programs/mobile.webp"
+        }
+      },
+      "journey": {
+        "eyebrow": "Academic pattern",
+        "title": [
+          "A learning journey",
+          "built around the child"
+        ],
+        "closing": "Children are encouraged to explore activities based on their interests while learning through interaction."
+      },
+      "continuum": {
+        "title": [
+          "Learning through",
+          "play and discovery"
+        ],
+        "closing": "Our approach combines structured learning with creative and experiential activities.",
+        "programmeDescriptions": {
+          "pyp": "A planned mix of foundational learning and play.",
+          "myp": "Experiences that support communication and creativity.",
+          "dp": "Activities that nurture confidence and independence."
+        }
+      },
+      "careerGuidance": {
+        "title": [
+          "Additional",
+          "experiences"
+        ],
+        "paragraphs": [
+          "Rhymes and Chimes, Garden Visits, Festivals and Celebrations, Little Chef, Dance and Field Trips."
+        ],
+        "points": [
+          "Rhymes and Chimes",
+          "Garden visits",
+          "Festivals and celebrations",
+          "Little Chef",
+          "Dance",
+          "Field trips"
+        ],
+        "classroomApproach": {
+          "title": "No Last Bench Concept",
+          "description": "At Vidya Academy, classroom seating is arranged in a welcoming arc rather than conventional front-and-back rows. This approach helps children see and hear the teacher clearly, stay connected with classmates and participate as one learning group."
+        },
+        "image": "/images/school/student-guidance.webp",
+        "imageAlt": "Students meeting with a staff member"
+      }
+    },
+    "learningStages": [
+      {
+        "id": "kindergarten",
+        "range": "Play Group – Nursery",
+        "title": "Early Years",
+        "summary": "Play Group ages 1.5–2.5 years and Nursery ages 2.5–3.5 years. Contact the school to confirm current eligibility.",
+        "exploreTarget": "pyp"
+      },
+      {
+        "id": "primary-middle",
+        "range": "LKG – UKG",
+        "title": "Kindergarten",
+        "summary": "LKG ages 3.5–4.5 years and UKG ages 4.5–5.5 years.",
+        "exploreTarget": "myp"
+      },
+      {
+        "id": "senior-school",
+        "range": "Classes 1–8",
+        "title": "Primary Classes",
+        "summary": "Classes 1 through 8. Contact Vidya Academy to confirm current class availability and age eligibility.",
+        "exploreTarget": "dp"
+      }
+    ],
+    "programmes": [
+      {
+        "id": "pyp",
+        "short": "PLAY",
+        "name": "Learning Through Play",
+        "ages": "Play Group – Class 1",
+        "accent": "#d9a500",
+        "summary": "Structured learning with play, creativity, language and movement.",
+        "eyebrow": "A meaningful start",
+        "title": "A Holistic, Play-Based Learning Experience",
+        "paragraphs": [
+          "The Vidya Academy curriculum is designed to make learning active, engaging and meaningful. Children participate in structured activities that support early literacy, numeracy, communication, creativity, social skills, physical development and independence.",
+          "The school works with Key Education Foundation as a learning partner to support innovative teaching approaches and opportunities for logical reasoning, problem-solving and solution-building.",
+          "Share & Care and Open Sesame give children opportunities to communicate, share ideas, cooperate, build relationships and express themselves. Library Time, Tune-In Time, Fun with Math, Eat & Treat, Art & Craft and Play Time bring stories, rhymes, early mathematics, healthy food, creativity and active exploration into learning."
+        ],
+        "tags": [
+          "Play-based learning",
+          "Communication",
+          "Independence"
+        ],
+        "links": [],
+        "image": "/images/school/learning-through-play.webp",
+        "imageAlt": "Children playing and learning together on the lawn",
+        "quote": "",
+        "quoteName": "",
+        "stats": []
+      },
+      {
+        "id": "myp",
+        "short": "EXPLORE",
+        "name": "Creative and Experiential Learning",
+        "ages": "Across the learning experience",
+        "accent": "#d9544d",
+        "summary": "Children explore ideas through stories, music, art, food and practical activities.",
+        "eyebrow": "Learning through experience",
+        "title": "Activities that build curiosity and confidence",
+        "paragraphs": [
+          "Open interaction sessions give children opportunities to talk, listen, build relationships and express themselves. Story sessions and guided reading introduce children to books and language, building listening, vocabulary, early literacy and an interest in books.",
+          "Rhymes, songs and listening activities support pronunciation, rhythm and confidence in spoken language. Counting, sorting, board games and abacus-based activities introduce early mathematical thinking in an enjoyable and practical way.",
+          "Painting, colouring, sketching and paper craft give children opportunities to express ideas, strengthen fine-motor skills and develop creativity. Play supports observation, exploration, simple problem-solving and physical and cognitive development."
+        ],
+        "tags": [
+          "Share & Care",
+          "Library Time",
+          "Tune-In Time",
+          "Fun with Math",
+          "Art & Craft",
+          "Play Time"
+        ],
+        "links": [],
+        "image": "/images/school/building-blocks.webp",
+        "imageAlt": "Young children working together with colourful building blocks",
+        "quote": "",
+        "quoteName": "",
+        "stats": []
+      },
+      {
+        "id": "dp",
+        "short": "GROW",
+        "name": "Additional Experiences",
+        "ages": "Age-appropriate activities",
+        "accent": "#5672d4",
+        "summary": "Garden visits, festivals, cooking, dance and field trips complement classroom learning.",
+        "eyebrow": "Additional experiences",
+        "title": "A strong foundation for lifelong learning",
+        "paragraphs": [
+          "Additional experiences include Rhymes and Chimes, Garden Visits, Festivals and Celebrations, Little Chef, Dance and Field Trips.",
+          "The No Last Bench Concept arranges classroom seating in a welcoming arc rather than conventional front-and-back rows. It is designed to help children see and hear the teacher clearly, stay connected with classmates and participate as one learning group.",
+          "Academic pattern: Play Group, 1.5–2.5 years; Nursery, 2.5–3.5 years; LKG, 3.5–4.5 years; UKG, 4.5–5.5 years; Class 1, 6 years. Contact the school to confirm current eligibility and age cut-offs."
+        ],
+        "tags": [
+          "Garden Visits",
+          "Little Chef",
+          "Dance",
+          "Field Trips"
+        ],
+        "links": [],
+        "image": "/images/school/board-game-together.webp",
+        "imageAlt": "Students playing a tabletop game together",
+        "quote": "",
+        "quoteName": "",
+        "stats": []
+      }
+    ]
+  },
+  "motion": {
+    "FALLBACK_IMAGE": "/images/school/school-community.webp",
+    "heroEvent": {
+      "month": "",
+      "day": "",
+      "year": "",
+      "category": "Vidya Academy",
+      "title": "News & Activities",
+      "meta": [],
+      "description": "Explore school events and student achievements at Vidya Academy.",
+      "ctaLabel": "Explore Events & Achievements",
+      "image": "/media/milestone/milestone-hero-desktop-1920x1080.jpg",
+      "mobileImage": "/media/milestone/milestone-hero-mobile-900x1600.jpg"
+    },
+    "motionSections": {
+      "eyebrow": "Motion-In",
+      "title": "Events & Achievements",
+      "introduction": "",
+      "cards": [
+        {
+          "id": "events",
+          "title": "Events",
+          "description": "Rhymes and Chimes, Garden Visits, Festivals and Celebrations, Little Chef, Dance and Field Trips.",
+          "image": "/images/school/outdoor-group-play.webp",
+          "imageAlt": "Children taking part in an outdoor group activity",
+          "href": "/motion/events",
+          "linkLabel": "Explore Events"
+        },
+        {
+          "id": "achievements",
+          "title": "Achievements",
+          "description": "Karnataka Shikshana Rathna Award – Best Preschool and student participation in a State-Level Karate Championship.",
+          "image": "/images/school/karate-sparring.webp",
+          "imageAlt": "Students practising karate sparring in uniform",
+          "href": "/motion/achievements",
+          "linkLabel": "Explore Achievements"
+        }
+      ]
+    }
+  },
+  "motionEvents": {
+    "events": [],
+    "motionEventsPage": {
+      "headingAlign": "center",
+      "eyebrow": "",
+      "title": "Events",
+      "description": "Additional experiences include Rhymes and Chimes, Garden Visits, Festivals and Celebrations, Little Chef, Dance and Field Trips.",
+      "backLabel": "Back to Motion-In",
+      "detailBackLabel": "Back to Events",
+      "readMoreLabel": "Read more",
+      "enquiryLabel": "Send an Enquiry",
+      "heroImage": "/images/heroes/events/desktop.webp",
+      "mobileImage": "/images/heroes/events/mobile.webp",
+      "heroImageAlt": "Children taking part in an outdoor activity at Vidya Academy"
+    }
+  },
+  "motionAchievements": {
+    "achievements": [],
+    "motionAchievementsPage": {
+      "headingAlign": "center",
+      "eyebrow": "",
+      "title": "Awards & Achievements",
+      "description": "Vidya Academy, Moodlakatte, received the Karnataka Shikshana Rathna Award for Best Preschool at a ceremony held at Ambedkar Bhavana, Bengaluru, in January 2025.",
+      "backLabel": "Back to Motion-In",
+      "detailBackLabel": "Back to Achievements",
+      "readMoreLabel": "Read more",
+      "enquiryLabel": "Send an Enquiry",
+      "heroImage": "/images/heroes/achievements/desktop.webp",
+      "mobileImage": "/images/heroes/achievements/mobile.webp",
+      "heroImageAlt": "Students practising karate at Vidya Academy"
+    }
+  },
+  "contact": {
+    "contactPage": {
+      "hero": {
+        "eyebrow": "Vidya Academy · Moodlakatte, Kundapura",
+        "title": "Contact Vidya Academy",
+        "description": "Have questions about admissions, classes, facilities or the learning programme? Our school team is available to help you understand the right learning option for your child."
+      },
+      "details": {
+        "title": "Contact Vidya Academy",
+        "addressLabel": "Address",
+        "phoneLabel": "Phone",
+        "emailLabel": "Email",
+        "directions": "Get Directions",
+        "call": "Call the School",
+        "emailAction": "Send an Email"
+      },
+      "form": {
+        "eyebrow": "Send an Enquiry",
+        "title": "How can we help your family?",
+        "fields": [
+          {
+            "name": "Parent/Guardian Name",
+            "label": "Parent/Guardian Name",
+            "type": "text",
+            "required": true
+          },
+          {
+            "name": "Phone Number",
+            "label": "Phone Number",
+            "type": "tel",
+            "required": true
+          },
+          {
+            "name": "Email",
+            "label": "Email",
+            "type": "email",
+            "required": true
+          },
+          {
+            "name": "Address/Location",
+            "label": "Address/Location",
+            "type": "text",
+            "required": false
+          },
+          {
+            "name": "Child’s Age",
+            "label": "Child’s Age",
+            "type": "text",
+            "required": false
+          }
+        ],
+        "classLabel": "Class Interested In",
+        "classPlaceholder": "Select a class",
+        "classOptions": [
+          "Play Group",
+          "Nursery",
+          "LKG",
+          "UKG",
+          "Class 1",
+          "Class 2",
+          "Class 3–8"
+        ],
+        "messageLabel": "Message",
+        "submit": "Send an Enquiry"
+      }
+    }
+  },
+  "notFound": {
+    "notFoundPage": {
+      "eyebrow": "404 · Page not found",
+      "title": "This page isn’t here.",
+      "description": "The page may have moved, or the link may be out of date. Head back to Vidya Academy to continue exploring.",
+      "homeLink": "Back to Home"
+    }
+  },
+  "blogs": {
+    "blogsPage": {
+      "eyebrow": "Stories from Vidya Academy",
+      "title": "Ideas, moments & updates",
+      "description": "News and stories from our learning community.",
+      "readMoreLabel": "Read article",
+      "publishedLabel": "Published",
+      "emptyTitle": "Stories are on their way",
+      "emptyDescription": "Please check back soon for news and updates from Vidya Academy.",
+      "metaTitle": "Stories from Vidya Academy | News, Events and School Life",
+      "metaDescription": "Read the latest stories, activities and updates from Vidya Academy in Moodlakatte, Kundapura.",
+      "contentHtml": "",
+      "customCss": ""
+    },
+    "blogs": []
+  },
+  "seoLandingPages": [],
+  "mandatoryDisclosure": {
+    "pageTitle": "Mandatory Public Disclosure",
+    "description": "Vidya Academy shares school information and required documents for parents and the wider community.",
+    "schoolDetails": {
+      "name": "VIDYA ACADEMY",
+      "address": "D No. II 72/1 Railway Station Road, Moodlakatte, Kundapura, Pin – 576217.",
+      "phone": "9148019301",
+      "email": "vidyaacademy.schools@gmail.com"
+    },
+    "sections": [
+      {
+        "title": "A: GENERAL INFORMATION",
+        "columns": [
+          "SL. NO.",
+          "INFORMATION",
+          "DETAILS"
+        ],
+        "rows": [
+          {
+            "no": "1",
+            "label": "NAME OF THE SCHOOL",
+            "value": "VIDYA ACADEMY"
+          },
+          {
+            "no": "2",
+            "label": "AFFILIATION NO. (IF APPLICABLE)",
+            "value": ""
+          },
+          {
+            "no": "3",
+            "label": "SCHOOL CODE (IF APPLICABLE)",
+            "value": ""
+          },
+          {
+            "no": "4",
+            "label": "COMPLETE ADDRESS WITH PIN CODE",
+            "value": "D No. II 72/1 Railway Station Road, Moodlakatte, Kundapura, Pin – 576217."
+          },
+          {
+            "no": "5",
+            "label": "PRINCIPAL NAME & QUALIFICATION",
+            "value": "Aruna Bheri PTT, BA, B.Ed."
+          },
+          {
+            "no": "6",
+            "label": "EMAIL ID",
+            "value": "vidyaacademy.schools@gmail.com"
+          },
+          {
+            "no": "7",
+            "label": "CONTACT DETAILS (MOBILE)",
+            "value": "9148019301"
+          }
+        ]
+      },
+      {
+        "title": "B: DOCUMENTS/INFORMATION",
+        "columns": [
+          "SL. NO.",
+          "DOCUMENTS/INFORMATION",
+          "DOCUMENT / LINK"
+        ],
+        "rows": [
+          {
+            "no": "1",
+            "label": "AFFILIATION / UPGRADATION LETTER AND RECENT EXTENSION OF AFFILIATION",
+            "linkLabel": "Click Here",
+            "href": ""
+          },
+          {
+            "no": "2",
+            "label": "SOCIETY / TRUST / COMPANY REGISTRATION / RENEWAL CERTIFICATE",
+            "linkLabel": "Click Here",
+            "href": ""
+          },
+          {
+            "no": "3",
+            "label": "NO OBJECTION CERTIFICATE (NOC) ISSUED BY STATE GOVERNMENT / UT",
+            "value": "NA"
+          },
+          {
+            "no": "4",
+            "label": "RECOGNITION CERTIFICATE UNDER RTE ACT, 2009 AND RENEWAL",
+            "linkLabel": "Click Here",
+            "href": ""
+          },
+          {
+            "no": "5",
+            "label": "VALID BUILDING SAFETY CERTIFICATE",
+            "linkLabel": "Click Here",
+            "href": ""
+          },
+          {
+            "no": "6",
+            "label": "COPY OF VALID FIRE SAFETY CERTIFICATE ISSUED BY THE COMPETENT AUTHORITY",
+            "linkLabel": "Click Here",
+            "href": ""
+          },
+          {
+            "no": "7",
+            "label": "COPY OF THE DEO CERTIFICATE SUBMITTED BY THE SCHOOL FOR AFFILIATION/ UPGRADATION/ EXTENSION OF AFFILIATION OR SELF-CERTIFICATION BY SCHOOL",
+            "linkLabel": "Click Here",
+            "href": ""
+          },
+          {
+            "no": "8",
+            "label": "VALID WATER, HEALTH AND SANITATION CERTIFICATES",
+            "linkLabel": "Click Here",
+            "href": ""
+          }
+        ]
+      },
+      {
+        "title": "C: ACADEMICS",
+        "columns": [
+          "SL. NO.",
+          "DOCUMENTS/INFORMATION",
+          "DOCUMENT / LINK"
+        ],
+        "rows": [
+          {
+            "no": "1",
+            "label": "FEE STRUCTURE OF THE SCHOOL",
+            "linkLabel": "Click Here",
+            "href": ""
+          },
+          {
+            "no": "2",
+            "label": "ANNUAL ACADEMIC CALENDAR",
+            "linkLabel": "Click Here",
+            "href": ""
+          },
+          {
+            "no": "3",
+            "label": "LIST OF SCHOOL MANAGEMENT COMMITTEE (SMC)",
+            "linkLabel": "Click Here",
+            "href": ""
+          },
+          {
+            "no": "4",
+            "label": "LIST OF PTA MEMBERS",
+            "linkLabel": "Click Here",
+            "href": ""
+          },
+          {
+            "no": "5",
+            "label": "LAST THREE-YEAR RESULT OF THE BOARD EXAMINATION AS PER APPLICABILITY",
+            "value": "NA"
+          }
+        ]
+      },
+      {
+        "title": "D: STAFF (TEACHING)",
+        "columns": [
+          "SL. NO.",
+          "INFORMATION",
+          "DETAILS"
+        ],
+        "rows": [
+          {
+            "no": "1",
+            "label": "PRINCIPAL",
+            "value": "01"
+          },
+          {
+            "no": "2",
+            "label": "TOTAL NO. OF TEACHERS",
+            "value": "15"
+          },
+          {
+            "no": "",
+            "label": "PGT",
+            "value": "00"
+          },
+          {
+            "no": "",
+            "label": "TGT",
+            "value": "05"
+          },
+          {
+            "no": "",
+            "label": "NTT",
+            "value": "02"
+          },
+          {
+            "no": "",
+            "label": "PRT",
+            "value": "06"
+          },
+          {
+            "no": "",
+            "label": "TEACHERS DETAILS",
+            "linkLabel": "Click Here",
+            "href": ""
+          },
+          {
+            "no": "3",
+            "label": "TEACHERS SECTION RATIO",
+            "value": "1:1.5"
+          },
+          {
+            "no": "4",
+            "label": "DETAILS OF SPECIAL EDUCATOR",
+            "value": "01"
+          },
+          {
+            "no": "5",
+            "label": "DETAILS OF COUNSELLOR / WELLNESS TEACHER",
+            "value": "01"
+          },
+          {
+            "no": "6",
+            "label": "NUMBER OF STUDENTS",
+            "value": "163"
+          }
+        ]
+      },
+      {
+        "title": "E: SCHOOL INFRASTRUCTURE",
+        "columns": [
+          "SL. NO.",
+          "INFORMATION",
+          "DETAILS"
+        ],
+        "rows": [
+          {
+            "no": "1",
+            "label": "TOTAL CAMPUS AREA OF THE SCHOOL (IN SQ. METRE)",
+            "value": "16,333.94 Sq. mtr"
+          },
+          {
+            "no": "2",
+            "label": "NO. AND SIZE OF THE CLASSROOMS (IN SQ. METRE)",
+            "value": "19 Classrooms (Each Classroom 46.45 sq. metre)"
+          },
+          {
+            "no": "3",
+            "label": "NO. AND SIZE OF LABORATORIES INCLUDING COMPUTER LABS (IN SQ. METRE)",
+            "value": "3(47)"
+          },
+          {
+            "no": "4",
+            "label": "INTERNET FACILITY (YES/NO)",
+            "value": "YES"
+          },
+          {
+            "no": "5",
+            "label": "NO. OF GIRLS’ TOILETS",
+            "value": "10"
+          },
+          {
+            "no": "6",
+            "label": "NO. OF BOYS’ TOILETS",
+            "value": "10"
+          },
+          {
+            "no": "7",
+            "label": "LINK OF YOUTUBE VIDEO OF THE INSPECTION OF SCHOOL COVERING THE INFRASTRUCTURE (IF EXIST)",
+            "linkLabel": "Click Here",
+            "href": ""
+          }
+        ]
+      },
+      {
+        "title": "A: GENERAL INFORMATION",
+        "columns": [
+          "SL. NO.",
+          "INFORMATION"
+        ],
+        "rows": [
+          {
+            "no": "1",
+            "label": "Declaration – This is to certify that we follow the books prescribed by the CBSE and that they do not contain any objectionable content",
+            "value": ""
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,1408 @@
+/* =========================================================
+   THE VIDYA WAY
+
+   DARK GREEN:
+   #0b8255
+
+   LIGHT GREEN:
+   #26b474
+
+   ORANGE:
+   #f9a01b
+========================================================= */
+
+
+/* =========================================================
+   SECTION
+
+   LESS TOP SPACE
+========================================================= */
+
+.vidya-way {
+  position:
+    relative;
+
+  width:
+    100%;
+
+  overflow:
+    hidden;
+
+  background:
+    #f3f0e6;
+
+  padding:
+    clamp(
+      62px,
+      5.5vw,
+      92px
+    )
+    0
+    clamp(
+      100px,
+      9vw,
+      150px
+    );
+}
+
+
+/* =========================================================
+   HEADER
+
+   EXTRA LEFT PADDING
+========================================================= */
+
+.vidya-way-header {
+  width:
+    min(
+      calc(
+        100% -
+        (
+          var(--page-padding) *
+          2
+        )
+      ),
+      1580px
+    );
+
+  margin:
+    0
+    auto
+    clamp(
+      40px,
+      4vw,
+      58px
+    );
+
+  padding-left:
+    clamp(
+      14px,
+      1.2vw,
+      22px
+    );
+
+  box-sizing:
+    border-box;
+}
+
+
+/* =========================================================
+   HEADING
+
+   EXACT SAME TYPOGRAPHY
+   AS LIFE AT SCHOOL
+========================================================= */
+
+.vidya-way-heading {
+  width:
+    100%;
+
+  max-width:
+    none;
+
+  margin:
+    0;
+
+  font-family:
+    "Manrope",
+    sans-serif;
+
+  font-size:
+    clamp(
+      45px,
+      4.3vw,
+      70px
+    );
+
+  font-weight:
+    550;
+
+  line-height:
+    1;
+
+  letter-spacing:
+    -0.058em;
+
+  white-space:
+    nowrap;
+
+  will-change:
+    transform,
+    opacity;
+}
+
+
+/* =========================================================
+   DARK GREEN HEADING
+========================================================= */
+
+.vidya-way-heading-dark {
+  display:
+    inline;
+
+  color:
+    #0b8255;
+}
+
+
+/* =========================================================
+   LIGHT GREEN HEADING
+========================================================= */
+
+.vidya-way-heading-light {
+  display:
+    inline;
+
+  color:
+    #26b474;
+}
+
+
+/* =========================================================
+   CARD GRID
+========================================================= */
+
+.vidya-way-cards {
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(
+      4,
+      minmax(
+        0,
+        1fr
+      )
+    );
+
+  align-items:
+    start;
+
+  gap:
+    clamp(
+      16px,
+      1.4vw,
+      24px
+    );
+
+  width:
+    min(
+      calc(
+        100% -
+        (
+          var(--page-padding) *
+          2
+        )
+      ),
+      1580px
+    );
+
+  margin-inline:
+    auto;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.vidya-way-card {
+  --way-card-bg:
+    #0b8255;
+
+  --way-card-hover:
+    #087349;
+
+  position:
+    relative;
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  min-width:
+    0;
+
+  overflow:
+    hidden;
+
+  border-radius:
+    0;
+
+  background:
+    var(--way-card-bg);
+
+  box-shadow:
+    0
+    16px
+    36px
+    rgba(
+      5,
+      59,
+      40,
+      0.07
+    );
+
+  will-change:
+    transform,
+    opacity;
+
+  transition:
+    transform
+    0.5s
+    cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    ),
+
+    box-shadow
+    0.5s
+    ease;
+}
+
+
+/* =========================================================
+   GREEN CARDS
+   1 / 3
+========================================================= */
+
+.vidya-way-card:nth-child(odd) {
+  --way-card-bg:
+    #0b8255;
+
+  --way-card-hover:
+    #087349;
+}
+
+
+/* =========================================================
+   ORANGE CARDS
+   2 / 4
+========================================================= */
+
+.vidya-way-card:nth-child(even) {
+  --way-card-bg:
+    #f9a01b;
+
+  --way-card-hover:
+    #ec9213;
+}
+
+
+/* =========================================================
+   REVERSE CARD
+========================================================= */
+
+.vidya-way-card.is-reverse {
+  flex-direction:
+    column-reverse;
+}
+
+
+/* =========================================================
+   IMAGE AREA
+========================================================= */
+
+.vidya-way-card-image-wrap {
+  position:
+    relative;
+
+  width:
+    100%;
+
+  aspect-ratio:
+    4 / 4.35;
+
+  overflow:
+    hidden;
+
+  border-radius:
+    0;
+
+  background:
+    #d8dfda;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.vidya-way-card-image {
+  display:
+    block;
+
+  width:
+    100%;
+
+  height:
+    100%;
+
+  object-fit:
+    cover;
+
+  object-position:
+    center;
+
+  border-radius:
+    0;
+
+  transform:
+    scale(1.01);
+
+  transition:
+    transform
+    0.7s
+    cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    );
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.vidya-way-card-content {
+  position:
+    relative;
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  justify-content:
+    space-between;
+
+  min-height:
+    285px;
+
+  padding:
+    clamp(
+      29px,
+      2vw,
+      36px
+    );
+
+  border-radius:
+    0;
+
+  background:
+    var(--way-card-bg);
+
+  color:
+    #ffffff;
+
+  transition:
+    background
+    0.45s
+    ease;
+}
+
+
+/* =========================================================
+   CARD TITLE
+
+   WHITE FOR ALL CARDS
+========================================================= */
+
+.vidya-way-card-content
+h3 {
+  max-width:
+    270px;
+
+  margin:
+    0
+    0
+    18px;
+
+  color:
+    #ffffff;
+
+  font-family:
+    "Manrope",
+    sans-serif;
+
+  font-size:
+    clamp(
+      31px,
+      2.3vw,
+      40px
+    );
+
+  font-weight:
+    560;
+
+  line-height:
+    0.99;
+
+  letter-spacing:
+    -0.05em;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+
+   WHITE FOR ALL CARDS
+========================================================= */
+
+.vidya-way-card-content
+p {
+  max-width:
+    285px;
+
+  margin:
+    0;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.86
+    );
+
+  font-family:
+    "Manrope",
+    sans-serif;
+
+  font-size:
+    clamp(
+      15px,
+      1vw,
+      17px
+    );
+
+  font-weight:
+    400;
+
+  line-height:
+    1.52;
+}
+
+
+/* =========================================================
+   DISCOVER MORE
+========================================================= */
+
+.vidya-way-card-link {
+  position:
+    relative;
+
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  width:
+    max-content;
+
+  margin-top:
+    28px;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.94
+    );
+
+  font-family:
+    "Manrope",
+    sans-serif;
+
+  font-size:
+    9px;
+
+  font-weight:
+    700;
+
+  letter-spacing:
+    0.1em;
+}
+
+
+/* =========================================================
+   DISCOVER LINE
+========================================================= */
+
+.vidya-way-card-link::after {
+  content:
+    "";
+
+  width:
+    30px;
+
+  height:
+    1px;
+
+  margin-left:
+    11px;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.72
+    );
+
+  transition:
+    width
+    0.45s
+    cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    );
+}
+
+
+/* =========================================================
+   EDITORIAL CARD OFFSET
+========================================================= */
+
+.vidya-way-card:nth-child(2),
+.vidya-way-card:nth-child(4) {
+  margin-top:
+    clamp(
+      28px,
+      2.4vw,
+      40px
+    );
+}
+
+
+/* =========================================================
+   DESKTOP HOVER
+========================================================= */
+
+@media (
+  hover: hover
+) {
+
+  .vidya-way-card:hover {
+    transform:
+      translateY(-7px);
+
+    box-shadow:
+      0
+      24px
+      52px
+      rgba(
+        5,
+        59,
+        40,
+        0.13
+      );
+  }
+
+
+  .vidya-way-card:hover
+  .vidya-way-card-image {
+    transform:
+      scale(1.045);
+  }
+
+
+  .vidya-way-card:hover
+  .vidya-way-card-content {
+    background:
+      var(--way-card-hover);
+  }
+
+
+  .vidya-way-card:hover
+  .vidya-way-card-link::after {
+    width:
+      44px;
+  }
+
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (
+  min-width: 1600px
+) {
+
+  .vidya-way-header,
+  .vidya-way-cards {
+    max-width:
+      1620px;
+  }
+
+
+  .vidya-way-header {
+    padding-left:
+      24px;
+  }
+
+
+  .vidya-way-card-content {
+    min-height:
+      300px;
+
+    padding:
+      38px;
+  }
+
+
+  .vidya-way-card-content
+  h3 {
+    font-size:
+      41px;
+  }
+
+
+  .vidya-way-card-content
+  p {
+    font-size:
+      17px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET / SMALL DESKTOP
+========================================================= */
+
+@media (
+  max-width: 1150px
+) {
+
+  .vidya-way {
+    padding-top:
+      58px;
+  }
+
+
+  .vidya-way-header {
+    padding-left:
+      14px;
+  }
+
+
+  .vidya-way-cards {
+    display:
+      flex;
+
+    align-items:
+      flex-start;
+
+    gap:
+      18px;
+
+    width:
+      100%;
+
+    max-width:
+      none;
+
+    overflow-x:
+      auto;
+
+    overflow-y:
+      hidden;
+
+    box-sizing:
+      border-box;
+
+    padding:
+      8px
+      var(--page-padding)
+      20px;
+
+    scroll-snap-type:
+      x proximity;
+
+    scroll-padding-left:
+      var(--page-padding);
+
+    overscroll-behavior-x:
+      contain;
+
+    -webkit-overflow-scrolling:
+      touch;
+
+    touch-action:
+      pan-x pan-y;
+
+    scrollbar-width:
+      none;
+  }
+
+
+  .vidya-way-cards::-webkit-scrollbar {
+    display:
+      none;
+  }
+
+
+  .vidya-way-card {
+    flex:
+      0
+      0
+      360px;
+
+    border-radius:
+      0;
+
+    scroll-snap-align:
+      start;
+
+    scroll-snap-stop:
+      normal;
+  }
+
+
+  .vidya-way-card:nth-child(2),
+  .vidya-way-card:nth-child(4) {
+    margin-top:
+      32px;
+  }
+
+
+  .vidya-way-card-content {
+    min-height:
+      285px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (
+  max-width: 768px
+) {
+
+  /* =====================================================
+     SECTION
+  ===================================================== */
+
+  .vidya-way {
+    padding:
+      58px
+      0
+      90px;
+  }
+
+
+  /* =====================================================
+     HEADER
+  ===================================================== */
+
+  .vidya-way-header {
+    width:
+      calc(
+        100% - 40px
+      );
+
+    margin:
+      0
+      auto
+      34px;
+
+    padding-left:
+      8px;
+
+    overflow:
+      hidden;
+  }
+
+
+  /* =====================================================
+     HEADING
+
+     SAME TYPOGRAPHY AS
+     LIFE AT SCHOOL MOBILE
+  ===================================================== */
+
+  .vidya-way-heading {
+    width:
+      100%;
+
+    max-width:
+      none;
+
+    margin:
+      0;
+
+    font-family:
+      "Manrope",
+      sans-serif;
+
+    font-size:
+      clamp(
+        37px,
+        9.5vw,
+        49px
+      );
+
+    font-weight:
+      550;
+
+    line-height:
+      0.98;
+
+    letter-spacing:
+      -0.058em;
+
+    white-space:
+      nowrap;
+  }
+
+
+  .vidya-way-heading-dark,
+  .vidya-way-heading-light {
+    display:
+      inline;
+  }
+
+
+  /* =====================================================
+     MOBILE SCROLLER
+  ===================================================== */
+
+  .vidya-way-cards {
+    display:
+      flex;
+
+    align-items:
+      flex-start;
+
+    gap:
+      14px;
+
+    width:
+      100%;
+
+    max-width:
+      none;
+
+    margin:
+      0;
+
+    overflow-x:
+      auto;
+
+    overflow-y:
+      hidden;
+
+    box-sizing:
+      border-box;
+
+    padding:
+      4px
+      20px
+      18px;
+
+    scroll-padding-left:
+      20px;
+
+    scroll-padding-right:
+      20px;
+
+    scroll-snap-type:
+      x mandatory;
+
+    overscroll-behavior-x:
+      contain;
+
+    -webkit-overflow-scrolling:
+      touch;
+
+    touch-action:
+      pan-x pan-y;
+
+    scrollbar-width:
+      none;
+
+    cursor:
+      auto;
+  }
+
+
+  .vidya-way-cards::-webkit-scrollbar {
+    display:
+      none;
+  }
+
+
+  /* =====================================================
+     MOBILE CARD
+  ===================================================== */
+
+  .vidya-way-card {
+    flex:
+      0
+      0
+      calc(
+        100vw - 64px
+      );
+
+    width:
+      calc(
+        100vw - 64px
+      );
+
+    max-width:
+      365px;
+
+    min-width:
+      0;
+
+    margin-top:
+      0 !important;
+
+    border-radius:
+      0;
+
+    scroll-snap-align:
+      start;
+
+    scroll-snap-stop:
+      always;
+
+    transform:
+      none !important;
+
+    opacity:
+      1;
+
+    touch-action:
+      pan-x pan-y;
+  }
+
+
+  /* =====================================================
+     REMOVE DESKTOP OFFSET
+  ===================================================== */
+
+  .vidya-way-card:nth-child(2),
+  .vidya-way-card:nth-child(4) {
+    margin-top:
+      0;
+  }
+
+
+  /* =====================================================
+     MOBILE IMAGE
+  ===================================================== */
+
+  .vidya-way-card-image-wrap {
+    aspect-ratio:
+      4 / 4.25;
+
+    border-radius:
+      0;
+
+    touch-action:
+      pan-x pan-y;
+  }
+
+
+  .vidya-way-card-image {
+    border-radius:
+      0;
+
+    user-select:
+      none;
+
+    -webkit-user-drag:
+      none;
+
+    pointer-events:
+      none;
+  }
+
+
+  /* =====================================================
+     MOBILE CONTENT
+  ===================================================== */
+
+  .vidya-way-card-content {
+    min-height:
+      265px;
+
+    padding:
+      27px;
+
+    border-radius:
+      0;
+
+    color:
+      #ffffff;
+
+    touch-action:
+      pan-x pan-y;
+  }
+
+
+  .vidya-way-card-content
+  h3 {
+    color:
+      #ffffff;
+
+    font-size:
+      clamp(
+        30px,
+        8vw,
+        37px
+      );
+  }
+
+
+  .vidya-way-card-content
+  p {
+    max-width:
+      300px;
+
+    color:
+      rgba(
+        255,
+        255,
+        255,
+        0.86
+      );
+
+    font-size:
+      15px;
+  }
+
+
+  .vidya-way-card-link {
+    color:
+      #ffffff;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (
+  max-width: 480px
+) {
+
+  .vidya-way {
+    padding:
+      52px
+      0
+      78px;
+  }
+
+
+  .vidya-way-header {
+    width:
+      calc(
+        100% - 36px
+      );
+
+    margin-bottom:
+      30px;
+
+    padding-left:
+      7px;
+  }
+
+
+  /*
+    Keep Manrope and same Life at School
+    responsive sizing system.
+  */
+
+  .vidya-way-heading {
+    font-family:
+      "Manrope",
+      sans-serif;
+
+    font-size:
+      clamp(
+        37px,
+        9.5vw,
+        49px
+      );
+
+    font-weight:
+      550;
+
+    line-height:
+      0.98;
+
+    letter-spacing:
+      -0.058em;
+
+    white-space:
+      nowrap;
+  }
+
+
+  /* =====================================================
+     SCROLLER
+  ===================================================== */
+
+  .vidya-way-cards {
+    gap:
+      12px;
+
+    padding-left:
+      18px;
+
+    padding-right:
+      18px;
+
+    padding-bottom:
+      16px;
+
+    scroll-padding-left:
+      18px;
+
+    scroll-padding-right:
+      18px;
+
+    touch-action:
+      pan-x pan-y;
+  }
+
+
+  /* =====================================================
+     CARD
+  ===================================================== */
+
+  .vidya-way-card {
+    flex:
+      0
+      0
+      calc(
+        100vw - 55px
+      );
+
+    width:
+      calc(
+        100vw - 55px
+      );
+
+    max-width:
+      350px;
+
+    border-radius:
+      0;
+
+    scroll-snap-align:
+      start;
+
+    scroll-snap-stop:
+      always;
+
+    touch-action:
+      pan-x pan-y;
+  }
+
+
+  .vidya-way-card-image-wrap,
+  .vidya-way-card-content {
+    border-radius:
+      0;
+  }
+
+
+  .vidya-way-card-content {
+    min-height:
+      250px;
+
+    padding:
+      24px;
+  }
+
+
+  .vidya-way-card-content
+  h3 {
+    color:
+      #ffffff;
+
+    font-size:
+      30px;
+  }
+
+
+  .vidya-way-card-content
+  p {
+    color:
+      rgba(
+        255,
+        255,
+        255,
+        0.86
+      );
+
+    font-size:
+      14px;
+  }
+
+
+  .vidya-way-card-link {
+    color:
+      #ffffff;
+  }
+
+}
+
+
+/* =========================================================
+   EXTRA SMALL MOBILE
+========================================================= */
+
+@media (
+  max-width: 380px
+) {
+
+  .vidya-way {
+    padding-top:
+      48px;
+  }
+
+
+  /*
+    Slight reduction only to prevent
+    the one-line heading from clipping
+    on very narrow devices.
+  */
+
+  .vidya-way-heading {
+    font-size:
+      33px;
+  }
+
+
+  .vidya-way-cards {
+    gap:
+      10px;
+
+    padding-left:
+      16px;
+
+    padding-right:
+      16px;
+
+    scroll-padding-left:
+      16px;
+
+    scroll-padding-right:
+      16px;
+  }
+
+
+  .vidya-way-card {
+    flex-basis:
+      calc(
+        100vw - 48px
+      );
+
+    width:
+      calc(
+        100vw - 48px
+      );
+
+    max-width:
+      none;
+
+    border-radius:
+      0;
+  }
+
+
+  .vidya-way-card-content {
+    min-height:
+      235px;
+
+    padding:
+      21px;
+  }
+
+
+  .vidya-way-card-content
+  h3 {
+    margin-bottom:
+      14px;
+
+    color:
+      #ffffff;
+
+    font-size:
+      28px;
+  }
+
+
+  .vidya-way-card-content
+  p {
+    color:
+      rgba(
+        255,
+        255,
+        255,
+        0.86
+      );
+
+    font-size:
+      13px;
+  }
+
+
+  .vidya-way-card-link {
+    margin-top:
+      22px;
+
+    color:
+      #ffffff;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (
+  prefers-reduced-motion:
+    reduce
+) {
+
+  .vidya-way-heading,
+  .vidya-way-card,
+  .vidya-way-card-image,
+  .vidya-way-card-content {
+    transition:
+      none !important;
+
+    transform:
+      none !important;
+
+    opacity:
+      1 !important;
+  }
+
+}

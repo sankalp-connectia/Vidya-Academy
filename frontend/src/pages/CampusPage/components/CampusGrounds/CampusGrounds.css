@@ -1,0 +1,1968 @@
+/* =========================================================
+   VIDYA ACADEMY
+   CAMPUS GROUNDS
+
+   HOMEPAGE + ABOUT PAGE SYSTEM
+
+   CREAM         #f5f3e9
+   MAIN GREEN    #0b8255
+   DEEP GREEN    #0b563b
+   BRIGHT GREEN  #26b474
+   ORANGE        #f9a01b
+========================================================= */
+
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+.campus-grounds {
+  --page-padding:
+    clamp(
+      68px,
+      5vw,
+      100px
+    );
+
+  --cream:
+    #f5f3e9;
+
+  --cream-soft:
+    #f3f0e6;
+
+  --green:
+    #0b8255;
+
+  --deep-green:
+    #0b563b;
+
+  --deep-green-2:
+    #073f32;
+
+  --bright-green:
+    #26b474;
+
+  --orange:
+    #f9a01b;
+
+  --white:
+    #ffffff;
+
+
+  position:
+    relative;
+
+
+  width:
+    100%;
+
+
+  overflow:
+    hidden;
+
+
+  background:
+    var(--cream);
+
+
+  color:
+    var(--green);
+
+
+  font-family:
+    "Manrope",
+    sans-serif;
+}
+
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+.campus-grounds,
+.campus-grounds *,
+.campus-grounds *::before,
+.campus-grounds *::after {
+  box-sizing:
+    border-box;
+
+
+  font-family:
+    "Manrope",
+    sans-serif !important;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.campus-intro {
+  position:
+    relative;
+
+
+  display:
+    flex;
+
+
+  align-items:
+    center;
+
+
+  width:
+    100%;
+
+
+  min-height:
+    92vh;
+
+  min-height:
+    92svh;
+
+
+  overflow:
+    hidden;
+
+
+  background:
+    var(--cream);
+
+
+  padding:
+    clamp(
+      105px,
+      9vw,
+      150px
+    )
+    0;
+}
+
+
+.campus-intro::before,
+.campus-intro::after {
+  content:
+    none;
+}
+
+
+/* =========================================================
+   INTRO INNER
+========================================================= */
+
+.campus-intro-inner {
+  position:
+    relative;
+
+
+  z-index:
+    2;
+
+
+  width:
+    min(
+      calc(
+        100% -
+        (
+          var(--page-padding) *
+          2
+        )
+      ),
+      1580px
+    );
+
+
+  margin:
+    0 auto;
+}
+
+
+/* =========================================================
+   INTRO TEXT
+========================================================= */
+
+.campus-intro-text {
+  width:
+    min(
+      1450px,
+      97%
+    );
+
+
+  margin:
+    0;
+
+
+  padding:
+    0;
+
+
+  color:
+    var(--green);
+
+
+  font-size:
+    clamp(
+      47px,
+      4.5vw,
+      72px
+    );
+
+
+  font-style:
+    normal;
+
+
+  font-weight:
+    520;
+
+
+  line-height:
+    0.99;
+
+
+  letter-spacing:
+    -0.058em;
+
+
+  text-align:
+    left;
+
+
+  text-wrap:
+    pretty;
+
+
+  will-change:
+    transform;
+}
+
+
+/* =========================================================
+   WORD
+========================================================= */
+
+.campus-intro-word {
+  display:
+    inline;
+
+
+  margin:
+    0;
+
+
+  padding:
+    0;
+
+
+  color:
+    rgba(
+      11,
+      130,
+      85,
+      0.14
+    );
+
+
+  font-size:
+    inherit;
+
+
+  font-style:
+    normal;
+
+
+  font-weight:
+    inherit;
+
+
+  line-height:
+    inherit;
+
+
+  letter-spacing:
+    inherit;
+}
+
+
+/* =========================================================
+   GROUNDS MAIN
+========================================================= */
+
+.campus-grounds-main {
+  position:
+    relative;
+
+
+  width:
+    100%;
+
+
+  overflow:
+    hidden;
+
+
+  background:
+    var(--deep-green);
+
+
+  padding:
+    0
+    0
+    clamp(
+      92px,
+      7vw,
+      125px
+    );
+}
+
+
+.campus-grounds-main::before,
+.campus-grounds-main::after {
+  content:
+    none;
+}
+
+
+/* =========================================================
+   MARQUEE
+
+   IMPORTANT PATCH:
+   Previously this area was too tall.
+
+   Now it hugs the content much more closely.
+========================================================= */
+
+.campus-grounds-marquee-section {
+  position:
+    relative;
+
+
+  z-index:
+    2;
+
+
+  display:
+    flex;
+
+
+  align-items:
+    center;
+
+
+  width:
+    100%;
+
+
+  min-height:
+    clamp(
+      155px,
+      11vw,
+      195px
+    );
+
+
+  overflow:
+    hidden;
+
+
+  background:
+    transparent;
+}
+
+
+/* =========================================================
+   MARQUEE SHELL
+========================================================= */
+
+.campus-grounds-marquee-shell {
+  position:
+    relative;
+
+
+  width:
+    100%;
+
+
+  overflow:
+    hidden;
+}
+
+
+/* =========================================================
+   MARQUEE TRACK
+========================================================= */
+
+.campus-grounds-marquee-track {
+  display:
+    flex;
+
+
+  align-items:
+    center;
+
+
+  width:
+    max-content;
+
+
+  will-change:
+    transform;
+
+
+  animation:
+    campus-grounds-marquee 34s linear infinite;
+  -webkit-animation:
+    campus-grounds-marquee 34s linear infinite;
+}
+
+
+@-webkit-keyframes campus-grounds-marquee {
+  from { -webkit-transform: translate3d(0, 0, 0); }
+  to { -webkit-transform: translate3d(-50%, 0, 0); }
+}
+
+@keyframes campus-grounds-marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+
+/* =========================================================
+   MARQUEE GROUP
+========================================================= */
+
+.campus-grounds-marquee-group {
+  display:
+    flex;
+
+
+  align-items:
+    center;
+
+
+  flex-shrink:
+    0;
+}
+
+
+/* =========================================================
+   MARQUEE ITEM
+========================================================= */
+
+.campus-grounds-marquee-item {
+  display:
+    flex;
+
+
+  align-items:
+    center;
+
+
+  flex-shrink:
+    0;
+
+
+  gap:
+    clamp(
+      18px,
+      1.5vw,
+      26px
+    );
+
+
+  margin-right:
+    clamp(
+      34px,
+      3vw,
+      52px
+    );
+}
+
+
+/* =========================================================
+   THE GROUNDS
+========================================================= */
+
+.campus-grounds-marquee-item > span {
+  white-space:
+    nowrap;
+
+
+  color:
+    #ffffff;
+
+
+  font-size:
+    clamp(
+      45px,
+      4.3vw,
+      70px
+    );
+
+
+  font-style:
+    normal;
+
+
+  font-weight:
+    550;
+
+
+  line-height:
+    1;
+
+
+  letter-spacing:
+    -0.058em;
+}
+
+
+/* =========================================================
+   THUMB
+========================================================= */
+
+.campus-marquee-thumb {
+  position:
+    relative;
+
+
+  flex:
+    0 0 auto;
+
+
+  width:
+    clamp(
+      108px,
+      7.5vw,
+      142px
+    );
+
+
+  height:
+    clamp(
+      70px,
+      4.8vw,
+      90px
+    );
+
+
+  overflow:
+    hidden;
+
+
+  background:
+    var(--green);
+}
+
+
+.campus-marquee-thumb::after {
+  content:
+    "";
+
+
+  position:
+    absolute;
+
+
+  z-index:
+    2;
+
+
+  inset:
+    0;
+
+
+  background:
+    linear-gradient(
+      180deg,
+
+      transparent
+      72%,
+
+      rgba(
+        7,
+        63,
+        50,
+        0.07
+      )
+      100%
+    );
+
+
+  pointer-events:
+    none;
+}
+
+
+/* =========================================================
+   THUMB IMAGE
+========================================================= */
+
+.campus-marquee-thumb img {
+  position:
+    absolute;
+
+
+  inset:
+    0;
+
+
+  display:
+    block;
+
+
+  width:
+    100%;
+
+
+  height:
+    100%;
+
+
+  object-fit:
+    cover;
+
+
+  object-position:
+    center;
+
+
+  transform:
+    scale(
+      1.01
+    );
+
+
+  pointer-events:
+    none;
+
+
+  user-select:
+    none;
+
+
+  -webkit-user-drag:
+    none;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+
+   IMPORTANT PATCH:
+
+   Much less space above and below.
+========================================================= */
+
+.campus-grounds-caption {
+  position:
+    relative;
+
+
+  z-index:
+    2;
+
+
+  width:
+    min(
+      620px,
+      calc(
+        100% -
+        (
+          var(--page-padding) *
+          2
+        )
+      )
+    );
+
+
+  margin:
+    clamp(
+      8px,
+      0.8vw,
+      14px
+    )
+    auto
+    clamp(
+      42px,
+      3.5vw,
+      58px
+    );
+
+
+  text-align:
+    center;
+}
+
+
+/* =========================================================
+   DESCRIPTION TEXT
+========================================================= */
+
+.campus-grounds-caption p {
+  margin:
+    0;
+
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.82
+    );
+
+
+  font-size:
+    clamp(
+      16px,
+      1.1vw,
+      19px
+    );
+
+
+  font-style:
+    normal;
+
+
+  font-weight:
+    400;
+
+
+  line-height:
+    1.5;
+
+
+  letter-spacing:
+    -0.012em;
+
+
+  text-wrap:
+    balance;
+}
+
+
+/* =========================================================
+   PHOTO GRID
+========================================================= */
+
+.campus-photo-grid {
+  position:
+    relative;
+
+
+  z-index:
+    2;
+
+
+  display:
+    grid;
+
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(
+        0,
+        1fr
+      )
+    );
+
+
+  grid-template-rows:
+    repeat(
+      11,
+      clamp(
+        34px,
+        3.15vw,
+        52px
+      )
+    );
+
+
+  column-gap:
+    clamp(
+      12px,
+      1vw,
+      18px
+    );
+
+
+  row-gap:
+    clamp(
+      12px,
+      1vw,
+      18px
+    );
+
+
+  width:
+    min(
+      calc(
+        100% -
+        (
+          var(--page-padding) *
+          2
+        )
+      ),
+      1420px
+    );
+
+
+  margin:
+    0 auto;
+}
+
+
+/* =========================================================
+   PHOTO
+========================================================= */
+
+.campus-photo {
+  position:
+    relative;
+
+
+  width:
+    100%;
+
+
+  height:
+    100%;
+
+
+  min-width:
+    0;
+
+
+  min-height:
+    0;
+
+
+  margin:
+    0;
+
+
+  overflow:
+    hidden;
+
+
+  background:
+    var(--green);
+
+
+  border:
+    0;
+
+
+  border-radius:
+    0;
+
+
+  will-change:
+    opacity,
+    transform;
+}
+
+
+/* =========================================================
+   PHOTO IMAGE
+========================================================= */
+
+.campus-photo img {
+  position:
+    absolute;
+
+
+  inset:
+    -3% 0;
+
+
+  display:
+    block;
+
+
+  width:
+    100%;
+
+
+  height:
+    106%;
+
+
+  max-width:
+    none;
+
+
+  object-fit:
+    cover;
+
+
+  object-position:
+    center;
+
+
+  transform:
+    scale(
+      1.05
+    );
+
+
+  transform-origin:
+    center;
+
+
+  pointer-events:
+    none;
+
+
+  user-select:
+    none;
+
+
+  -webkit-user-drag:
+    none;
+
+
+  backface-visibility:
+    hidden;
+
+
+  -webkit-backface-visibility:
+    hidden;
+
+
+  will-change:
+    transform;
+}
+
+
+/* =========================================================
+   SUBTLE PHOTO SHADE
+========================================================= */
+
+.campus-photo::after {
+  content:
+    "";
+
+
+  position:
+    absolute;
+
+
+  z-index:
+    2;
+
+
+  inset:
+    0;
+
+
+  background:
+    linear-gradient(
+      180deg,
+
+      transparent
+      72%,
+
+      rgba(
+        7,
+        63,
+        50,
+        0.08
+      )
+      100%
+    );
+
+
+  pointer-events:
+    none;
+}
+
+
+/* =========================================================
+   DESKTOP PHOTO COMPOSITION
+========================================================= */
+
+.campus-photo--01 {
+  grid-column:
+    1 / 2;
+
+
+  grid-row:
+    1 / span 5;
+}
+
+
+.campus-photo--02 {
+  grid-column:
+    2 / 3;
+
+
+  grid-row:
+    1 / span 3;
+}
+
+
+.campus-photo--03 {
+  grid-column:
+    3 / 4;
+
+
+  grid-row:
+    1 / span 5;
+}
+
+
+.campus-photo--04 {
+  grid-column:
+    2 / 3;
+
+
+  grid-row:
+    4 / span 3;
+}
+
+
+.campus-photo--05 {
+  grid-column:
+    1 / 2;
+
+
+  grid-row:
+    6 / span 5;
+}
+
+
+.campus-photo--06 {
+  grid-column:
+    3 / 4;
+
+
+  grid-row:
+    6 / span 5;
+}
+
+
+.campus-photo--07 {
+  grid-column:
+    2 / 3;
+
+
+  grid-row:
+    7 / span 5;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (
+  min-width: 1500px
+) {
+
+  .campus-intro {
+    min-height:
+      92svh;
+  }
+
+
+  .campus-intro-inner {
+    max-width:
+      1620px;
+  }
+
+
+  .campus-intro-text {
+    width:
+      min(
+        1510px,
+        97%
+      );
+
+
+    font-size:
+      clamp(
+        54px,
+        4vw,
+        74px
+      );
+  }
+
+
+  /* =====================================================
+     MARQUEE
+  ===================================================== */
+
+  .campus-grounds-marquee-section {
+    min-height:
+      195px;
+  }
+
+
+  .campus-grounds-marquee-item > span {
+    font-size:
+      70px;
+  }
+
+
+  .campus-marquee-thumb {
+    width:
+      142px;
+
+
+    height:
+      90px;
+  }
+
+
+  /* =====================================================
+     DESCRIPTION
+  ===================================================== */
+
+  .campus-grounds-caption {
+    margin-top:
+      8px;
+
+
+    margin-bottom:
+      56px;
+  }
+
+
+  /* =====================================================
+     GRID
+  ===================================================== */
+
+  .campus-photo-grid {
+    grid-template-rows:
+      repeat(
+        11,
+        51px
+      );
+
+
+    column-gap:
+      18px;
+
+
+    row-gap:
+      18px;
+  }
+
+}
+
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media
+(
+  max-width: 1200px
+)
+and
+(
+  min-width: 769px
+) {
+
+  .campus-grounds {
+    --page-padding:
+      42px;
+  }
+
+
+  /* =====================================================
+     INTRO
+  ===================================================== */
+
+  .campus-intro {
+    min-height:
+      84svh;
+
+
+    padding:
+      90px
+      0
+      100px;
+  }
+
+
+  .campus-intro-text {
+    width:
+      100%;
+
+
+    font-size:
+      clamp(
+        40px,
+        4.5vw,
+        56px
+      );
+
+
+    line-height:
+      1.01;
+
+
+    letter-spacing:
+      -0.055em;
+  }
+
+
+  /* =====================================================
+     MARQUEE
+  ===================================================== */
+
+  .campus-grounds-marquee-section {
+    min-height:
+      150px;
+  }
+
+
+  .campus-grounds-marquee-item {
+    gap:
+      15px;
+
+
+    margin-right:
+      30px;
+  }
+
+
+  .campus-grounds-marquee-item > span {
+    font-size:
+      clamp(
+        37px,
+        4vw,
+        52px
+      );
+  }
+
+
+  .campus-marquee-thumb {
+    width:
+      96px;
+
+
+    height:
+      62px;
+  }
+
+
+  /* =====================================================
+     DESCRIPTION
+  ===================================================== */
+
+  .campus-grounds-caption {
+    max-width:
+      560px;
+
+
+    margin-top:
+      6px;
+
+
+    margin-bottom:
+      44px;
+  }
+
+
+  .campus-grounds-caption p {
+    font-size:
+      clamp(
+        15px,
+        1.5vw,
+        18px
+      );
+  }
+
+
+  /* =====================================================
+     GRID
+  ===================================================== */
+
+  .campus-photo-grid {
+    grid-template-rows:
+      repeat(
+        11,
+        clamp(
+          32px,
+          3.9vw,
+          46px
+        )
+      );
+
+
+    column-gap:
+      12px;
+
+
+    row-gap:
+      12px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media
+(
+  max-width: 900px
+)
+and
+(
+  min-width: 769px
+) {
+
+  .campus-grounds {
+    --page-padding:
+      30px;
+  }
+
+
+  .campus-intro-text {
+    font-size:
+      clamp(
+        37px,
+        4.8vw,
+        46px
+      );
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (
+  max-width: 768px
+) {
+
+  .campus-grounds {
+    --page-padding:
+      20px;
+  }
+
+
+  /* =====================================================
+     INTRO
+  ===================================================== */
+
+  .campus-intro {
+    display:
+      block;
+
+
+    min-height:
+      auto;
+
+
+    padding:
+      72px
+      0
+      78px;
+  }
+
+
+  .campus-intro-inner {
+    width:
+      calc(
+        100% -
+        40px
+      );
+  }
+
+
+  .campus-intro-text {
+    width:
+      100%;
+
+
+    max-width:
+      620px;
+
+
+    font-size:
+      clamp(
+        37px,
+        9.5vw,
+        49px
+      );
+
+
+    font-weight:
+      520;
+
+
+    line-height:
+      1;
+
+
+    letter-spacing:
+      -0.055em;
+  }
+
+
+  /* =====================================================
+     MAIN
+  ===================================================== */
+
+  .campus-grounds-main {
+    padding-bottom:
+      68px;
+  }
+
+
+  /* =====================================================
+     MOBILE MARQUEE
+
+     LESS EMPTY SPACE
+  ===================================================== */
+
+  .campus-grounds-marquee-section {
+    min-height:
+      116px;
+  }
+
+
+  .campus-grounds-marquee-item {
+    gap:
+      11px;
+
+
+    margin-right:
+      20px;
+  }
+
+
+  .campus-grounds-marquee-item > span {
+    font-size:
+      clamp(
+        37px,
+        9.5vw,
+        49px
+      );
+
+
+    font-weight:
+      550;
+
+
+    line-height:
+      0.98;
+
+
+    letter-spacing:
+      -0.058em;
+  }
+
+
+  .campus-marquee-thumb {
+    width:
+      clamp(
+        72px,
+        19vw,
+        88px
+      );
+
+
+    height:
+      clamp(
+        46px,
+        12vw,
+        57px
+      );
+  }
+
+
+  /* =====================================================
+     MOBILE DESCRIPTION
+
+     VERY TIGHT MARQUEE -> COPY -> PHOTOS
+  ===================================================== */
+
+  .campus-grounds-caption {
+    width:
+      calc(
+        100% -
+        40px
+      );
+
+
+    max-width:
+      460px;
+
+
+    margin:
+      8px
+      auto
+      32px;
+
+
+    text-align:
+      left;
+  }
+
+
+  .campus-grounds-caption p {
+    font-size:
+      15px;
+
+
+    line-height:
+      1.48;
+
+
+    letter-spacing:
+      -0.012em;
+
+
+    text-wrap:
+      pretty;
+  }
+
+
+  /* =====================================================
+     MOBILE GRID
+  ===================================================== */
+
+  .campus-photo-grid {
+    width:
+      calc(
+        100% -
+        24px
+      );
+
+
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(
+          0,
+          1fr
+        )
+      );
+
+
+    grid-template-rows:
+      repeat(
+        14,
+        clamp(
+          40px,
+          12.5vw,
+          62px
+        )
+      );
+
+
+    column-gap:
+      9px;
+
+
+    row-gap:
+      9px;
+  }
+
+
+  .campus-photo--01 {
+    grid-column:
+      1 / 2 !important;
+
+
+    grid-row:
+      1 / span 4 !important;
+  }
+
+
+  .campus-photo--02 {
+    grid-column:
+      2 / 3 !important;
+
+
+    grid-row:
+      1 / span 3 !important;
+  }
+
+
+  .campus-photo--03 {
+    grid-column:
+      2 / 3 !important;
+
+
+    grid-row:
+      4 / span 4 !important;
+  }
+
+
+  .campus-photo--04 {
+    grid-column:
+      1 / 2 !important;
+
+
+    grid-row:
+      5 / span 3 !important;
+  }
+
+
+  .campus-photo--05 {
+    grid-column:
+      1 / 2 !important;
+
+
+    grid-row:
+      8 / span 4 !important;
+  }
+
+
+  .campus-photo--06 {
+    grid-column:
+      2 / 3 !important;
+
+
+    grid-row:
+      8 / span 4 !important;
+  }
+
+
+  .campus-photo--07 {
+    grid-column:
+      1 / -1 !important;
+
+
+    grid-row:
+      12 / span 3 !important;
+  }
+
+
+  .campus-photo {
+    height:
+      100%;
+
+
+    min-height:
+      0;
+
+
+    touch-action:
+      pan-y;
+  }
+
+
+  .campus-photo img {
+    inset:
+      -2% 0;
+
+
+    width:
+      100%;
+
+
+    height:
+      104%;
+
+
+    transform:
+      scale(
+        1.025
+      );
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (
+  max-width: 480px
+) {
+
+  .campus-grounds {
+    --page-padding:
+      17px;
+  }
+
+
+  .campus-intro {
+    padding:
+      64px
+      0
+      70px;
+  }
+
+
+  .campus-intro-inner {
+    width:
+      calc(
+        100% -
+        34px
+      );
+  }
+
+
+  .campus-intro-text {
+    font-size:
+      clamp(
+        33px,
+        9vw,
+        42px
+      );
+
+
+    line-height:
+      1.02;
+
+
+    letter-spacing:
+      -0.052em;
+  }
+
+
+  /* =====================================================
+     MARQUEE
+  ===================================================== */
+
+  .campus-grounds-marquee-section {
+    min-height:
+      102px;
+  }
+
+
+  .campus-grounds-marquee-item {
+    gap:
+      9px;
+
+
+    margin-right:
+      17px;
+  }
+
+
+  .campus-grounds-marquee-item > span {
+    font-size:
+      clamp(
+        33px,
+        9vw,
+        42px
+      );
+  }
+
+
+  .campus-marquee-thumb {
+    width:
+      64px;
+
+
+    height:
+      42px;
+  }
+
+
+  /* =====================================================
+     DESCRIPTION
+  ===================================================== */
+
+  .campus-grounds-caption {
+    width:
+      calc(
+        100% -
+        34px
+      );
+
+
+    margin:
+      6px
+      auto
+      28px;
+  }
+
+
+  .campus-grounds-caption p {
+    font-size:
+      14px;
+  }
+
+
+  /* =====================================================
+     GRID
+  ===================================================== */
+
+  .campus-photo-grid {
+    width:
+      calc(
+        100% -
+        18px
+      );
+
+
+    grid-template-rows:
+      repeat(
+        14,
+        clamp(
+          37px,
+          12vw,
+          52px
+        )
+      );
+
+
+    column-gap:
+      7px;
+
+
+    row-gap:
+      7px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (
+  max-width: 360px
+) {
+
+  .campus-intro {
+    padding:
+      58px
+      0
+      64px;
+  }
+
+
+  .campus-intro-inner {
+    width:
+      calc(
+        100% -
+        30px
+      );
+  }
+
+
+  .campus-intro-text {
+    font-size:
+      31px;
+
+
+    line-height:
+      1.03;
+  }
+
+
+  .campus-grounds-marquee-section {
+    min-height:
+      94px;
+  }
+
+
+  .campus-grounds-marquee-item > span {
+    font-size:
+      31px;
+  }
+
+
+  .campus-marquee-thumb {
+    width:
+      58px;
+
+
+    height:
+      39px;
+  }
+
+
+  .campus-grounds-caption {
+    width:
+      calc(
+        100% -
+        30px
+      );
+
+
+    margin-bottom:
+      24px;
+  }
+
+
+  .campus-photo-grid {
+    width:
+      calc(
+        100% -
+        14px
+      );
+
+
+    grid-template-rows:
+      repeat(
+        14,
+        42px
+      );
+
+
+    column-gap:
+      6px;
+
+
+    row-gap:
+      6px;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (
+  prefers-reduced-motion:
+    reduce
+) {
+
+  .campus-intro-text {
+    transform:
+      none !important;
+  }
+
+
+  .campus-intro-word {
+    color:
+      var(--green) !important;
+  }
+
+
+  .campus-grounds-marquee-track {
+    -webkit-animation: none !important;
+    animation: none !important;
+    transform: translate3d(0, 0, 0) !important;
+  }
+
+
+  .campus-photo,
+  .campus-photo img {
+    opacity:
+      1 !important;
+
+
+    transform:
+      none !important;
+  }
+
+}
