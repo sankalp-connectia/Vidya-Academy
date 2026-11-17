@@ -1,18 +1,38 @@
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { Link, useParams } from "react-router-dom";
 import ArticleGallery from "../../components/ArticleGallery/ArticleGallery";
-import ResponsiveImage from "../../components/ResponsiveImage/ResponsiveImage";
-import { blogs, blogsPage } from "../../cms/siteContent.js";
 import SEOHead from "../../components/SEO/SEOHead.jsx";
+import { blogs } from "../../cms/siteContent.js";
 import NotFoundPage from "../NotFoundPage/NotFoundPage";
-import scopeCss from "../SEOLandingPage/scopeCss.js";
 import "./BlogDetailPage.css";
 
-function formattedDate(value) {
+function formatDate(value) {
   if (!value) return "";
   const date = new Date(value);
   if (Number.isNaN(date.getTime())) return "";
-  return new Intl.DateTimeFormat("en-IN", { day: "numeric", month: "long", year: "numeric" }).format(date);
+  return new Intl.DateTimeFormat("en-IN", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  }).format(date);
+}
+
+function RelatedStory({ post }) {
+  const image = post.image || post.fallbackImage;
+
+  return (
+    <article className="story-related-card">
+      <Link className="story-related-card__image" to={`/blogs/${post.slug}`} aria-label={`Read ${post.title}`}>
+        {image && <img src={image} alt={post.imageAlt || post.title || "Vidya Academy story"} loading="lazy" />}
+        <span aria-hidden="true"><ArrowUpRight size={18} /></span>
+      </Link>
+      <div className="story-related-card__body">
+        {post.category && <p className="story-related-card__category">{post.category}</p>}
+        <h3><Link to={`/blogs/${post.slug}`}>{post.title}</Link></h3>
+        {(post.description || post.excerpt) && <p className="story-related-card__excerpt">{post.description || post.excerpt}</p>}
+      </div>
+    </article>
+  );
 }
 
 export default function BlogDetailPage() {
@@ -23,103 +43,92 @@ export default function BlogDetailPage() {
   const sections = Array.isArray(post.content) ? post.content : [];
   const paragraphs = Array.isArray(post.details) ? post.details : [];
   const dateValue = post.publishedAt || post.date;
-  const date = formattedDate(dateValue);
-  const summary = post.description || post.excerpt;
-  const pageTitle = post.metaTitle || post.seoTitle || `${post.title} | Vidya Academy`;
-  const customHtml = typeof post.customHtml === "string" ? post.customHtml.trim() : "";
+  const date = formatDate(dateValue);
+  const summary = post.description || post.excerpt || "";
+  const image = post.image || post.fallbackImage;
+  const gallery = Array.isArray(post.gallery) ? post.gallery : [];
+  const html = typeof post.contentHtml === "string" ? post.contentHtml.trim() : "";
+  const hasBody = sections.length > 0 || paragraphs.length > 0 || html.length > 0;
+  const related = blogs.filter((entry) => entry.slug !== post.slug && entry.slug && entry.title).slice(0, 3);
 
   return (
-    <article className="journal-story">
+    <article className="story-detail">
       <SEOHead
-        title={pageTitle}
-        description={post.metaDescription || summary || `Read ${post.title} from Vidya Academy.`}
+        title={post.metaTitle || `${post.title} | Vidya Academy`}
+        description={post.metaDescription || summary || "Stories and updates from Vidya Academy in Moodlakatte, Kundapura."}
         canonicalPath={`/blogs/${post.slug}`}
-        image={post.image}
-        schema={{
-          "@context": "https://schema.org",
-          "@type": "Article",
-          headline: post.title,
-          description: post.metaDescription || summary || "",
-          image: post.image ? [post.image] : undefined,
-          datePublished: dateValue || undefined,
-          author: post.author ? { "@type": "Person", name: post.author } : { "@type": "Organization", name: "Vidya Academy" },
-          publisher: { "@type": "Organization", name: "Vidya Academy" },
-        }}
       />
-      <div className="journal-story__shell">
-        <nav className="journal-story__back" aria-label="Blog navigation">
-          <Link to="/blogs"><ArrowLeft size={15} aria-hidden="true" /> All stories</Link>
-          <span>Vidya Academy Journal</span>
-        </nav>
 
-        <header className={`journal-story__hero${post.image ? " has-image" : ""}`}>
-          <div className="journal-story__hero-copy">
-            <div className="journal-story__meta">
-              <span>{post.category || "Vidya Journal"}</span>
-              {date && <time dateTime={dateValue}>{date}</time>}
-            </div>
-            <h1 className="site-page-title">{post.title}</h1>
-            {summary && <p className="journal-story__summary">{summary}</p>}
-            {post.author && <p className="journal-story__author">Words by {post.author}</p>}
-          </div>
-          {post.image && (
-          <figure className="journal-story__cover">
-            <ResponsiveImage
-              pictureClassName="journal-story__cover-picture"
-              className="journal-story__cover-image"
-              src={post.image}
-              mobileImage={post.mobileImage}
-              alt={post.imageAlt || post.title || "Vidya Academy blog photo"}
-              width="1600"
-              height="1200"
-              fetchPriority="high"
-              onError={(event) => {
-                const fallback = post.fallbackImage;
-                if (fallback && event.currentTarget.src !== new URL(fallback, window.location.href).href) {
-                  event.currentTarget.src = fallback;
-                }
-              }}
-            />
-            {post.imageHeading && <h2 className="journal-story__image-heading">{post.imageHeading}</h2>}
-            {post.imageCaption && <figcaption>{post.imageCaption}</figcaption>}
-          </figure>
-          )}
-        </header>
+      <div className="story-detail__topline">
+        <Link to="/blogs"><ArrowLeft size={16} aria-hidden="true" /> All stories</Link>
+        <span>Vidya Academy <i>·</i> Journal</span>
+      </div>
 
-        {customHtml ? (
-          <div className="journal-story__custom-shell">
-            {post.customCss && <style>{scopeCss(post.customCss, `blog-${post.slug}`)}</style>}
-            <div id="seo-custom-page" className="journal-story__custom" dangerouslySetInnerHTML={{ __html: customHtml }} />
-          </div>
-        ) : (
-        <div className="journal-story__reading">
-          <aside className="journal-story__side-note" aria-label="Story details">
-            <span>Vidya Academy</span>
-            {post.category && <span>{post.category}</span>}
+      <header className={`story-hero${image ? " story-hero--image" : ""}`}>
+        <div className="story-hero__copy">
+          <p className="story-hero__eyebrow"><span /> {post.category || "From our community"}</p>
+          <h1>{post.title}</h1>
+          {summary && <p className="story-hero__summary">{summary}</p>}
+          <div className="story-hero__byline">
             {date && <time dateTime={dateValue}>{date}</time>}
-            <Link to="/blogs">More stories <ArrowUpRight size={14} aria-hidden="true" /></Link>
-          </aside>
-
-          <div className="journal-story__article">
-            {sections.length ? sections.map((section, index) => (
-              <section key={`${section.heading || "section"}-${index}`}>
-                {section.heading && <h2>{section.heading}</h2>}
-                {(section.paragraphs || []).filter(Boolean).map((paragraph, paragraphIndex) => <p key={paragraphIndex}>{paragraph}</p>)}
-                {section.bulletPoints?.filter(Boolean).length > 0 && <ul>{section.bulletPoints.filter(Boolean).map((point, pointIndex) => <li key={pointIndex}>{point}</li>)}</ul>}
-              </section>
-            )) : paragraphs.filter(Boolean).map((paragraph, index) => <p key={index}>{paragraph}</p>)}
-            {post.contentHtml && <div className="journal-story__html" dangerouslySetInnerHTML={{ __html: post.contentHtml }} />}
+            {post.author && <><span aria-hidden="true">/</span><span>By {post.author}</span></>}
           </div>
         </div>
+        {image && (
+          <figure className="story-hero__visual">
+            <img src={image} alt={post.imageAlt || post.title || "Vidya Academy story"} width="1600" height="1000" fetchPriority="high" />
+            {(post.imageCaption || post.imageHeading) && (
+              <figcaption>{post.imageCaption || post.imageHeading}</figcaption>
+            )}
+          </figure>
+        )}
+        <span className="story-hero__number" aria-hidden="true">VA</span>
+      </header>
+
+      <div className="story-reading">
+        <aside className="story-reading__rail" aria-label="Story details">
+          <span className="story-reading__label">Story details</span>
+          {post.category && <span>{post.category}</span>}
+          {date && <time dateTime={dateValue}>{date}</time>}
+          <Link to="/blogs"><ArrowLeft size={14} aria-hidden="true" /> Browse all stories</Link>
+        </aside>
+
+        <div className="story-reading__content">
+          {sections.length ? sections.map((section, index) => (
+            <section key={`${section.heading || "section"}-${index}`}>
+              {section.heading && <h2>{section.heading}</h2>}
+              {(Array.isArray(section.paragraphs) ? section.paragraphs : []).map((paragraph, paragraphIndex) => (
+                <p key={paragraphIndex}>{paragraph}</p>
+              ))}
+              {Array.isArray(section.bulletPoints) && section.bulletPoints.length > 0 && (
+                <ul>{section.bulletPoints.map((point, pointIndex) => <li key={pointIndex}>{point}</li>)}</ul>
+              )}
+            </section>
+          )) : paragraphs.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
+          {html && <div className="story-reading__html" dangerouslySetInnerHTML={{ __html: html }} />}
+          {!hasBody && <p className="story-reading__empty">The full story will be added here soon.</p>}
+        </div>
+      </div>
+
+      <div className="story-detail__lower">
+        {gallery.length > 0 && <ArticleGallery images={gallery} headingId="blog-story-gallery" title="A few more moments" />}
+
+        {related.length > 0 && (
+          <section className="story-more" aria-labelledby="story-more-title">
+            <div className="story-more__heading">
+              <div><span>Continue exploring</span><h2 id="story-more-title">More stories</h2></div>
+              <Link to="/blogs">See all stories <ArrowUpRight size={16} aria-hidden="true" /></Link>
+            </div>
+            <div className="story-more__grid">
+              {related.map((entry) => <RelatedStory key={entry.slug} post={entry} />)}
+            </div>
+          </section>
         )}
 
-        <div className="journal-story__afterword">
-          <ArticleGallery images={post.gallery} headingId="blog-story-gallery" title={post.galleryTitle || "A closer look"} />
-          <footer>
-            <span>Vidya Academy · Moodlakatte</span>
-            <Link to="/blogs"><ArrowLeft size={15} aria-hidden="true" /> Back to all stories</Link>
-          </footer>
-        </div>
+        <footer className="story-detail__footer">
+          <span>Vidya Academy · Moodlakatte, Kundapura</span>
+          <Link to="/blogs"><ArrowLeft size={15} aria-hidden="true" /> Return to stories</Link>
+        </footer>
       </div>
     </article>
   );

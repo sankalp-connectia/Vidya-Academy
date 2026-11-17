@@ -66,6 +66,8 @@
 .admissions-contact__copy > p:last-child { max-width: 550px; margin-top: 18px; color: rgba(255,255,255,.72); font-size: 14px; line-height: 1.8; }
 .admissions-contact__actions { display: flex; flex: 0 0 auto; flex-direction: column; align-items: flex-start; }
 .admissions-contact__actions .admissions-button { margin: 0 0 18px; }
+.admissions-contact__actions .admissions-button--brochure { color: #fff; border: 1px solid rgba(255,255,255,.58); background: transparent; }
+.admissions-contact__actions .admissions-button--brochure:hover { color: var(--ad-deep); border-color: var(--ad-gold); background: var(--ad-gold); }
 .admissions-contact__detail { margin-top: 8px; color: rgba(255,255,255,.8); font-size: 12px; }
 @media (max-width: 900px) {
   .admissions-hero { min-height: 680px; grid-template-columns: 1.1fr .9fr; padding-inline: clamp(28px,6vw,60px); }
@@ -139,3 +141,4 @@
 @media (max-width: 640px) {
   .admissions-hero { min-height: auto; padding-block-start: 34px; }
 }
+

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { contactPage } from "../../cms/siteContent.js";
 import { schoolDetails } from "../../cms/siteContent.js";
-import { enquiryFieldKey, submitWordPressEnquiry } from "../../cms/wordpressApi.js";
+import { enquiryFieldKey, submitFormSubmitEnquiry } from "../../cms/wordpressApi.js";
 import "./ContactPage.css";
 
 export default function ContactPage() {
@@ -18,7 +18,7 @@ export default function ContactPage() {
     setFormStatus("");
     setFormStatusIsError(false);
     try {
-      const result = await submitWordPressEnquiry(form);
+      const result = await submitFormSubmitEnquiry(form);
       setFormStatus(result.message || "Thank you. Your enquiry has been sent to the school.");
       form.reset();
     } catch (error) {
@@ -128,3 +128,4 @@ export default function ContactPage() {
     </main>
   );
 }
+

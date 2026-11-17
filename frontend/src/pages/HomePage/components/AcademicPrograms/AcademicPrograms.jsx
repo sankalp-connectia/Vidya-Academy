@@ -535,11 +535,11 @@ export default function AcademicPrograms() {
               ]}
 
               slidesPerView={
-                1.12
+                1
               }
 
               spaceBetween={
-                16
+                14
               }
 
               speed={

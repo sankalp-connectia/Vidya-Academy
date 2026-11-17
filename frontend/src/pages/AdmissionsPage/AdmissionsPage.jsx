@@ -1,4 +1,4 @@
-import { ClipboardCheck, ClipboardList, Compass, MessageCircle, School } from "lucide-react";
+import { ClipboardCheck, ClipboardList, Compass, Download, MessageCircle, School } from "lucide-react";
 import { Link } from "react-router-dom";
 import { admissionsPage } from "../../cms/siteContent.js";
 import "./AdmissionsPage.css";
@@ -59,6 +59,14 @@ export default function AdmissionsPage() {
         <div className="admissions-contact__copy"><p className="admissions-eyebrow admissions-eyebrow--light">{sections.contactEyebrow}</p><h2 className="site-section-title">{contact.title}</h2><p>{contact.description}</p></div>
         <div className="admissions-contact__actions">
           <Link className="admissions-button admissions-button--light" to="/contact#enquiry"><span>{sections.enquireButton}</span></Link>
+          <a
+            className="admissions-button admissions-button--brochure"
+            href={`${import.meta.env.BASE_URL}documents/vidya-academy-brochure.pdf`}
+            download="Vidya-Academy-Brochure.pdf"
+          >
+            <span>Download brochure</span>
+            <Download size={17} aria-hidden="true" />
+          </a>
           <Link className="admissions-contact__detail" to="/contact#enquiry">{sections.visitButton}</Link>
           <a className="admissions-contact__detail" href={`tel:${contact.phone.replaceAll(" ", "")}`}>{contact.phone}</a>
           <a className="admissions-contact__detail" href={`mailto:${contact.email}`}>{contact.email}</a>
@@ -67,3 +75,4 @@ export default function AdmissionsPage() {
     </main>
   );
 }
+

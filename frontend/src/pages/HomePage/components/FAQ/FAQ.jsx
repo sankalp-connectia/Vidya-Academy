@@ -1,6 +1,6 @@
 import { admissionFormCopy, homeCopy } from "../../../../cms/siteContent.js";
 import { faqItems } from "../../../../cms/siteContent.js";
-import { enquiryFieldKey, submitWordPressEnquiry } from "../../../../cms/wordpressApi.js";
+import { enquiryFieldKey, submitFormSubmitEnquiry } from "../../../../cms/wordpressApi.js";
 import {
   useEffect,
   useLayoutEffect,
@@ -190,7 +190,7 @@ export default function FAQ() {
     setEnquiryStatus("");
     setEnquiryStatusIsError(false);
     try {
-      const result = await submitWordPressEnquiry(form);
+      const result = await submitFormSubmitEnquiry(form);
       setEnquiryStatus(result.message || "Thank you. Your enquiry has been sent to the school.");
       form.reset();
     } catch (error) {
@@ -613,3 +613,4 @@ export default function FAQ() {
   );
 
 }
+

@@ -188,8 +188,21 @@ export function applyWordPressContent(content) {
 
   const motion = content.motion;
   motionFallbackImage = typeof motion.FALLBACK_IMAGE === "string" ? motion.FALLBACK_IMAGE : "";
-  heroEvent = objectOrNull(motion.heroEvent);
-  motionSections = objectOrNull(motion.motionSections);
+  const motionHero = objectOrNull(motion.heroEvent);
+  heroEvent = motionHero ? {
+    ...motionHero,
+    description: "Explore school events and student activities at Vidya Academy.",
+    ctaLabel: "Explore Events",
+  } : null;
+  const motionSectionsContent = objectOrNull(motion.motionSections);
+  const eventCard = listOrEmpty(motionSectionsContent?.cards).find((card) =>
+    card?.id === "events" || card?.href === "/motion/events" || /^events$/i.test(card?.title || "")
+  );
+  motionSections = motionSectionsContent ? {
+    ...motionSectionsContent,
+    title: "Events",
+    cards: eventCard ? [eventCard] : [],
+  } : null;
   motionEventsPage = objectOrNull(content.motionEvents.motionEventsPage);
   motionEvents = listOrEmpty(content.motionEvents.events);
   motionAchievementsPage = objectOrNull(content.motionAchievements.motionAchievementsPage);

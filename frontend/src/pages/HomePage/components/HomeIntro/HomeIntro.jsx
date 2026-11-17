@@ -234,8 +234,8 @@ export default function IntroReveal({
       window.setTimeout(
         completeIntro,
         isMobile
-          ? 5900
-          : 6400
+          ? 4500
+          : 5000
       );
 
     return () => {
@@ -451,3 +451,4 @@ export default function IntroReveal({
     document.body
   );
 }
+

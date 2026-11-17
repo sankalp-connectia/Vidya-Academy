@@ -8,7 +8,7 @@
 .motion-sections__eyebrow { grid-column: 1 / -1; margin: 0; color: #0e6b45; font-size: 11px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
 .motion-sections__heading h2 { margin: 0; color: #143e30; font-size: clamp(36px, 5.4vw, 68px); font-weight: 600; letter-spacing: -.06em; line-height: 1.02; }
 .motion-sections__intro { margin: 0; color: #68766e; font-size: 14px; line-height: 1.75; }
-.motion-sections__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: stretch; gap: clamp(16px, 2.4vw, 32px); }
+.motion-sections__grid { display: grid; grid-template-columns: minmax(0, 1fr); align-items: stretch; gap: clamp(16px, 2.4vw, 32px); }
 
 .motion-section-card {
   --card-surface: #e8efe5;
@@ -18,6 +18,7 @@
   min-width: 0;
   min-height: clamp(360px, 31vw, 420px);
   grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr);
+  grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
   grid-template-rows: minmax(0, 1fr);
   grid-template-areas: "media copy";
   overflow: hidden;
@@ -84,6 +85,7 @@
 @media (max-width: 1100px) {
   .motion-sections__grid { grid-template-columns: minmax(0, 1fr); }
   .motion-section-card { min-height: clamp(330px, 38vw, 410px); grid-template-columns: minmax(0, .88fr) minmax(0, 1.12fr); }
+  .motion-section-card { min-height: clamp(330px, 38vw, 410px); grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); }
   .motion-section-card--achievements { grid-template-columns: minmax(0, 1.12fr) minmax(0, .88fr); }
   .motion-section-card__copy { padding: clamp(26px, 4vw, 48px); }
 }

@@ -23,10 +23,8 @@ const SEOLandingPage = lazy(() => import("./pages/SEOLandingPage/SEOLandingPage"
 const SEOLandingIndexPage = lazy(() => import("./pages/SEOLandingPage/SEOLandingPage").then((module) => ({ default: module.SEOLandingIndexPage })));
 
 const EventsPage = lazy(() => import("./pages/MotionPage/EventsPage"));
-const AchievementsPage = lazy(() => import("./pages/MotionPage/AchievementsPage"));
 const MotionStoryPage = lazy(() => import("./pages/MotionPage/components/MotionStoryPage/MotionStoryPage"));
 import { motionEvents as events } from "./cms/siteContent.js";
-import { achievements } from "./cms/siteContent.js";
 
 import "./App.css";
 
@@ -128,8 +126,6 @@ function App() {
 
         <Route path="/motion/events" element={<EventsPage />} />
         <Route path="/motion/events/:slug" element={<MotionStoryPage items={events} type="events" />} />
-        <Route path="/motion/achievements" element={<AchievementsPage />} />
-        <Route path="/motion/achievements/:slug" element={<MotionStoryPage items={achievements} type="achievements" />} />
 
         <Route
           path="*"

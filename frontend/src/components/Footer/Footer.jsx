@@ -143,6 +143,7 @@ function EmailIcon() {
 export default function Footer() {
   const { pathname } = useLocation();
   const [mascotVisible, setMascotVisible] = useState(false);
+  const isIPhone = typeof navigator !== "undefined" && /iPhone|iPod/i.test(navigator.userAgent || "");
   const mascotVideo = footerCopy.mascotVideo || "/mascot-doll1.webm";
   const footerNavigation = footerColumns.map((column, index) => {
     if (index !== 0 || !Array.isArray(column.links)) return column;
@@ -578,28 +579,30 @@ export default function Footer() {
           FIXED MASCOT
       ===================================================== */}
 
-      <button
-        type="button"
-        className={`vidya-site-mascot${mascotVisible ? " vidya-site-mascot--visible" : ""}`}
-        onClick={handleGoToTop}
-        aria-label="Back to top"
-      >
-
-        {mascotVisible && <video
-          className="vidya-site-mascot-video"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          disablePictureInPicture
-          aria-hidden="true"
-          onCanPlay={handleVideoReady}
+      {!isIPhone && (
+  <button
+          type="button"
+          className={`vidya-site-mascot${mascotVisible ? " vidya-site-mascot--visible" : ""}`}
+          onClick={handleGoToTop}
+          aria-label="Back to top"
         >
-          <source src={mascotVideo} type={/\.webm(?:[?#]|$)/i.test(mascotVideo) ? "video/webm" : "video/mp4"} />
-        </video>}
 
-      </button>
+          {mascotVisible && <video
+            className="vidya-site-mascot-video"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            disablePictureInPicture
+            aria-hidden="true"
+            onCanPlay={handleVideoReady}
+          >
+            <source src={mascotVideo} type={/\.webm(?:[?#]|$)/i.test(mascotVideo) ? "video/webm" : "video/mp4"} />
+          </video>}
+
+        </button>
+      )}
 
 
       {/* =====================================================

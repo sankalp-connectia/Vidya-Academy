@@ -1,14 +1,26 @@
-import { ArrowDown, ArrowUpRight, FileText } from "lucide-react";
+import { ArrowDown, ArrowUpRight, FileText, Play } from "lucide-react";
 import { mandatoryDisclosure } from "../../cms/siteContent.js";
 import SEOHead from "../../components/SEO/SEOHead";
 import "./MandatoryDisclosurePage.css";
+
+// Paste the school's specific infrastructure-inspection YouTube URL here.
+// A WordPress URL on the matching disclosure row takes precedence.
+const SCHOOL_INSPECTION_VIDEO_URL = "https://youtu.be/DoFxLlRwuis";
+
+function isYouTubeUrl(value = "") {
+  return /^https?:\/\/(?:www\.)?(?:youtube\.com|youtu\.be)\//i.test(value);
+}
+
+function isInspectionVideoRow(row) {
+  return /youtube.*inspection|inspection.*youtube/i.test(row.label || "");
+}
 
 function DisclosureSection({ section, index }) {
   const columns = Array.isArray(section.columns) && section.columns.length
     ? section.columns
     : ["SL. NO.", "INFORMATION", "DETAILS"];
   const rows = Array.isArray(section.rows) ? section.rows : [];
-  const hasLinks = rows.some((row) => row.href);
+  const hasLinks = rows.some((row) => row.href || (isInspectionVideoRow(row) && SCHOOL_INSPECTION_VIDEO_URL));
 
   return (
     <section className="mandatory-disclosure__section" aria-labelledby={`disclosure-section-${index}`}>
@@ -22,7 +34,10 @@ function DisclosureSection({ section, index }) {
           </thead>
           <tbody>
             {rows.map((row, rowIndex) => {
-              const link = row.href && /^https?:\/\//i.test(row.href);
+              const inspectionVideo = isInspectionVideoRow(row);
+              const href = row.href || (inspectionVideo ? SCHOOL_INSPECTION_VIDEO_URL : "");
+              const link = href && /^https?:\/\//i.test(href);
+              const youtube = link && isYouTubeUrl(href);
               return (
                 <tr key={`${row.no || "row"}-${rowIndex}`}>
                   <td data-label={columns[0]}>{row.no}</td>
@@ -30,13 +45,15 @@ function DisclosureSection({ section, index }) {
                   {columns.length > 2 && (
                     <td data-label={columns[2]}>
                       {link ? (
-                        <a className="mandatory-disclosure__pdf" href={row.href} target="_blank" rel="noopener noreferrer">
-                          <FileText size={17} aria-hidden="true" />
-                          {row.linkLabel || "View PDF"}
+                        <a className={youtube ? "mandatory-disclosure__video-link" : "mandatory-disclosure__pdf"} href={href} target="_blank" rel="noopener noreferrer">
+                          {youtube ? <Play size={18} aria-hidden="true" /> : <FileText size={17} aria-hidden="true" />}
+                          {youtube ? "Watch inspection video" : row.linkLabel || "View PDF"}
                           <ArrowUpRight size={15} aria-hidden="true" />
                         </a>
                       ) : row.linkLabel ? (
-                        <span className="mandatory-disclosure__pending" title="Upload the document in the WordPress Mandatory Disclosure editor">PDF not uploaded yet</span>
+                        <span className="mandatory-disclosure__pending" title={inspectionVideo ? "Add the YouTube video URL in the page code or WordPress disclosure editor" : "Upload the document in the WordPress Mandatory Disclosure editor"}>
+                          {inspectionVideo ? "Video link not added yet" : "PDF not uploaded yet"}
+                        </span>
                       ) : row.value ? (
                         row.value
                       ) : null}
@@ -48,7 +65,7 @@ function DisclosureSection({ section, index }) {
           </tbody>
         </table>
       </div>
-      {hasLinks && <p className="mandatory-disclosure__note">PDF documents open in a new tab.</p>}
+      {hasLinks && <p className="mandatory-disclosure__note">Documents and video links open in a new tab.</p>}
     </section>
   );
 }
@@ -102,3 +119,4 @@ export default function MandatoryDisclosurePage() {
     </main>
   );
 }
+

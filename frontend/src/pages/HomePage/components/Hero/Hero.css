@@ -53,6 +53,36 @@
   overflow-wrap: anywhere;
 }
 
+.raya-hero-container:not([inert]) .raya-hero-title {
+  animation: raya-hero-title-in .42s cubic-bezier(.22, 1, .36, 1) both;
+}
+
+.raya-hero-container:not([inert]) .raya-hero-description,
+.raya-hero-container:not([inert]) .raya-hero-actions {
+  animation: raya-hero-support-in .38s cubic-bezier(.22, 1, .36, 1) both;
+}
+
+.raya-hero-container:not([inert]) .raya-hero-description { animation-delay: .06s; }
+.raya-hero-container:not([inert]) .raya-hero-actions { animation-delay: .12s; }
+
+@keyframes raya-hero-title-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes raya-hero-support-in {
+  from { opacity: 0; transform: translateY(7px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .raya-hero-container:not([inert]) .raya-hero-title,
+  .raya-hero-container:not([inert]) .raya-hero-description,
+  .raya-hero-container:not([inert]) .raya-hero-actions {
+    animation: none;
+  }
+}
+
 .raya-hero-title {
   display: grid;
   gap: .09em;
@@ -189,3 +219,4 @@
   .raya-hero-title { font-size: clamp(2rem, 4.2vw, 2.5rem); }
   .raya-hero-description { font-size: .9375rem; }
 }
+

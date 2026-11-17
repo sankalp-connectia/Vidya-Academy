@@ -691,14 +691,9 @@ h3 {
 ========================================================= */
 
 .academic-mobile-swiper {
-  width:
-    calc(
-      100% +
-      var(--page-padding)
-    );
+  width: 100%;
 
-  overflow:
-    visible;
+  overflow: hidden;
 
   padding-bottom:
     45px;
@@ -1173,7 +1168,7 @@ and
     display: block;
     height: 445px;
     min-height: 445px;
-    overflow: visible;
+    overflow: hidden;
   }
 
   .academic-mobile-swiper .swiper-wrapper {

@@ -234,13 +234,13 @@ body.vidya-page-intro-active
    DESKTOP
 
    HOLD:
-   2 SECONDS
+   1.2 SECONDS
 
    ZOOM:
-   4.2 SECONDS
+   3.2 SECONDS
 
    TOTAL:
-   ABOUT 6.2 SECONDS
+   ABOUT 4.4 SECONDS
 ========================================================= */
 
 .vidya-intro--started
@@ -249,10 +249,10 @@ body.vidya-page-intro-active
     vidyaLogoZoomDesktop;
 
   animation-duration:
-    4.2s;
+    3.2s;
 
   animation-delay:
-    2s;
+    1.2s;
 
   animation-timing-function:
     cubic-bezier(
@@ -345,12 +345,12 @@ body.vidya-page-intro-active
    DESKTOP GREEN COVER TRANSITION
 
    LOGO ZOOM:
-   2.00s -> 6.20s
+   1.20s -> 4.40s
 
    GREEN COVER FADE:
-   2.55s -> 4.75s
+   1.80s -> 3.60s
 
-   FINAL ~1.45 SEC:
+   FINAL ~0.80 SEC:
    FULL TRANSPARENT ZOOM
 ========================================================= */
 
@@ -360,10 +360,10 @@ body.vidya-page-intro-active
     vidyaWhiteFadeDesktop;
 
   animation-duration:
-    2.2s;
+    1.8s;
 
   animation-delay:
-    2.55s;
+    1.8s;
 
   animation-timing-function:
     cubic-bezier(
@@ -599,10 +599,10 @@ body.vidya-page-intro-active
      MOBILE
 
      HOLD:
-     2 SECONDS
+     1 SECOND
 
      ZOOM:
-     3.7 SECONDS
+     2.8 SECONDS
   ===================================================== */
 
   .vidya-intro--started
@@ -611,10 +611,10 @@ body.vidya-page-intro-active
       vidyaLogoZoomMobile;
 
     animation-duration:
-      3.7s;
+      2.8s;
 
     animation-delay:
-      2s;
+      1s;
 
     animation-timing-function:
       cubic-bezier(
@@ -684,10 +684,10 @@ body.vidya-page-intro-active
       vidyaWhiteFadeMobile;
 
     animation-duration:
-      1.95s;
+      1.4s;
 
     animation-delay:
-      2.45s;
+      1.5s;
 
     animation-timing-function:
       cubic-bezier(
@@ -923,10 +923,11 @@ body.vidya-page-intro-active
   fill: rgba(255, 255, 255, 0.015);
 }
 .vidya-intro--started .vidya-intro-semicircles {
-  animation: vidyaWhiteFadeDesktop 2.2s 2.55s cubic-bezier(0.42, 0, 0.18, 1) forwards;
+  animation: vidyaWhiteFadeDesktop 1.8s 1.8s cubic-bezier(0.42, 0, 0.18, 1) forwards;
 }
 @media (max-width: 768px) {
   .vidya-intro--started .vidya-intro-semicircles {
-    animation: vidyaWhiteFadeMobile 1.95s 2.45s cubic-bezier(0.42, 0, 0.18, 1) forwards;
+    animation: vidyaWhiteFadeMobile 1.4s 1.5s cubic-bezier(0.42, 0, 0.18, 1) forwards;
   }
 }
+
