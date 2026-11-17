@@ -17,15 +17,15 @@ gsap.registerPlugin(ScrollTrigger);
 
 /* =========================================================
    QUICK FACTS DATA
-   8 TOTAL
-   4 TOP + 4 BOTTOM
+   10 TOTAL
+   5 TOP + 5 BOTTOM
 ========================================================= */
 
 
 
 
 /* =========================================================
-   SPLIT 4 + 4
+   SPLIT 5 + 5
 ========================================================= */
 
 /* =========================================================
@@ -138,8 +138,8 @@ function FactGroup({
 ========================================================= */
 
 export default function QuickFacts() {
-  const topFacts = facts.slice(0, 4);
-  const bottomFacts = facts.slice(4, 8);
+  const topFacts = facts.slice(0, 5);
+  const bottomFacts = facts.slice(5, 10);
   const sectionRef =
     useRef(null);
 
@@ -574,13 +574,13 @@ export default function QuickFacts() {
 
 
       {/* =====================================================
-          4 + 4 IMAGE WALL
+          5 + 5 IMAGE WALL
       ===================================================== */}
 
       <div className="quick-marquee-wall">
 
         {/* =================================================
-            TOP ROW — 4 IMAGES
+            TOP ROW — 5 IMAGES
         ================================================= */}
 
         <div
@@ -607,7 +607,7 @@ export default function QuickFacts() {
 
 
         {/* =================================================
-            BOTTOM ROW — 4 IMAGES
+            BOTTOM ROW — 5 IMAGES
         ================================================= */}
 
         <div
