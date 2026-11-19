@@ -1,7 +1,7 @@
 import { applyWordPressBlogs, applyWordPressContent } from "./siteContent";
 import legacySchoolPhotos from "../data/legacySchoolPhotos.json";
 
-const MIN_WORDPRESS_PLUGIN_VERSION = "1.9.33";
+const MIN_WORDPRESS_PLUGIN_VERSION = "1.9.32";
 
 function resolveBundledAssetPaths(value) {
   if (Array.isArray(value)) return value.map(resolveBundledAssetPaths);
