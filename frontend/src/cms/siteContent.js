@@ -33,6 +33,8 @@ export let admissionsPage = null;
 export let mandatoryDisclosure = null;
 
 export let introText = "";
+export let infrastructureTitle = "Infrastructure";
+export let infrastructureImages = [];
 export let marqueeImages = [];
 export let groundsImages = [];
 export let heroImages = [];
@@ -48,6 +50,7 @@ export let upcomingCampus = null;
 export let programmes = [];
 export let learningStages = [];
 export let learningPathwaysCopy = null;
+export let additionalExperienceImages = [];
 
 export let motionFallbackImage = "";
 export let heroEvent = null;
@@ -136,6 +139,16 @@ export function applyWordPressContent(content) {
 
   const navigation = content.siteNavigation;
   navbarData = objectOrNull(navigation.navbarData);
+  if (Array.isArray(navbarData?.links)) {
+    navbarData = {
+      ...navbarData,
+      links: navbarData.links.map((link) =>
+        link?.to === "/learning-pathways" && /^programs$/i.test(link.label?.trim())
+          ? { ...link, label: "ACADEMICS" }
+          : link,
+      ),
+    };
+  }
   footerColumns = listOrEmpty(navigation.footerColumns);
   socialLinks = listOrEmpty(navigation.socialLinks);
   schoolDetails = objectOrNull(navigation.schoolDetails);
@@ -169,6 +182,22 @@ export function applyWordPressContent(content) {
 
   const campus = content.campus;
   introText = typeof campus.introText === "string" ? campus.introText : "";
+  infrastructureTitle = typeof campus.infrastructureTitle === "string" && campus.infrastructureTitle.trim()
+    ? campus.infrastructureTitle
+    : "Infrastructure";
+  const legacyInfrastructureImages = [
+    ...listOrEmpty(campus.groundsImages),
+    ...listOrEmpty(campus.buildingImages),
+  ];
+  infrastructureImages = listWithBundledDefaults(
+    listOrEmpty(campus.infrastructureImages).length ? campus.infrastructureImages : legacyInfrastructureImages,
+    offlineContent.campus.infrastructureImages,
+  ).map((photo, index) => {
+    const fallback = offlineContent.campus.infrastructureImages[index];
+    if (!fallback || photo.src === resolveCampusPhoto(fallback.src) || photo.src === fallback.src) return photo;
+    const configured = (listOrEmpty(campus.infrastructureImages).length ? campus.infrastructureImages : legacyInfrastructureImages)[index];
+    return { ...photo, caption: configured?.caption || configured?.alt || "" };
+  });
   marqueeImages = listWithBundledDefaults(campus.marqueeImages, offlineContent.campus.marqueeImages);
   groundsImages = listWithBundledDefaults(campus.groundsImages, offlineContent.campus.groundsImages);
   heroImages = listOrEmpty(campus.heroImages);
@@ -185,6 +214,10 @@ export function applyWordPressContent(content) {
   programmes = listOrEmpty(pathways.programmes);
   learningStages = listOrEmpty(pathways.learningStages);
   learningPathwaysCopy = objectOrNull(pathways.learningPathwaysCopy);
+  additionalExperienceImages = listWithBundledDefaults(
+    learningPathwaysCopy?.careerGuidance?.experienceImages,
+    offlineContent.learningPathways.learningPathwaysCopy.careerGuidance.experienceImages,
+  );
 
   const motion = content.motion;
   motionFallbackImage = typeof motion.FALLBACK_IMAGE === "string" ? motion.FALLBACK_IMAGE : "";

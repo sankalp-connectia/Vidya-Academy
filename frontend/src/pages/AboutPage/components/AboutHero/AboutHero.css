@@ -79,7 +79,20 @@
   border-radius: 48% 48% 3px 3px;
   background: #d6ddd1;
 }
-.about-hero__main-image img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 42%; }
+.about-hero__main-image::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(7, 63, 50, 0.02) 38%, rgba(7, 63, 50, 0.22) 100%);
+  content: "";
+  pointer-events: none;
+}
+.about-hero__main-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 52%;
+}
 .about-hero__detail-image {
   position: absolute;
   bottom: 2%;
@@ -91,7 +104,14 @@
   background: #f3f0e6;
   box-shadow: 0 14px 38px rgba(7,63,50,.15);
 }
-.about-hero__detail-image img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.about-hero__detail-image::after {
+  position: absolute;
+  inset: 8px;
+  background: linear-gradient(150deg, rgba(198, 151, 40, 0.16), transparent 55%);
+  content: "";
+  pointer-events: none;
+}
+.about-hero__detail-image img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
 .about-hero__caption {
   position: absolute;
   right: 0;

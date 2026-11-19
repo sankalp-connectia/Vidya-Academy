@@ -73,7 +73,7 @@
   inset: 42% 0 0;
   content: "";
   pointer-events: none;
-  background: linear-gradient(transparent, rgb(7 36 26 / 68%));
+  background: linear-gradient(transparent, rgb(7 36 26 / 90%));
 }
 
 .campus-infrastructure__photo figcaption {
@@ -95,9 +95,15 @@
   .campus-infrastructure__header h2 { font-size: clamp(42px, 11vw, 58px); }
   .campus-infrastructure__gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
   .campus-infrastructure__photo { aspect-ratio: 1.15 / 1; }
-  .campus-infrastructure__photo figcaption { right: 7px; bottom: 7px; left: 7px; font-size: clamp(9px, 2.65vw, 11px); line-height: 1.25; }
+  .campus-infrastructure__photo figcaption { right: 7px; bottom: 7px; left: 7px; font-size: clamp(11px, 2.65vw, 13px); line-height: 1.25; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .campus-infrastructure__photo img { transition: none; }
+}
+
+@media (max-width: 380px) {
+  .campus-infrastructure__gallery { grid-template-columns: minmax(0, 1fr); }
+  .campus-infrastructure__photo { aspect-ratio: 1.48 / 1; }
+  .campus-infrastructure__photo figcaption { font-size: 13px; }
 }

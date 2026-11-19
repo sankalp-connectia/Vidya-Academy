@@ -224,6 +224,10 @@
   .contact-page-hero__content { max-width: 720px; }
   .contact-page-hero__visual { width: min(54vw, 330px); margin-top: 8px; }
   .contact-page-hero__visual-core span { font-size: clamp(96px, 18vw, 140px); }
+  .contact-enquiry__inner { gap: 28px; }
+  .contact-enquiry-form { padding: 24px; }
+  .contact-enquiry-form__grid { grid-template-columns: 1fr; gap: 16px; }
+  .contact-enquiry-field--wide { grid-column: auto; }
 }
 
 @media (max-width: 680px) {
@@ -233,6 +237,20 @@
   .contact-page-details { padding-block: 52px; }
   .contact-page-details__grid { gap: 14px; }
   .contact-info-card { min-height: 220px; }
+  .contact-enquiry { padding: 48px 0 60px; }
+  .contact-enquiry__inner { width: 100%; min-width: 0; }
+  .contact-enquiry__intro { padding-inline: 16px; }
+  .contact-enquiry-form { width: 100%; min-width: 0; max-width: none; padding: 20px 16px; border-inline: 0; border-radius: 0; }
+  .contact-enquiry__intro h2 { max-width: 100%; font-size: clamp(34px, 10vw, 46px); }
+  .contact-enquiry__intro > p:last-child { margin-top: 15px; font-size: 13px; }
+  .contact-enquiry-field input, .contact-enquiry-field select { min-height: 52px; }
+  .contact-enquiry-field textarea { min-height: 132px; }
+  .contact-enquiry-form__submit { width: 100%; min-height: 54px; margin-top: 22px; }
+}
+
+@media (max-width: 380px) {
+  .contact-enquiry__intro { padding-inline: 14px; }
+  .contact-enquiry-form { padding-inline: 14px; }
 }
 
 /* Give the enquiry form a deep green setting with the same semicircle language. */
@@ -289,4 +307,11 @@
   min-height: min(610px, calc(100svh - var(--site-nav-height, 88px)));
   padding-block-start: clamp(48px, 7vh, 88px);
 }
+
+/* Keep the footer address readable while making the whole location actionable. */
+.vidya-footer-location {
+  color: inherit;
+  text-decoration: none;
+}
+.vidya-footer-location:hover { color: #f3c64e; }
 @media (max-width: 640px) { .contact-page-hero { min-height: 480px; padding-block-start: 42px; } }

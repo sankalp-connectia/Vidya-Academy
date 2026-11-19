@@ -534,7 +534,7 @@ export default function Footer() {
   ========================================================= */
 
   const whatsappNumber =
-    SCHOOL.whatsapp.replace(
+    (SCHOOL.whatsapp || SCHOOL.phone || "").replace(
       /\D/g,
       ""
     );
@@ -550,6 +550,8 @@ export default function Footer() {
     Boolean(
       whatsappNumber
     );
+
+  const directionsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(SCHOOL.location || "")}`;
 
 
   /* =========================================================
@@ -645,9 +647,15 @@ export default function Footer() {
                     <LocationIcon />
                   </span>
 
-                  <span>
+                  <a
+                    className="vidya-footer-location"
+                    href={directionsHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Open ${SCHOOL.location} in Google Maps`}
+                  >
                     {SCHOOL.location}
-                  </span>
+                  </a>
 
                 </div>
 
@@ -701,7 +709,7 @@ export default function Footer() {
                   <WhatsAppIcon />
 
                   <span>
-                    Chat on WhatsApp
+                    WhatsApp: {SCHOOL.whatsapp || SCHOOL.phone}
                   </span>
 
                 </a>

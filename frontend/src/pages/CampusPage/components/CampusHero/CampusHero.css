@@ -1475,3 +1475,7 @@ and
     line-height: 1.42;
   }
 }
+
+.campus-zoom-wall .campus-wall-card:not(.campus-wall-card--center) .campus-wall-image {
+  filter: saturate(1.13) contrast(1.045) brightness(1.025);
+}

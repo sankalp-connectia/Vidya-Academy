@@ -5,7 +5,7 @@ export let navbarData = {
     to: "/",
   },
   links: [
-    { label: "PROGRAMS", to: "/learning-pathways" },
+    { label: "ACADEMICS", to: "/learning-pathways" },
     { label: "ADMISSIONS", to: "/admissions" },
     { label: "CAMPUS", to: "/campus" },
     { label: "MILESTONE", to: "/motion" },
@@ -63,7 +63,7 @@ export let schoolDetails = {
   location: "1172/1 Railway Station Road, Moodlakatte, Kundapura – 576217, Karnataka, India",
   phone: "+91 91480 19301",
   email: "vidyaacademy2024@gmail.com",
-  whatsapp: "",
+  whatsapp: "+91 91480 19301",
 };
 
 export let footerCopy = {

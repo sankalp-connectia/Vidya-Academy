@@ -1,7 +1,7 @@
 import { applyWordPressBlogs, applyWordPressContent } from "./siteContent";
 import legacySchoolPhotos from "../data/legacySchoolPhotos.json";
 
-const MIN_WORDPRESS_PLUGIN_VERSION = "1.9.31";
+const MIN_WORDPRESS_PLUGIN_VERSION = "1.9.33";
 
 function resolveBundledAssetPaths(value) {
   if (Array.isArray(value)) return value.map(resolveBundledAssetPaths);
@@ -205,6 +205,15 @@ export async function loadWordPressContent() {
       }
     }
 
+    const brochure = content.admissions?.admissionsPage?.brochure;
+    const brochureHref = typeof brochure?.href === "string" ? brochure.href.trim() : "";
+    if (brochureHref && URL.canParse(brochureHref, baseUrl + "/")) {
+      const pdf = new URL(brochureHref, baseUrl + "/");
+      brochure.href = ["https:", "http:"].includes(pdf.protocol) ? pdf.href : "";
+    } else if (brochure) {
+      brochure.href = "";
+    }
+
     applyWordPressContent(resolveBundledAssetPaths(content));
 
     try {
@@ -232,9 +241,18 @@ export function enquiryFieldKey(name = "", label = "") {
 }
 
 export async function submitFormSubmitEnquiry(formElement) {
-  const recipient = String(
+  const configuredRecipients = [
     import.meta.env.VITE_FORMSUBMIT_EMAIL || "",
-  ).trim();
+    import.meta.env.VITE_FORMSUBMIT_CC || "",
+  ]
+    .join(",")
+    .split(",")
+    .map((email) => email.trim())
+    .filter(Boolean)
+    .filter((email, index, list) => list.indexOf(email) === index);
+
+  const recipient = configuredRecipients[0] || "";
+  const ccRecipients = configuredRecipients.slice(1).join(",");
 
   if (!recipient) {
     throw new Error(
@@ -273,6 +291,7 @@ export async function submitFormSubmitEnquiry(formElement) {
   payload._template = "table";
   payload._honey = "";
   payload._url = window.location.href.split("?")[0];
+  if (ccRecipients) payload._cc = ccRecipients;
 
   if (payload.email) payload._replyto = payload.email;
 

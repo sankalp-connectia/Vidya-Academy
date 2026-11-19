@@ -223,7 +223,7 @@ export let wayItems = [
       "Use engaging and age-appropriate learning experiences to develop foundational skills.",
 
     image:
-      "/images/school/classroom-writing.webp",
+      "/images/school/building-blocks.webp",
 
     reverse:
       true,
@@ -239,7 +239,7 @@ export let wayItems = [
       "Encourage confidence, responsibility, compassion, empathy and integrity.",
 
     image:
-      "/images/school/school-friends.webp",
+      "/images/school/playground-friends.webp",
 
     reverse:
       false,
@@ -255,7 +255,7 @@ export let wayItems = [
       "Support children in becoming creative thinkers, active participants and independent learners.",
 
     image:
-      "/images/school/carrom-game.webp",
+      "/images/school/green-dress-school-activity-840x910.jpg",
 
     reverse:
       true,
@@ -270,73 +270,71 @@ export let facts = [
     id: "01",
     value: "24×7",
     title: "CCTV Surveillance",
-    description:
-      "A safety-focused campus with 24×7 CCTV surveillance.",
-    image:
-      "/images/school/school-entrance.webp",
+    description: "A safety-focused campus with 24×7 CCTV surveillance.",
+    image: "/images/school/campus-cctv.webp",
   },
   {
     id: "02",
     value: "Small",
     title: "Batches",
-    description:
-      "Smaller batches are designed to support personal attention.",
-    image:
-      "/images/school/preschool-circle.webp",
+    description: "Smaller batches are designed to support personal attention.",
+    image: "/images/school/small-batches.webp",
   },
   {
     id: "03",
     value: "Play",
     title: "Indoor and Outdoor",
-    description:
-      "Indoor and outdoor play opportunities support active learning.",
-    image:
-      "/images/school/playground-ride-on.webp",
+    description: "Indoor and outdoor play opportunities support active learning.",
+    image: "/images/school/playground-ride-on.webp",
   },
   {
     id: "04",
     value: "Library",
     title: "Early Reading",
-    description:
-      "Library experiences encourage early reading habits.",
-    image:
-      "/images/school/classroom-writing.webp",
+    description: "Library experiences encourage early reading habits.",
+    image: "/images/school/classroom-writing.webp",
   },
   {
-    id: "05",
-    value: "Spoken English",
-    title: "Communication",
-    description:
-      "Activities give attention to vocabulary and pronunciation.",
-    image:
-      "/images/school/circle-time.webp",
-  },
-  {
-    id: "06",
-    value: "Transport",
-    title: "To and from School",
-    description:
-      "Transportation facility to and from the school.",
-    image:
-      "/images/school/school-bus.webp",
+    id: "09",
+    value: "Focus",
+    title: "Focus and Confidence",
+    description: "Activities such as badminton help children practise concentration, coordination and confidence.",
+    image: "/images/school/focus-badminton.webp",
   },
   {
     id: "07",
     value: "Nature",
     title: "Nature",
-    description:
-      "Green surroundings encourage children to connect with nature.",
-    image:
-      "/images/school/campus-courtyard.webp",
+    description: "Green surroundings encourage children to connect with nature.",
+    image: "/images/school/campus-nature.webp",
+  },
+  {
+    id: "06",
+    value: "Transport",
+    title: "To and from School",
+    description: "Transportation facility to and from the school.",
+    image: "/images/school/school-bus.webp",
+  },
+  {
+    id: "05",
+    value: "Spoken English",
+    title: "Communication",
+    description: "Activities give attention to vocabulary and pronunciation.",
+    image: "/images/school/classroom-teacher.webp",
+  },
+  {
+    id: "10",
+    value: "Partner",
+    title: "Oxford Advantage",
+    description: "Integrated learning solutions.",
+    image: "/images/school/oxford-advantage.webp",
   },
   {
     id: "08",
-    value: "Partner",
-    title: "Key Education Foundation",
-    description:
-      "Learning support through collaboration with Key Education Foundation.",
-    image:
-      "/images/school/faculty-team-meeting.webp",
+    value: "Play",
+    title: "Carrom",
+    description: "Children practise patience, planning and friendly play around the carrom board.",
+    image: "/images/school/focus-carrom.webp",
   },
 ];
 
@@ -345,49 +343,49 @@ export let programs = [
     id: 1,
 
     title:
-      "Play Group – Nursery",
+      "Play Group & Nursery",
 
     age:
       "1.5–3.5 years",
     href: "/learning-pathways#kindergarten",
 
     image:
-      "/images/school/preschool-ride-on.webp",
+      "/images/school/admission-01-play-group-nursery-720x1200.jpg",
   },
 
   {
     id: 2,
 
     title:
-      "LKG – UKG",
+      "LKG & UKG",
 
     age:
       "3.5–5.5 years",
     href: "/learning-pathways#primary-middle",
 
     image:
-      "/images/school/early-writing.webp",
+      "/images/school/admission-02-lkg-ukg-720x1200.jpg",
   },
 
   {
     id: 3,
 
     title:
-      "Classes 1–5",
+      "Class 1–5",
 
     age:
       "Primary classes",
     href: "/learning-pathways#senior-school",
 
     image:
-      "/images/school/teacher-at-board.webp",
+      "/images/school/admission-03-classes-1-5-720x1200.jpg",
   },
   {
     id: 4,
-    title: "Classes 6–8",
+    title: "Class 6–8",
     age: "Middle classes",
     href: "/learning-pathways#senior-school",
-    image: "/images/school/students-in-corridor.webp",
+    image: "/images/school/admission-04-classes-6-8-720x1200.jpg",
   },
 
 ];
@@ -397,7 +395,7 @@ export let homeCopy = {
     title: ["A Joyful Start", "to Learning at", "Vidya Academy"],
     description:
       "Vidya Academy, Moodlakatte, Kundapura, provides a nurturing and engaging learning environment where young children can explore, create, communicate and grow with confidence.",
-    video: "/videos/vidya-hero.mp4",
+    video: "/videos/va-enhanced.mp4",
     mobileVideo: "",
     explore: "Explore Our School",
     apply: "Apply for Admission",

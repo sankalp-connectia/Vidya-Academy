@@ -66,8 +66,8 @@
 .admissions-contact__copy > p:last-child { max-width: 550px; margin-top: 18px; color: rgba(255,255,255,.72); font-size: 14px; line-height: 1.8; }
 .admissions-contact__actions { display: flex; flex: 0 0 auto; flex-direction: column; align-items: flex-start; }
 .admissions-contact__actions .admissions-button { margin: 0 0 18px; }
-.admissions-contact__actions .admissions-button--brochure { color: #fff; border: 1px solid rgba(255,255,255,.58); background: transparent; }
-.admissions-contact__actions .admissions-button--brochure:hover { color: var(--ad-deep); border-color: var(--ad-gold); background: var(--ad-gold); }
+.admissions-button--brochure { color: #fff; border: 1px solid rgba(255,255,255,.58); background: transparent; }
+.admissions-button--brochure:hover:not(:disabled) { color: var(--ad-deep); border-color: var(--ad-gold); background: var(--ad-gold); }
 .admissions-contact__detail { margin-top: 8px; color: rgba(255,255,255,.8); font-size: 12px; }
 @media (max-width: 900px) {
   .admissions-hero { min-height: 680px; grid-template-columns: 1.1fr .9fr; padding-inline: clamp(28px,6vw,60px); }
@@ -142,3 +142,9 @@
   .admissions-hero { min-height: auto; padding-block-start: 34px; }
 }
 
+
+.admissions-hero__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 24px; margin-top: clamp(24px, 4vw, 42px); }
+.admissions-hero__actions .admissions-button,
+.admissions-hero__actions .admissions-scroll { margin-top: 0; }
+.admissions-button--brochure:disabled { opacity: .65; cursor: default; transform: none; }
+.admissions-button--brochure:focus-visible { outline: 2px solid var(--ad-gold); outline-offset: 4px; }

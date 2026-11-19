@@ -16,8 +16,8 @@ export let programmes = [
     ],
     tags: ["Play-based learning", "Communication", "Independence"],
     links: [],
-    image: "/images/school/learning-through-play.webp",
-    imageAlt: "Children playing and learning together on the lawn",
+    image: "/images/school/building-blocks.webp",
+    imageAlt: "Children working together with colourful building blocks",
     quote: "",
     quoteName: "",
     stats: []
@@ -38,8 +38,8 @@ export let programmes = [
     ],
     tags: ["Share & Care", "Library Time", "Tune-In Time", "Fun with Math", "Art & Craft", "Play Time"],
     links: [],
-    image: "/images/school/building-blocks.webp",
-    imageAlt: "Young children working together with colourful building blocks",
+    image: "/images/school/classroom-writing.webp",
+    imageAlt: "Children writing together at a classroom table",
     quote: "",
     quoteName: "",
     stats: []
@@ -55,13 +55,12 @@ export let programmes = [
     title: "A strong foundation for lifelong learning",
     paragraphs: [
       "Additional experiences include Rhymes and Chimes, Garden Visits, Festivals and Celebrations, Little Chef, Dance and Field Trips.",
-      "The No Last Bench Concept arranges classroom seating in a welcoming arc rather than conventional front-and-back rows. It is designed to help children see and hear the teacher clearly, stay connected with classmates and participate as one learning group.",
       "Academic pattern: Play Group, 1.5–2.5 years; Nursery, 2.5–3.5 years; LKG, 3.5–4.5 years; UKG, 4.5–5.5 years; Class 1, 6 years. Contact the school to confirm current eligibility and age cut-offs."
     ],
     tags: ["Garden Visits", "Little Chef", "Dance", "Field Trips"],
     links: [],
-    image: "/images/school/board-game-together.webp",
-    imageAlt: "Students playing a tabletop game together",
+    image: "/images/school/lifelong-learning-5721.webp",
+    imageAlt: "Two Vidya Academy students sitting together by the school garden",
     quote: "",
     quoteName: "",
     stats: []
@@ -71,7 +70,7 @@ export let programmes = [
 export let learningStages = [
   { id: "kindergarten", range: "Play Group – Nursery", title: "Early Years", summary: "Play Group ages 1.5–2.5 years and Nursery ages 2.5–3.5 years. Contact the school to confirm current eligibility.", exploreTarget: "pyp" },
   { id: "primary-middle", range: "LKG – UKG", title: "Kindergarten", summary: "LKG ages 3.5–4.5 years and UKG ages 4.5–5.5 years.", exploreTarget: "myp" },
-  { id: "senior-school", range: "Classes 1–8", title: "Primary Classes", summary: "Classes 1 through 8. Contact Vidya Academy to confirm current class availability and age eligibility.", exploreTarget: "dp" }
+  { id: "senior-school", range: "Class 1 – Class 8", title: "Primary & Middle", summary: "Primary ages 6–11 years (Classes 1–5) and Middle ages 11–14 years (Classes 6–8).", exploreTarget: "dp" }
 ];
 
 export let learningPathwaysCopy = {
@@ -97,19 +96,15 @@ export let learningPathwaysCopy = {
     title: ["Additional", "experiences"],
     paragraphs: ["Rhymes and Chimes, Garden Visits, Festivals and Celebrations, Little Chef, Dance and Field Trips."],
     points: ["Rhymes and Chimes", "Garden visits", "Festivals and celebrations", "Little Chef", "Dance", "Field trips"],
-    classroomApproach: {
-      title: "No Last Bench Concept",
-      description: "At Vidya Academy, classroom seating is arranged in a welcoming arc rather than conventional front-and-back rows. This approach helps children see and hear the teacher clearly, stay connected with classmates and participate as one learning group.",
-    },
     image: "/images/school/student-guidance.webp",
     imageAlt: "Students meeting with a staff member"
   }
 };
 
 learningPathwaysCopy.hero.image = {
-  src: "/images/heroes/programs/desktop.webp",
-  mobileImage: "/images/heroes/programs/mobile.webp",
-  alt: "Children writing together at a classroom table"
+  src: "/images/heroes/events/desktop.webp",
+  mobileImage: "/images/heroes/programs/running-students-mobile.webp",
+  alt: "Vidya Academy students running together along a covered school walkway"
 };
 
 export function applyWordPressContent(content = {}) {

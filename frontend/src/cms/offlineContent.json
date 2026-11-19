@@ -107,7 +107,7 @@
       },
       "links": [
         {
-          "label": "PROGRAMS",
+          "label": "ACADEMICS",
           "to": "/learning-pathways"
         },
         {
@@ -140,7 +140,7 @@
       "location": "1172/1 Railway Station Road, Moodlakatte, Kundapura – 576217, Karnataka, India",
       "phone": "+91 91480 19301",
       "email": "vidyaacademy2024@gmail.com",
-      "whatsapp": ""
+      "whatsapp": "+91 91480 19301"
     },
     "socialLinks": [
       {
@@ -217,7 +217,7 @@
         "value": "24×7",
         "title": "CCTV Surveillance",
         "description": "A safety-focused campus with 24×7 CCTV surveillance.",
-        "image": "/images/school/school-entrance.webp",
+        "image": "/images/school/campus-cctv.webp",
         "mobileImage": ""
       },
       {
@@ -225,7 +225,7 @@
         "value": "Small",
         "title": "Batches",
         "description": "Smaller batches are designed to support personal attention.",
-        "image": "/images/school/preschool-circle.webp",
+        "image": "/images/school/small-batches.webp",
         "mobileImage": ""
       },
       {
@@ -245,11 +245,19 @@
         "mobileImage": ""
       },
       {
-        "id": "05",
-        "value": "Spoken English",
-        "title": "Communication",
-        "description": "Activities give attention to vocabulary and pronunciation.",
-        "image": "/images/school/circle-time.webp",
+        "id": "09",
+        "value": "Focus",
+        "title": "Focus and Confidence",
+        "description": "Activities such as badminton help children practise concentration, coordination and confidence.",
+        "image": "/images/school/focus-badminton.webp",
+        "mobileImage": ""
+      },
+      {
+        "id": "07",
+        "value": "Nature",
+        "title": "Nature",
+        "description": "Green surroundings encourage children to connect with nature.",
+        "image": "/images/school/campus-nature.webp",
         "mobileImage": ""
       },
       {
@@ -261,19 +269,27 @@
         "mobileImage": ""
       },
       {
-        "id": "07",
-        "value": "Nature",
-        "title": "Nature",
-        "description": "Green surroundings encourage children to connect with nature.",
-        "image": "/images/school/campus-courtyard.webp",
+        "id": "05",
+        "value": "Spoken English",
+        "title": "Communication",
+        "description": "Activities give attention to vocabulary and pronunciation.",
+        "image": "/images/school/classroom-teacher.webp",
+        "mobileImage": ""
+      },
+      {
+        "id": "10",
+        "value": "Partner",
+        "title": "Oxford Advantage",
+        "description": "Integrated learning solutions.",
+        "image": "/images/school/oxford-advantage.webp",
         "mobileImage": ""
       },
       {
         "id": "08",
-        "value": "Partner",
-        "title": "Key Education Foundation",
-        "description": "Learning support through collaboration with Key Education Foundation.",
-        "image": "/images/school/faculty-team-meeting.webp",
+        "value": "Play",
+        "title": "Carrom",
+        "description": "Children practise patience, planning and friendly play around the carrom board.",
+        "image": "/images/school/focus-carrom.webp",
         "mobileImage": ""
       }
     ],
@@ -367,7 +383,7 @@
           "Vidya Academy"
         ],
         "description": "Vidya Academy, Moodlakatte, Kundapura, provides a nurturing and engaging learning environment where young children can explore, create, communicate and grow with confidence.",
-        "video": "/media/home-hero-original.mp4",
+        "video": "/videos/va-enhanced.mp4",
         "explore": "Explore Our School",
         "apply": "Apply for Admission",
         "mobileVideo": "",
@@ -524,34 +540,34 @@
     "programs": [
       {
         "id": 1,
-        "title": "Play Group – Nursery",
+        "title": "Play Group & Nursery",
         "age": "1.5–3.5 years",
         "href": "/learning-pathways#kindergarten",
-        "image": "/images/school/preschool-ride-on.webp",
+        "image": "/images/school/admission-01-play-group-nursery-720x1200.jpg",
         "mobileImage": ""
       },
       {
         "id": 2,
-        "title": "LKG – UKG",
+        "title": "LKG & UKG",
         "age": "3.5–5.5 years",
         "href": "/learning-pathways#primary-middle",
-        "image": "/images/school/early-writing.webp",
+        "image": "/images/school/admission-02-lkg-ukg-720x1200.jpg",
         "mobileImage": ""
       },
       {
         "id": 3,
-        "title": "Classes 1–5",
+        "title": "Class 1–5",
         "age": "Primary classes",
         "href": "/learning-pathways#senior-school",
-        "image": "/images/school/teacher-at-board.webp",
+        "image": "/images/school/admission-03-classes-1-5-720x1200.jpg",
         "mobileImage": ""
       },
       {
         "id": 4,
-        "title": "Classes 6–8",
+        "title": "Class 6–8",
         "age": "Middle classes",
         "href": "/learning-pathways#senior-school",
-        "image": "/images/school/students-in-corridor.webp",
+        "image": "/images/school/admission-04-classes-6-8-720x1200.jpg",
         "mobileImage": ""
       }
     ],
@@ -568,7 +584,7 @@
         "id": "02",
         "title": "Foundational Skills",
         "description": "Use engaging and age-appropriate learning experiences to develop foundational skills.",
-        "image": "/images/school/classroom-writing.webp",
+        "image": "/images/school/building-blocks.webp",
         "reverse": true,
         "mobileImage": ""
       },
@@ -576,7 +592,7 @@
         "id": "03",
         "title": "Values and Responsibility",
         "description": "Encourage confidence, responsibility, compassion, empathy and integrity.",
-        "image": "/images/school/school-friends.webp",
+        "image": "/images/school/playground-friends.webp",
         "reverse": false,
         "mobileImage": ""
       },
@@ -584,7 +600,7 @@
         "id": "04",
         "title": "Creative and Independent Learning",
         "description": "Support children in becoming creative thinkers, active participants and independent learners.",
-        "image": "/images/school/carrom-game.webp",
+        "image": "/images/school/green-dress-school-activity-840x910.jpg",
         "reverse": true,
         "mobileImage": ""
       }
@@ -599,7 +615,9 @@
         "continuation": "We aim to bring together meaningful learning, creativity, values and opportunities for children to discover what they can do. Through supportive teachers, engaging activities and a child-friendly environment, we strive to make each child’s school experience enriching and purposeful.",
         "closing": "Our commitment is simple: to give every child a strong, happy and meaningful beginning to their educational journey.",
         "name": "Mr. Siddhartha J. Shetty",
-        "role": "Chairman, Vidya Academy"
+        "role": "Chairman, Vidya Academy",
+        "image": "/media/about/vision-generations-1200x800.jpeg",
+        "imageAlt": "A vision that continues to inspire generations"
       },
       "hero": {
         "eyebrow": "About Vidya Academy",
@@ -617,14 +635,13 @@
           "Set in a green and peaceful environment, the school provides children with opportunities to learn both inside and outside the classroom. We work to make the transition from home to school comfortable and build a strong partnership between parents and teachers."
         ],
         "visionTitle": "Our Vision",
-        "vision": "To provide transformative early education that helps young learners develop knowledge, values, confidence and curiosity, preparing them to grow into responsible and capable individuals.",
+        "vision": "Empowering young minds through experiential and joyful early childhood education to nurture confident, compassionate, ethical and responsible citizens.",
         "missionTitle": "Our Mission",
         "mission": [
-          "Create a child-centred environment that inspires curiosity and lifelong learning.",
-          "Use engaging and age-appropriate learning experiences to develop foundational skills.",
-          "Encourage confidence, responsibility, compassion, empathy and integrity.",
-          "Support children in becoming creative thinkers, active participants and independent learners.",
-          "Build a strong partnership between parents, teachers and the school."
+          "Provide joyful, experiential and child-centred learning that nurtures curiosity, creativity, critical thinking and a lifelong love for learning.",
+          "Create a safe, stimulating and nurturing environment that empowers every child with leadership and essential life skills.",
+          "Adopt globally benchmarked practices in early childhood education, integrating innovative pedagogy, technology and best practices to provide an exceptional learning experience.",
+          "Nurture compassionate, empathetic and responsible individuals, empowering them to grow into ethical, confident and responsible citizens."
         ],
         "philosophyTitle": "Our Educational Philosophy",
         "philosophy": "Our philosophy is rooted in the belief that children have a natural desire to learn. Inspired by child-centred and Montessori-influenced principles, we encourage children to explore their surroundings, learn through experience and progress at an appropriate pace while receiving guidance and encouragement from teachers.",
@@ -732,15 +749,14 @@
     "aboutImages": [
       {
         "id": "03",
-        "src": "/media/about/IMG_5972-Desktop-1920x1080.jpg",
-        "alt": "Children learning together at Vidya Academy",
-        "focus": true,
-        "mobileImage": "/media/about/IMG_5972-Mobile-900x1600.jpg"
+        "src": "/images/school/about-students-together.webp",
+        "alt": "Two Vidya Academy students smiling together",
+        "focus": true
       },
       {
         "id": "02",
-        "src": "/images/school/building-blocks.webp",
-        "alt": "Young children working together with colourful building blocks"
+        "src": "/images/school/about-cricket-swing.webp",
+        "alt": "Vidya Academy student practising a cricket swing"
       }
     ],
     "conceptRing": [
@@ -812,7 +828,7 @@
         "id": "01",
         "name": "Mr. Siddhartha J. Shetty",
         "role": "Chairman",
-        "image": "https://www.imjinstitutions.com/wp-content/uploads/2026/04/siddartha_02.jpg-1.png",
+        "image": "/media/leadership/chairman.png",
         "imageAlt": "Mr. Siddhartha J. Shetty, Chairman",
         "quote": "",
         "bio": ""
@@ -821,7 +837,7 @@
         "id": "02",
         "name": "Smt. Vidya J. Shetty",
         "role": "Managing Trustee",
-        "image": "https://mnbstrust.com/wp-content/uploads/2024/04/Group-50830.png",
+        "image": "/media/leadership/managing-trustee.png",
         "imageAlt": "Smt. Vidya J. Shetty, Managing Trustee",
         "quote": "",
         "bio": ""
@@ -830,7 +846,7 @@
         "id": "03",
         "name": "Mr. Ram Rathan J. Shetty",
         "role": "Trustee",
-        "image": "https://mnbstrust.com/wp-content/uploads/2024/04/Group-50831.png",
+        "image": "/media/leadership/trustee.png",
         "imageAlt": "Mr. Ram Rathan J. Shetty, Trustee",
         "quote": "",
         "bio": ""
@@ -979,6 +995,10 @@
         "address": "1172/1 Railway Station Road, Moodlakatte, Kundapura – 576217, Karnataka, India",
         "email": "vidyaacademy2024@gmail.com",
         "phone": "+91 91480 19301"
+      },
+      "brochure": {
+        "href": "",
+        "label": "Download brochure"
       }
     }
   },
@@ -1138,50 +1158,49 @@
     "heroImages": [
       {
         "id": "01",
-        "src": "/images/school/academy-entrance-sign.webp",
-        "alt": "Vidya Academy signage above the entrance"
+        "src": "/images/heroes/campus/wall-academy-sign.webp",
+        "alt": "Vidya Academy sign in a covered campus walkway"
       },
       {
         "id": "02",
-        "src": "/images/school/academy-wall-sign.webp",
-        "alt": "Vidya Academy lettering on an interior wall"
+        "src": "/images/heroes/campus/wall-classroom-writing.webp",
+        "alt": "Students writing together at a classroom table"
       },
       {
         "id": "03",
-        "src": "/images/school/racket-play.webp",
-        "alt": "A student playing a racket sport in the covered area"
+        "src": "/images/heroes/campus/wall-karate-5696.webp",
+        "alt": "Two students practising karate with protective gloves"
       },
       {
         "id": "04",
-        "src": "/images/school/students-in-corridor.webp",
-        "alt": "A group of students walking through a school corridor"
+        "src": "/images/heroes/campus/wall-campus-corridor.webp",
+        "alt": "Students sitting beside a green column in the campus corridor"
       },
       {
         "id": "05",
-        "src": "/media/vidya-campus-desktop-1920x1080.jpg",
-        "alt": "Children learning and playing at Vidya Academy",
-        "center": true,
-        "mobileImage": "/media/vidya-campus-mobile-900x1600.jpg"
+        "src": "/images/heroes/campus/wall-student-audience.webp",
+        "alt": "Students in colourful school uniforms seated together",
+        "center": true
       },
       {
         "id": "06",
-        "src": "/images/school/outdoor-mindfulness.webp",
-        "alt": "Children sitting quietly on the outdoor lawn"
+        "src": "/images/heroes/campus/wall-school-celebration.webp",
+        "alt": "Students applauding at a school celebration"
       },
       {
         "id": "07",
-        "src": "/images/school/cricket-swing.webp",
-        "alt": "A student practising a cricket swing"
+        "src": "/images/heroes/campus/wall-mindfulness-5727.webp",
+        "alt": "Students sitting on the lawn during a mindfulness activity"
       },
       {
         "id": "08",
-        "src": "/images/school/classroom-writing.webp",
-        "alt": "Children writing together at a classroom table"
+        "src": "/images/heroes/campus/wall-group-play.webp",
+        "alt": "Young students playing together on the lawn"
       },
       {
         "id": "09",
-        "src": "/images/school/school-friends.webp",
-        "alt": "Four students talking together on campus"
+        "src": "/images/heroes/campus/wall-karate-instructor.webp",
+        "alt": "A karate instructor leading students in the covered activity area"
       }
     ],
     "introText": "Every space at Vidya Academy is intended to support learning, movement, creativity and comfort. Our campus combines child-friendly learning areas with facilities that encourage children to explore and participate.",
@@ -1195,33 +1214,110 @@
       "title": "Our Upcoming Campus",
       "description": "Planned spaces will bring together sport, learning, creativity and community for children at every stage.",
       "image": "/media/upcoming-campus-facilities.jpg",
-      "imageAlt": "Illustrative views of planned school facilities: a library, auditorium, classroom, dining hall, swimming pool and sports court",
+      "imageAlt": "Illustrative collage of school interiors and outdoor facilities",
       "groups": [
         {
-          "id": "sport-wellbeing",
-          "title": "Sport & wellbeing",
+          "id": "planned-facilities",
+          "title": "Planned facilities",
           "facilities": [
             "Skating rink",
             "Cricket nets",
             "Volleyball court",
             "Tennis court",
             "Basketball court",
-            "Swimming pool"
-          ]
-        },
-        {
-          "id": "learning-community",
-          "title": "Learning & community",
-          "facilities": [
-            "Auditorium",
-            "High school classrooms",
-            "Foundation and secondary classrooms",
-            "Library",
+            "Swimming pool",
             "Dining hall"
           ]
         }
       ]
-    }
+    },
+    "infrastructureTitle": "Infrastructure",
+    "infrastructureImages": [
+      {
+        "id": "01",
+        "src": "/images/school/infrastructure-courtyard.webp",
+        "alt": "A rectangular lawn surrounded by covered walkways",
+        "caption": "A Bright and Welcoming Campus Courtyard"
+      },
+      {
+        "id": "02",
+        "src": "/images/school/infrastructure-architecture.webp",
+        "alt": "A terracotta roof above a row of arched windows",
+        "caption": "Distinctive School Architecture & Design"
+      },
+      {
+        "id": "03",
+        "src": "/images/school/infrastructure-play-space.webp",
+        "alt": "A small playground seen through a yellow arch",
+        "caption": "A Safe and Playful Space for Little Explorers"
+      },
+      {
+        "id": "04",
+        "src": "/images/school/infrastructure-corridors.webp",
+        "alt": "A covered school corridor with yellow arches and a strip of lawn",
+        "caption": "Bright and Welcoming School Corridors"
+      },
+      {
+        "id": "05",
+        "src": "/images/school/infrastructure-aerial.webp",
+        "alt": "Aerial view of the school entrance and grounds",
+        "caption": "Aerial View of the Vidya Academy Campus"
+      },
+      {
+        "id": "06",
+        "src": "/images/school/infrastructure-academy-sign.webp",
+        "alt": "Vidya Academy signage in a covered walkway",
+        "caption": "The Vidya Academy Campus – A Place to Learn and Grow"
+      },
+      {
+        "id": "07",
+        "src": "/images/school/infrastructure-community-in-action.webp",
+        "alt": "Students gathered in the school courtyard",
+        "caption": "A Vibrant School Community in Action"
+      },
+      {
+        "id": "08",
+        "src": "/images/school/infrastructure-culture-mural.webp",
+        "alt": "A red-and-white mural depicting a tree and community scenes",
+        "caption": "A Celebration of Learning, Culture & Tradition"
+      },
+      {
+        "id": "09",
+        "src": "/images/school/infrastructure-martial-arts.webp",
+        "alt": "Students practising martial arts in protective gloves",
+        "caption": "Building Confidence Through Martial Arts"
+      },
+      {
+        "id": "10",
+        "src": "/images/school/infrastructure-school-community.webp",
+        "alt": "Students in colourful uniforms gathered on tiered seating",
+        "caption": "Students Coming Together as One Community"
+      },
+      {
+        "id": "11",
+        "src": "/images/school/infrastructure-young-learners.webp",
+        "alt": "Students running through the campus entrance",
+        "caption": "Confident Young Learners on the Move"
+      },
+      {
+        "id": "12",
+        "src": "/images/school/infrastructure-mindfulness.webp",
+        "alt": "Students seated on the lawn during a mindfulness exercise",
+        "caption": "Helping children develop calmness, focus, and inner balance"
+      },
+      {
+        "id": "13",
+        "src": "/images/school/infrastructure-teamwork.webp",
+        "alt": "Children working together to stack colourful blocks",
+        "caption": "Encouraging teamwork, creativity, and hands-on learning"
+      },
+      {
+        "id": "14",
+        "src": "/images/school/infrastructure-library-courtyard.webp",
+        "alt": "Planters and a tree beneath a terracotta roof beside the yellow library entrance",
+        "caption": "A Green Courtyard Outside the School Library"
+      }
+    ]
   },
   "learningPathways": {
     "learningPathwaysCopy": {
@@ -1233,9 +1329,9 @@
         ],
         "introduction": "The Vidya Academy curriculum is designed to make learning active, engaging and meaningful. Children participate in structured activities that support early literacy, numeracy, communication, creativity, social skills, physical development and independence.",
         "image": {
-          "src": "/images/heroes/programs/desktop.webp",
-          "alt": "Children writing together at a classroom table",
-          "mobileImage": "/images/heroes/programs/mobile.webp"
+          "src": "/images/heroes/events/desktop.webp",
+          "alt": "Vidya Academy students running together along a covered school walkway",
+          "mobileImage": "/images/heroes/programs/running-students-mobile.webp"
         }
       },
       "journey": {
@@ -1274,12 +1370,35 @@
           "Dance",
           "Field trips"
         ],
-        "classroomApproach": {
-          "title": "No Last Bench Concept",
-          "description": "At Vidya Academy, classroom seating is arranged in a welcoming arc rather than conventional front-and-back rows. This approach helps children see and hear the teacher clearly, stay connected with classmates and participate as one learning group."
-        },
         "image": "/images/school/student-guidance.webp",
-        "imageAlt": "Students meeting with a staff member"
+        "imageAlt": "Students meeting with a staff member",
+        "experienceImages": [
+          {
+            "src": "/images/school/circle-time.webp",
+            "alt": "Children sharing songs and rhymes in a circle",
+            "label": "Rhymes & chimes"
+          },
+          {
+            "src": "/images/school/friends-on-the-lawn.webp",
+            "alt": "Children spending time together outdoors",
+            "label": "Garden visits"
+          },
+          {
+            "src": "/images/school/students-applauding.webp",
+            "alt": "Children celebrating a school activity together",
+            "label": "Festivals & celebrations"
+          },
+          {
+            "src": "/images/school/lunchtime.webp",
+            "alt": "Children learning to share and enjoy food together",
+            "label": "Little Chef"
+          },
+          {
+            "src": "/images/school/outdoor-group-play.webp",
+            "alt": "Children enjoying movement and group activities outdoors",
+            "label": "Dance & field trips"
+          }
+        ]
       }
     },
     "learningStages": [
@@ -1299,9 +1418,9 @@
       },
       {
         "id": "senior-school",
-        "range": "Classes 1–8",
-        "title": "Primary Classes",
-        "summary": "Classes 1 through 8. Contact Vidya Academy to confirm current class availability and age eligibility.",
+        "range": "Class 1 – Class 8",
+        "title": "Primary & Middle",
+        "summary": "Primary ages 6–11 years (Classes 1–5) and Middle ages 11–14 years (Classes 6–8).",
         "exploreTarget": "dp"
       }
     ],
@@ -1326,8 +1445,8 @@
           "Independence"
         ],
         "links": [],
-        "image": "/images/school/learning-through-play.webp",
-        "imageAlt": "Children playing and learning together on the lawn",
+        "image": "/images/school/building-blocks.webp",
+        "imageAlt": "Children working together with colourful building blocks",
         "quote": "",
         "quoteName": "",
         "stats": []
@@ -1355,8 +1474,8 @@
           "Play Time"
         ],
         "links": [],
-        "image": "/images/school/building-blocks.webp",
-        "imageAlt": "Young children working together with colourful building blocks",
+        "image": "/images/school/classroom-writing.webp",
+        "imageAlt": "Children writing together at a classroom table",
         "quote": "",
         "quoteName": "",
         "stats": []
@@ -1372,7 +1491,6 @@
         "title": "A strong foundation for lifelong learning",
         "paragraphs": [
           "Additional experiences include Rhymes and Chimes, Garden Visits, Festivals and Celebrations, Little Chef, Dance and Field Trips.",
-          "The No Last Bench Concept arranges classroom seating in a welcoming arc rather than conventional front-and-back rows. It is designed to help children see and hear the teacher clearly, stay connected with classmates and participate as one learning group.",
           "Academic pattern: Play Group, 1.5–2.5 years; Nursery, 2.5–3.5 years; LKG, 3.5–4.5 years; UKG, 4.5–5.5 years; Class 1, 6 years. Contact the school to confirm current eligibility and age cut-offs."
         ],
         "tags": [
@@ -1382,8 +1500,8 @@
           "Field Trips"
         ],
         "links": [],
-        "image": "/images/school/board-game-together.webp",
-        "imageAlt": "Students playing a tabletop game together",
+        "image": "/images/school/lifelong-learning-5721.webp",
+        "imageAlt": "Two Vidya Academy students sitting together by the school garden",
         "quote": "",
         "quoteName": "",
         "stats": []
@@ -1813,7 +1931,8 @@
             "no": "7",
             "label": "LINK OF YOUTUBE VIDEO OF THE INSPECTION OF SCHOOL COVERING THE INFRASTRUCTURE (IF EXIST)",
             "linkLabel": "Click Here",
-            "href": ""
+            "href": "",
+            "type": "youtube"
           }
         ]
       },
@@ -1831,6 +1950,18 @@
           }
         ]
       }
-    ]
+    ],
+    "eyebrow": "VIDYA ACADEMY · KUNDAPURA",
+    "jumpLabel": "View disclosure",
+    "introEyebrow": "SCHOOL INFORMATION",
+    "introTitle": "Public documents and details",
+    "introDescription": "School information and supporting documents are listed below.",
+    "contactEyebrow": "CONTACT THE SCHOOL",
+    "contactTitle": "Need more information?",
+    "linkNote": "Documents and video links open in a new tab.",
+    "videoLinkLabel": "Watch inspection video",
+    "pdfLinkLabel": "View PDF",
+    "pendingVideoLabel": "Video link not added yet",
+    "pendingPdfLabel": "PDF not uploaded yet"
   }
 }

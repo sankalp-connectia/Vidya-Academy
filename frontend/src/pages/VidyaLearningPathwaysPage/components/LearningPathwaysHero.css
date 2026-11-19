@@ -271,6 +271,7 @@
   height: 100%;
   max-width: none;
   object-fit: cover;
+  filter: saturate(1.12) contrast(1.045);
   object-position: center 48%;
   transform: scale(1.02);
   transform-origin: center center;

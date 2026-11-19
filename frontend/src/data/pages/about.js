@@ -2,53 +2,26 @@ export let aboutImages = [
   {
     id: "01",
 
-    src:
-      "/images/school/learning-through-play.webp",
+    src: "/images/school/about-students-together.webp",
 
-    alt:
-      "Children playing and learning together on the lawn",
+    alt: "Two Vidya Academy students smiling together",
+
+    focus: true,
   },
 
   {
     id: "02",
 
-    src:
-      "/images/school/building-blocks.webp",
+    src: "/images/school/about-cricket-swing.webp",
 
-    alt:
-      "Young children working together with colourful building blocks",
-  },
-
-  {
-    id: "03",
-
-    src:
-      "/images/heroes/about/desktop.webp",
-    mobileImage:
-      "/images/heroes/about/mobile.webp",
-
-    alt:
-      "A teacher speaking to a group in a classroom",
-
-    focus:
-      true,
-  },
-
-  {
-    id: "04",
-
-    src:
-      "/images/school/school-community.webp",
-
-    alt:
-      "A large group of Vidya Academy students seated together",
+    alt: "Vidya Academy student practising a cricket swing",
   },
 ];
 
 export let leaders = [
-  { id: "01", name: "Mr. Siddhartha J. Shetty", role: "Chairman", image: "https://www.imjinstitutions.com/wp-content/uploads/2026/04/siddartha_02.jpg-1.png", imageAlt: "Mr. Siddhartha J. Shetty, Chairman", quote: "", bio: "" },
-  { id: "02", name: "Smt. Vidya J. Shetty", role: "Managing Trustee", image: "https://mnbstrust.com/wp-content/uploads/2024/04/Group-50830.png", imageAlt: "Smt. Vidya J. Shetty, Managing Trustee", quote: "", bio: "" },
-  { id: "03", name: "Mr. Ram Rathan J. Shetty", role: "Trustee", image: "https://mnbstrust.com/wp-content/uploads/2024/04/Group-50831.png", imageAlt: "Mr. Ram Rathan J. Shetty, Trustee", quote: "", bio: "" },
+  { id: "01", name: "Mr. Siddhartha J. Shetty", role: "Chairman", image: "/media/leadership/chairman.png", imageAlt: "Mr. Siddhartha J. Shetty, Chairman", quote: "", bio: "" },
+  { id: "02", name: "Smt. Vidya J. Shetty", role: "Managing Trustee", image: "/media/leadership/managing-trustee.png", imageAlt: "Smt. Vidya J. Shetty, Managing Trustee", quote: "", bio: "" },
+  { id: "03", name: "Mr. Ram Rathan J. Shetty", role: "Trustee", image: "/media/leadership/trustee.png", imageAlt: "Mr. Ram Rathan J. Shetty, Trustee", quote: "", bio: "" },
 ];
 
 export let statement = "We believe a school should be more than a place children come to study. It should be where they discover what excites them, learn to ask better questions, build confidence through experience and find joy in becoming who they are. Every space, every lesson and every interaction should help make that possible. So we built Vidya around it.";
@@ -97,6 +70,8 @@ export let aboutCopy = {
     closing: "Our commitment is simple: to give every child a strong, happy and meaningful beginning to their educational journey.",
     name: "Mr. Siddhartha J. Shetty",
     role: "Chairman, Vidya Academy",
+    image: "/media/about/vision-generations-1200x800.jpeg",
+    imageAlt: "A vision that continues to inspire generations",
   },
   hero: {
     eyebrow: "About Vidya Academy",
@@ -112,14 +87,13 @@ export let aboutCopy = {
       "Set in a green and peaceful environment, the school provides children with opportunities to learn both inside and outside the classroom. We work to make the transition from home to school comfortable and build a strong partnership between parents and teachers.",
     ],
     visionTitle: "Our Vision",
-    vision: "To provide transformative early education that helps young learners develop knowledge, values, confidence and curiosity, preparing them to grow into responsible and capable individuals.",
+    vision: "Empowering young minds through experiential and joyful early childhood education to nurture confident, compassionate, ethical and responsible citizens.",
     missionTitle: "Our Mission",
     mission: [
-      "Create a child-centred environment that inspires curiosity and lifelong learning.",
-      "Use engaging and age-appropriate learning experiences to develop foundational skills.",
-      "Encourage confidence, responsibility, compassion, empathy and integrity.",
-      "Support children in becoming creative thinkers, active participants and independent learners.",
-      "Build a strong partnership between parents, teachers and the school.",
+      "Provide joyful, experiential and child-centred learning that nurtures curiosity, creativity, critical thinking and a lifelong love for learning.",
+      "Create a safe, stimulating and nurturing environment that empowers every child with leadership and essential life skills.",
+      "Adopt globally benchmarked practices in early childhood education, integrating innovative pedagogy, technology and best practices to provide an exceptional learning experience.",
+      "Nurture compassionate, empathetic and responsible individuals, empowering them to grow into ethical, confident and responsible citizens.",
     ],
     philosophyTitle: "Our Educational Philosophy",
     philosophy: "Our philosophy is rooted in the belief that children have a natural desire to learn. Inspired by child-centred and Montessori-influenced principles, we encourage children to explore their surroundings, learn through experience and progress at an appropriate pace while receiving guidance and encouragement from teachers.",

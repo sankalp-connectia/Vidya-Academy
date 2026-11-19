@@ -6,6 +6,16 @@ export default function AboutChairmanVoice() {
 
   return (
     <section className="about-chairman-voice" aria-labelledby="about-chairman-title">
+      <div className="about-chairman-voice__artwork-wrap">
+        <h2 className="about-chairman-voice__artwork-title">A Vision That Continues to Inspire Generations</h2>
+        <figure className="about-chairman-voice__artwork">
+          <img
+            src={voice.image ?? "/media/about/vision-generations-1200x800.jpeg"}
+            alt={voice.imageAlt ?? "A vision that continues to inspire generations"}
+            loading="lazy"
+          />
+        </figure>
+      </div>
       <div className="about-chairman-voice__inner">
         <div className="about-chairman-voice__heading">
           <p className="about-chairman-voice__eyebrow">{voice.eyebrow}</p>

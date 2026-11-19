@@ -1,8 +1,8 @@
-import { campusFallbackImage, buildingImages, groundsImages, introText } from "../../../../cms/siteContent.js";
+import { campusFallbackImage, infrastructureImages, infrastructureTitle, introText } from "../../../../cms/siteContent.js";
 import "./CampusInfrastructure.css";
 
 export default function CampusInfrastructure() {
-  const photos = [...groundsImages, ...buildingImages].filter(
+  const photos = infrastructureImages.filter(
     (photo) => photo && typeof photo.src === "string" && photo.src,
   );
 
@@ -27,7 +27,7 @@ export default function CampusInfrastructure() {
     <section className="campus-infrastructure" aria-labelledby="campus-infrastructure-title">
       <div className="campus-infrastructure__inner">
         <header className="campus-infrastructure__header">
-          <h2 id="campus-infrastructure-title">Infrastructure</h2>
+          <h2 id="campus-infrastructure-title">{infrastructureTitle}</h2>
           <p>{introText}</p>
         </header>
 
@@ -43,7 +43,7 @@ export default function CampusInfrastructure() {
                 draggable="false"
                 onError={handleImageError}
               />
-              <figcaption>{photo.alt}</figcaption>
+              {(photo.caption || photo.alt) && <figcaption>{photo.caption || photo.alt}</figcaption>}
             </figure>
           ))}
         </div>

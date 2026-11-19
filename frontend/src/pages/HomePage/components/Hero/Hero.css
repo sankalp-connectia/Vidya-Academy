@@ -27,6 +27,7 @@
 }
 
 .raya-hero-video {
+  filter: saturate(1.12) contrast(1.045) brightness(1.04);
   display: block;
   object-fit: cover;
   object-position: center;
@@ -34,7 +35,7 @@
 
 .raya-hero-media::after {
   content: "";
-  background: linear-gradient(90deg, rgb(3 29 19 / 84%), rgb(3 29 19 / 54%) 52%, rgb(3 29 19 / 12%)),
+  background: linear-gradient(90deg, rgb(3 29 19 / 84%), rgb(3 29 19 / 48%) 52%, rgb(3 29 19 / 12%)),
     linear-gradient(0deg, rgb(3 29 19 / 64%), transparent 70%);
 }
 

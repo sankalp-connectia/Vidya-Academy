@@ -1171,13 +1171,15 @@ and
   position: relative;
   width: 100%;
   overflow: hidden;
+  padding: 12px 12px 0;
+  background: linear-gradient(145deg, #0d6b4d 0%, #073f32 76%);
 }
 
 .about-leader-image img {
   inset: 0 !important;
   width: 100% !important;
   height: 100% !important;
-  object-fit: cover;
-  object-position: center 24%;
+  object-fit: contain;
+  object-position: center bottom;
   transform: none !important;
 }

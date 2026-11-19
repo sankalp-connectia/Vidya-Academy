@@ -1384,3 +1384,7 @@
   .programme-detail__media, .programme-detail--rose .programme-detail__media, .programme-detail--dp .programme-detail__media { aspect-ratio: 4 / 3; min-height: 0; max-height: none; }
   .programme-detail__media img, .programme-detail--rose .programme-detail__media img, .programme-detail--dp .programme-detail__media img { min-height: 0; max-height: none; }
 }
+
+.programme-detail__media img {
+  filter: saturate(1.12) contrast(1.045) brightness(1.025);
+}

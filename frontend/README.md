@@ -6,7 +6,7 @@ This folder contains the React/Vite frontend and the matching WordPress content 
 
 1. Install Node.js and npm.
 2. Run `npm install`.
-3. Optionally copy `.env.example` to `.env.local` and set `VITE_WORDPRESS_URL` to the base URL of your WordPress site (do not add `/wp-json`).
+3. Optionally create `.env.local` and set `VITE_WORDPRESS_URL` to the base URL of your WordPress site (do not add `/wp-json`). For FormSubmit, set `VITE_FORMSUBMIT_EMAIL` to the primary recipient and `VITE_FORMSUBMIT_CC` to any additional recipients separated by commas.
 4. Run `npm run dev`. The website renders from bundled content immediately. When WordPress is configured and reachable, its saved content replaces the defaults. Page viewing and bundled photos do not require WordPress; enquiries and CMS updates do.
 
 ## WordPress setup

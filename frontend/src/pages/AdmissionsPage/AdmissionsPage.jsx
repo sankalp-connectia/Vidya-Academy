@@ -5,8 +5,21 @@ import "./AdmissionsPage.css";
 
 const stepIcons = [MessageCircle, Compass, School, ClipboardList, ClipboardCheck];
 
+function BrochureDownload({ brochure, showPlaceholder = false }) {
+  const href = brochure?.href?.trim();
+  const label = brochure?.label?.trim() || "Download brochure";
+  const className = "admissions-button admissions-button--brochure";
+  const content = <><span>{label}</span><Download size={17} aria-hidden="true" /></>;
+
+  if (!href) {
+    return showPlaceholder ? <button className={className} type="button" disabled>{content}</button> : null;
+  }
+
+  return <a className={className} href={href} download target="_blank" rel="noopener noreferrer">{content}</a>;
+}
+
 export default function AdmissionsPage() {
-  const { hero, sections, steps, stages, contact } = admissionsPage;
+  const { hero, sections, steps, stages, contact, brochure } = admissionsPage;
 
   return (
     <main className="admissions-page">
@@ -15,7 +28,10 @@ export default function AdmissionsPage() {
           <p className="admissions-eyebrow">{hero.eyebrow}</p>
           <h1 className="site-page-title">{hero.title}</h1>
           <p className="admissions-hero__description">{hero.description}</p>
-          <a className="admissions-scroll" href="#process">{sections.heroScroll}</a>
+          <div className="admissions-hero__actions">
+            <BrochureDownload brochure={brochure} showPlaceholder />
+            <a className="admissions-scroll" href="#process">{sections.heroScroll}</a>
+          </div>
         </div>
         <div className="admissions-hero__art" aria-hidden="true">
           <div className="admissions-hero__orb" />
@@ -59,14 +75,7 @@ export default function AdmissionsPage() {
         <div className="admissions-contact__copy"><p className="admissions-eyebrow admissions-eyebrow--light">{sections.contactEyebrow}</p><h2 className="site-section-title">{contact.title}</h2><p>{contact.description}</p></div>
         <div className="admissions-contact__actions">
           <Link className="admissions-button admissions-button--light" to="/contact#enquiry"><span>{sections.enquireButton}</span></Link>
-          <a
-            className="admissions-button admissions-button--brochure"
-            href={`${import.meta.env.BASE_URL}documents/vidya-academy-brochure.pdf`}
-            download="Vidya-Academy-Brochure.pdf"
-          >
-            <span>Download brochure</span>
-            <Download size={17} aria-hidden="true" />
-          </a>
+          <BrochureDownload brochure={brochure} />
           <Link className="admissions-contact__detail" to="/contact#enquiry">{sections.visitButton}</Link>
           <a className="admissions-contact__detail" href={`tel:${contact.phone.replaceAll(" ", "")}`}>{contact.phone}</a>
           <a className="admissions-contact__detail" href={`mailto:${contact.email}`}>{contact.email}</a>

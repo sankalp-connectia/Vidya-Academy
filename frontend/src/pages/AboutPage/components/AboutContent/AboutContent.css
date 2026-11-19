@@ -5,8 +5,23 @@
 .about-content__intro p:first-child { grid-column: 1 / -1; max-width: 940px; color: #315342; font-size: clamp(20px, 2vw, 24px); font-weight: 650; line-height: 1.65; }
 .about-content__eyebrow { margin: 0 0 13px; color: #0e7650; font-size: 10px; font-weight: 800; letter-spacing: .14em; line-height: 1.5; text-transform: uppercase; }
 .about-content h2 { margin: 0 0 18px; color: #173d30; font-size: clamp(30px, 4vw, 48px); font-weight: 600; letter-spacing: -.055em; line-height: 1.08; text-wrap: balance; }
-.about-content__vision { max-width: 870px; padding: clamp(26px, 4vw, 48px); background: #fff; border-left: 3px solid #d7af39; }
-.about-content__vision > p:last-child { max-width: 740px; }
+.about-content__vision {
+  width: 100%;
+  max-width: none;
+  padding: clamp(28px, 4vw, 52px);
+  border: 1px solid rgba(23, 61, 48, .12);
+  border-left: 4px solid #d7af39;
+  background: #fff;
+  box-shadow: 0 16px 42px rgba(23, 61, 48, .05);
+}
+.about-content__vision > p:not(.about-content__eyebrow) {
+  max-width: 740px;
+  margin: 0;
+  color: #63736a;
+  font-size: clamp(16px, 1.15vw, 17px);
+  font-weight: 550;
+  line-height: 1.8;
+}
 .about-content__mission { display: grid; grid-template-columns: minmax(230px, .65fr) minmax(0, 1.35fr); gap: clamp(32px, 6vw, 82px); align-items: start; margin-top: clamp(56px, 8vw, 100px); }
 .about-content__mission ul, .about-content__why ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 28px; margin: 0; padding: 0; list-style: none; }
 .about-content__mission li, .about-content__why li { position: relative; padding: 16px 0 16px 24px; border-bottom: 1px solid rgba(23,61,48,.14); color: #53665b; font-size: clamp(15px, 1.08vw, 16px); font-weight: 550; line-height: 1.75; }
@@ -29,4 +44,3 @@
 }
 
 .about-content__intro p:first-child { max-width: 100%; }
-.about-content__vision { width: 100%; max-width: none; }

@@ -876,7 +876,7 @@ and
         280px
       );
 
-    border-radius: 18px;
+    border-radius: 0;
 
     background: transparent;
 
@@ -1086,7 +1086,7 @@ and
         250px
       );
 
-    border-radius: 17px;
+    border-radius: 0;
 
     background: transparent;
 
@@ -1231,4 +1231,31 @@ and
   }
 
   .quick-marquee-group { flex: 0 0 auto; }
+}
+
+.quick-marquee-card::before {
+  background: rgba(9, 29, 20, 0.44);
+}
+
+.quick-marquee-card::after {
+  background: linear-gradient(
+    180deg,
+    transparent 35%,
+    rgba(9, 29, 20, 0.18) 62%,
+    rgba(9, 29, 20, 0.74) 100%
+  );
+  opacity: 0.45;
+}
+
+.quick-marquee-image[src*="/oxford-advantage.webp"] {
+  background: #fff;
+  object-fit: contain;
+  object-position: center 27%;
+  padding: 8% 10% 23%;
+}
+
+@media (hover: none), (max-width: 767px) {
+  .quick-marquee-card::after {
+    opacity: 1;
+  }
 }

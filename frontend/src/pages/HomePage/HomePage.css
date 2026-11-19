@@ -1,3 +1,18 @@
 .home-picture {
   display: contents;
 }
+
+.home-page .vidya-about-gallery img,
+.home-page .academic-card-image,
+.home-page .life-school-card-image,
+.home-page .quick-marquee-image:not([src*="/oxford-advantage.webp"]) {
+  filter: saturate(1.09) contrast(1.035) brightness(1.025);
+}
+
+.home-page .vidya-way-card-image {
+  filter: saturate(1.15) contrast(1.05) brightness(1.045);
+}
+
+.home-page .vidya-way-card-image[src*="/green-dress-school-activity-"] {
+  filter: saturate(1.17) contrast(1.045) brightness(1.10);
+}

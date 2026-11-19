@@ -3236,3 +3236,169 @@ and
     font-size: 10px;
   }
 }
+
+/* Final phone layout: larger readable links, a single institutions list,
+   and a compact copyright row that fits without squeezing its text. */
+@media (max-width: 600px) {
+  .vidya-footer {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+    padding: 46px 0 18px;
+  }
+
+  .vidya-footer-container {
+    width: min(calc(100% - 32px), 520px);
+    margin-inline: auto;
+  }
+
+  .vidya-footer-main {
+    gap: 28px;
+  }
+
+  .vidya-footer-description {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .vidya-footer-details {
+    gap: 11px;
+    margin-top: 18px;
+  }
+
+  .vidya-footer-detail {
+    align-items: flex-start;
+    font-size: 12px;
+    line-height: 1.45;
+  }
+
+  .vidya-footer-detail > span:last-child,
+  .vidya-footer-detail a {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .vidya-footer-navigation {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    align-items: start;
+    column-gap: 16px;
+    row-gap: 22px;
+  }
+
+  .vidya-footer-column {
+    min-width: 0;
+  }
+
+  .vidya-footer-column h3 {
+    margin-bottom: 0;
+    font-size: 15px;
+    line-height: 1.25;
+    white-space: normal;
+  }
+
+  .vidya-footer-column ul {
+    gap: 10px !important;
+    margin-top: 11px;
+  }
+
+  .vidya-footer-column > ul a {
+    font-size: 12px;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+  }
+
+  .vidya-footer-column:nth-child(3) {
+    grid-column: 1 / -1;
+  }
+
+  .vidya-footer-institution-links {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 9px;
+    margin-top: 11px;
+  }
+
+  .vidya-footer-institution-links ul {
+    gap: 9px !important;
+  }
+
+  .vidya-footer-institution-links a {
+    font-size: 12px;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+  }
+
+  .vidya-footer-brand {
+    margin-top: 22px;
+    margin-bottom: 4px;
+  }
+
+  .vidya-footer-wordmark-window {
+    --wordmark-size: clamp(36px, 10vw, 48px);
+    height: calc(var(--wordmark-size) * .82) !important;
+  }
+
+  .vidya-footer-large-name {
+    scale: .9 1.08;
+  }
+
+  .vidya-footer-bottom {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    justify-content: initial;
+    gap: 8px;
+    margin-top: 4px;
+    padding-top: 4px;
+    text-align: left;
+  }
+
+  .vidya-footer-copyright {
+    width: auto !important;
+    min-width: 0;
+    margin: 0;
+    font-size: 9px;
+    line-height: 1.4;
+    text-align: left;
+    white-space: normal;
+  }
+
+  .vidya-footer-socials {
+    justify-self: end;
+    gap: 6px;
+    margin: 0 !important;
+  }
+
+  .vidya-footer-socials a {
+    width: 28px;
+    height: 28px;
+  }
+
+  .vidya-footer-socials svg {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+@media (max-width: 380px) {
+  .vidya-footer-container {
+    width: min(calc(100% - 28px), 520px);
+  }
+
+  .vidya-footer-navigation {
+    column-gap: 12px;
+  }
+
+  .vidya-footer-column > ul a,
+  .vidya-footer-institution-links a {
+    font-size: 11px;
+  }
+
+  .vidya-footer-socials {
+    gap: 4px;
+  }
+
+  .vidya-footer-socials a {
+    width: 26px;
+    height: 26px;
+  }
+}

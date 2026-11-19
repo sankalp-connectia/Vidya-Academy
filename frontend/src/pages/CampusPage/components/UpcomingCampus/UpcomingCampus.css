@@ -25,9 +25,8 @@
 }
 
 .upcoming-campus__intro h2 {
-  max-width: 760px;
   margin: 0;
-  font-size: clamp(46px, 6.5vw, 88px);
+  font-size: clamp(24px, 7.3vw, 88px);
   font-weight: 600;
   letter-spacing: -.06em;
   line-height: .96;
@@ -43,7 +42,7 @@
 
 .upcoming-campus__content {
   display: grid;
-  grid-template-columns: minmax(0, 1.12fr) minmax(0, .88fr);
+  grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr);
   align-items: stretch;
   gap: clamp(20px, 3vw, 42px);
 }
@@ -80,12 +79,6 @@
   letter-spacing: .02em;
 }
 
-.upcoming-campus__groups {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(16px, 2vw, 26px);
-}
-
 .upcoming-campus__group {
   padding: clamp(18px, 2vw, 27px);
   border: 1px solid rgb(245 243 233 / 20%);
@@ -94,7 +87,6 @@
 }
 
 .upcoming-campus__group h3 {
-  min-height: 2.7em;
   margin: 0 0 12px;
   padding-bottom: 12px;
   border-bottom: 1px solid rgb(245 243 233 / 30%);
@@ -142,10 +134,8 @@
 @media (max-width: 620px) {
   .upcoming-campus { padding: 62px 18px 70px; }
   .upcoming-campus__intro { margin-bottom: 26px; }
-  .upcoming-campus__intro h2 { font-size: clamp(44px, 12vw, 62px); }
-  .upcoming-campus__groups { grid-template-columns: 1fr; gap: 12px; }
   .upcoming-campus__group { padding: 18px 19px; }
-  .upcoming-campus__group h3 { min-height: 0; font-size: 18px; }
+  .upcoming-campus__group h3 { font-size: 18px; }
   .upcoming-campus__group li { font-size: 14px; }
   .upcoming-campus__visual figcaption { right: 8px; bottom: 8px; font-size: 9px; }
 }

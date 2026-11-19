@@ -113,78 +113,49 @@ export let groundsImages = [
 export let heroImages = [
   {
     id: "01",
-    src:
-      "/images/school/academy-entrance-sign.webp",
-    alt:
-      "Vidya Academy signage above the entrance",
+    src: "/images/heroes/campus/wall-academy-sign.webp",
+    alt: "Vidya Academy sign in a covered campus walkway",
   },
-
   {
     id: "02",
-    src:
-      "/images/school/academy-wall-sign.webp",
-      alt:
-      "Vidya Academy lettering on an interior wall",
+    src: "/images/heroes/campus/wall-classroom-writing.webp",
+    alt: "Students writing together at a classroom table",
   },
-
   {
     id: "03",
-    src:
-      "/images/school/racket-play.webp",
-    alt:
-      "A student playing a racket sport in the covered area",
+    src: "/images/heroes/campus/wall-karate-5696.webp",
+    alt: "Two students practising karate with protective gloves",
   },
-
   {
     id: "04",
-    src:
-      "/images/school/students-in-corridor.webp",
-      alt:
-      "A group of students walking through a school corridor",
+    src: "/images/heroes/campus/wall-campus-corridor.webp",
+    alt: "Students sitting beside a green column in the campus corridor",
   },
-
   {
     id: "05",
-    src:
-      "/images/heroes/campus/desktop.webp",
-    mobileImage:
-      "/images/heroes/campus/mobile.webp",
-      alt:
-      "Children playing in the covered school court",
-    center:
-      true,
+    src: "/images/heroes/campus/wall-student-audience.webp",
+    alt: "Students in colourful school uniforms seated together",
+    center: true,
   },
-
   {
     id: "06",
-    src:
-      "/images/school/outdoor-mindfulness.webp",
-    alt:
-      "Children sitting quietly on the outdoor lawn",
+    src: "/images/heroes/campus/wall-school-celebration.webp",
+    alt: "Students applauding at a school celebration",
   },
-
   {
     id: "07",
-    src:
-      "/images/school/cricket-swing.webp",
-    alt:
-      "A student practising a cricket swing",
+    src: "/images/heroes/campus/wall-mindfulness-5727.webp",
+    alt: "Students sitting on the lawn during a mindfulness activity",
   },
-
   {
     id: "08",
-    src:
-      "/images/school/classroom-writing.webp",
-    alt:
-      "Children writing together at a classroom table",
+    src: "/images/heroes/campus/wall-group-play.webp",
+    alt: "Young students playing together on the lawn",
   },
-
   {
     id: "09",
-    src:
-      "/images/school/school-friends.webp",
-    alt:
-      "Four students talking together on campus",
+    src: "/images/heroes/campus/wall-karate-instructor.webp",
+    alt: "A karate instructor leading students in the covered activity area",
   },
 ];
 
@@ -310,7 +281,7 @@ export let buildingImages = [
 ];
 
 export let campusFeatureImage =
-  "/images/school/covered-activity-court.webp"
+  "/media/IMG_5963-Campus-Feature-1600x1000.jpg"
 
 export let campusStats = [
   { id: "01", value: "24×7", label: "CCTV surveillance" },
@@ -338,10 +309,9 @@ export let upcomingCampus = {
   title: "Our Upcoming Campus",
   description: "Planned spaces will bring together sport, learning, creativity and community for children at every stage.",
   image: "/media/upcoming-campus-facilities.jpg",
-  imageAlt: "Illustrative views of planned school facilities: a library, auditorium, classroom, dining hall, swimming pool and sports court",
+  imageAlt: "Illustrative collage of school interiors and outdoor facilities",
   groups: [
-    { id: "sport-wellbeing", title: "Sport & wellbeing", facilities: ["Skating rink", "Cricket nets", "Volleyball court", "Tennis court", "Basketball court", "Swimming pool"] },
-    { id: "learning-community", title: "Learning & community", facilities: ["Auditorium", "High school classrooms", "Foundation and secondary classrooms", "Library", "Dining hall"] },
+    { id: "planned-facilities", title: "Planned facilities", facilities: ["Skating rink", "Cricket nets", "Volleyball court", "Tennis court", "Basketball court", "Swimming pool", "Dining hall"] },
   ],
 };
 

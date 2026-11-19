@@ -470,7 +470,7 @@ const CampusNumbers = () => {
 
           src={campusFeatureImage}
 
-          alt="Students enjoying life at Vidya Academy"
+          alt="Vidya Academy students practising karate in protective gloves"
 
           className="campus-numbers-image"
 
@@ -493,11 +493,7 @@ const CampusNumbers = () => {
           className="campus-numbers-visual-caption"
         >
 
-          Every student finds their{" "}
-
-          <span>
-            footing.
-          </span>
+          Every student finds their{" "}<span>footing.</span>
 
         </p>
 
