@@ -6,6 +6,9 @@
 }
 
 .about-chairman-voice__artwork-wrap {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
   width: min(calc(100% - clamp(28px, 5vw, 96px)), 1320px);
   margin: clamp(36px, 6vw, 76px) auto clamp(52px, 7vw, 92px);
   padding-top: clamp(14px, 2vw, 28px);
@@ -15,12 +18,12 @@
   max-width: none;
   margin: 0 0 18px;
   color: #173d30;
-  font-size: clamp(34px, 3.5vw, 52px);
+  font-size: clamp(21px, 6vw, 30px);
   font-weight: 600;
   letter-spacing: -.04em;
   line-height: 1.12;
   text-align: left;
-  white-space: nowrap;
+  text-wrap: balance;
 }
 
 .about-chairman-voice__artwork {
@@ -132,9 +135,23 @@
   line-height: 1.7;
 }
 
+@media (min-width: 1024px) {
+  .about-chairman-voice__artwork-wrap {
+    grid-template-columns: minmax(250px, .58fr) minmax(0, 1.42fr);
+    gap: clamp(28px, 5vw, 76px);
+    align-items: center;
+  }
+
+  .about-chairman-voice .about-chairman-voice__artwork-title {
+    max-width: 10ch;
+    margin: 0;
+    font-size: clamp(40px, 4.4vw, 68px);
+  }
+}
+
 @media (max-width: 760px) {
-  .about-chairman-voice__artwork-wrap { width: calc(100% - 24px); margin-top: 30px; margin-bottom: 42px; padding-top: 8px; }
-  .about-chairman-voice .about-chairman-voice__artwork-title { margin-bottom: 14px; font-size: clamp(21px, 6vw, 30px); white-space: normal; }
+  .about-chairman-voice__artwork-wrap { grid-template-columns: 1fr; gap: 0; width: calc(100% - 24px); margin-top: 30px; margin-bottom: 42px; padding-top: 8px; }
+  .about-chairman-voice .about-chairman-voice__artwork-title { max-width: none; margin-bottom: 14px; font-size: clamp(21px, 6vw, 30px); }
   .about-chairman-voice__artwork { aspect-ratio: auto; display: block; padding: 7px; }
   .about-chairman-voice__artwork img { height: auto; object-fit: contain; }
   .about-chairman-voice__inner { grid-template-columns: 1fr; gap: 26px; }

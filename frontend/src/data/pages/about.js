@@ -71,6 +71,7 @@ export let aboutCopy = {
     name: "Mr. Siddhartha J. Shetty",
     role: "Chairman, Vidya Academy",
     image: "/media/about/vision-generations-1200x800.jpeg",
+    artworkTitle: "A Legacy That Lives On",
     imageAlt: "A vision that continues to inspire generations",
   },
   hero: {
