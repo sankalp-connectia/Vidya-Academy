@@ -145,10 +145,10 @@ export default function Footer() {
   const [mascotVisible, setMascotVisible] = useState(false);
   const isIPhone = typeof navigator !== "undefined" && /iPhone|iPod/i.test(navigator.userAgent || "");
   const mascotVideo = footerCopy.mascotVideo || "/mascot-doll1.webm";
-  const footerNavigation = footerColumns.map((column, index) => {
-    if (index !== 0 || !Array.isArray(column.links)) return column;
+  const footerNavigation = footerColumns.map((column) => {
+    if (!Array.isArray(column.links)) return column;
     const links = column.links.filter((link) => link.to !== "/schools");
-    return { ...column, links: [...links, { label: "School guides", to: "/schools" }] };
+    return { ...column, links };
   });
   const footerRef =
     useRef(null);
