@@ -62,7 +62,7 @@ export default function MotionStoryPage({ items, type }) {
       <div className="motion-story__content">
         {(detailsHtml || paragraphs.length > 0 || highlights.length > 0 || facts.length > 0) && (
           <div className="motion-story__details">
-            {paragraphs.length > 0 && (
+            {(detailsHtml || paragraphs.length > 0) && (
               <section className="motion-story__body" aria-labelledby="motion-story-details">
                 <h2 className="site-content-title" id="motion-story-details">{isEvent ? "About the event" : "About the achievement"}</h2>
                 {detailsHtml

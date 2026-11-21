@@ -30,14 +30,14 @@ function resolveBundledAssetPaths(value) {
   );
 }
 
-function useBundledSchoolPhotos(content, replacements, prefix = "") {
+function replaceBundledSchoolPhotos(content, replacements, prefix = "") {
   if (!content || typeof content !== "object") return;
 
   for (const [key, value] of Object.entries(content)) {
     const path = prefix ? `${prefix}.${key}` : key;
 
     if (value && typeof value === "object") {
-      useBundledSchoolPhotos(value, replacements, path);
+      replaceBundledSchoolPhotos(value, replacements, path);
       continue;
     }
 
@@ -201,7 +201,7 @@ export async function loadWordPressContent() {
 
     for (const [page, replacements] of Object.entries(legacySchoolPhotos)) {
       if (content[page] && typeof content[page] === "object") {
-        useBundledSchoolPhotos(content[page], replacements);
+        replaceBundledSchoolPhotos(content[page], replacements);
       }
     }
 
@@ -240,23 +240,22 @@ export function enquiryFieldKey(name = "", label = "") {
   return `custom:${name || label}`;
 }
 
+function isValidEmailAddress(value) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(value || "").trim());
+}
+
 export async function submitFormSubmitEnquiry(formElement) {
-  const configuredRecipients = [
-    import.meta.env.VITE_FORMSUBMIT_EMAIL || "",
-    import.meta.env.VITE_FORMSUBMIT_CC || "",
-  ]
-    .join(",")
+  const recipient = String(import.meta.env.VITE_FORMSUBMIT_EMAIL || "").trim();
+  const ccRecipients = String(import.meta.env.VITE_FORMSUBMIT_CC || "")
     .split(",")
     .map((email) => email.trim())
-    .filter(Boolean)
-    .filter((email, index, list) => list.indexOf(email) === index);
+    .filter((email) => isValidEmailAddress(email) && email !== recipient)
+    .filter((email, index, list) => list.indexOf(email) === index)
+    .join(",");
 
-  const recipient = configuredRecipients[0] || "";
-  const ccRecipients = configuredRecipients.slice(1).join(",");
-
-  if (!recipient) {
+  if (!isValidEmailAddress(recipient)) {
     throw new Error(
-      "FormSubmit is not configured yet. Add VITE_FORMSUBMIT_EMAIL to the frontend environment.",
+      "FormSubmit is not configured yet. Add a valid VITE_FORMSUBMIT_EMAIL in the production environment.",
     );
   }
 
@@ -264,7 +263,6 @@ export async function submitFormSubmitEnquiry(formElement) {
   const honeypot = String(formData.get("website") || "").trim();
 
   if (honeypot) {
-    // Silently treat a filled hidden field as accepted without sending spam.
     return {
       success: true,
       message: "Thank you. Your enquiry has been received.",
@@ -284,15 +282,19 @@ export async function submitFormSubmitEnquiry(formElement) {
   }
 
   const isHomepageForm = formElement.classList.contains("admission-form");
-
   payload._subject = isHomepageForm
     ? "New homepage admission enquiry"
     : "New contact page enquiry";
   payload._template = "table";
   payload._honey = "";
-  payload._url = window.location.href.split("?")[0];
-  if (ccRecipients) payload._cc = ccRecipients;
 
+  // FormSubmit needs an absolute hosted URL. Do not pass a file URL, query
+  // string, or hash; this also gives both forms a stable production URL.
+  const isHostedPage = ["http:", "https:"].includes(window.location.protocol);
+  payload._url = isHostedPage
+    ? new URL(window.location.pathname, window.location.origin).href
+    : "";
+  if (ccRecipients) payload._cc = ccRecipients;
   if (payload.email) payload._replyto = payload.email;
 
   const response = await fetch(
@@ -325,5 +327,5 @@ export async function submitFormSubmitEnquiry(formElement) {
   };
 }
 
-// Keep this export so existing form pages can continue using their current import.
+// Compatibility export for any older page import. Both names use FormSubmit.
 export const submitWordPressEnquiry = submitFormSubmitEnquiry;

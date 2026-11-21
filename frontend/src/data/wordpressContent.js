@@ -11,6 +11,7 @@ import { applyWordPressContent as applyContact } from "./pages/contact";
 import { applyWordPressContent as applyNotFound } from "./pages/notFound";
 import { applyWordPressContent as applyBlogs } from "./pages/blogs";
 import legacySchoolPhotos from "./legacySchoolPhotos.json";
+import { submitFormSubmitEnquiry } from "../cms/wordpressApi.js";
 
 const contentUpdaters = {
   siteNavigation: applySiteNavigation,
@@ -29,11 +30,11 @@ const contentUpdaters = {
 
 // Existing WordPress saves can still point to the original stock photos.
 // Replace those known URLs while preserving custom media and other edits.
-function useBundledSchoolPhotos(content, replacements, prefix = "") {
+function replaceBundledSchoolPhotos(content, replacements, prefix = "") {
   for (const [key, value] of Object.entries(content)) {
     const path = prefix ? `${prefix}.${key}` : key;
     if (value && typeof value === "object") {
-      useBundledSchoolPhotos(value, replacements, path);
+      replaceBundledSchoolPhotos(value, replacements, path);
       continue;
     }
     if (typeof value !== "string" || !value.startsWith("https://")) continue;
@@ -97,7 +98,7 @@ export async function loadWordPressContent() {
     for (const [key, applyContent] of Object.entries(contentUpdaters)) {
       const page = payload.content[key];
       if (page && typeof page === "object") {
-        if (legacySchoolPhotos[key]) useBundledSchoolPhotos(page, legacySchoolPhotos[key]);
+        if (legacySchoolPhotos[key]) replaceBundledSchoolPhotos(page, legacySchoolPhotos[key]);
         applyContent(page);
       }
     }
@@ -125,40 +126,6 @@ export function enquiryFieldKey(name = "", label = "") {
   return `custom:${name || label}`;
 }
 
-export async function submitWordPressEnquiry(formElement) {
-  const baseUrl = import.meta.env.VITE_WORDPRESS_URL?.trim().replace(/\/+$/, "");
-  if (!baseUrl) {
-    throw new Error("The WordPress site URL is not configured for this frontend.");
-  }
-
-  const rawFields = new FormData(formElement);
-  const payload = {
-    extra_fields: {},
-    website: String(rawFields.get("website") || ""),
-  };
-
-  for (const [key, value] of rawFields.entries()) {
-    if (key === "website") continue;
-    if (key.startsWith("custom:")) {
-      payload.extra_fields[key.slice("custom:".length)] = String(value);
-    } else if (["name", "phone", "email", "address", "child_age", "class", "message"].includes(key)) {
-      payload[key] = String(value);
-    } else {
-      payload.extra_fields[key] = String(value);
-    }
-  }
-
-  const response = await fetch(`${baseUrl}/wp-json/vidya/v1/enquiry`, {
-    method: "POST",
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(payload),
-  });
-  const result = await response.json().catch(() => ({}));
-  if (!response.ok || !result?.success) {
-    throw new Error(result?.message || "We couldn’t send your enquiry. Please try again.");
-  }
-  return result;
-}
+// Kept for compatibility with older imports. Enquiries are sent directly to
+// FormSubmit; this legacy data module never calls the WordPress enquiry route.
+export const submitWordPressEnquiry = submitFormSubmitEnquiry;
